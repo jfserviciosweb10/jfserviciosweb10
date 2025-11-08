@@ -118,26 +118,26 @@ section > .container {
 
 /* Fondos de sección CON IMÁGENES Y COLORES EXACTOS */
 #inicio { 
-  background-image: url('img/inicio.jpg'), linear-gradient(135deg, var(--color-inicio) 0%, #0a4da0 100%);
+  background-image: url('/img/inicio.jpg'), linear-gradient(135deg, var(--color-inicio) 0%, #0a4da0 100%);
   background-attachment: fixed;
 }
 
 #nosotros { 
-  background-image: url('img/nosotros.jpg'), linear-gradient(135deg, var(--color-nosotros) 0%, #4a7bc4 100%);
+  background-image: url('/img/nosotros.jpg'), linear-gradient(135deg, var(--color-nosotros) 0%, #4a7bc4 100%);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
 #servicios { 
-  background-image: url('img/servicios.jpg'), linear-gradient(135deg, var(--color-servicios) 0%, #5a8bc9 100%);
+  background-image: url('/img/servicios.jpg'), linear-gradient(135deg, var(--color-servicios) 0%, #5a8bc9 100%);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
 #contacto { 
-  background-image: url('img/contacto.jpg'), linear-gradient(135deg, var(--color-contacto) 0%, #8fb3e6 100%);
+  background-image: url('/img/contacto.jpg'), linear-gradient(135deg, var(--color-contacto) 0%, #8fb3e6 100%);
   background-attachment: fixed;
 }
 
@@ -945,7 +945,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ARREGLAR SECCIÓN INICIO */
 #inicio {
     background: linear-gradient(135deg, #1867db 0%, #0a4da0 100%) !important;
-    background-image: url('img/inicio.jpg'), linear-gradient(135deg, #1867db 0%, #0a4da0 100%) !important;
+    background-image: url('/img/inicio.jpg'), linear-gradient(135deg, #1867db 0%, #0a4da0 100%) !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
