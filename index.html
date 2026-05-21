@@ -88,7 +88,7 @@ h5{font-family:var(--font-head);font-size:.9rem;font-weight:700;color:var(--t1);
 .hero-title{font-family:var(--font-head);font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:1.5rem}
 .hero-title em{font-style:normal;color:var(--accent)}
 .hero-title .gold{color:var(--gold)}
-.hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:var(--t2);max-width:600px;margin-bottom:2.5rem;line-height:1.7}
+.hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:var(--t2);max-width:680px;margin-bottom:2.5rem;line-height:1.7}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:3rem}
 .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;background:var(--accent);color:#fff;padding:14px 28px;border-radius:var(--r);transition:all var(--tr)}
 .btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,124,246,.3);color:#fff}
@@ -107,7 +107,7 @@ section{padding:5rem 5%}
 .s-label.gold{color:var(--gold)}
 .s-label.green{color:var(--green)}
 .s-title{font-family:var(--font-head);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:1rem;color:var(--t1)}
-.s-sub{font-size:1.05rem;color:var(--t2);max-width:600px;line-height:1.7}
+.s-sub{font-size:1.05rem;color:var(--t2);line-height:1.7}
 .divider{border:none;border-top:1px solid var(--border);margin:2rem 0}
 /* VIDEO */
 #video-sec{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -756,7 +756,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     </div>
     <div class="reveal" style="max-width:700px;margin:0 auto;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:16px;padding:1.5rem 2rem;text-align:center">
       <p style="color:#f87171;font-size:.85rem;font-weight:700;margin-bottom:.5rem">¿Por qué no usar las plataformas del mercado?</p>
-      <p style="color:#94a3b8;font-size:.83rem;line-height:1.7">En el mercado hay empresas conocidas que te cobran mensualidades y comisión por cada venta o transacción. Con la Tienda Digital de JF pagás $99 una sola vez — y el dinero de cada venta es 100% tuyo.</p>
+      <p style="color:#aaaacc;font-size:.88rem;line-height:1.7">En el mercado hay empresas conocidas que te cobran mensualidades y comisión por cada venta o transacción. Con la Tienda Digital de JF pagás $99 una sola vez — y el dinero de cada venta es 100% tuyo.</p>
     </div>
     <div class="reveal" style="text-align:center;margin-top:2.5rem">
       <a href="https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20quiero%20agregar%20la%20Tienda%20Digital%20a%20mi%20sitio" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:700;font-size:.95rem;padding:.9rem 2rem;border-radius:50px;text-decoration:none">
@@ -1146,5 +1146,67 @@ initSim();
 function cerrarPopup(){var p=document.getElementById('exitPopup');p.classList.remove('visible');p.style.display='none';localStorage.setItem('jf_exit_popup_done','1');}
 function submitExitForm(e){e.preventDefault();var form=document.getElementById('exitForm');fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){form.style.display='none';document.getElementById('exitSuccess').style.display='block';localStorage.setItem('jf_exit_popup_done','1');setTimeout(cerrarPopup,3000);}}).catch(function(){cerrarPopup()});}
 </script>
+</body>
+</html>
+<script>
+const T={es:{'cf.send':'Enviar mensaje →'},en:{'cf.send':'Send message →'}};
+let lang='es';
+function setLang(l){lang=l;document.getElementById('htmlRoot').lang=l;document.getElementById('btnES').classList.toggle('active',l==='es');document.getElementById('btnEN').classList.toggle('active',l==='en');}
+function toggleTheme(){document.getElementById('body').classList.toggle('lm')}
+function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open')}
+function closeMenu(){document.getElementById('mobileNav').classList.remove('open')}
+document.getElementById('year').textContent=new Date().getFullYear();
+(function(){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});},{threshold:0.1});document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});})();
+(function(){var seq=[{id:'rb-typing',delay:1000},{id:'rb-c2',delay:2200,hideTyping:true},{id:'rb-typing',delay:4000},{id:'rb-c3',delay:5000,hideTyping:true},{id:'rb-typing',delay:5800},{id:'rb-c4',delay:7000,hideTyping:true}];seq.forEach(function(s){setTimeout(function(){var el=document.getElementById(s.id);if(!el)return;if(s.hideTyping){var t=document.getElementById('rb-typing');if(t)t.style.display='none';}el.style.display=(s.id==='rb-typing')?'block':'flex';},s.delay);});})();
+function toggleFaq(btn){btn.closest('.faq-item').classList.toggle('open');}
+function openTyC(){document.getElementById('modalTyC').classList.add('open')}
+function closeTyC(){document.getElementById('modalTyC').classList.remove('open')}
+document.getElementById('modalTyC').addEventListener('click',function(e){if(e.target===this)closeTyC()});
+(function(){if(!localStorage.getItem('cookiesAccepted_v2'))document.getElementById('cookieBanner').style.display='flex';})();
+function acceptCookies(){localStorage.setItem('cookiesAccepted_v2','1');document.getElementById('cookieBanner').style.display='none';}
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();var btn=this.querySelector('button[type="submit"]');var ok=document.getElementById('formOk');var err=document.getElementById('formErr');btn.textContent='Enviando...';btn.disabled=true;fetch(this.action,{method:'POST',body:new FormData(this),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){ok.style.display='block';err.style.display='none';document.getElementById('contactForm').reset();}else{err.style.display='block';ok.style.display='none';}btn.textContent='Enviar mensaje →';btn.disabled=false;}).catch(function(){err.style.display='block';ok.style.display='none';btn.textContent='Enviar mensaje →';btn.disabled=false;});});
+var SD={veterinaria:{nombre:'Veterinaria Del Sol',slogan:'La salud de tu mascota, nuestra prioridad',color:'#2563eb',servicios:['Consultas y vacunas','Cirugías programadas','Grooming profesional','Urgencias 24hs']},ferreteria:{nombre:'Ferretería El Tornillo',slogan:'Todo para tu obra, en un solo lugar',color:'#d97706',servicios:['Herramientas eléctricas','Materiales de construcción','Electricidad y plomería','Pinturería completa']},restaurant:{nombre:'Restaurante La Esquina',slogan:'Cocina casera con sabor a hogar',color:'#dc2626',servicios:['Menú del día','Delivery a domicilio','Catering para eventos','Salón privado']},consultorio:{nombre:'Consultorio Dr. López',slogan:'Tu salud, nuestra prioridad',color:'#059669',servicios:['Consultas','Estudios','Turnos online','Urgencias']},carniceria:{nombre:'Carnicería San Martín',slogan:'La mejor carne de la zona',color:'#b45309',servicios:['Vacuno','Pollo','Cerdo','Pedidos por WhatsApp']},estudio:{nombre:'Estudio Contable Pérez',slogan:'Tu tranquilidad fiscal, nuestra misión',color:'#7c3aed',servicios:['Impuestos','Sueldos','Empresas','Auditorías']},peluqueria:{nombre:'Peluquería Valeria',slogan:'Tu imagen, nuestra pasión',color:'#db2777',servicios:['Corte y peinado','Coloración','Tratamientos','Uñas']},gimnasio:{nombre:'Gym & Fit Center',slogan:'Transformá tu cuerpo, transformá tu vida',color:'#0891b2',servicios:['Musculación','Clases grupales','Pilates y yoga','Nutrición']},inmobiliaria:{nombre:'Inmobiliaria Del Centro',slogan:'Tu propiedad ideal te espera',color:'#0d9488',servicios:['Venta','Alquiler','Tasaciones','Asesoría']},taller:{nombre:'Taller Mecánico Rodríguez',slogan:'Tu auto en las mejores manos',color:'#4338ca',servicios:['Service general','Reparaciones','Gomería','Revisión técnica']}};
+var simRubroAct='veterinaria',simNivelAct=1;
+var RUBROS=['veterinaria','ferreteria','restaurant','consultorio','carniceria','estudio','peluqueria','gimnasio','inmobiliaria','taller'];
+var RUBRO_LABELS={veterinaria:'🐾 Veterinaria',ferreteria:'🔧 Ferretería',restaurant:'🍽️ Restaurant',consultorio:'🏥 Consultorio',carniceria:'🥩 Carnicería',estudio:'📊 Estudio Contable',peluqueria:'✂️ Peluquería',gimnasio:'💪 Gimnasio',inmobiliaria:'🏠 Inmobiliaria',taller:'🚗 Taller'};
+function initSim(){var r=document.getElementById('simRubros');RUBROS.forEach(function(k){var b=document.createElement('button');b.className='sim-rubro-btn'+(k===simRubroAct?' active':'');b.textContent=RUBRO_LABELS[k];b.onclick=function(){setSimRubro(k)};r.appendChild(b);});renderSim();}
+function setSimRubro(k){simRubroAct=k;document.querySelectorAll('.sim-rubro-btn').forEach(function(b,i){b.classList.toggle('active',RUBROS[i]===k)});renderSim();}
+function setSimNivel(n){simNivelAct=n;document.querySelectorAll('.sim-nivel-tab').forEach(function(b,i){b.classList.toggle('active',i===n-1)});renderSim();}
+function renderSim(){var d=SD[simRubroAct];var planLabel=simNivelAct===1?'Estratégica — $399 USD':'Premium — $799 USD';var extra=simNivelAct===2?'<span style="display:inline-block;margin-left:6px;font-size:.65rem;background:rgba(74,124,246,.2);color:#7aabff;padding:2px 7px;border-radius:10px;font-weight:700">APP INSTALABLE</span>':'';document.getElementById('simUrl').textContent=simRubroAct+'.com · '+planLabel;document.getElementById('simPreview').innerHTML='<div style="font-size:.7rem;font-weight:700;color:'+d.color+';text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem">Plan '+planLabel+extra+'</div><div style="margin-bottom:1.5rem"><div style="font-family:\'Syne\',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:.3rem">'+d.nombre+'</div><div style="font-size:.85rem;color:#aaaacc">'+d.slogan+'</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.5rem">'+d.servicios.map(function(s){return'<div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:.7rem .9rem;font-size:.78rem;color:#d0d0e8"><span style="color:'+d.color+';font-weight:700;margin-right:4px">✓</span>'+s+'</div>'}).join('')+'</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem"><div style="background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.2);border-radius:8px;padding:.7rem .9rem;font-size:.78rem;color:#22c55e;font-weight:600">📱 WA flotante</div><div style="background:rgba(74,124,246,.08);border:1px solid rgba(74,124,246,.2);border-radius:8px;padding:.7rem .9rem;font-size:.78rem;color:#7aabff;font-weight:600">📍 Google Maps</div><div style="background:rgba(74,124,246,.08);border:1px solid rgba(74,124,246,.2);border-radius:8px;padding:.7rem .9rem;font-size:.78rem;color:#7aabff;font-weight:600">📊 Analítica</div>'+(simNivelAct===1?'<div style="background:rgba(240,180,41,.08);border:1px solid rgba(240,180,41,.2);border-radius:8px;padding:.7rem .9rem;font-size:.78rem;color:#f0b429;font-weight:600">📅 Agenda turnos</div>':'<div style="background:rgba(74,124,246,.15);border:1px solid rgba(74,124,246,.3);border-radius:8px;padding:.7rem .9rem;font-size:.78rem;color:#7aabff;font-weight:700">📱 App instalable</div>')+'</div>';}
+initSim();
+(function(){var canvas=document.getElementById('particles-canvas');if(!canvas)return;var ctx=canvas.getContext('2d');var particles=[];var mouse={x:null,y:null};function resize(){canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight}resize();window.addEventListener('resize',resize);for(var i=0;i<70;i++){particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+1});}canvas.parentElement.addEventListener('mousemove',function(e){var rect=canvas.getBoundingClientRect();mouse.x=e.clientX-rect.left;mouse.y=e.clientY-rect.top;});canvas.parentElement.addEventListener('mouseleave',function(){mouse.x=null;mouse.y=null;});function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);for(var i=0;i<particles.length;i++){for(var j=i+1;j<particles.length;j++){var dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y;var dist=Math.sqrt(dx*dx+dy*dy);if(dist<120){ctx.beginPath();ctx.strokeStyle='rgba(74,124,246,'+(1-dist/120)*.35+')';ctx.lineWidth=.8;ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.stroke();}}if(mouse.x!==null){var dx=particles[i].x-mouse.x,dy=particles[i].y-mouse.y;var dist=Math.sqrt(dx*dx+dy*dy);if(dist<150){ctx.beginPath();ctx.strokeStyle='rgba(74,124,246,'+(1-dist/150)*.6+')';ctx.lineWidth=.8;ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(mouse.x,mouse.y);ctx.stroke();}}}for(var i=0;i<particles.length;i++){ctx.beginPath();ctx.arc(particles[i].x,particles[i].y,particles[i].r,0,Math.PI*2);ctx.fillStyle='rgba(110,149,255,.8)';ctx.fill();particles[i].x+=particles[i].vx;particles[i].y+=particles[i].vy;if(particles[i].x<0||particles[i].x>canvas.width)particles[i].vx*=-1;if(particles[i].y<0||particles[i].y>canvas.height)particles[i].vy*=-1;}requestAnimationFrame(draw);}draw();})();
+(function(){if(localStorage.getItem('jf_exit_popup_done'))return;var shown=false,delay=false;setTimeout(function(){delay=true},5000);document.addEventListener('mouseleave',function(e){if(!delay||shown||e.clientY>10)return;shown=true;document.getElementById('exitPopup').classList.add('visible');});window.addEventListener('scroll',function(){if(!delay||shown)return;var pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;if(pct>70){shown=true;document.getElementById('exitPopup').classList.add('visible');}});})();
+function cerrarPopup(){var p=document.getElementById('exitPopup');p.classList.remove('visible');p.style.display='none';localStorage.setItem('jf_exit_popup_done','1');}
+function submitExitForm(e){e.preventDefault();var form=document.getElementById('exitForm');fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){form.style.display='none';document.getElementById('exitSuccess').style.display='block';localStorage.setItem('jf_exit_popup_done','1');setTimeout(cerrarPopup,3000);}}).catch(function(){cerrarPopup();});}
+</script>
+<!-- EXIT-INTENT POPUP -->
+<div id="exitPopup" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);align-items:center;justify-content:center">
+  <div style="background:#1e1e30;border:1px solid rgba(74,124,246,.3);border-radius:20px;max-width:520px;width:90%;padding:2.5rem 2rem;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.6);animation:popIn .35s cubic-bezier(.34,1.56,.64,1)">
+    <button onclick="cerrarPopup()" style="position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.08);border:none;color:#aaa;width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer;line-height:32px;text-align:center">✕</button>
+    <div style="text-align:center;margin-bottom:1rem;font-size:2.8rem">🎁</div>
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.55rem;font-weight:700;color:#fff;text-align:center;margin-bottom:.5rem;line-height:1.3">Antes de irte, llevate esto gratis</h2>
+    <p style="color:#aaaacc;font-size:.92rem;text-align:center;margin-bottom:1.5rem;line-height:1.6">Descargá el PDF <strong style="color:#fff">"5 errores que arruinan tu presencia online"</strong> y descubrí si tu negocio los está cometiendo ahora mismo.</p>
+    <div style="background:rgba(74,124,246,.08);border:1px solid rgba(74,124,246,.2);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem">
+      <div style="display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.5rem"><span style="color:#4a7cf6">✓</span><span style="color:#cbd5e1;font-size:.85rem">Por qué tu web no aparece en Google (y cómo solucionarlo)</span></div>
+      <div style="display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.5rem"><span style="color:#4a7cf6">✓</span><span style="color:#cbd5e1;font-size:.85rem">El error que hace que los clientes se vayan antes de contactarte</span></div>
+      <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:#4a7cf6">✓</span><span style="color:#cbd5e1;font-size:.85rem">Qué herramientas gratuitas usamos nosotros — y por qué</span></div>
+    </div>
+    <form action="https://formspree.io/f/movnpobb" method="POST" id="exitForm" onsubmit="submitExitForm(event)">
+      <input type="hidden" name="_subject" value="Lead Magnet — PDF 5 errores">
+      <input type="hidden" name="origen" value="Exit-intent popup">
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+        <input type="email" name="email" placeholder="Tu email de trabajo" required style="flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.75rem 1rem;color:#fff;font-size:.9rem;outline:none">
+        <button type="submit" style="background:linear-gradient(135deg,#4a7cf6,#2563eb);color:#fff;border:none;border-radius:10px;padding:.75rem 1.25rem;font-weight:700;font-size:.9rem;cursor:pointer;white-space:nowrap">Quiero el PDF →</button>
+      </div>
+      <p style="color:#64748b;font-size:.75rem;text-align:center;margin-top:.75rem">Sin spam. Tu email no se comparte con nadie.</p>
+    </form>
+    <div id="exitSuccess" style="display:none;text-align:center;padding:1rem 0">
+      <div style="font-size:2rem;margin-bottom:.5rem">✅</div>
+      <p style="color:#4ade80;font-weight:700;font-size:1rem">¡Listo! Te enviamos el PDF ahora mismo.</p>
+      <p style="color:#aaaacc;font-size:.85rem;margin-top:.25rem">Revisá tu bandeja de entrada (y el spam, por las dudas).</p>
+    </div>
+  </div>
+</div>
+<style>@keyframes popIn{from{opacity:0;transform:scale(.88) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}#exitPopup.visible{display:flex!important}</style>
 </body>
 </html>
