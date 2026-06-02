@@ -19,6 +19,7 @@
 </script>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+<link rel="preconnect" href="https://img.youtube.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap">
@@ -82,7 +83,7 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
    ============================================================ */
 #hero{min-height:100vh;padding:calc(var(--nav)+5rem) 5% 5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center}
 .hero-glow{position:absolute;top:-10%;left:20%;width:60%;height:50%;background:radial-gradient(ellipse,rgba(74,124,246,0.14) 0%,transparent 70%);pointer-events:none;z-index:0}
-#particles-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#particles-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;will-change:transform}
 .hero-content{position:relative;z-index:1;max-width:820px;display:flex;flex-direction:column;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2);background:rgba(74,124,246,.1);border:1px solid rgba(74,124,246,.25);padding:6px 14px;border-radius:20px;margin-bottom:1.5rem}
 .hero-badge::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
@@ -423,10 +424,10 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
 /* ============================================================
    WA FLOTANTE
    ============================================================ */
-#wa-float{position:fixed;bottom:24px;right:24px;z-index:997;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:bounceWA 2.5s ease-in-out infinite;transition:transform var(--tr)}
+#wa-float{position:fixed;bottom:24px;right:24px;z-index:997;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:bounceWA 2.5s ease-in-out infinite;transition:transform var(--tr);will-change:transform}
 #wa-float:hover{transform:scale(1.1);animation:none}
 #wa-float img{width:58px;height:58px;border-radius:50%}
-@keyframes bounceWA{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bounceWA{0%,100%{transform:translateY(0) translateZ(0)}50%{transform:translateY(-8px) translateZ(0)}}
 /* ============================================================
    COOKIES
    ============================================================ */
@@ -534,7 +535,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-logo-wrap">
-    <a href="#hero"><img src="img/logo.png" alt="JF Servicios Web" class="nav-logo-img"></a>
+    <a href="#hero"><img src="img/logo.png" alt="JF Servicios Web" class="nav-logo-img" width="160" height="40" fetchpriority="high"></a>
   </div>
   <ul class="nav-links">
     <li><a href="#webs-personalizadas" data-i18n="nav.v">Propuesta</a></li>
@@ -600,7 +601,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     <p class="s-sub" data-i18n="vid.sub">Este es el proceso completo desde que nos contactás hasta que tu web está generando clientes.</p>
     <div style="display:flex;justify-content:center;margin-top:3rem">
       <a href="https://www.youtube.com/watch?v=uZiNkLAztQg" target="_blank" rel="noopener noreferrer" class="video-wrap" style="max-width:860px;width:100%;display:block;cursor:pointer">
-        <img src="https://img.youtube.com/vi/uZiNkLAztQg/maxresdefault.jpg" alt="Video JF Servicios Web" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <img src="https://img.youtube.com/vi/uZiNkLAztQg/maxresdefault.jpg" alt="Video JF Servicios Web" width="860" height="483" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
         <div class="video-placeholder" style="position:relative;z-index:1">
           <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </div>
@@ -619,32 +620,32 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     </div>
     <div class="vg reveal">
       <div class="vc">
-        <div class="vc-icon"><img src="img/seo-optimizado.webp" alt="Velocidad"></div>
+        <div class="vc-icon"><img src="img/seo-optimizado.webp" alt="Velocidad" width="36" height="36" loading="lazy"></div>
         <h3 data-i18n="vp.v1t">Velocidad real</h3>
         <p data-i18n="vp.v1d">Menos de 1 segundo de carga. Infraestructura de nivel empresarial con red global. Velocidad garantizada en cualquier parte del mundo.</p>
       </div>
       <div class="vc">
-        <div class="vc-icon"><img src="img/dominio-cero.webp" alt="Tu web es tuya"></div>
+        <div class="vc-icon"><img src="img/dominio-cero.webp" alt="Tu web es tuya" width="36" height="36" loading="lazy"></div>
         <h3 data-i18n="vp.v2t">Tu web es tuya, siempre</h3>
         <p data-i18n="vp.v2d">Código, dominio y archivos 100% tuyos desde el día 1. Si cancelás o cambiás de proveedor, tu web sigue online.</p>
       </div>
       <div class="vc">
-        <div class="vc-icon"><img src="img/alcance-global.webp" alt="SEO"></div>
+        <div class="vc-icon"><img src="img/alcance-global.webp" alt="SEO" width="36" height="36" loading="lazy"></div>
         <h3 data-i18n="vp.v3t">SEO desde el primer día</h3>
         <p data-i18n="vp.v3d">Optimización técnica completa para que Google te encuentre. Tu negocio aparece en los resultados de búsqueda desde que sale al aire.</p>
       </div>
       <div class="vc">
-        <div class="vc-icon"><img src="img/whatsapp.webp" alt="Automatización"></div>
+        <div class="vc-icon"><img src="img/whatsapp.webp" alt="Automatización" width="36" height="36" loading="lazy"></div>
         <h3 data-i18n="vp.v4t">Automatización real</h3>
         <p data-i18n="vp.v4d">Con RE-BOMBA, un mensaje de WhatsApp actualiza tu sitio en 30 segundos y publica en tus redes automáticamente.</p>
       </div>
       <div class="vc">
-        <div class="vc-icon"><img src="img/hosting-cero.webp" alt="Hosting gratis"></div>
+        <div class="vc-icon"><img src="img/hosting-cero.webp" alt="Hosting gratis" width="36" height="36" loading="lazy"></div>
         <h3 data-i18n="vp.v5t">Hosting permanente gratis</h3>
         <p data-i18n="vp.v5d">Nuestro hosting es gratuito para siempre. Tu inversión única genera presencia web permanente sin costos mensuales.</p>
       </div>
       <div class="vc">
-        <div class="vc-icon"><img src="img/24-7.webp" alt="Demo gratis"></div>
+        <div class="vc-icon"><img src="img/24-7.webp" alt="Demo gratis" width="36" height="36" loading="lazy"></div>
         <h3 data-i18n="vp.v6t">Demo gratis antes de pagar</h3>
         <p data-i18n="vp.v6d">Te armamos una web de muestra personalizada en 24-48hs. La ves antes de pagar un solo centavo.</p>
       </div>
@@ -727,16 +728,16 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     <div class="reveal" style="margin-top:2.5rem">
       <p style="text-align:center;font-size:.82rem;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.25rem">Incluido en ambos planes</p>
       <div class="incluidos-grid">
-        <div class="inc-item"><img src="img/dominio-cero.webp" alt="Dominio"><span>Dominio 1° año</span></div>
-        <div class="inc-item"><img src="img/hosting-cero.webp" alt="Hosting"><span>Hosting gratis</span></div>
-        <div class="inc-item"><img src="img/ssl-gratis.webp" alt="SSL"><span>SSL gratis</span></div>
-        <div class="inc-item"><img src="img/google-maps.webp" alt="Maps"><span>Google Maps</span></div>
-        <div class="inc-item"><img src="img/whatsapp.webp" alt="WhatsApp"><span>WA flotante</span></div>
-        <div class="inc-item"><img src="img/formulario.webp" alt="Formulario"><span>Formulario</span></div>
-        <div class="inc-item"><img src="img/privacidad.webp" alt="Privacidad"><span>Privacidad</span></div>
-        <div class="inc-item"><img src="img/term-y-cond.webp" alt="T&C"><span>T&amp;C</span></div>
-        <div class="inc-item"><img src="img/seguridad.webp" alt="Seguridad"><span>SEO base</span></div>
-        <div class="inc-item"><img src="img/redes-sociales.webp" alt="Redes"><span>Redes Sociales</span></div>
+        <div class="inc-item"><img src="img/dominio-cero.webp" alt="Dominio" width="36" height="36" loading="lazy"><span>Dominio 1° año</span></div>
+        <div class="inc-item"><img src="img/hosting-cero.webp" alt="Hosting" width="36" height="36" loading="lazy"><span>Hosting gratis</span></div>
+        <div class="inc-item"><img src="img/ssl-gratis.webp" alt="SSL" width="36" height="36" loading="lazy"><span>SSL gratis</span></div>
+        <div class="inc-item"><img src="img/google-maps.webp" alt="Maps" width="36" height="36" loading="lazy"><span>Google Maps</span></div>
+        <div class="inc-item"><img src="img/whatsapp.webp" alt="WhatsApp" width="36" height="36" loading="lazy"><span>WA flotante</span></div>
+        <div class="inc-item"><img src="img/formulario.webp" alt="Formulario" width="36" height="36" loading="lazy"><span>Formulario</span></div>
+        <div class="inc-item"><img src="img/privacidad.webp" alt="Privacidad" width="36" height="36" loading="lazy"><span>Privacidad</span></div>
+        <div class="inc-item"><img src="img/term-y-cond.webp" alt="T&C" width="36" height="36" loading="lazy"><span>T&amp;C</span></div>
+        <div class="inc-item"><img src="img/seguridad.webp" alt="Seguridad" width="36" height="36" loading="lazy"><span>SEO base</span></div>
+        <div class="inc-item"><img src="img/redes-sociales.webp" alt="Redes" width="36" height="36" loading="lazy"><span>Redes Sociales</span></div>
       </div>
     </div>
 
@@ -1040,31 +1041,31 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     </div>
     <div class="proceso-wrap reveal">
       <div class="paso">
-        <img src="img/contacto-inicial.webp" alt="Contacto" class="paso-img">
+        <img src="img/contacto-inicial.webp" alt="Contacto" class="paso-img" width="52" height="52" loading="lazy">
         <div class="paso-n">01</div>
         <h3 data-i18n="ps1t">Pedí tu demo gratis</h3>
         <p data-i18n="ps1d">WhatsApp con los datos básicos de tu negocio. En 24-48hs tenés una web personalizada para ver antes de pagar.</p>
       </div>
       <div class="paso">
-        <img src="img/presupuesto.webp" alt="Presupuesto" class="paso-img">
+        <img src="img/presupuesto.webp" alt="Presupuesto" class="paso-img" width="52" height="52" loading="lazy">
         <div class="paso-n">02</div>
         <h3 data-i18n="ps2t">Elegís tu plan</h3>
         <p data-i18n="ps2d">Si te convence lo que ves, elegís el nivel que más te sirve y abonás el 50% inicial para arrancar.</p>
       </div>
       <div class="paso">
-        <img src="img/formulario.webp" alt="Cuestionario" class="paso-img">
+        <img src="img/formulario.webp" alt="Cuestionario" class="paso-img" width="52" height="52" loading="lazy">
         <div class="paso-n">03</div>
         <h3 data-i18n="ps3t">Completás el cuestionario</h3>
         <p data-i18n="ps3d">Formulario online con textos, fotos, colores y servicios. Desde cualquier dispositivo, a tu ritmo.</p>
       </div>
       <div class="paso">
-        <img src="img/confirmacion-de-compra.webp" alt="Revisión" class="paso-img">
+        <img src="img/confirmacion-de-compra.webp" alt="Revisión" class="paso-img" width="52" height="52" loading="lazy">
         <div class="paso-n">04</div>
         <h3 data-i18n="ps4t">Revisás y aprobás</h3>
         <p data-i18n="ps4d">Recibís el link de tu web lista. Correcciones incluidas hasta quedar 100% conforme.</p>
       </div>
       <div class="paso">
-        <img src="img/entrega.webp" alt="Entrega" class="paso-img">
+        <img src="img/entrega.webp" alt="Entrega" class="paso-img" width="52" height="52" loading="lazy">
         <div class="paso-n">05</div>
         <h3 data-i18n="ps5t">Tu web sale en vivo</h3>
         <p data-i18n="ps5d">Pagás el 50% restante y recibís todos los accesos. Tu dominio, tu código, tu repositorio. 100% tuyo.</p>
@@ -1417,11 +1418,11 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
             <div><strong>Email</strong><br><span style="font-size:.82rem;color:var(--t3)">info@jfserviciosweb.com</span></div>
           </a>
           <a href="https://www.instagram.com/jfserviciosweb/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <span class="cl-icon"><img src="img/instagram.webp" width="28" alt="Instagram"></span>
+            <span class="cl-icon"><img src="img/instagram.webp" width="28" height="28" alt="Instagram" loading="lazy"></span>
             <div><strong>Instagram</strong><br><span style="font-size:.82rem;color:var(--t3)">@jfserviciosweb</span></div>
           </a>
           <a href="https://www.facebook.com/jfsweb/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <span class="cl-icon"><img src="img/facebook.webp" width="28" alt="Facebook"></span>
+            <span class="cl-icon"><img src="img/facebook.webp" width="28" height="28" alt="Facebook" loading="lazy"></span>
             <div><strong>Facebook</strong><br><span style="font-size:.82rem;color:var(--t3)">JF Servicios Web</span></div>
           </a>
           <div class="contact-link" style="cursor:default">
@@ -1543,7 +1544,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="img/logo.png" alt="JF Servicios Web">
+      <img src="img/logo.png" alt="JF Servicios Web" width="160" height="40">
       <p>Sitios web profesionales para pymes y emprendedores de Latinoamérica. Velocidad, SEO y automatización desde el día uno.</p>
     </div>
     <div class="footer-col">
@@ -1575,7 +1576,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
           <img src="img/whatsapp-flotante.webp" width="16" alt="WA" style="display:inline;vertical-align:middle;border-radius:3px;margin-right:4px">
           <a href="https://api.whatsapp.com/send?phone=5493496591636" target="_blank" rel="noopener noreferrer">+54 9 3496 591636</a><br>
           ✉️ <a href="mailto:info@jfserviciosweb.com">info@jfserviciosweb.com</a><br>
-          <img src="img/instagram.webp" width="16" alt="IG" style="display:inline;vertical-align:middle;margin-right:4px">
+          <img src="img/instagram.webp" width="16" height="16" alt="IG" style="display:inline;vertical-align:middle;margin-right:4px">
           <a href="https://www.instagram.com/jfserviciosweb/" target="_blank" rel="noopener noreferrer">@jfserviciosweb</a><br>
           📍 Esperanza, Santa Fe, Argentina
         </p>
@@ -1593,7 +1594,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
 
 <!-- WA FLOTANTE -->
 <a id="wa-float" href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20informaci%C3%B3n%20sobre%20JF%20Servicios%20Web" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-<img src="img/WHATSAPP-FLOTANTE.webp?v=2" alt="WhatsApp">
+<img src="img/WHATSAPP-FLOTANTE.webp?v=2" alt="WhatsApp" width="58" height="58">
 </a>
 
 <script>
@@ -1767,9 +1768,9 @@ function renderSim(){
 initSim();
 
 // ============================================================
-// PARTÍCULAS CANVAS
+// PARTÍCULAS CANVAS — diferido con requestIdleCallback
 // ============================================================
-(function(){
+function initParticles(){
   var canvas=document.getElementById('particles-canvas');
   if(!canvas)return;
   var ctx=canvas.getContext('2d');
@@ -1819,7 +1820,8 @@ initSim();
     requestAnimationFrame(draw);
   }
   draw();
-})();
+}
+if('requestIdleCallback' in window){requestIdleCallback(initParticles,{timeout:2000})}else{setTimeout(initParticles,500)}
 </script>
 
 <!-- EXIT-INTENT POPUP -->
