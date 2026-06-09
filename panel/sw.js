@@ -1,13 +1,10 @@
-/* RE-BOMBA Panel — Service Worker v1.1
+/* RE-BOMBA Panel — Service Worker v1.2
    Rutas relativas: funciona en GitHub Pages con o sin dominio propio */
-
 const CACHE_NAME = 'rebomba-panel-v1';
 const ASSETS = [
   './index.html',
   './offline.html',
-  './manifest.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png'
+  './manifest.json'
 ];
 
 /* ── INSTALL ── */
@@ -33,7 +30,6 @@ self.addEventListener('activate', e => {
    Resto → Cache first, Network fallback                                 */
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
-
   if (url.hostname === 'script.google.com') {
     e.respondWith(
       fetch(e.request).catch(() =>
@@ -45,7 +41,6 @@ self.addEventListener('fetch', e => {
     );
     return;
   }
-
   e.respondWith(
     caches.match(e.request).then(hit => {
       if (hit) return hit;
@@ -88,8 +83,8 @@ self.addEventListener('push', e => {
   const d = e.data ? e.data.json() : {};
   e.waitUntil(self.registration.showNotification(d.title || '🔥 RE-BOMBA', {
     body:     d.body    || 'Nuevo lead HOT en tu panel',
-    icon:     './icons/icon-192.png',
-    badge:    './icons/icon-192.png',
+    icon:     'https://jfserviciosweb10.github.io/jfserviciosweb10/icon-192.png',
+    badge:    'https://jfserviciosweb10.github.io/jfserviciosweb10/icon-192.png',
     vibrate:  [200, 100, 200],
     tag:      d.tag     || 'rebomba',
     renotify: true,
@@ -118,6 +113,7 @@ function openDB() {
     r.onerror   = rej;
   });
 }
+
 function dbGetAll(db, store) {
   return new Promise(res => {
     const tx = db.transaction(store, 'readonly');
@@ -125,6 +121,7 @@ function dbGetAll(db, store) {
     r.onsuccess = () => res(r.result);
   });
 }
+
 function dbDelete(db, store, key) {
   return new Promise(res => {
     const tx = db.transaction(store, 'readwrite');
