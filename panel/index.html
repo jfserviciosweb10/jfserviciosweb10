@@ -614,7 +614,8 @@ const CONFIG = {
   NEGOCIO:         'JF Test MOVI',
   POLL_INTERVAL:   30000,
   CACHE_KEY:       'rebomba-panel-data-v2',
-  VAPID_PUBLIC_KEY:'BKiW4PY3z-9RUFqR5YaqIBuRVq1WOVLilHF3WSil4Fr3Ng5X7NQ3Yi74AXkWKJRG5AZrvvAmLNVlndC7gR5Z0ME'
+  VAPID_PUBLIC_KEY:'BKiW4PY3z-9RUFqR5YaqIBuRVq1WOVLilHF3WSil4Fr3Ng5X7NQ3Yi74AXkWKJRG5AZrvvAmLNVlndC7gR5Z0ME',
+  PUSH_WORKER_URL:  'https://rebomba-push.jfserviciosweb.workers.dev'
 };
 
 /* ═══════════════════════════════════════════════
@@ -1283,33 +1284,16 @@ if (['inicio','clientes','turnos','negocios','mensajes'].includes(hash)) nav(has
 /* ── INICIO ── */
 cargarDatos(true);
 setInterval(cargarDatos, CONFIG.POLL_INTERVAL);
-</script>
-/* ============================================================
-   RE-BOMBA Panel — PARCHE PUSH NOTIFICATIONS
-   Versión: 1.0 — 05/06/2026
-
-   INSTRUCCIONES:
-   Pegar este bloque JUSTO ANTES del cierre </script> final
-   del panel/index.html (antes de la línea que dice </script>)
-
-   ADEMÁS: en la sección CONFIG del panel/index.html,
-   agregar esta línea:
-     VAPID_PUBLIC_KEY: 'VAPID_PUBLIC_KEY: 'BKiW4PY3z-9RUFqR5YaqIBuRVq1WOVLilHF3WSil4Fr3Ng5X7NQ3Yi74AXkWKJRG5AZrvvAmLNVlndC7gR5Z0ME',
-   (la misma que pusiste en el Cloudflare Worker)
-   ============================================================ */
-
 
 /* ═══════════════════════════════════════════════
    PUSH NOTIFICATIONS — suscripción y activación
 ═══════════════════════════════════════════════ */
 
 const PUSH_CONFIG = {
-  // ── EDITAR POR CLIENTE ──
-  // Copiar de vapidkeys.com → Public Key
-  VAPID_PUBLIC_KEY: 'BKiW4PY3z-9RUFqR5YaqIBuRVq1WOVLilHF3WSil4Fr3Ng5X7NQ3Yi74AXkWKJRG5AZrvvAmLNVlndC7gR5Z0ME'
+  VAPID_PUBLIC_KEY:'BKiW4PY3z-9RUFqR5YaqIBuRVq1WOVLilHF3WSil4Fr3Ng5X7NQ3Yi74AXkWKJRG5AZrvvAmLNVlndC7gR5Z0ME',
+  PUSH_WORKER_URL:  'https://rebomba-push.jfserviciosweb.workers.dev'
 };
 
-/* Convierte la VAPID public key de base64 a Uint8Array */
 function urlBase64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
   const base64  = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
@@ -1317,100 +1301,83 @@ function urlBase64ToUint8Array(base64String) {
   return Uint8Array.from(raw, c => c.charCodeAt(0));
 }
 
-/* Solicita permiso y suscribe al dueño a las push notifications */
 async function activarPushNotifications() {
   if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
     showToast('⚠ Tu navegador no soporta notificaciones push');
     return false;
   }
-
-  // Pedir permiso al usuario
   const permiso = await Notification.requestPermission();
   if (permiso !== 'granted') {
-    showToast('⚠ Permiso de notificaciones denegado');
+    showToast('⚠ Permiso denegado. Habilitalo en config del sitio.');
     return false;
   }
-
   try {
-    const reg = await navigator.serviceWorker.ready;
-
-    // Verificar si ya hay una suscripción activa
+    showToast('⏳ Activando...');
+    let reg = await navigator.serviceWorker.getRegistration('./');
+    if (!reg) reg = await navigator.serviceWorker.register('./sw.js');
+    if (!reg.active) {
+      await new Promise((resolve, reject) => {
+        const timeout = setTimeout(() => reject(new Error('SW timeout')), 10000);
+        const worker = reg.installing || reg.waiting;
+        if (worker) {
+          worker.addEventListener('statechange', () => {
+            if (worker.state === 'activated') { clearTimeout(timeout); resolve(); }
+          });
+        } else {
+          navigator.serviceWorker.ready.then(() => { clearTimeout(timeout); resolve(); }).catch(reject);
+        }
+      });
+    }
     let sub = await reg.pushManager.getSubscription();
-
     if (!sub) {
-      // Crear nueva suscripción
       sub = await reg.pushManager.subscribe({
         userVisibleOnly:      true,
         applicationServerKey: urlBase64ToUint8Array(PUSH_CONFIG.VAPID_PUBLIC_KEY)
       });
     }
-
-    // Guardar la suscripción en el GAS del cliente
-    const response = await fetch(CONFIG.GAS_URL, {
+    const response = await fetch(CONFIG.PUSH_WORKER_URL + '/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        action:       'savePushSubscription',
-        subscription: sub.toJSON()
-      })
+      body: JSON.stringify({ subscription: sub.toJSON() })
     });
-
     const result = await response.json();
-
     if (result.ok) {
-      showToast('🔔 Notificaciones activadas correctamente');
-      // Actualizar botón de notificaciones si existe
-      const btnPush = document.getElementById('btn-push');
-      if (btnPush) {
-        btnPush.textContent = '🔔 Notificaciones: ON';
-        btnPush.style.color = 'var(--verde)';
-      }
+      showToast('🔔 Notificaciones activadas');
+      const btn = document.getElementById('btn-push');
+      if (btn) { btn.textContent = '🔔 Notificaciones: ON'; btn.style.color = 'var(--verde)'; }
       return true;
     } else {
-      showToast('⚠ Error al guardar suscripción: ' + (result.error || 'desconocido'));
+      showToast('⚠ Error: ' + (result.error || JSON.stringify(result)));
       return false;
     }
-
   } catch (err) {
-    console.error('Push subscription error:', err);
-    showToast('⚠ Error activando notificaciones: ' + err.message);
+    showToast('⚠ ' + err.message);
     return false;
   }
 }
 
-/* Verificar estado actual de las notificaciones al cargar */
 async function verificarEstadoPush() {
   if (!('Notification' in window)) return;
-
-  const btnPush = document.getElementById('btn-push');
-  if (!btnPush) return;
-
+  const btn = document.getElementById('btn-push');
+  if (!btn) return;
+  if (Notification.permission === 'denied') {
+    btn.textContent = '🔕 Notificaciones bloqueadas';
+    btn.style.color = 'var(--rojo)';
+    return;
+  }
   if (Notification.permission === 'granted') {
-    const reg = await navigator.serviceWorker.ready;
-    const sub = await reg.pushManager.getSubscription();
-    if (sub) {
-      btnPush.textContent = '🔔 Notificaciones: ON';
-      btnPush.style.color = 'var(--verde)';
-    }
-  } else if (Notification.permission === 'denied') {
-    btnPush.textContent = '🔕 Notificaciones bloqueadas';
-    btnPush.style.color = 'var(--rojo)';
+    try {
+      const reg = await navigator.serviceWorker.getRegistration('./');
+      if (reg) {
+        const sub = await reg.pushManager.getSubscription();
+        if (sub) { btn.textContent = '🔔 Notificaciones: ON'; btn.style.color = 'var(--verde)'; }
+      }
+    } catch { /* silencioso */ }
   }
 }
 
-/* Inicializar push al cargar la app */
-window.addEventListener('load', () => {
-  verificarEstadoPush();
-});
+window.addEventListener('load', () => { verificarEstadoPush(); });
 
-/* ── Agregar al doPost del GAS_PANEL_ENDPOINT_V2.gs ──
-   Dentro del switch(body.action), agregar este case:
-
-   case 'savePushSubscription':
-     result = savePushSubscription(body.subscription); break;
-
-   Y la función savePushSubscription está en REBOMBA_PUSH.gs
-*/
-
+</script>
 </body>
 </html>
