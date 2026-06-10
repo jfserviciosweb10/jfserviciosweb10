@@ -41,7 +41,7 @@
    RESET + BASE
 ═══════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html, body { height: 100%; height: 100dvh; overflow: hidden; }
+html, body { height: 100%; overflow: hidden; }
 body {
   background: var(--negro);
   color: var(--blanco);
@@ -58,7 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  height: 100dvh;
+  height: calc(var(--vh, 1vh) * 100);
   padding-top: var(--safe-top);
   padding-bottom: var(--safe-bot);
 }
@@ -332,6 +332,17 @@ body {
 </head>
 <body>
 
+<script>
+/* ═══════════════════════════════════════════════
+   FIX ALTURA REAL VIEWPORT MOBILE (Moto/Android)
+═══════════════════════════════════════════════ */
+function setVH() {
+  document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+}
+setVH();
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', setVH);
+</script>
 <!-- LOADING -->
 <div class="loading-overlay" id="loading">
   <div class="loader"></div>
