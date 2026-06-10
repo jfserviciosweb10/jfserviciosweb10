@@ -299,6 +299,34 @@ body {
 .modal { background:var(--gris-panel); border-radius:16px 16px 0 0; padding:20px 16px; width:100%; border-top:1px solid var(--gris-borde); }
 .modal-title { font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--verde); margin-bottom:14px; }
 .modal-close { float:right; background:none; border:none; color:var(--gris-txt); font-size:20px; cursor:pointer; margin-top:-2px; }
+
+/* ── AJUSTES MOTO / PANTALLAS CHICAS (≤380px) ── */
+@media (max-width: 380px) {
+  body { font-size: 13px; }
+
+  .kpi-val { font-size: 24px; }
+  .kpi { padding: 10px 12px; }
+  .kpi-label { font-size: 9px; }
+
+  #btn-push {
+    font-size: 11px;
+    padding: 9px 8px;
+    gap: 4px;
+  }
+
+  .btn { font-size: 11px; padding: 9px 12px; }
+
+  .h-logo { font-size: 16px; }
+  .h-negocio { font-size: 10px; }
+
+  .nav-btn .ti { font-size: 20px; }
+  .nav-btn span { font-size: 8px; }
+
+  .modal { padding: 16px 12px; }
+}
+
+/* ── AJUSTE GENERAL: evitar overflow horizontal en cualquier ancho ── */
+#app, #content, .section { max-width: 100vw; overflow-x: hidden; }
 </style>
 </head>
 <body>
