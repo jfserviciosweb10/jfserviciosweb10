@@ -342,6 +342,22 @@ function setVH() {
 setVH();
 window.addEventListener('resize', setVH);
 window.addEventListener('orientationchange', setVH);
+
+/* ═══════════════════════════════════════════════
+   DIAGNÓSTICO TEMPORAL — BORRAR DESPUÉS
+═══════════════════════════════════════════════ */
+window.addEventListener('load', () => {
+  const d = document.createElement('div');
+  d.style.cssText = 'position:fixed;top:0;left:0;right:0;background:red;color:white;font-size:11px;padding:6px;z-index:99999;font-family:monospace;white-space:pre-wrap;';
+  d.textContent =
+    'innerW:' + window.innerWidth +
+    ' innerH:' + window.innerHeight +
+    ' dpr:' + window.devicePixelRatio +
+    ' scrollW:' + document.documentElement.scrollWidth +
+    ' clientW:' + document.documentElement.clientWidth +
+    ' visualVP:' + (window.visualViewport ? window.visualViewport.width + 'x' + window.visualViewport.height + ' scale:' + window.visualViewport.scale : 'n/a');
+  document.body.appendChild(d);
+});
 </script>
 <!-- LOADING -->
 <div class="loading-overlay" id="loading">
