@@ -2077,6 +2077,26 @@ function submitExitForm(e){
 </script>
 <!-- Microsoft Clarity — no bloqueante -->
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.defer=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wsp3ozq0yd");</script>
+<!-- Protección básica de contenido (sin afectar accesibilidad ni Lighthouse) -->
+<script>
+(function(){
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+  document.addEventListener('selectstart', function(e){ e.preventDefault(); });
+  document.addEventListener('copy', function(e){ e.preventDefault(); });
+  document.addEventListener('cut', function(e){ e.preventDefault(); });
+  document.addEventListener('keydown', function(e){
+    if (
+      (e.ctrlKey && (e.key === 'u' || e.key === 'U')) ||
+      (e.ctrlKey && (e.key === 's' || e.key === 'S')) ||
+      (e.ctrlKey && (e.key === 'c' || e.key === 'C')) ||
+      (e.ctrlKey && (e.key === 'a' || e.key === 'A')) ||
+      (e.metaKey && (e.key === 'u' || e.key === 's'))
+    ) {
+      e.preventDefault();
+    }
+  });
+})();
+</script>
 </body>
 </html>
 
