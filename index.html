@@ -178,14 +178,14 @@ section{padding:5rem 5%}
 #vs-competencia{background:var(--bg);border-top:1px solid var(--border)}
 .vs-tabla-wrap{overflow-x:auto;border-radius:var(--r2);border:1px solid var(--border);margin-top:2.5rem;max-width:1000px;margin-left:auto;margin-right:auto}
 .vs-tabla{width:100%;border-collapse:collapse;min-width:640px;background:var(--card)}
-.vs-tabla th,.vs-tabla td{padding:.85rem 1.25rem;text-align:center;font-size:.85rem;border-bottom:1px solid var(--border)}
-.vs-tabla th{font-family:var(--font-head);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--t2);background:var(--bg3)}
-.vs-tabla td:first-child,.vs-tabla th:first-child{text-align:left;font-weight:600;color:var(--t1)}
-.vs-tabla th.vs-jf{color:var(--accent2);background:rgba(74,124,246,.1)}
-.vs-tabla td.vs-jf{background:rgba(74,124,246,.05);font-weight:700}
+.vs-tabla th,.vs-tabla td{padding:.95rem 1.25rem;text-align:center;font-size:.95rem;border-bottom:1px solid var(--border)}
+.vs-tabla th{font-family:var(--font-head);font-size:.92rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#fff;background:var(--bg3)}
+.vs-tabla td:first-child,.vs-tabla th:first-child{text-align:left;font-weight:700;color:#fff}
+.vs-tabla th.vs-jf{color:#7aabff;background:rgba(74,124,246,.18);font-size:1rem}
+.vs-tabla td.vs-jf{background:rgba(74,124,246,.08);font-weight:800;font-size:1.05rem}
 .vs-tabla tr:last-child td{border-bottom:none}
-.vs-yes{color:var(--green);font-weight:800}
-.vs-no{color:var(--t3)}
+.vs-yes{color:#34e88a;font-weight:900;font-size:1.1rem}
+.vs-no{color:#cbd5e1;font-weight:600}
 .vs-note{max-width:800px;margin:1.75rem auto 0;text-align:center;font-size:.9rem;color:var(--t2);line-height:1.7}
 .vs-note strong{color:var(--t1)}
 /* ============================================================
@@ -520,11 +520,14 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
   .vs-tabla-wrap{overflow-x:visible}
   .vs-tabla{min-width:0;width:100%}
   .vs-tabla thead{display:none}
-  .vs-tabla tbody tr{display:block;margin-bottom:1.25rem;border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;background:var(--card)}
-  .vs-tabla tbody td{display:flex;justify-content:space-between;align-items:center;text-align:left!important;padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+  .vs-tabla tbody tr{display:block;margin-bottom:1.25rem;border:2px solid var(--border2);border-radius:var(--r2);overflow:hidden;background:var(--card)}
+  .vs-tabla tbody td{display:flex;justify-content:space-between;align-items:center;text-align:left!important;padding:.85rem 1rem;border-bottom:1px solid var(--border);font-size:1rem!important}
   .vs-tabla tbody td:last-child{border-bottom:none}
-  .vs-tabla tbody td:first-child{background:var(--bg3);font-weight:700;display:block;padding:.85rem 1rem}
-  .vs-tabla tbody td:not(:first-child)::before{content:attr(data-label);font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--t3);margin-right:1rem;flex-shrink:0}
+  .vs-tabla tbody td:first-child{background:var(--bg3);font-weight:800;display:block;padding:1rem;color:#fff;font-size:.95rem!important}
+  .vs-tabla tbody td:not(:first-child)::before{content:attr(data-label);font-size:.75rem;font-weight:800;text-transform:uppercase;color:#fff;margin-right:1rem;flex-shrink:0;background:rgba(74,124,246,.25);padding:3px 8px;border-radius:6px}
+  .vs-tabla tbody td.vs-jf{background:rgba(74,124,246,.12)}
+  .vs-tabla tbody .vs-no{font-size:1rem!important;color:#e2e8f0!important;font-weight:700}
+  .vs-tabla tbody .vs-yes{font-size:1.15rem!important}
   section{padding:3.5rem 5%}
   .hero-ctas{flex-direction:column;width:100%}
   .btn-primary,.btn-secondary,.btn-wa{width:100%;justify-content:center}
@@ -920,14 +923,15 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
       <h2 class="s-label" data-i18n="niv.title">Elegí tu sitio web</h2>
       <p class="s-sub" style="margin:0 auto" data-i18n="niv.sub">Probá gratis el Nivel Online, o elegí directamente entre 4 niveles pensados para distintas necesidades. Upgradeable de Estratégica a Premium en cualquier momento, pagando solo la diferencia.</p>
     </div>
-    <div class="reveal" style="margin-top:3rem;margin-bottom:2rem;background:var(--card);border:2px solid var(--green);border-radius:var(--r2);padding:2rem;display:grid;grid-template-columns:1fr 1.4fr;gap:2rem;align-items:center;max-width:1200px;margin-left:auto;margin-right:auto">
-      <div>
-        <div class="pbadge b1-on" data-i18n="t0n" style="display:inline-block">Nivel Online</div>
-        <div class="pprecio" style="color:var(--green)" data-i18n="t0p">GRATIS</div>
-        <div class="psubprecio" data-i18n="t0s">Demo sin compromiso</div>
+    <div class="reveal" style="margin-top:3rem;margin-bottom:2rem;background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(34,197,94,.03));border:2px solid var(--green);border-radius:var(--r2);padding:2.5rem;display:grid;grid-template-columns:1fr 1.4fr;gap:2rem;align-items:center;max-width:1200px;margin-left:auto;margin-right:auto;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(34,197,94,.15)">
+      <div style="position:absolute;top:-50%;left:-10%;width:50%;height:200%;background:radial-gradient(ellipse,rgba(34,197,94,.15) 0%,transparent 70%);pointer-events:none"></div>
+      <div style="position:relative;z-index:1">
+        <div class="pbadge b1-on" data-i18n="t0n" style="display:inline-block;font-size:.85rem;padding:7px 16px;background:var(--green);color:#06210f;font-weight:900;box-shadow:0 4px 16px rgba(34,197,94,.4)">⭐ Nivel Online</div>
+        <div class="pprecio" style="color:var(--green);font-size:3.5rem;text-shadow:0 0 30px rgba(34,197,94,.4)" data-i18n="t0p">GRATIS</div>
+        <div class="psubprecio" style="font-size:1rem;color:var(--t1);font-weight:600" data-i18n="t0s">Demo sin compromiso</div>
       </div>
-      <div>
-        <p class="pdesc" data-i18n="t0d" style="margin-bottom:1rem">Una web de muestra personalizada para tu negocio. La ves, la mostrás, y si te convence elegís un plan. Sin pagar un centavo antes.</p>
+      <div style="position:relative;z-index:1">
+        <p class="pdesc" data-i18n="t0d" style="margin-bottom:1rem;font-size:1rem">Una web de muestra personalizada para tu negocio. La ves, la mostrás, y si te convence elegís un plan. Sin pagar un centavo antes.</p>
         <ul class="fl" style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem">
           <li><span class="fi">✓</span><span data-i18n="t0f1">Web personalizada con tus datos reales</span></li>
           <li><span class="fi">✓</span><span data-i18n="t0f2">Diseño profesional adaptado a tu rubro</span></li>
@@ -1099,8 +1103,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
           <p style="text-align:center;font-size:.82rem;font-weight:700;color:var(--green);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.05em">💡 ALERTAS WEB — incluido en los 4 niveles</p>
           <p style="font-size:.85rem;color:var(--t2);line-height:1.7;margin:0;text-align:center;max-width:680px;margin-left:auto;margin-right:auto">Corren en servidores las 24 horas — los mantenemos, actualizamos y soportamos por vos.<br><strong style="color:var(--t1)">U$D 75/mes</strong> pagando anualmente o con débito automático, o <strong style="color:var(--t1)">U$D 85 mes a mes</strong>.<br>Desde el segundo año: U$D 100/mes o U$D 115 mes a mes.<br>Si no seguís: tu web sigue online y solo se desactivan las automatizaciones.</p>
         </div>
-      </div>
-    </div>
+
         <!-- Add-ons -->
         <div style="padding:.6rem 1.5rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:2fr 1fr 1fr;align-items:center;background:rgba(34,197,94,.04)">
           <span style="font-size:.88rem;color:var(--t1);font-weight:600">🛒 Tienda Digital <span style="font-size:.72rem;color:var(--t3);font-weight:400">(add-on disponible para cualquier nivel)</span></span>
