@@ -106,7 +106,7 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 .hero-stats{display:flex;flex-wrap:wrap;gap:2.5rem;justify-content:center}
 .hero-stat-n{font-family:var(--font-head);font-size:1.8rem;font-weight:800}
 .hero-stat-n span{color:var(--accent)}
-.hero-stat-l{font-size:.78rem;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+.hero-stat-l{font-size:.82rem;color:#e2e8f0;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 /* ============================================================
    SECCIÓN COMUNES
    ============================================================ */
@@ -608,6 +608,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     <li><a href="#planes" data-i18n="nav.n">Planes</a></li>
     <li><a href="#rebomba" data-i18n="nav.rb">Alerta-Web</a></li>
     <li><a href="#tyc-section">T&amp;C</a></li>
+    <li><a href="#jfweb-movi" style="color:var(--green);font-weight:700">JFWEB_MOVI</a></li>
     <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
     <li><a href="#contacto" data-i18n="nav.c">Contacto</a></li>
   </ul>
@@ -927,24 +928,26 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
       <h2 class="s-label" data-i18n="niv.title">Elegí tu sitio web</h2>
       <p class="s-sub" style="margin:0 auto" data-i18n="niv.sub">Probá gratis el Nivel Online, o elegí directamente entre 4 niveles pensados para distintas necesidades. Upgradeable de Estratégica a Premium en cualquier momento, pagando solo la diferencia.</p>
     </div>
-    <div class="reveal" style="margin-top:3rem;margin-bottom:2rem;background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(34,197,94,.03));border:2px solid var(--green);border-radius:var(--r2);padding:2.5rem;display:grid;grid-template-columns:1fr 1.4fr;gap:2rem;align-items:center;max-width:1200px;margin-left:auto;margin-right:auto;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(34,197,94,.15)">
+    <div class="reveal" style="margin-top:3rem;margin-bottom:2rem;background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(34,197,94,.03));border:2px solid var(--green);border-radius:var(--r2);padding:2.5rem;max-width:1200px;margin-left:auto;margin-right:auto;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(34,197,94,.15)">
       <div style="position:absolute;top:-50%;left:-10%;width:50%;height:200%;background:radial-gradient(ellipse,rgba(34,197,94,.15) 0%,transparent 70%);pointer-events:none"></div>
-      <div style="position:relative;z-index:1">
-        <div class="pbadge b1-on" data-i18n="t0n" style="display:inline-block;font-size:.85rem;padding:7px 16px;background:var(--green);color:#06210f;font-weight:900;box-shadow:0 4px 16px rgba(34,197,94,.4)">⭐ Nivel Online</div>
-        <div class="pprecio" style="color:var(--green);font-size:3.5rem;text-shadow:0 0 30px rgba(34,197,94,.4)" data-i18n="t0p">GRATIS</div>
-        <div class="psubprecio" style="font-size:1rem;color:var(--t1);font-weight:600" data-i18n="t0s">Demo sin compromiso</div>
-      </div>
-      <div style="position:relative;z-index:1">
-        <p class="pdesc" data-i18n="t0d" style="margin-bottom:1rem;font-size:1rem">Una web de muestra personalizada para tu negocio. La ves, la mostrás, y si te convence elegís un plan. Sin pagar un centavo antes.</p>
-        <ul class="fl" style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem">
-          <li><span class="fi">✓</span><span data-i18n="t0f1">Web personalizada con tus datos reales</span></li>
-          <li><span class="fi">✓</span><span data-i18n="t0f2">Diseño profesional adaptado a tu rubro</span></li>
-          <li><span class="fi">✓</span><span data-i18n-html="t0f3">Lista en <strong>24-48 horas</strong></span></li>
-          <li><span class="fi">✓</span><span data-i18n="t0f4">La ves antes de pagar</span></li>
-          <li><span class="fi">✓</span><span data-i18n="t0f5">Sin compromiso de compra</span></li>
-          <li><span class="fi">✓</span><span data-i18n="t0f6">Podés compartirla con quien quieras</span></li>
-        </ul>
-        <a href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20mi%20demo%20gratis" target="_blank" rel="noopener noreferrer" class="pcta" style="background:var(--green);color:#fff;margin-top:1rem;display:inline-block" data-i18n="t0c">Pedir mi demo gratis →</a>
+      <div style="position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:2rem;align-items:center">
+        <div style="flex:0 0 auto">
+          <div class="pbadge b1-on" data-i18n="t0n" style="display:inline-block;font-size:.85rem;padding:7px 16px;background:var(--green);color:#06210f;font-weight:900;box-shadow:0 4px 16px rgba(34,197,94,.4)">⭐ Nivel Online</div>
+          <div class="pprecio" style="color:var(--green);font-size:3.5rem;text-shadow:0 0 30px rgba(34,197,94,.4)" data-i18n="t0p">GRATIS</div>
+          <div class="psubprecio" style="font-size:1rem;color:var(--t1);font-weight:600" data-i18n="t0s">Demo sin compromiso</div>
+        </div>
+        <div style="flex:1;min-width:260px">
+          <p class="pdesc" data-i18n="t0d" style="margin-bottom:1rem;font-size:1rem">Una web de muestra personalizada para tu negocio. La ves, la mostrás, y si te convence elegís un plan. Sin pagar un centavo antes.</p>
+          <ul class="fl" style="display:flex;flex-direction:column;gap:.4rem">
+            <li><span class="fi">✓</span><span data-i18n="t0f1">Web personalizada con tus datos reales</span></li>
+            <li><span class="fi">✓</span><span data-i18n="t0f2">Diseño profesional adaptado a tu rubro</span></li>
+            <li><span class="fi">✓</span><span data-i18n-html="t0f3">Lista en <strong>24-48 horas</strong></span></li>
+            <li><span class="fi">✓</span><span data-i18n="t0f4">La ves antes de pagar</span></li>
+            <li><span class="fi">✓</span><span data-i18n="t0f5">Sin compromiso de compra</span></li>
+            <li><span class="fi">✓</span><span data-i18n="t0f6">Podés compartirla con quien quieras</span></li>
+          </ul>
+          <a href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20mi%20demo%20gratis" target="_blank" rel="noopener noreferrer" class="pcta" style="background:var(--green);color:#fff;margin-top:1rem;display:inline-block" data-i18n="t0c">Pedir mi demo gratis →</a>
+        </div>
       </div>
     </div>
 
@@ -969,7 +972,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
 <li>📱 Diseño responsive — se ve perfecto en celular</li>
 <li>✅ Entrega en 5 días hábiles · 1 revisión · Garantía 30 días</li>
 </ul>
-<p style="margin:.75rem 0 .5rem;font-size:.82rem;background:rgba(240,180,41,.1);border:1px solid rgba(240,180,41,.3);border-radius:var(--r);padding:.6rem 1rem;color:var(--gold);font-weight:700">⚠️ Este plan no incluye logo profesional ni multiidioma. Para eso, mirá Premium o JFWEB_MOVI.</p>
+<p style="margin:.75rem 0 .5rem;font-size:.82rem;background:rgba(240,180,41,.1);border:1px solid rgba(240,180,41,.3);border-radius:var(--r);padding:.6rem 1rem;color:var(--gold);font-weight:700">⚠️ Este plan no incluye logo profesional, multiidioma ni la web en tu celular (PWA). Para eso, mirá Premium o JFWEB_MOVI.</p>
 
         <div style="margin-top:1.25rem;padding:1.25rem;background:rgba(34,197,94,.08);border:2px solid rgba(34,197,94,.3);border-radius:var(--r2);text-align:center">
           <p style="font-size:.95rem;font-weight:800;color:var(--green);margin-bottom:.5rem">🚀 ALERTAS WEB — 17 AUTOMATIZACIONES EN TODOS NUESTROS PRODUCTOS</p>
@@ -1149,6 +1152,48 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
         </div>
         <div id="simPreview"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- JFWEB_MOVI DESTACADO -->
+<section id="jfweb-movi" style="background:linear-gradient(135deg,rgba(34,197,94,.06) 0%,var(--bg) 60%);border-top:2px solid rgba(34,197,94,.2);border-bottom:2px solid rgba(34,197,94,.2)">
+  <div class="s-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem">
+      <div style="display:inline-block;background:var(--green);color:#06210f;font-weight:900;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;padding:6px 18px;border-radius:20px;margin-bottom:1rem">⭐ Producto estrella</div>
+      <h2 style="font-family:var(--font-head);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem">JFWEB_MOVI</h2>
+      <p style="font-size:1.15rem;color:var(--green);font-weight:700;margin-bottom:.5rem">Tu web Premium + 17 ALERTAS WEB, todo en tu celular como una app</p>
+      <p style="max-width:680px;margin:0 auto;font-size:1rem;color:var(--t2);line-height:1.7">No es una web aparte ni un nivel reducido. Es exactamente lo mismo que Premium — tu sitio completo con SEO, multiidioma, blog — más las 17 automatizaciones de ALERTAS WEB, todo empaquetado como una aplicación instalable (PWA) que vivís y manejás desde tu celular, sin depender de una compu.</p>
+    </div>
+
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:3rem">
+      <div style="background:var(--card);border:1px solid rgba(34,197,94,.2);border-radius:var(--r2);padding:1.5rem;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:.75rem">📱</div>
+        <h4 style="font-family:var(--font-head);font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:.5rem">Instalable como app</h4>
+        <p style="font-size:.88rem;color:var(--t2);line-height:1.6">Se instala en la pantalla de inicio del celular. Sin App Store, sin Play Store. Tus clientes la abren como cualquier app.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid rgba(34,197,94,.2);border-radius:var(--r2);padding:1.5rem;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:.75rem">🚀</div>
+        <h4 style="font-family:var(--font-head);font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:.5rem">17 ALERTAS WEB incluidas</h4>
+        <p style="font-size:.88rem;color:var(--t2);line-height:1.6">Turnos, catálogo, stock, cobros, reseñas, Vendedor IA y más — automatizados en WhatsApp desde el primer día.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid rgba(34,197,94,.2);border-radius:var(--r2);padding:1.5rem;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:.75rem">📶</div>
+        <h4 style="font-family:var(--font-head);font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:.5rem">Funciona sin conexión</h4>
+        <p style="font-size:.88rem;color:var(--t2);line-height:1.6">La PWA carga aunque no haya internet. Tu negocio está disponible siempre, en cualquier condición.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid rgba(34,197,94,.2);border-radius:var(--r2);padding:1.5rem;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:.75rem">🌍</div>
+        <h4 style="font-family:var(--font-head);font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:.5rem">Multiidioma</h4>
+        <p style="font-size:.88rem;color:var(--t2);line-height:1.6">Español e inglés incluidos. Tu web le habla al mundo — y el mundo puede encontrarte en Google en ambos idiomas.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="background:var(--card);border:2px solid var(--green);border-radius:var(--r2);padding:2rem;max-width:680px;margin:0 auto;text-align:center;box-shadow:0 8px 40px rgba(34,197,94,.12)">
+      <p style="font-size:.82rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem">Todo esto por</p>
+      <div style="font-family:var(--font-head);font-size:3rem;font-weight:900;color:#fff">$299 <span style="font-size:1.2rem;color:var(--t2)">USD</span></div>
+      <p style="font-size:.9rem;color:var(--t2);margin-bottom:1.5rem">Pago único · + U$D 75/mes ALERTAS WEB · <strong style="color:var(--green)">3 meses GRATIS</strong></p>
+      <a href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20el%20plan%20JFWEB_MOVI" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,var(--green),#16a34a);color:#06210f;font-weight:900;font-size:1.05rem;padding:14px 32px;border-radius:var(--r);text-decoration:none;box-shadow:0 6px 24px rgba(34,197,94,.35)">Quiero JFWEB_MOVI →</a>
     </div>
   </div>
 </section>
