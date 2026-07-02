@@ -1,7 +1,7 @@
 {
-  "name": "RE-BOMBA Panel",
+  "name": "Panel del Dueño",
   "short_name": "Panel",
-  "description": "Panel de gestión RE-BOMBA — JF Servicios Web",
+  "description": "Panel de gestión — JF Servicios Web",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
