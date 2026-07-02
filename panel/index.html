@@ -7,14 +7,14 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Panel JF">
-<meta name="description" content="Panel de gestión RE-BOMBA — JF Servicios Web">
+<meta name="apple-mobile-web-app-title" content="Panel del Dueño">
+<meta name="description" content="Panel del Dueño — JF Servicios Web">
 <link rel="manifest" href="./manifest.json">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-<title>Panel RE-BOMBA</title>
+<title>Panel del Dueño</title>
 <style>
 /* ═══════════════════════════════════════════════
    TOKENS
@@ -358,7 +358,7 @@ window.addEventListener('orientationchange', setVH);
   <!-- HEADER -->
   <div id="header">
     <div>
-      <div class="h-logo">RE-BOMBA</div>
+      <div class="h-logo">Panel del Dueño</div>
       <div class="h-negocio" id="h-negocio">Cargando...</div>
     </div>
     <div class="h-live"><div class="h-live-dot"></div><span id="h-estado">Activo</span></div>
@@ -411,7 +411,7 @@ window.addEventListener('orientationchange', setVH);
 
       <div class="card">
         <div class="card-title">Estado del sistema</div>
-        <div class="stat"><span class="stat-k">RE-BOMBA</span><span class="stat-v verde" id="s-rebomba">—</span></div>
+        <div class="stat"><span class="stat-k">Alertas Web</span><span class="stat-v verde" id="s-rebomba">—</span></div>
         <div class="stat"><span class="stat-k">WhatsApp API</span><span class="stat-v verde" id="s-wa">—</span></div>
         <div class="stat"><span class="stat-k">Módulos activos</span><span class="stat-v" id="s-mods">—</span></div>
         <div class="stat"><span class="stat-k">Msgs gratuitos restantes</span><span class="stat-v verde" id="s-msgs-rest">—</span></div>
@@ -548,7 +548,7 @@ window.addEventListener('orientationchange', setVH);
     <!-- ═══ MENSAJES ═══ -->
     <div class="section" id="sec-mensajes">
       <div class="card">
-        <div class="card-title">Log RE-BOMBA <span class="sub" id="log-count">cargando...</span></div>
+        <div class="card-title">Log Alertas Web <span class="sub" id="log-count">cargando...</span></div>
         <div id="log-lista"></div>
       </div>
       <div class="card">
@@ -556,7 +556,7 @@ window.addEventListener('orientationchange', setVH);
         <div id="conv-lista"></div>
       </div>
       <div class="card">
-        <div class="card-title">Módulos RE-BOMBA <span class="sub" id="mod-plan-label">—</span></div>
+        <div class="card-title">Módulos Alertas Web <span class="sub" id="mod-plan-label">—</span></div>
         <div class="sec-label verde">Estratégica — Módulos 1 al 9</div>
         <div class="mod-grid" id="mod-grid-estrat"></div>
         <div class="sec-label amarillo" style="margin-top:4px;">Premium — Módulos 10 al 16</div>
@@ -650,10 +650,10 @@ window.addEventListener('orientationchange', setVH);
    CONFIG — EDITAR POR CLIENTE
 ═══════════════════════════════════════════════ */
 const CONFIG = {
-  GAS_URL:         'https://script.google.com/macros/s/AKfycbx3vXOqdFN2G7PmvrbCFC_N1hqPszhOrvwFkUz0plz0tiim5INAIQcdnhMzBnF8r61fZw/exec',
-  NEGOCIO:         'JF Test MOVI',
+  GAS_URL:         'https://nsnhxzqewyilitmseouh.supabase.co/functions/v1/panel-data',
+  NEGOCIO:         'JF Servicios Web',
   POLL_INTERVAL:   30000,
-  CACHE_KEY:       'rebomba-panel-data-v2',
+  CACHE_KEY:       'jf-panel-data-v1',
   VAPID_PUBLIC_KEY:'BEase7ZK8cgKsWZTkVXPuAN3TUwDsLBmEUssrBHbrFumAh0IS4MiYbrv98fo4ouhOCjxWhXF0xYW2XYRSF4KTAM',
   PUSH_WORKER_URL:  'https://rebomba-push.jfserviciosweb.workers.dev'
 };
