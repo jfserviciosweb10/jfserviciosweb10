@@ -1,6 +1,6 @@
 /* RE-BOMBA Panel — Service Worker v1.2
    Rutas relativas: funciona en GitHub Pages con o sin dominio propio */
-const CACHE_NAME = 'rebomba-panel-v2';
+const CACHE_NAME = 'rebomba-panel-v3';
 const ASSETS = [
   './index.html',
   './offline.html',
