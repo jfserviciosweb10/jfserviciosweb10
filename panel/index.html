@@ -1380,10 +1380,10 @@ async function activarPushNotifications() {
         applicationServerKey: urlBase64ToUint8Array(PUSH_CONFIG.VAPID_PUBLIC_KEY)
       });
     }
-    const response = await fetch(CONFIG.PUSH_WORKER_URL + '/subscribe', {
+    const response = await fetch(CONFIG.PANEL_DATA_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ subscription: sub.toJSON() })
+      body: JSON.stringify({ action: 'savePushSubscription', subscription: sub.toJSON(), tel_duenio: CONFIG.TEL_DUENIO })
     });
     const result = await response.json();
     if (result.ok) {
