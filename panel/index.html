@@ -942,8 +942,12 @@ function cotizHTML(c) {
 async function accionCotiz(tipo, id) {
   showToast('⏳ Procesando...');
   const action = tipo === 'cerrar' ? 'cerrarCotizacion' : 'seguimientoCotizacion';
-  await postGAS({ action, id });
-  showToast(tipo === 'cerrar' ? '✅ Cotización cerrada' : '📲 Seguimiento enviado por WA');
+  const r = await postGAS({ action, id, tel_duenio: CONFIG.TEL_DUENIO });
+  if (r && r.ok === false) {
+    showToast('⚠ ' + (r.error || 'No se pudo procesar'));
+  } else {
+    showToast(tipo === 'cerrar' ? '✅ Cotización cerrada' : '📲 Seguimiento enviado por WA');
+  }
   setTimeout(cargarDatos, 1500);
 }
 
@@ -992,8 +996,8 @@ async function pagarVenc(id) {
 }
 
 async function recordarVenc(id) {
-  await postGAS({ action:'recordarVencimiento', id });
-  showToast('📲 Recordatorio enviado por WA');
+  const r = await postGAS({ action:'recordarVencimiento', id, tel_duenio: CONFIG.TEL_DUENIO });
+  showToast(r && r.ok ? '📲 Recordatorio enviado por WA' : '⚠ ' + (r?.error || 'No se pudo enviar'));
 }
 
 /* ── STOCK ── */
@@ -1163,11 +1167,15 @@ async function confirmarStock() {
 ═══════════════════════════════════════════════ */
 async function accion(tipo) {
   showToast('⏳ Procesando...');
-  await postGAS({ action: tipo });
+  const r = await postGAS({ action: tipo, tel_duenio: CONFIG.TEL_DUENIO });
+  if (r && r.ok === false) {
+    showToast('⚠ ' + (r.error || 'No se pudo procesar'));
+    return;
+  }
   const msgs = {
-    'seguimiento-hot':    '✅ Seguimiento enviado a leads HOT',
-    'archivar-frios':     '🗑 Leads fríos archivados',
-    'recordar-pendientes':'📲 Recordatorio enviado a turnos pendientes'
+    'seguimiento-hot':    `✅ Seguimiento enviado a ${r?.enviados ?? 0} de ${r?.total ?? 0} leads HOT`,
+    'archivar-frios':     `🗑 ${r?.archivados ?? 0} leads fríos archivados`,
+    'recordar-pendientes':`📲 Recordatorio enviado a ${r?.enviados ?? 0} de ${r?.total ?? 0} turnos pendientes`
   };
   showToast(msgs[tipo] || '✅ Listo');
   setTimeout(cargarDatos, 2000);
