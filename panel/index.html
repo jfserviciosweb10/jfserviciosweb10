@@ -331,6 +331,17 @@ body {
 </style>
 </head>
 <body>
+<div id="loginOverlay" style="position:fixed;inset:0;background:#0A0D0F;z-index:9999;display:none;align-items:center;justify-content:center;padding:24px">
+  <div style="max-width:340px;width:100%;text-align:center">
+    <div style="font-size:2.5rem;margin-bottom:.5rem">🔒</div>
+    <h1 style="font-size:1.15rem;margin:0 0 .5rem;color:#00E676">Panel privado</h1>
+    <p style="font-size:.85rem;color:#9898b8;margin:0 0 1.25rem;line-height:1.4">Ingresá la contraseña para ver tus datos.</p>
+    <input id="loginPassInput" type="password" placeholder="Contraseña" autocomplete="current-password"
+      style="width:100%;box-sizing:border-box;padding:12px 14px;border-radius:10px;border:2px solid #2a2a3a;background:#14141f;color:#fff;font-size:1rem;margin-bottom:10px">
+    <button onclick="intentarLogin()" style="width:100%;padding:12px;border-radius:10px;border:none;background:#00E676;color:#06210f;font-weight:800;font-size:.95rem;cursor:pointer">Entrar</button>
+    <p id="loginError" style="font-size:.8rem;color:#f87171;margin-top:10px;min-height:1em"></p>
+  </div>
+</div>
 
 <script>
 /* ═══════════════════════════════════════════════
@@ -658,6 +669,7 @@ const CONFIG = {
   VAPID_PUBLIC_KEY:'BEase7ZK8cgKsWZTkVXPuAN3TUwDsLBmEUssrBHbrFumAh0IS4MiYbrv98fo4ouhOCjxWhXF0xYW2XYRSF4KTAM',
   PUSH_WORKER_URL:  'https://rebomba-push.jfserviciosweb.workers.dev'
 };
+CONFIG.PWD_KEY = 'panel-pwd-hash-' + CONFIG.TEL_DUENIO;
 
 /* ═══════════════════════════════════════════════
    MÓDULOS JF — 17 oficiales
@@ -713,12 +725,53 @@ function tabNegocios(tab) {
 }
 
 /* ═══════════════════════════════════════════════
+   LOGIN — contraseña del panel (agregado 06/07)
+═══════════════════════════════════════════════ */
+async function sha256Hex(texto) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(texto));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function mostrarLogin(mensajeError) {
+  const overlay = document.getElementById('loginOverlay');
+  const yaVisible = overlay.style.display === 'flex';
+  overlay.style.display = 'flex';
+  if (mensajeError) document.getElementById('loginError').textContent = mensajeError;
+  if (!yaVisible) {
+    const input = document.getElementById('loginPassInput');
+    input.value = '';
+    input.focus();
+    input.onkeydown = (e) => { if (e.key === 'Enter') intentarLogin(); };
+  }
+}
+
+function ocultarLogin() {
+  document.getElementById('loginOverlay').style.display = 'none';
+}
+
+async function intentarLogin() {
+  const pass = document.getElementById('loginPassInput').value;
+  if (!pass) return;
+  const hash = await sha256Hex(pass);
+  localStorage.setItem(CONFIG.PWD_KEY, hash);
+  ocultarLogin();
+  mostrarLoading(true);
+  await cargarDatos(true);
+}
+
+/* ═══════════════════════════════════════════════
    CARGA DE DATOS
 ═══════════════════════════════════════════════ */
 async function cargarDatos(showLoading = false) {
   if (showLoading) mostrarLoading(true);
+  const passHash = localStorage.getItem(CONFIG.PWD_KEY) || '';
   try {
-    const res  = await fetch(CONFIG.PANEL_DATA_URL + '?tel_duenio=' + encodeURIComponent(CONFIG.TEL_DUENIO), { method:'GET', cache:'no-cache' });
+    const res  = await fetch(CONFIG.PANEL_DATA_URL + '?tel_duenio=' + encodeURIComponent(CONFIG.TEL_DUENIO) + '&password_hash=' + encodeURIComponent(passHash), { method:'GET', cache:'no-cache' });
+    if (res.status === 401) {
+      if (showLoading) mostrarLoading(false);
+      mostrarLogin(passHash ? 'Contraseña incorrecta, probá de nuevo.' : '');
+      return;
+    }
     const json = await res.json();
     DATA = json;
     localStorage.setItem(CONFIG.CACHE_KEY, JSON.stringify({ ts: Date.now(), data: json }));
@@ -1183,11 +1236,16 @@ async function accion(tipo) {
 
 async function postGAS(body) {
   try {
+    const passHash = localStorage.getItem(CONFIG.PWD_KEY) || '';
     const res = await fetch(CONFIG.PANEL_DATA_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
+      body: JSON.stringify({ ...body, tel_duenio: CONFIG.TEL_DUENIO, password_hash: passHash })
     });
+    if (res.status === 401) {
+      mostrarLogin('Tu sesión venció — ingresá la contraseña de nuevo.');
+      return { ok: false, error: 'Sesión vencida' };
+    }
     const result = await res.json();
     if (result.ok === false) showToast('⚠ ' + (result.error || 'Error al procesar'));
     return result;
