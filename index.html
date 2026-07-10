@@ -617,7 +617,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     <li><a href="#" onclick="openTyC();return false" data-no-spy="1">T&amp;C</a></li>
     <li><a href="#jfweb-movi">JFWEB_MOVI</a></li>
     <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-    <li><a href="/blog/">Blog</a></li>
+    <li><a href="blog/">Blog</a></li>
     <li><a href="#contacto" data-i18n="nav.c">Contacto</a></li>
   </ul>
   <div class="nav-right">
@@ -633,7 +633,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
   <a href="#preview-webs" onclick="closeMenu()">Ejemplos reales</a>
   <a href="#rebomba" onclick="closeMenu()" data-i18n="nav.rb">Alerta-Web</a>
   <a href="#" onclick="closeMenu();openTyC();return false">T&amp;C</a>
-  <a href="/blog/" onclick="closeMenu()">Blog</a>
+  <a href="blog/" onclick="closeMenu()">Blog</a>
   <a href="#contacto" onclick="closeMenu()" data-i18n="nav.c">Contacto</a>
 </div>
 
@@ -1809,7 +1809,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
         <li><a href="#planes">Planes</a></li>
         <li><a href="#rebomba">Alerta-Web</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="/blog/">Blog</a></li>
+        <li><a href="blog/">Blog</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -2007,17 +2007,8 @@ var RUBROS=["academia-de-idiomas", "aire-frio-service", "carpinteria-artesanal",
 
 // Rubros sin backend real generado todavía (solo vidriera estática).
 // Cuando se genere la carpeta real con jf-gen-alertas.js, sacar de esta lista.
-var BACKEND_PENDING={
-  "gastronomia":"demo_03_gastronomia.html",
-  "pizzeria":"demo_04_pizzeria.html",
-  "barberia":"demo_07_barberia.html",
-  "mecanica-automotriz":"demo_09_mecanica.html",
-  "electricista":"demo_12_electricista.html",
-  "fletes-mudanzas":"demo_14_fletes.html",
-  "jardineria-paisajismo":"demo_15_jardineria.html",
-  "estudio-juridico":"demo_20_abogado.html",
-  "centro-medico":"demo_21_centro_medico.html"
-};
+// (10/7/2026: los 9 pendientes ya tienen backend real — lista vacía)
+var BACKEND_PENDING={};
 var RUBRO_LABELS={"academia-de-idiomas": "Academia de Idiomas Lingua", "agencia-de-viajes": "Viajes del Sol", "agencia-inmobiliaria": "Inmobiliaria Del Centro", "aire-frio-service": "AireFrío Service", "carpinteria-artesanal": "Carpintería Don Marcos", "centro-cultural": "Centro Cultural La Nave", "cerrajeria-24hs": "Cerrajería 24hs Rápida", "cine-multiplex": "Cine Multiplex Estrella", "complejo-deportivo": "Complejo Deportivo Arena", "construcciones-jc": "Construcciones JC", "cosmeticos-naturales": "Cosméticos Naturales Pura Vida", "delivery-express": "Delivery Express 24hs", "diseno-grafico-studio": "Estudio Gráfico Forma", "estancia-tradicional": "Estancia La Pampa Grande", "estetica-facial-pro": "Estética Facial Pro", "estudio-vargas-arquitectos": "Estudio Vargas Arquitectos", "ferreteria-el-clavo": "Ferretería El Clavo", "fisioterapia-movewell": "Fisioterapia MoveWell", "foto-studio": "Foto Studio Lens", "guarderia-feliz": "Guardería Feliz", "gym-powerfit": "Gym PowerFit", "hotel-la-cumbrecita": "Hotel Serrano La Cumbrecita", "hotel-las-sierras": "Hotel Las Sierras", "instituto-educativo": "Instituto Educativo San Martín", "lavadero-de-autos": "Lavadero de Autos Premium", "limpieza-premium": "Limpieza Premium", "maquilladora-pro": "Maquilladora Pro Studio", "moda-style": "Moda Style Boutique", "muebleria-moderna": "Mueblería Moderna", "nutricion-saludable": "Nutrición Saludable Lic. Gómez", "obra-segura": "Obra Segura Construcciones", "odontologia-gomez": "Odontología Gómez", "panaderia-la-tradicion": "Panadería La Tradición", "peluqueria-canina": "Peluquería Canina Happy Dog", "pintureria-color": "Pinturería Color Total", "pisos-y-revestimientos": "Pisos y Revestimientos Élite", "plomeria-total": "Plomería Total", "psicologia-integral": "Psicología Integral", "salon-de-bodas": "Salón de Bodas El Jardín", "spa-relax-total": "Spa Relax Total", "tattoo-studio-dark": "Tattoo Studio Dark Ink", "taxi-ejecutivo": "Taxi Ejecutivo Premium", "techados-del-sur": "Techados del Sur", "veterinaria-mascotas": "Veterinaria Mascotas Felices", "gastronomia": "El Fogón", "pizzeria": "La Leña", "barberia": "BarberKing", "mecanica-automotriz": "TallerPro", "electricista": "ElectroMax", "fletes-mudanzas": "FlexFlete", "jardineria-paisajismo": "Verde Vivo", "estudio-juridico": "Lex & Partners", "centro-medico": "MediCentro"};
 
 function initSim(){
