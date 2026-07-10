@@ -1,0 +1,38 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Respaldo automático — cada cambio queda guardado, restauración en minutos</title>
+<defs>
+<linearGradient id="bgGrad3" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#1e1e30"/>
+<stop offset="100%" stop-color="#181828"/>
+</linearGradient>
+<linearGradient id="cloudGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#6e95ff"/>
+<stop offset="100%" stop-color="#4a7cf6"/>
+</linearGradient>
+</defs>
+<rect width="600" height="300" fill="url(#bgGrad3)"/>
+<g opacity="0.06" stroke="#4a7cf6" stroke-width="1">
+<line x1="0" y1="70" x2="600" y2="70"/>
+<line x1="0" y1="230" x2="600" y2="230"/>
+</g>
+<circle cx="300" cy="145" r="98" fill="#4a7cf6" opacity="0.08"/>
+<path d="M225 175 C200 175 182 157 182 134 C182 111 200 94 222 93 C228 68 250 50 277 50 C307 50 331 71 336 99 C360 100 380 119 380 143 C380 167 360 186 336 186 L225 186 Z" fill="url(#cloudGrad)"/>
+<g transform="translate(300,143)">
+<path d="M-30 0 A30 30 0 1 1 0 30" fill="none" stroke="#181828" stroke-width="9" stroke-linecap="round"/>
+<path d="M0 -30 A30 30 0 1 1 -30 0" fill="none" stroke="#181828" stroke-width="9" stroke-linecap="round"/>
+<path d="M-30 -8 L-30 0 L-22 0" fill="none" stroke="#181828" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 8 L30 0 L22 0" fill="none" stroke="#181828" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g fill="#22c55e">
+<circle cx="180" cy="245" r="6"/>
+<circle cx="215" cy="245" r="6"/>
+<circle cx="250" cy="245" r="6"/>
+<circle cx="285" cy="245" r="8"/>
+</g>
+<g fill="#7070a0" opacity="0.5">
+<circle cx="320" cy="245" r="5"/>
+<circle cx="350" cy="245" r="5"/>
+<circle cx="380" cy="245" r="5"/>
+<circle cx="410" cy="245" r="5"/>
+</g>
+</svg>

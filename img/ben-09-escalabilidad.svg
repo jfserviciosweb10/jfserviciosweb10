@@ -1,0 +1,31 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Escalabilidad — el sitio soporta picos masivos de tráfico sin caerse</title>
+<defs>
+<linearGradient id="bgGrad2" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#1e1e30"/>
+<stop offset="100%" stop-color="#181828"/>
+</linearGradient>
+<linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+<stop offset="0%" stop-color="#22c55e"/>
+<stop offset="100%" stop-color="#4a7cf6"/>
+</linearGradient>
+</defs>
+<rect width="600" height="300" fill="url(#bgGrad2)"/>
+<g opacity="0.06" stroke="#4a7cf6" stroke-width="1">
+<line x1="0" y1="70" x2="600" y2="70"/>
+<line x1="0" y1="230" x2="600" y2="230"/>
+</g>
+<line x1="130" y1="235" x2="490" y2="235" stroke="#7070a0" stroke-width="1.5" opacity="0.4"/>
+<rect x="155" y="190" width="34" height="45" rx="4" fill="#323248"/>
+<rect x="215" y="160" width="34" height="75" rx="4" fill="#323248"/>
+<rect x="275" y="120" width="34" height="115" rx="4" fill="url(#barGrad)"/>
+<rect x="335" y="85" width="34" height="150" rx="4" fill="url(#barGrad)"/>
+<rect x="395" y="60" width="34" height="175" rx="4" fill="url(#barGrad)"/>
+<path d="M155 205 L232 175 L292 132 L352 100 L412 72" fill="none" stroke="#ffd166" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="412" cy="72" r="9" fill="#ffd166"/>
+<circle cx="412" cy="72" r="16" fill="#ffd166" opacity="0.25"/>
+<g fill="#f0f0f8" opacity="0.85">
+<circle cx="472" cy="80" r="10"/>
+<path d="M456 108 C456 96 465 90 472 90 C479 90 488 96 488 108" fill="#f0f0f8"/>
+</g>
+</svg>
