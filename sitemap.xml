@@ -2,31 +2,151 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jfserviciosweb.com/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jfserviciosweb.com/#inicio</loc>
-    <lastmod>2024-12-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jfserviciosweb.com/#nosotros</loc>
-    <lastmod>2024-12-09</lastmod>
+    <loc>https://jfserviciosweb.com/#ganchos2</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jfserviciosweb.com/#servicios</loc>
-    <lastmod>2024-12-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://jfserviciosweb.com/#planes</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://jfserviciosweb.com/#preview-webs</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/#rebomba</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/#faq</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jfserviciosweb.com/#contacto</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/primera-respuesta-automatica-whatsapp-negocio.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/confirmacion-automatica-de-turnos-por-whatsapp.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/como-evitar-que-los-clientes-falten-a-los-turnos.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/como-medir-la-satisfaccion-de-tus-clientes-automaticamente.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/como-evitar-malas-resenas-antes-de-que-pasen.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/como-conseguir-resenas-de-google-automaticamente.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/como-recuperar-clientes-inactivos-por-whatsapp.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/como-cerrar-mas-presupuestos-con-seguimiento-automatico.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/reporte-semanal-automatico-para-tu-negocio.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/catalogo-de-productos-por-whatsapp-automatico.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/generador-de-posteos-para-redes-sociales-con-ia.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/como-actualizar-precios-de-forma-automatica.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/preguntas-frecuentes-automaticas-con-inteligencia-artificial.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/control-automatico-de-vencimientos-y-cobros.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/vendedor-con-inteligencia-artificial-para-whatsapp.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/alerta-automatica-de-stock-bajo-para-tu-negocio.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/agenda-automatica-para-duenos-de-negocio.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
