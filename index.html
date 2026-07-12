@@ -89,7 +89,9 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 .hero-title{font-family:var(--font-head);font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:1.5rem;text-align:center;width:100%}
 .hero-title em{font-style:normal;color:var(--accent)}
 .hero-title .gold{color:var(--gold)}
-.hero-sub{font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--t1);max-width:none;margin:0 auto 2.5rem;line-height:1.6;font-weight:800;letter-spacing:.01em;border:2px solid var(--gold);border-radius:var(--r2);padding:1.1rem 1.5rem;background:rgba(240,180,41,.08)}
+.hero-sub{font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--t1);max-width:none;margin:0 auto 2.5rem;line-height:1.6;font-weight:800;letter-spacing:.01em;border:2px solid var(--gold);border-radius:var(--r2);padding:1.1rem 1.5rem;background:rgba(240,180,41,.08);min-height:6.5rem;box-sizing:border-box}
+@media(max-width:640px){.hero-sub{min-height:10.5rem}}
+@media(min-width:641px) and (max-width:900px){.hero-sub{min-height:8rem}}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:3rem}
 .hero-ctas .btn-primary{text-align:center;line-height:1.4;white-space:normal;max-width:100%;word-break:break-word;font-size:clamp(.95rem,1.8vw,1.15rem);font-weight:800;letter-spacing:.01em}
 @media(max-width:900px){
