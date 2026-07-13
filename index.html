@@ -89,7 +89,7 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 .hero-title{font-family:var(--font-head);font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:1.5rem;text-align:center;width:100%}
 .hero-title em{font-style:normal;color:var(--accent)}
 .hero-title .gold{color:var(--gold)}
-.hero-sub{font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--t1);max-width:none;margin:0 auto 2.5rem;line-height:1.6;font-weight:800;letter-spacing:.01em;border:2px solid var(--gold);border-radius:var(--r2);padding:1.1rem 1.5rem;background:rgba(240,180,41,.08);min-height:6.5rem;box-sizing:border-box}
+.hero-sub{font-size:clamp(.95rem,1.8vw,1.03rem);color:var(--t1);max-width:none;margin:0 auto 2.5rem;line-height:1.6;font-weight:800;letter-spacing:.01em;border:2px solid var(--gold);border-radius:var(--r2);padding:1.1rem 1.25rem;background:rgba(240,180,41,.08);min-height:6.5rem;box-sizing:border-box}
 @media(max-width:640px){.hero-sub{min-height:10.5rem}}
 @media(min-width:641px) and (max-width:900px){.hero-sub{min-height:8rem}}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:3rem}
@@ -142,8 +142,7 @@ section{padding:5rem 5%}
 @media(max-width:640px){.benef-grid{grid-template-columns:1fr}.benef-img{height:160px}}
 #advertencia{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 5%}
 #advertencia .adv-text{font-size:1.05rem;line-height:1.8;color:var(--t2)}
-#advertencia .adv-text strong{color:var(--gold);font-weight:800;display:inline-block}
-@media(min-width:640px){#advertencia .adv-text strong{white-space:nowrap}}
+#advertencia .adv-text strong{color:var(--gold);font-weight:800;display:block;margin-top:.6rem}
 /* ============================================================
    GANCHOS (preguntas/respuesta con imágenes)
    ============================================================ */
@@ -619,7 +618,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
   <div class="hero-content">
     <div class="hero-badge" data-i18n="hero.badge">🏪 Creamos webs + alertas por WhatsApp para negocios, pymes y emprendedores</div>
     <h1 class="hero-title" data-i18n-html="hero.title">Tu pyme, <span class="gold">con web propia y WhatsApp que vende solo</span></h1>
-    <p class="hero-sub" data-i18n="hero.sub">Da turnos, responde preguntas y cierra ventas por vos — sin estar obsesionado con el&nbsp;celular.</p>
+    <p class="hero-sub" data-i18n="hero.sub">Da turnos, responde preguntas y cierra ventas por vos — sin estar obsesionado con el celular.</p>
     <p class="hero-decl" style="font-size:clamp(.95rem,2.6vw,1.25rem);font-weight:800;color:var(--gold);margin:0 auto 1.6rem;line-height:1.5;letter-spacing:.01em;border:2px solid var(--gold);border-radius:var(--r2);padding:.9rem 1.4rem;background:rgba(240,180,41,.08);max-width:none" data-i18n="hero.decl">Nuestro objetivo no es venderte una web. Es que factures más.</p>
     <div class="hero-ctas">
       <a href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20probar%20la%20prueba%20gratis%20de%2010%20d%C3%ADas" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-i18n="hero.cta2">Probá 10 días gratis, sin tarjeta →</a>
