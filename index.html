@@ -1722,8 +1722,11 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
           </div>
         </div>
         <div class="contacto-extras">
-          <button class="extra-btn" onclick="toggleQRJF()" aria-label="Ver QR de contacto">
-            📱 Escanear QR
+          <button class="extra-btn" onclick="toggleQRJF('whatsapp')" aria-label="Ver QR de WhatsApp">
+            💬 QR → WhatsApp
+          </button>
+          <button class="extra-btn" onclick="toggleQRJF('web')" aria-label="Ver QR de la web">
+            🌐 QR → Mi Web
           </button>
           <a class="extra-btn" href="#" onclick="descargarVCFJF(event)" aria-label="Guardar contacto">
             💾 Guardar contacto
@@ -1731,7 +1734,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
         </div>
         <div class="qr-wrap-jf">
           <div id="qrCanvasJF"></div>
-          <p id="qrLabelJF" style="display:none">Escaneá para ir directo a WhatsApp</p>
+          <p id="qrLabelJF" style="display:none"></p>
         </div>
       </div>
       <div class="contact-form">
@@ -1973,21 +1976,35 @@ function toggleFaq(btn){
 // QR + VCF — sección Contacto
 // ============================================================
 (function(){
-  var qrGenerated = false;
-  window.toggleQRJF = function(){
+  var qrActual = null; // 'whatsapp' | 'web' | null
+  var DATOS_QR = {
+    whatsapp: { texto: 'https://wa.me/5493496591636', label: 'Escaneá para ir directo a WhatsApp' },
+    web:      { texto: 'https://jfserviciosweb.com',   label: 'Escaneá para ver esta web' }
+  };
+  window.toggleQRJF = function(tipo){
     var wrap = document.getElementById('qrCanvasJF');
     var label = document.getElementById('qrLabelJF');
-    if(!qrGenerated && typeof QRCode !== 'undefined'){
-      new QRCode(wrap, {
-        text: 'https://wa.me/5493496591636',
-        width: 160, height: 160,
-        colorDark: '#4a7cf6', colorLight: '#ffffff',
-        correctLevel: QRCode.CorrectLevel.H
-      });
-      qrGenerated = true;
+    if(typeof QRCode === 'undefined') return;
+
+    // Si tocás el mismo botón que ya está mostrado, lo ocultás (toggle)
+    if(qrActual === tipo && wrap.classList.contains('show')){
+      wrap.classList.remove('show');
+      label.style.display = 'none';
+      return;
     }
-    var showing = wrap.classList.toggle('show');
-    label.style.display = showing ? 'block' : 'none';
+
+    // Regenerar el QR con el contenido correcto
+    wrap.innerHTML = '';
+    new QRCode(wrap, {
+      text: DATOS_QR[tipo].texto,
+      width: 160, height: 160,
+      colorDark: '#4a7cf6', colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.H
+    });
+    qrActual = tipo;
+    wrap.classList.add('show');
+    label.textContent = DATOS_QR[tipo].label;
+    label.style.display = 'block';
   };
 })();
 window.descargarVCFJF = function(e){
