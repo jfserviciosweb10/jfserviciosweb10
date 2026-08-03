@@ -22,6 +22,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=optional">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=optional" rel="stylesheet"></noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 <style>
 /* ============================================================
    VARIABLES
@@ -412,6 +413,14 @@ section{padding:5rem 5%}
 .contact-link{display:flex;align-items:center;gap:12px;padding:1rem 1.25rem;background:var(--card);border:1px solid var(--border);border-radius:var(--r);font-size:.88rem;transition:all var(--tr)}
 .contact-link:hover{border-color:var(--border2);color:var(--t1)}
 .cl-icon{font-size:1.1rem;flex-shrink:0}
+/* QR + VCF */
+.contacto-extras{display:flex;gap:16px;flex-wrap:wrap;margin-top:1.25rem}
+.extra-btn{display:flex;align-items:center;gap:8px;padding:11px 20px;border-radius:50px;font-size:.85rem;font-weight:700;transition:all var(--tr);cursor:pointer;border:2px solid var(--accent);color:var(--accent2);background:transparent;text-decoration:none}
+.extra-btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+#qrCanvasJF{margin-top:14px;display:none}
+#qrCanvasJF.show{display:block}
+.qr-wrap-jf{text-align:center;margin-top:10px}
+.qr-wrap-jf p{font-size:.75rem;color:var(--t3);margin-top:6px}
 .contact-form{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:2.5rem}
 .contact-form h3{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
@@ -1712,6 +1721,18 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
             <div><strong>Ubicación</strong><br><span style="font-size:.82rem;color:var(--t3)">Esperanza, Santa Fe, Argentina · Atención a toda Latinoamérica</span></div>
           </div>
         </div>
+        <div class="contacto-extras">
+          <button class="extra-btn" onclick="toggleQRJF()" aria-label="Ver QR de contacto">
+            📱 Escanear QR
+          </button>
+          <a class="extra-btn" href="#" onclick="descargarVCFJF(event)" aria-label="Guardar contacto">
+            💾 Guardar contacto
+          </a>
+        </div>
+        <div class="qr-wrap-jf">
+          <div id="qrCanvasJF"></div>
+          <p id="qrLabelJF" style="display:none">Escaneá para ir directo a WhatsApp</p>
+        </div>
       </div>
       <div class="contact-form">
         <h3 data-i18n="con.ft">Envianos un mensaje</h3>
@@ -1947,6 +1968,50 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
   if(!isOpen){item.classList.add('open');}
 }
+
+// ============================================================
+// QR + VCF — sección Contacto
+// ============================================================
+(function(){
+  var qrGenerated = false;
+  window.toggleQRJF = function(){
+    var wrap = document.getElementById('qrCanvasJF');
+    var label = document.getElementById('qrLabelJF');
+    if(!qrGenerated && typeof QRCode !== 'undefined'){
+      new QRCode(wrap, {
+        text: 'https://wa.me/5493496591636',
+        width: 160, height: 160,
+        colorDark: '#4a7cf6', colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.H
+      });
+      qrGenerated = true;
+    }
+    var showing = wrap.classList.toggle('show');
+    label.style.display = showing ? 'block' : 'none';
+  };
+})();
+window.descargarVCFJF = function(e){
+  e.preventDefault();
+  var vcf = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'FN:JF Servicios Web',
+    'ORG:JF Servicios Web',
+    'TEL;TYPE=CELL:+5493496591636',
+    'EMAIL:info@jfserviciosweb.com',
+    'URL:https://jfserviciosweb.com',
+    'ADR;TYPE=WORK:;;Esperanza, Santa Fe;;;;AR',
+    'NOTE:Sitios web profesionales con automatización de WhatsApp',
+    'END:VCARD'
+  ].join('\n');
+  var blob = new Blob([vcf], {type:'text/vcard'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'jf-servicios-web.vcf';
+  a.click();
+  URL.revokeObjectURL(url);
+};
 
 // ============================================================
 // MODAL T&C
