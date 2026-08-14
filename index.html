@@ -749,12 +749,12 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     <h2 class="s-label" data-i18n="vid.title">Conocé cómo trabajamos</h2>
     <p class="s-sub" style="max-width:680px;margin:0 auto;font-size:clamp(.88rem,1.6vw,1.05rem)" data-i18n="vid.sub">En menos de 2 minutos, el proceso completo desde que nos contactás hasta que tu web está generando clientes.</p>
     <div style="display:flex;justify-content:center;margin-top:3rem">
-      <a href="https://www.youtube.com/watch?v=-OoMoxu39ko" target="_blank" rel="noopener noreferrer" class="video-wrap" style="max-width:860px;width:100%;display:block;cursor:pointer">
-        <img src="https://img.youtube.com/vi/-OoMoxu39ko/maxresdefault.jpg" alt="Video JF Servicios Web" width="860" height="483" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
+      <div id="videoInstitucional" class="video-wrap" style="max-width:860px;width:100%;display:block;cursor:pointer" onclick="reproducirVideoInstitucional()">
+        <img src="https://img.youtube.com/vi/-OoMoxu39ko/hqdefault.jpg" alt="Video JF Servicios Web" width="860" height="483" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
         <div class="video-placeholder" style="position:relative;z-index:1">
           <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -1893,6 +1893,13 @@ function setLang(l){
 // TEMA
 // ============================================================
 function toggleTheme(){document.getElementById('body').classList.toggle('lm')}
+
+function reproducirVideoInstitucional(){
+  var wrap = document.getElementById('videoInstitucional');
+  wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/-OoMoxu39ko?autoplay=1&rel=0" title="Video institucional JF Servicios Web" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+  wrap.onclick = null;
+  wrap.style.cursor = 'default';
+}
 
 // ============================================================
 // MENU MOBILE
