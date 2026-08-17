@@ -328,6 +328,17 @@ body {
 
 /* ── AJUSTE GENERAL: evitar overflow horizontal en cualquier ancho ── */
 #app, #content, .section { max-width: 100vw; overflow-x: hidden; }
+
+.kanban-board{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-top:.4rem;overflow-x:auto}
+@media(max-width:640px){.kanban-board{grid-template-columns:1fr;gap:.8rem}}
+.kanban-col{background:rgba(255,255,255,.03);border:1px solid var(--borde,#2a2a2a);border-radius:10px;padding:.4rem;min-height:70px}
+.kanban-col-head{font-size:.72rem;font-weight:700;padding:.3rem .2rem;display:flex;justify-content:space-between;opacity:.85;color:var(--gris-txt)}
+.kanban-cards{display:flex;flex-direction:column;gap:.35rem;min-height:36px}
+.kanban-card{background:var(--gris2,#1c1c1c);border:1px solid var(--borde,#2a2a2a);border-radius:8px;padding:.4rem .5rem;font-size:.75rem;cursor:grab}
+.kanban-card:active{cursor:grabbing}
+.kanban-card.dragging{opacity:.4}
+.kanban-card .k-nombre{font-weight:600;font-size:.78rem}
+.kanban-col.drag-over{border-color:var(--verde,#1e7e34)}
 </style>
 </head>
 <body>
@@ -506,15 +517,25 @@ window.addEventListener('orientationchange', setVH);
       <!-- TAB LEADS -->
       <div class="tab-content" id="tc-leads">
         <div class="card">
-          <div class="card-title">Pipeline de leads</div>
-          <div class="sec-label rojo">HOT</div>
-          <div id="leads-hot"></div>
-          <hr class="sep">
-          <div class="sec-label amarillo">TIBIO</div>
-          <div id="leads-tibio"></div>
-          <hr class="sep">
-          <div class="sec-label" style="color:var(--azul)">FRÍO</div>
-          <div id="leads-frio"></div>
+          <div class="card-title">Pipeline de leads <span class="sub" id="pipeline-count">—</span></div>
+          <div class="kanban-board" id="kanban-board">
+            <div class="kanban-col" data-etapa="NUEVO">
+              <div class="kanban-col-head">Nuevo <span id="kcount-NUEVO">0</span></div>
+              <div class="kanban-cards" id="kcards-NUEVO"></div>
+            </div>
+            <div class="kanban-col" data-etapa="EN_CONTACTO">
+              <div class="kanban-col-head">En contacto <span id="kcount-EN_CONTACTO">0</span></div>
+              <div class="kanban-cards" id="kcards-EN_CONTACTO"></div>
+            </div>
+            <div class="kanban-col" data-etapa="PROPUESTA">
+              <div class="kanban-col-head">Propuesta <span id="kcount-PROPUESTA">0</span></div>
+              <div class="kanban-cards" id="kcards-PROPUESTA"></div>
+            </div>
+            <div class="kanban-col" data-etapa="GANADO">
+              <div class="kanban-col-head">Ganado <span id="kcount-GANADO">0</span></div>
+              <div class="kanban-cards" id="kcards-GANADO"></div>
+            </div>
+          </div>
         </div>
         <div class="card">
           <div class="card-title">Acciones</div>
@@ -922,13 +943,50 @@ function renderDashLeads() {
     : '<p class="empty-msg">Sin leads calientes ahora</p>';
 }
 
+const ETAPAS_KANBAN = ['NUEVO', 'EN_CONTACTO', 'PROPUESTA', 'GANADO'];
+
 function renderLeads() {
-  ['HOT','TIBIO','FRÍO'].forEach(score => {
-    const id    = score === 'HOT' ? 'hot' : score === 'TIBIO' ? 'tibio' : 'frio';
-    const lista = (DATA.leads || []).filter(l => l.score === score);
-    document.getElementById('leads-' + id).innerHTML = lista.length
-      ? lista.map(leadHTML).join('')
-      : '<p class="empty-msg" style="font-size:11px;padding:4px 6px">—</p>';
+  const leads = DATA.leads || [];
+  document.getElementById('pipeline-count').textContent = leads.length ? `(${leads.length})` : '—';
+
+  ETAPAS_KANBAN.forEach(etapa => {
+    const enEsta = leads.filter(l => (l.etapa || 'NUEVO') === etapa);
+    document.getElementById('kcount-' + etapa).textContent = enEsta.length;
+    document.getElementById('kcards-' + etapa).innerHTML = enEsta.map(l => `
+      <div class="kanban-card" draggable="true" data-id="${l.id}">
+        <div class="k-nombre">${l.nombre}</div>
+        <span class="pill ${(l.score||'').toLowerCase().replace('í','i')}" style="margin-top:4px">${l.score}</span>
+      </div>`).join('');
+  });
+
+  activarDragDropKanban();
+}
+
+function activarDragDropKanban() {
+  document.querySelectorAll('.kanban-card').forEach(card => {
+    card.addEventListener('dragstart', e => {
+      card.classList.add('dragging');
+      e.dataTransfer.setData('text/plain', card.dataset.id);
+    });
+    card.addEventListener('dragend', () => card.classList.remove('dragging'));
+  });
+
+  document.querySelectorAll('.kanban-col').forEach(col => {
+    col.addEventListener('dragover', e => { e.preventDefault(); col.classList.add('drag-over'); });
+    col.addEventListener('dragleave', () => col.classList.remove('drag-over'));
+    col.addEventListener('drop', async e => {
+      e.preventDefault();
+      col.classList.remove('drag-over');
+      const id = e.dataTransfer.getData('text/plain');
+      const nuevaEtapa = col.dataset.etapa;
+      const card = document.querySelector(`.kanban-card[data-id="${id}"]`);
+      if (card) col.querySelector('.kanban-cards').appendChild(card); // mover visual al toque
+      const r = await postGAS({ action: 'moverEtapaLead', id, etapa: nuevaEtapa, tel_duenio: CONFIG.TEL_DUENIO });
+      if (r && r.ok === false) {
+        showToast('⚠ ' + (r.error || 'No se pudo mover el lead'));
+      }
+      setTimeout(cargarDatos, 1200);
+    });
   });
 }
 
