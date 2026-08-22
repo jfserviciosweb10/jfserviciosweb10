@@ -289,13 +289,16 @@ section{padding:5rem 5%}
 .rb-scen{background:var(--bg3);border-radius:var(--r);padding:.75rem;font-size:.8rem;color:var(--t2);line-height:1.5}
 .rb-scen strong{color:var(--gold);display:block;font-size:.75rem;margin-bottom:.2rem}
 /* Alerta-Web módulos */
-.rb-modulos{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1rem;margin-top:2rem}
-.rb-mod{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.4rem;transition:all .2s;position:relative}
+.rb-modulos{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.rb-mod{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;transition:all .2s;position:relative}
 .rb-mod:hover{border-color:rgba(37,211,102,.25);transform:translateY(-3px)}
 .rb-mod-n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;background:#128c7e;color:#fff;font-size:.72rem;font-weight:800;margin-bottom:.6rem}
-.rb-mod h4{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:.25rem;font-family:var(--font-head)}
-.rb-mod p{font-size:.8rem;color:var(--t2);margin:0;line-height:1.5}
-.rb-mod .rb-gold-tag{position:absolute;top:8px;right:8px;font-size:.6rem;font-weight:800;padding:2px 7px;border-radius:100px;background:rgba(240,180,41,.1);color:var(--gold);border:1px solid rgba(240,180,41,.22)}
+.rb-mod h4{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:.5rem;font-family:var(--font-head);line-height:1.3}
+.rb-mod .rb-antes{font-size:.76rem;color:#f87171;margin:0 0 .35rem;line-height:1.45}
+.rb-mod .rb-despues{font-size:.76rem;color:#4ade80;margin:0 0 .5rem;line-height:1.45}
+.rb-mod .rb-gana{font-size:.74rem;color:var(--t2);margin:0;line-height:1.5;padding-top:.5rem;border-top:1px solid var(--border)}
+.rb-mod .rb-gana strong{color:var(--gold)}
+.rb-mod .rb-gold-tag{position:absolute;top:8px;right:8px;font-size:.58rem;font-weight:800;padding:2px 7px;border-radius:100px;background:rgba(240,180,41,.1);color:var(--gold);border:1px solid rgba(240,180,41,.22)}
 /* Alerta-Web comparativa */
 .rb-tabla-wrap{overflow-x:auto;border-radius:var(--r2);border:1px solid var(--border);margin-top:2rem}
 .rb-tabla{width:100%;border-collapse:collapse;font-size:.84rem;min-width:580px}
@@ -533,6 +536,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
   .rb-scenarios{grid-template-columns:1fr}
   .rb-stats{grid-template-columns:1fr 1fr}
   .incluidos-grid{grid-template-columns:repeat(4,1fr)}
+  .rb-modulos{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
   .vs-tabla-wrap{overflow-x:visible}
@@ -1321,7 +1325,7 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
           <div class="rb-stat"><div class="rb-stat-n">24/7</div><div class="rb-stat-l">Atención sin descanso</div></div>
           <div class="rb-stat"><div class="rb-stat-n">$0</div><div class="rb-stat-l">Setup incluido</div></div>
           <div class="rb-stat"><div class="rb-stat-n">100%</div><div class="rb-stat-l">Datos en tu Google</div></div>
-          <div class="rb-stat"><div class="rb-stat-n">17</div><div class="rb-stat-l">Automatizaciones</div></div>
+          <div class="rb-stat"><div class="rb-stat-n">21</div><div class="rb-stat-l">Automatizaciones</div></div>
         </div>
         <a href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20informaci%C3%B3n%20sobre%20Alerta-Web" target="_blank" rel="noopener noreferrer" class="rb-cta">🔥 Quiero Alerta-Web</a>
       </div>
@@ -1374,29 +1378,31 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     <div class="reveal">
       <div style="text-align:center;margin-bottom:1.5rem">
         <div class="s-label green">ALERTAS WEB — Tu empleado virtual en WhatsApp</div>
-        <h3 style="font-family:var(--font-head);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--green)">ALERTAS WEB — 17 AUTOMATIZACIONES EN TODOS NUESTROS PRODUCTOS</h3>
+        <h3 style="font-family:var(--font-head);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--green)">ALERTAS WEB — 21 AUTOMATIZACIONES EN TODOS NUESTROS PRODUCTOS</h3>
         <p style="max-width:640px;margin:1rem auto 0;font-size:.95rem;color:var(--t2);line-height:1.6">ALERTAS WEB es un sistema que responde los mensajes de WhatsApp de tu negocio automáticamente, las 24 horas, los 7 días de la semana — aunque estés durmiendo o de vacaciones. <strong style="color:var(--green)">U$D 75 por mes con una bonificación inicial de 1 mes gratis.</strong></p>
       </div>
       <div class="rb-modulos">
-        <div class="rb-mod"><div class="rb-mod-n">1</div><h4>Bienvenida automática</h4><p>Responde al instante cuando alguien escribe por primera vez. Menú de opciones. Ni a las 3am queda sin respuesta.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">2</div><h4>Confirmación de turno</h4><p>Cada turno nuevo dispara una confirmación automática al cliente en segundos.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">3</div><h4>Recordatorio 2h antes</h4><p>Reduce cancelaciones y no-shows entre 30% y 50% con un aviso automático antes del turno.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">4</div><h4>Encuesta post-servicio</h4><p>2 horas después de cada servicio el cliente recibe encuesta de satisfacción del 1 al 5.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">5</div><h4>Alerta de insatisfacción</h4><p>Si alguien califica 3 o menos, te llega una alerta ese mismo día para que lo llames antes de que hable mal.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">6</div><h4>Review Automation Google</h4><div class="rb-gold-tag">Vale $197/mes en EEUU</div><p>Clientes con 4 o 5 estrellas reciben el link de Google para dejar reseña pública automáticamente.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">7</div><h4>Recuperación de clientes</h4><p>Detecta quién lleva más de 30 días sin visitarte y les escribe solo. Como un vendedor que no olvida a nadie.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">8</div><h4>Seguimiento de cotización</h4><p>Si el cliente no cerró, Alerta-Web le escribe a las 24hs y 72hs. Las pymes pierden ventas por no hacer seguimiento.</p></div>
-        <div class="rb-mod"><div class="rb-mod-n">9</div><h4>Reporte semanal inteligente</h4><p>Todos los lunes a las 9am: resumen con alertas si algo no va bien — sin turnos, satisfacción baja, cotizaciones abiertas.</p></div>
-      </div>
-      <div class="rb-modulos" style="margin-top:1rem">
-        <div class="rb-mod" ><div class="rb-mod-n" >10</div><h4>Catálogo por WhatsApp</h4><p>El cliente pregunta por un producto y recibe precio y disponibilidad automáticamente desde tu catálogo cargado en el sistema. El dueño duerme y vende.</p></div>
-        <div class="rb-mod" ><div class="rb-mod-n" >11</div><h4>Contenido & Redes</h4><p>Mandás una idea por WhatsApp y Alerta-Web publica en Facebook, Instagram, LinkedIn, Google My Business y tu blog. Hasta 90 posts/mes, máximo 3/día.</p></div>
-        <div class="rb-mod" ><div class="rb-mod-n" >12</div><h4>Actualización de precios</h4><p>Mandás el nuevo precio por WhatsApp y Alerta-Web actualiza todo automáticamente. Sin tocar nada más.</p></div>
-        <div class="rb-mod" ><div class="rb-mod-n" >13</div><h4>FAQ con IA</h4><p>Claude Haiku responde las preguntas frecuentes de tus clientes por WhatsApp en tiempo real, 24/7, sin que intervengas.</p></div>
-        <div class="rb-mod" ><div class="rb-mod-n" >14</div><h4>Recordatorios de vencimientos</h4><p>Facturas, garantías, renovaciones — Alerta-Web avisa al cliente 15, 7 y 2 días antes. Sin que tengas que llevar el registro.</p></div>
-        <div class="rb-mod" ><div class="rb-mod-n" >15</div><h4>Vendedor IA 🏆</h4><p>Claude Haiku cierra ventas por WhatsApp, Instagram y Messenger. Entiende cualquier forma de escribir, supera objeciones y cierra. Es el destino de todo el sistema.</p></div>
-        <div class="rb-mod" ><div class="rb-mod-n" >16</div><h4>Abastecimiento y Stock</h4><p>Alerta automática cuando el stock de un producto baja del mínimo. Trigger diario 8am. Ideal para carpinteros, carniceros y cualquier negocio con inventario.</p></div>
-        <div class="rb-mod" ><div class="rb-mod-n" >17</div><h4>Agenda del Dueño 📲</h4><div class="rb-gold-tag">Incluye Panel + Push</div><p>Te avisa por notificación push 48hs, 24hs y 2hs antes de cada turno confirmado. Nunca más te agarra desprevenido un turno que te olvidaste.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">1</div><h4>Bienvenida automática</h4><p class="rb-antes">❌ El cliente espera horas una respuesta y se va con la competencia.</p><p class="rb-despues">✅ El cliente recibe bienvenida al instante, a cualquier hora.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Cero clientes perdidos por demora en el primer contacto. Tu negocio contesta rápido las 24 horas, aunque vos estés durmiendo, manejando o atendiendo a otra persona.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">2</div><h4>Confirmación de turno</h4><p class="rb-antes">❌ El cliente no sabe si su turno quedó realmente agendado.</p><p class="rb-despues">✅ El cliente recibe confirmación automática en segundos.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Menos cancelaciones de último momento y clientes más comprometidos con el horario reservado — sin que vos tengas que escribirle a cada uno.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">3</div><h4>Recordatorio 2h antes</h4><p class="rb-antes">❌ El cliente se olvida y falta sin avisar — la hora se pierde.</p><p class="rb-despues">✅ El cliente recibe recordatorio 2 horas antes y llega.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Menos ausentismo, menos huecos vacíos en la agenda, más horas facturadas por semana sin agregar trabajo administrativo.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">4</div><h4>Encuesta post-servicio</h4><p class="rb-antes">❌ El dueño no tiene idea si el cliente quedó conforme.</p><p class="rb-despues">✅ El dueño recibe una calificación automática después de cada servicio.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Información real y constante sobre la calidad percibida, sin encuestas manuales ni pedir feedback cara a cara.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">5</div><h4>Alerta de insatisfacción</h4><p class="rb-antes">❌ Un cliente enojado se queja en público antes de que alguien se entere.</p><p class="rb-despues">✅ El dueño se entera al instante y lo resuelve en privado.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Problemas resueltos en privado antes de que se conviertan en pérdida de reputación pública. Cada cliente salvado a tiempo es facturación futura que no se pierde.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">6</div><h4>Reseñas Google</h4><div class="rb-gold-tag">Vale $197/mes en EEUU</div><p class="rb-antes">❌ Los clientes conformes nunca dejan reseña porque nadie se las pide.</p><p class="rb-despues">✅ Al cliente conforme se le pide la reseña en el momento justo, solo.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Reputación online que crece sola, mes a mes, sin esfuerzo — y más reseñas significa más clientes nuevos que llegan buscándote en Google, sin pagar publicidad.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">7</div><h4>Recuperación de clientes</h4><p class="rb-antes">❌ Los clientes viejos se olvidan del negocio y no vuelven.</p><p class="rb-despues">✅ El sistema los reconecta automáticamente, sin gastar en publicidad.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Ingresos recuperados de clientes que ya te conocían, sin gastar un peso en publicidad para atraerlos de nuevo.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">8</div><h4>Seguimiento de cotización</h4><p class="rb-antes">❌ La cotización se manda y se pierde en el silencio del cliente.</p><p class="rb-despues">✅ El sistema insiste solo a las 24 y 72 horas hasta cerrar.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Ventas que hoy se te escapan por falta de tiempo o memoria, cerradas automáticamente por insistencia constante y profesional.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">9</div><h4>Reporte semanal inteligente</h4><p class="rb-antes">❌ El dueño no sabe cómo viene la semana hasta que ya es tarde.</p><p class="rb-despues">✅ Cada lunes llega un resumen claro de toda la actividad.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Decisiones más rápidas y mejor informadas, y alertas tempranas cuando una semana viene floja — a tiempo de reaccionar, no de lamentarte.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">10</div><h4>Catálogo por WhatsApp</h4><p class="rb-antes">❌ El dueño contesta a mano cada consulta de precio, una y otra vez.</p><p class="rb-despues">✅ El sistema responde solo con precio y stock al instante.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Ventas resueltas al instante, sin que el dueño tenga que estar disponible todo el tiempo respondiendo lo mismo una y otra vez.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">11</div><h4>Contenido & Redes</h4><p class="rb-antes">❌ El dueño paga o pierde horas armando posteos para redes.</p><p class="rb-despues">✅ Con un mensaje con la idea, el posteo sale listo en segundos.</p><p class="rb-gana"><strong>Lo que ganás:</strong> El costo de un community manager, sin pagar un community manager.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">12</div><h4>Actualización de precios</h4><p class="rb-antes">❌ Un precio viejo genera discusiones o ventas mal cobradas.</p><p class="rb-despues">✅ El dueño actualiza el precio con un mensaje, sin errores.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Precios siempre correctos, cero errores por descuido, cero tiempo perdido entrando a un panel a mano.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">13</div><h4>FAQ con IA</h4><p class="rb-antes">❌ El cliente pregunta a las 11 de la noche y no tiene respuesta.</p><p class="rb-despues">✅ La Inteligencia Artificial responde al instante, a toda hora.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Respuestas inmediatas a toda hora sin que el dueño esté pegado al teléfono — el cliente que consulta a las 11 de la noche no se va sin respuesta ni se va a la competencia.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">14</div><h4>Vencimientos y pagos</h4><p class="rb-antes">❌ Un vencimiento se pasa por alto y el servicio se corta.</p><p class="rb-despues">✅ El sistema avisa a tiempo y registra el pago solo.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Cero cobros olvidados, cero cortes de servicio por descuido, control total del flujo de caja recurrente sin planillas ni recordatorios manuales.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">15</div><h4>Vendedor IA 🏆</h4><p class="rb-antes">❌ El negocio solo vende cuando el dueño está despierto y disponible.</p><p class="rb-despues">✅ El vendedor IA atiende y vende las 24 horas, los 7 días.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Un empleado que vende mientras vos dormís, comés o estás con tu familia — sin sueldo, sin licencias, sin descanso.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">16</div><h4>Stock y abastecimiento</h4><p class="rb-antes">❌ El cliente pide un producto que ya no hay — venta perdida.</p><p class="rb-despues">✅ El dueño se entera antes de quedarse sin stock.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Nunca más una venta perdida por no tener el producto a mano — reponés antes de quedarte corto.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">17</div><h4>Agenda del Dueño 📲</h4><div class="rb-gold-tag">Incluye Panel + Push</div><p class="rb-antes">❌ El dueño también se olvida de sus propios compromisos.</p><p class="rb-despues">✅ El dueño recibe recordatorios de sus propios turnos, sin excusas.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Profesionalismo constante frente al cliente — nunca llegás desprevenido, y esa confianza se traduce en más recomendaciones y más ventas.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">18</div><h4>Transcripción de audios</h4><p class="rb-antes">❌ El audio queda solo grabado — si no lo escuchás en el momento, se pierde entre los mensajes del día, y no hay forma de buscarlo después.</p><p class="rb-despues">✅ Cada audio llega también transcripto en texto, junto al audio original.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Podés escuchar el audio cuando quieras, pero además siempre te queda el texto — nada se pierde, podés buscarlo después, y el sistema lo entiende como cualquier mensaje escrito para actuar solo.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">19</div><h4>Cotización PDF</h4><p class="rb-antes">❌ El presupuesto se arma a mano, tarda, y a veces ni se manda a tiempo.</p><p class="rb-despues">✅ El presupuesto sale en PDF profesional, solo, en segundos.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Cerrás más rápido, con una imagen prolija de tu negocio, sin perder tiempo armando cada presupuesto a mano — y el sistema insiste solo hasta cerrar la venta.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">20</div><h4>Recuperación de carrito</h4><p class="rb-antes">❌ El cliente pregunta precio, no contesta más, y ahí se pierde la venta en silencio.</p><p class="rb-despues">✅ Si no vuelve a escribir, el dueño se entera a tiempo para ofrecerle algo y cerrar.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Ventas que hoy se enfrían solas, recuperadas con un empujón a tiempo — sin sonar desesperado, sin perseguir al cliente.</p></div>
+        <div class="rb-mod"><div class="rb-mod-n">21</div><h4>Cumpleaños del cliente</h4><p class="rb-antes">❌ El cumpleaños de un cliente pasa desapercibido, o el dueño arriesga un saludo forzado con quien no corresponde.</p><p class="rb-despues">✅ El dueño elige a quién saludar, y el sistema lo hace solo, el día exacto, con un beneficio.</p><p class="rb-gana"><strong>Lo que ganás:</strong> Fidelización automática con quien vos elegís, sin el riesgo de un gesto incómodo con quien no tenés esa confianza.</p></div>
       </div>
     </div>
 
@@ -1404,9 +1410,73 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
     <div class="reveal" style="max-width:820px;margin:2.5rem auto 0;padding:1.75rem 2rem;background:linear-gradient(135deg,rgba(240,180,41,.08),rgba(34,197,94,.06));border:2px solid rgba(240,180,41,.3);border-radius:var(--r2);text-align:center">
       <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(240,180,41,.15);border-radius:30px;padding:6px 16px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem">📖 Guía completa</div>
       <h3 style="font-family:var(--font-head);font-size:clamp(1.15rem,2.5vw,1.6rem);font-weight:800;color:#fff;margin-bottom:.6rem;line-height:1.3">¿Qué módulos de Alerta-Web te consiguen clientes nuevos?</h3>
-      <p style="font-size:.95rem;color:var(--t2);line-height:1.65;margin-bottom:1.1rem">De los 17 módulos, te mostramos exactamente cuáles están enfocados 100% en traerte gente que hoy no te conoce — y por qué.</p>
+      <p style="font-size:.95rem;color:var(--t2);line-height:1.65;margin-bottom:1.1rem">De los 21 módulos, te mostramos exactamente cuáles están enfocados 100% en traerte gente que hoy no te conoce — y por qué.</p>
       <a href="blog/que-modulos-te-consiguen-clientes-nuevos.html" style="display:inline-block;background:var(--gold);color:#1a1200;font-weight:800;padding:.75rem 1.75rem;border-radius:30px;font-size:.92rem">Leer la guía completa →</a>
     </div>
+
+    <!-- CALCULADORA DE PÉRDIDA POR NO ATENDER -->
+    <div class="reveal" style="max-width:720px;margin:3rem auto 0;background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:2rem">
+      <div style="text-align:center;margin-bottom:1.5rem">
+        <div class="s-label green">¿Cuánto te está costando?</div>
+        <h3 style="font-family:var(--font-head);font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:var(--t1)">Calculá cuánto perdés hoy por no responder a tiempo</h3>
+        <p style="max-width:560px;margin:.75rem auto 0;font-size:.9rem;color:var(--t2);line-height:1.6">Completá estos 3 datos y te mostramos una estimación real, con la cuenta a la vista — sin números inflados.</p>
+      </div>
+
+      <div style="margin-bottom:1.5rem">
+        <label style="display:block;font-size:.85rem;font-weight:700;color:var(--t1);margin-bottom:.5rem">¿Cuántas consultas por WhatsApp recibís por día, en promedio?</label>
+        <input type="number" id="calc-consultas" value="10" min="0" style="width:100%;padding:.7rem .9rem;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:1rem;font-family:var(--font-body)">
+      </div>
+
+      <div style="margin-bottom:1.5rem">
+        <label style="display:block;font-size:.85rem;font-weight:700;color:var(--t1);margin-bottom:.5rem">¿Qué porcentaje creés que no llegás a responder a tiempo (o no respondés)?</label>
+        <div style="display:flex;align-items:center;gap:1rem">
+          <input type="range" id="calc-porcentaje" value="30" min="0" max="100" step="5" style="flex:1;accent-color:var(--wa)">
+          <span id="calc-porcentaje-val" style="min-width:48px;text-align:right;font-weight:800;color:var(--wa);font-size:1.1rem">30%</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:2rem">
+        <label style="display:block;font-size:.85rem;font-weight:700;color:var(--t1);margin-bottom:.5rem">¿Cuál es tu ticket promedio de venta (en pesos)?</label>
+        <input type="number" id="calc-ticket" value="15000" min="0" step="500" style="width:100%;padding:.7rem .9rem;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:1rem;font-family:var(--font-body)">
+      </div>
+
+      <div style="background:var(--bg3);border-radius:var(--r);padding:1.5rem;text-align:center">
+        <p style="font-size:.8rem;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem">Estimación de pérdida mensual</p>
+        <p id="calc-resultado-mes" style="font-family:var(--font-head);font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;color:var(--gold);margin-bottom:.3rem">$0</p>
+        <p id="calc-resultado-anio" style="font-size:.85rem;color:var(--t2)">$0 al año</p>
+      </div>
+
+      <p style="font-size:.72rem;color:var(--t3);margin-top:1rem;line-height:1.5">Cálculo: consultas/día × días hábiles del mes (26) × % sin responder × una tasa conservadora del 30% de esas consultas que se hubieran convertido en venta × tu ticket promedio. Es una estimación orientativa, pensada para mostrar el orden de magnitud, no una cifra exacta de tu negocio.</p>
+
+      <a href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20vi%20la%20calculadora%20y%20quiero%20saber%20c%C3%B3mo%20resolver%20esto" target="_blank" rel="noopener noreferrer" class="rb-cta" style="display:block;text-align:center;margin-top:1.5rem">🔥 Quiero dejar de perder esta plata</a>
+    </div>
+    <script>
+    (function(){
+      var diasHabiles = 26;
+      var tasaConversion = 0.30;
+      var inConsultas = document.getElementById('calc-consultas');
+      var inPorcentaje = document.getElementById('calc-porcentaje');
+      var inTicket = document.getElementById('calc-ticket');
+      var spanPorcentaje = document.getElementById('calc-porcentaje-val');
+      var outMes = document.getElementById('calc-resultado-mes');
+      var outAnio = document.getElementById('calc-resultado-anio');
+      function formatoPesos(n){ return '$' + Math.round(n).toLocaleString('es-AR'); }
+      function calcular(){
+        var consultas = parseFloat(inConsultas.value) || 0;
+        var porcentaje = parseFloat(inPorcentaje.value) || 0;
+        var ticket = parseFloat(inTicket.value) || 0;
+        spanPorcentaje.textContent = porcentaje + '%';
+        var consultasPerdidasMes = consultas * diasHabiles * (porcentaje / 100);
+        var ventasPerdidasMes = consultasPerdidasMes * tasaConversion;
+        var perdidaMes = ventasPerdidasMes * ticket;
+        var perdidaAnio = perdidaMes * 12;
+        outMes.textContent = formatoPesos(perdidaMes);
+        outAnio.textContent = formatoPesos(perdidaAnio) + ' al año';
+      }
+      [inConsultas, inPorcentaje, inTicket].forEach(function(el){ el.addEventListener('input', calcular); });
+      calcular();
+    })();
+    </script>
 
 <!-- TIENDA DIGITAL -->
 <section id="tienda-digital" style="padding:80px 0;background:linear-gradient(180deg,#0a1628 0%,#0d1b2a 100%)">
@@ -1836,17 +1906,18 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
   <div class="modal-box">
     <button class="modal-close" onclick="closeTyC()">✕</button>
     <h2>Términos y Condiciones</h2>
-    <p class="modal-ver">JF Servicios Web · Versión 2.0 · Abril 2026 · jfserviciosweb.com · Esperanza, Santa Fe, Argentina</p>
+    <p class="modal-ver">JF Servicios Web · Versión 2.1 · Agosto 2026 · jfserviciosweb.com · Esperanza, Santa Fe, Argentina</p>
     <div class="ms"><h3>1. Partes del contrato</h3><p><strong>JF Servicios Web</strong> (operado por José Fuster, Esperanza, Santa Fe, Argentina) y el <strong>Cliente</strong> (quien contrata y paga). La aceptación se produce con el 50% inicial, sin firma manuscrita.</p></div>
     <div class="ms"><h3>2. Servicios y precios</h3><table><tr><th>Servicio</th><th>Precio</th><th>Tipo</th></tr><tr><td>JFWEB_MOVI (incluye Alerta-Web 17 módulos + Panel)</td><td>$299 USD</td><td>Pago único</td></tr><tr><td>Web Estratégica</td><td>$399 USD</td><td>Pago único</td></tr><tr><td>Web Premium + Panel</td><td>$699 USD</td><td>Pago único</td></tr><tr><td>ALERTAS WEB — 17 módulos (todos los planes)</td><td>$75 USD</td><td>Por mes (Año 1) · $85 mes a mes</td></tr><tr><td>ALERTAS WEB — Año 2+ (débito automático o anual)</td><td>$100 USD</td><td>Por mes</td></tr><tr><td>ALERTAS WEB — Año 2+ mes a mes</td><td>$115 USD</td><td>Por mes</td></tr><tr><td>Tienda Digital (add-on disponible para cualquier nivel)</td><td>$99 USD</td><td>Pago único</td></tr><tr><td>Revisión adicional</td><td>$25 USD</td><td>Por vez</td></tr></table><p style="margin-top:.75rem">1 mes de Alerta-Web <strong>GRATIS</strong> en todos los planes. Todos los precios en USD.</p></div>
-    <div class="ms"><h3>3. Propiedad del cliente</h3><div class="ok-box"><strong>✅ Es 100% tuyo desde el día 1:</strong>Código HTML/CSS/JS · Dominio (sos titular registrado) · Repositorio GitHub (owner) · Todo el contenido que aportaste · Cuentas de GA4, Brevo Meetings, HubSpot · Historial de publicaciones</div></div>
-    <div class="ms"><h3>4. Propiedad exclusiva de JF Servicios Web</h3><div class="lock-box"><strong>🔒 No se transfiere bajo ningún concepto:</strong>Supabase Edge Functions (motor de automatización) · Lógica completa de Alerta-Web · Webhooks y endpoints de integración · Know-how técnico y arquitectura · Plantillas base de diseño</div><div class="anal-box">💡 <strong>Analogía:</strong> Como un servicio de alarma. Si cancelás, la casa sigue siendo tuya — el guardia deja de venir. Tu web sigue online. Alerta-Web se desactiva porque el motor es nuestro.</div></div>
-    <div class="ms"><h3>5. Si cancelás el mantenimiento</h3><table><tr><th>Elemento</th><th>Qué sucede</th></tr><tr><td>Sitio web</td><td>100% online, contenido congelado.</td></tr><tr><td>Dominio</td><td>Activo mientras vos lo renueves.</td></tr><tr><td>Repo GitHub</td><td>Activo en tu cuenta.</td></tr><tr><td>Alerta-Web / Redes</td><td>Se desactiva. Reactivable en cualquier momento.</td></tr></table></div>
-    <div class="ms"><h3>6. Plazos y revisiones</h3><table><tr><th>Plan</th><th>Plazo</th><th>Revisiones</th></tr><tr><td>Estratégica</td><td>5-7 días hábiles</td><td>1 revisión</td></tr><tr><td>Premium / MOVI</td><td>8-12 días hábiles</td><td>2 revisiones</td></tr><tr><td>Alertas Automáticas</td><td>48-96 horas</td><td>—</td></tr></table><p style="margin-top:.75rem">Plazos desde la recepción del cuestionario completo. Revisiones adicionales fuera de las incluidas: $25 USD c/u.</p></div>
-    <div class="ms"><h3>7. Pago</h3><p>50% al confirmar · 50% al aprobar. Medios: transferencia bancaria, Mercado Pago, PayPal. Precios en USD. Tipo de cambio acordado al momento del pago. <strong>Sin reembolso tras el 50% inicial.</strong></p></div>
-    <div class="ms"><h3>8. Limitación de responsabilidad</h3><p>JF Servicios Web no se responsabiliza por el contenido del cliente, interrupciones en servicios de terceros (GitHub, Cloudflare, Google, Meta, LinkedIn), posicionamiento específico en buscadores, ni pérdida de datos en servicios de terceros.</p></div>
-    <div class="ms"><h3>9. Jurisdicción</h3><p>Leyes de la República Argentina. Tribunales de Esperanza, Santa Fe. Se privilegia la resolución amigable.</p></div>
-    <div class="ms" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:2rem"><p style="font-size:.8rem;color:var(--t3)">JF Servicios Web · Esperanza, Santa Fe, Argentina · jfserviciosweb.com · info@jfserviciosweb.com · +54 9 3496 591636 · Versión 2.0 · Abril 2026</p></div>
+    <div class="ms"><h3>3. Costo de mensajería de WhatsApp (Meta)</h3><p>El costo que cobra Meta por el uso de WhatsApp Business API (según categoría de mensaje y país de destino) <strong>corre por cuenta exclusiva del Cliente</strong>, pagado directamente a Meta a través de su propia cuenta de facturación. JF Servicios Web <strong>no cobra ningún margen ni comisión</strong> sobre ese costo — lo que Meta factura es exactamente lo que el Cliente paga, sin intermediarios.</p><div class="anal-box">💡 Este costo es independiente de la membresía mensual de Alertas Web, y varía según cuánto uso le dé el Cliente al sistema. JF Servicios Web brinda información orientativa sobre estos costos, pero no puede garantizar tarifas fijas, ya que las define Meta unilateralmente y pueden cambiar sin previo aviso.</div></div>
+    <div class="ms"><h3>4. Propiedad del cliente</h3><div class="ok-box"><strong>✅ Es 100% tuyo desde el día 1:</strong>Código HTML/CSS/JS · Dominio (sos titular registrado) · Repositorio GitHub (owner) · Todo el contenido que aportaste · Cuentas de GA4, Brevo Meetings, HubSpot · Historial de publicaciones</div></div>
+    <div class="ms"><h3>5. Propiedad exclusiva de JF Servicios Web</h3><div class="lock-box"><strong>🔒 No se transfiere bajo ningún concepto:</strong>Supabase Edge Functions (motor de automatización) · Lógica completa de Alerta-Web · Webhooks y endpoints de integración · Know-how técnico y arquitectura · Plantillas base de diseño</div><div class="anal-box">💡 <strong>Analogía:</strong> Como un servicio de alarma. Si cancelás, la casa sigue siendo tuya — el guardia deja de venir. Tu web sigue online. Alerta-Web se desactiva porque el motor es nuestro.</div></div>
+    <div class="ms"><h3>6. Si cancelás el mantenimiento</h3><table><tr><th>Elemento</th><th>Qué sucede</th></tr><tr><td>Sitio web</td><td>100% online, contenido congelado.</td></tr><tr><td>Dominio</td><td>Activo mientras vos lo renueves.</td></tr><tr><td>Repo GitHub</td><td>Activo en tu cuenta.</td></tr><tr><td>Alerta-Web / Redes</td><td>Se desactiva. Reactivable en cualquier momento.</td></tr></table></div>
+    <div class="ms"><h3>7. Plazos y revisiones</h3><table><tr><th>Plan</th><th>Plazo</th><th>Revisiones</th></tr><tr><td>Estratégica</td><td>5-7 días hábiles</td><td>1 revisión</td></tr><tr><td>Premium / MOVI</td><td>8-12 días hábiles</td><td>2 revisiones</td></tr><tr><td>Alertas Automáticas</td><td>48-96 horas</td><td>—</td></tr></table><p style="margin-top:.75rem">Plazos desde la recepción del cuestionario completo. Revisiones adicionales fuera de las incluidas: $25 USD c/u.</p></div>
+    <div class="ms"><h3>8. Pago</h3><p>50% al confirmar · 50% al aprobar. Medios: transferencia bancaria, Mercado Pago, PayPal. Precios en USD. Tipo de cambio acordado al momento del pago. <strong>Sin reembolso tras el 50% inicial.</strong></p></div>
+    <div class="ms"><h3>9. Limitación de responsabilidad</h3><p>JF Servicios Web no se responsabiliza por el contenido del cliente, interrupciones en servicios de terceros (GitHub, Cloudflare, Google, Meta, LinkedIn), posicionamiento específico en buscadores, ni pérdida de datos en servicios de terceros.</p></div>
+    <div class="ms"><h3>10. Jurisdicción</h3><p>Leyes de la República Argentina. Tribunales de Esperanza, Santa Fe. Se privilegia la resolución amigable.</p></div>
+    <div class="ms" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:2rem"><p style="font-size:.8rem;color:var(--t3)">JF Servicios Web · Esperanza, Santa Fe, Argentina · jfserviciosweb.com · info@jfserviciosweb.com · +54 9 3496 591636 · Versión 2.1 · Agosto 2026</p></div>
   </div>
 </div>
 
