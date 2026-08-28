@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://jfserviciosweb.com/">
 <meta name="robots" content="index, follow">
-<meta name="description" content="JF Servicios Web — Sitios web profesionales para pymes argentinas. JFWEB_MOVI $299 · Estratégica $399 · Premium $699. Alertas Web: automatización WhatsApp 24/7 con 17 módulos. Esperanza, Santa Fe.">
+<meta name="description" content="JF Servicios Web — Sitios web profesionales para pymes argentinas. JFWEB_MOVI $299 · Estratégica $399 · Premium $699. Alertas Web: automatización WhatsApp 24/7 con 21 módulos. Esperanza, Santa Fe.">
 <meta property="og:title" content="JF Servicios Web — Tu Web Profesional + Automatización WhatsApp">
-<meta property="og:description" content="Sitios web profesionales con pago único. Sin hosting mensual. Con Alertas Web: tu WhatsApp trabajando solo las 24 horas, con 17 módulos de automatización.">
+<meta property="og:description" content="Sitios web profesionales con pago único. Sin hosting mensual. Con Alertas Web: tu WhatsApp trabajando solo las 24 horas, con 21 módulos de automatización.">
 <meta property="og:image" content="https://jfserviciosweb.com/img/logo.png">
 <meta property="og:url" content="https://jfserviciosweb.com">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <title>JF Servicios Web — Sitios Web Profesionales para Pymes</title>
-</script>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 <link rel="preconnect" href="https://img.youtube.com">
@@ -1478,6 +1477,159 @@ footer{padding:3rem 5% 2rem;background:var(--bg);border-top:1px solid var(--bord
       calcular();
     })();
     </script>
+</section>
+
+<!-- DEMO FUNCIONAL EN VIVO -->
+<section id="demo-vivo" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="s-inner">
+    <div style="text-align:center;margin-bottom:2rem">
+      <div class="s-label green">PROBALO VOS MISMO</div>
+      <h2 style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800">Elegí un caso y mirá cómo respondería tu WhatsApp</h2>
+      <p style="max-width:600px;margin:1rem auto 0;font-size:.9rem;color:var(--t2);line-height:1.6">No es un video. Es la conversación real que tendría un cliente tuyo — elegí un escenario.</p>
+    </div>
+
+    <div class="demo-tabs">
+      <button class="demo-tab active" data-demo="urgencia" onclick="runDemo('urgencia',this)">🔑 Urgencia 24hs</button>
+      <button class="demo-tab" data-demo="turno" onclick="runDemo('turno',this)">📅 Turno + recordatorio</button>
+      <button class="demo-tab" data-demo="presupuesto" onclick="runDemo('presupuesto',this)">📄 Presupuesto sin respuesta</button>
+      <button class="demo-tab" data-demo="faq" onclick="runDemo('faq',this)">💬 Pregunta a medianoche</button>
+    </div>
+
+    <div style="max-width:420px;margin:2rem auto 0">
+      <div class="rb-chat">
+        <div class="rb-chat-header">
+          <div class="rb-avatar">🏪</div>
+          <div>
+            <div class="rb-chat-name">Tu negocio</div>
+            <div class="rb-chat-status">● Alertas Web activo</div>
+          </div>
+        </div>
+        <div class="rb-chat-body" id="demo-chat-body" style="min-height:260px"></div>
+      </div>
+      <p style="text-align:center;margin-top:.75rem;font-size:.72rem;color:var(--t3)">Simulación — así respondería tu WhatsApp, en segundos</p>
+    </div>
+  </div>
+</section>
+<style>
+.demo-tabs{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.demo-tab{background:var(--card);border:1px solid var(--border);border-radius:100px;padding:.6rem 1.2rem;font-size:.82rem;font-weight:600;color:var(--t2);transition:all var(--tr)}
+.demo-tab:hover{border-color:var(--border2);color:var(--t1)}
+.demo-tab.active{background:rgba(37,211,102,.12);border-color:var(--wa);color:#fff}
+</style>
+<script>
+var demoScripts = {
+  urgencia: [
+    {from:'in', text:'Hola, se me rompió la cerradura y no puedo entrar a mi casa 😩'},
+    {from:'out', text:'¡Hola! 👋 Recibimos tu mensaje. Contame tu dirección para coordinar cuanto antes.'},
+    {from:'in', text:'San Martín 450'},
+    {from:'out', text:'Perfecto, ya avisamos al equipo. Te contactan en los próximos minutos 🔧'}
+  ],
+  turno: [
+    {from:'in', text:'Hola, quiero sacar un turno para mañana'},
+    {from:'out', text:'¡Hola! 👋 Tenemos disponible mañana a las 10:00 o 15:00. ¿Cuál te queda mejor?'},
+    {from:'in', text:'10:00 dale'},
+    {from:'out', text:'Turno confirmado para mañana 10:00 ✅ Te mandamos un recordatorio 2hs antes para que no te olvides.'}
+  ],
+  presupuesto: [
+    {from:'out', text:'Hola María 👋 Vimos que pediste presupuesto hace 2 días y no supimos más de vos. ¿Seguís interesada?'},
+    {from:'in', text:'Ay perdón, se me pasó! Sí, todavía me interesa'},
+    {from:'out', text:'Sin problema 🙌 Te reenvío el presupuesto en PDF para que lo tengas a mano.'}
+  ],
+  faq: [
+    {from:'in', text:'Hola, disculpen la hora, ¿a qué hora abren mañana?'},
+    {from:'out', text:'¡Hola! No hay problema 😊 Mañana abrimos de 9:00 a 18:00. ¿Necesitás algo más?'},
+    {from:'in', text:'No, gracias! Buenas noches'},
+    {from:'out', text:'¡Que descanses! 🌙 Cualquier cosa, estamos acá.'}
+  ]
+};
+
+var demoTimeouts = [];
+
+function runDemo(key, btnEl) {
+  document.querySelectorAll('.demo-tab').forEach(function(b){ b.classList.remove('active'); });
+  if (btnEl) btnEl.classList.add('active');
+
+  demoTimeouts.forEach(function(t){ clearTimeout(t); });
+  demoTimeouts = [];
+
+  var body = document.getElementById('demo-chat-body');
+  body.innerHTML = '';
+
+  var script = demoScripts[key];
+  var t = 300;
+
+  script.forEach(function(msg){
+    if (msg.from === 'out') {
+      var typingDelay = t;
+      demoTimeouts.push(setTimeout(function(){
+        var typing = document.createElement('div');
+        typing.className = 'rb-typing-wrap';
+        typing.innerHTML = '<div class="rb-typing"><span></span><span></span><span></span></div>';
+        body.appendChild(typing);
+        body.scrollTop = body.scrollHeight;
+      }, typingDelay));
+      t += 1100;
+      demoTimeouts.push(setTimeout(function(){
+        var typingEl = body.querySelector('.rb-typing-wrap');
+        if (typingEl) typingEl.remove();
+        appendDemoMsg(body, msg);
+      }, t));
+      t += 300;
+    } else {
+      demoTimeouts.push(setTimeout(function(){
+        appendDemoMsg(body, msg);
+      }, t));
+      t += 900;
+    }
+  });
+}
+
+function appendDemoMsg(body, msg) {
+  var wrap = document.createElement('div');
+  wrap.className = 'rb-msg';
+  var bubbleClass = msg.from === 'out' ? 'rb-bubble-out' : 'rb-bubble-in';
+  wrap.innerHTML = '<div class="' + bubbleClass + '">' + msg.text + '</div>';
+  body.appendChild(wrap);
+  body.scrollTop = body.scrollHeight;
+}
+
+// Autoplay del primer escenario al cargar
+document.addEventListener('DOMContentLoaded', function(){
+  runDemo('urgencia');
+});
+</script>
+
+<!-- PARA QUÉ NEGOCIO SIRVE -->
+<section class="rubros-section" id="para-que-negocio-sirve">
+  <div class="rubros-container">
+    <h2 class="rubros-titulo">¿Para qué negocio sirve?</h2>
+    <p class="rubros-subtitulo">
+      Automatización de WhatsApp adaptada a tu rubro. Estos son algunos ejemplos:
+    </p>
+    <div class="rubros-grid">
+      <a href="landing-cerrajerias.html" class="rubro-card"><div class="rubro-icono">🔑</div><h3 class="rubro-nombre">Cerrajerías y urgencias 24hs</h3><p class="rubro-desc">Respuesta instantánea a cualquier hora, sin perder al cliente que necesita ayuda ya.</p></a>
+      <a href="#rebomba" class="rubro-card"><div class="rubro-icono">🦷</div><h3 class="rubro-nombre">Consultorios y clínicas</h3><p class="rubro-desc">Confirmación de turno y recordatorio automático para bajar el ausentismo.</p></a>
+      <a href="#rebomba" class="rubro-card"><div class="rubro-icono">🏠</div><h3 class="rubro-nombre">Inmobiliarias</h3><p class="rubro-desc">Seguimiento automático de consultas y catálogo de propiedades por WhatsApp.</p></a>
+      <a href="#rebomba" class="rubro-card"><div class="rubro-icono">🔧</div><h3 class="rubro-nombre">Servicios técnicos y presupuestos</h3><p class="rubro-desc">El sistema insiste solo a las 24 y 72hs para que ningún presupuesto se enfríe.</p></a>
+      <a href="#rebomba" class="rubro-card"><div class="rubro-icono">🐾</div><h3 class="rubro-nombre">Veterinarias</h3><p class="rubro-desc">Turnos, recordatorios y pedido de reseña automático después de cada visita.</p></a>
+      <a href="#rebomba" class="rubro-card"><div class="rubro-icono">⚖️</div><h3 class="rubro-nombre">Estudios profesionales</h3><p class="rubro-desc">Respuestas automáticas a preguntas frecuentes antes de derivar al profesional.</p></a>
+      <a href="#rebomba" class="rubro-card"><div class="rubro-icono">💪</div><h3 class="rubro-nombre">Gimnasios y centros deportivos</h3><p class="rubro-desc">Turnos de clases, recordatorios y encuesta de satisfacción sin trabajo manual.</p></a>
+      <a href="#rebomba" class="rubro-card"><div class="rubro-icono">💆</div><h3 class="rubro-nombre">Spas y centros de estética</h3><p class="rubro-desc">Recordatorios, reseñas automáticas y reconexión con clientes inactivos.</p></a>
+    </div>
+  </div>
+</section>
+<style>
+.rubros-section{padding:4rem 1.5rem}
+.rubros-container{max-width:1100px;margin:0 auto}
+.rubros-titulo{text-align:center;font-size:2rem;margin-bottom:.5rem;font-family:var(--font-head)}
+.rubros-subtitulo{text-align:center;margin-bottom:2.5rem;color:var(--t2)}
+.rubros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.rubro-card{display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:transform var(--tr),box-shadow var(--tr)}
+.rubro-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.2);border-color:var(--border2)}
+.rubro-icono{font-size:2rem;margin-bottom:.5rem}
+.rubro-nombre{font-size:1.1rem;margin-bottom:.4rem;color:var(--t1);font-family:var(--font-head)}
+.rubro-desc{font-size:.9rem;color:var(--t2);line-height:1.4}
+</style>
 
 <!-- TIENDA DIGITAL -->
 <section id="tienda-digital" style="padding:80px 0;background:linear-gradient(180deg,#0a1628 0%,#0d1b2a 100%)">
