@@ -83,8 +83,8 @@ self.addEventListener('push', e => {
   const d = e.data ? e.data.json() : {};
   e.waitUntil(self.registration.showNotification(d.title || '🔥 RE-BOMBA', {
     body:     d.body    || 'Nuevo lead HOT en tu panel',
-    icon:     'https://jfserviciosweb10.github.io/jfserviciosweb10/icon-192.png',
-    badge:    'https://jfserviciosweb10.github.io/jfserviciosweb10/icon-192.png',
+    icon:     './icons/icon-192.png',
+    badge:    './icons/icon-192.png',
     vibrate:  [200, 100, 200],
     tag:      d.tag     || 'rebomba',
     renotify: true,

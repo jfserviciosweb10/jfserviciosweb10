@@ -438,7 +438,6 @@ window.addEventListener('orientationchange', setVH);
         <div class="stat"><span class="stat-k">Módulos activos</span><span class="stat-v" id="s-mods">—</span></div>
         <div class="stat"><span class="stat-k">Msgs gratuitos restantes</span><span class="stat-v verde" id="s-msgs-rest">—</span></div>
         <div class="stat"><span class="stat-k">Clientes totales</span><span class="stat-v" id="s-clientes">—</span></div>
-        <div class="stat"><span class="stat-k">Plan</span><span class="stat-v amarillo" id="s-plan">—</span></div>
       </div>
 
       <div class="card">
@@ -588,10 +587,10 @@ window.addEventListener('orientationchange', setVH);
         <div id="conv-lista"></div>
       </div>
       <div class="card">
-        <div class="card-title">Módulos Alertas Web <span class="sub" id="mod-plan-label">—</span></div>
+        <div class="card-title">Módulos Alertas Web</div>
         <div class="sec-label verde">Estratégica — Módulos 1 al 9</div>
         <div class="mod-grid" id="mod-grid-estrat"></div>
-        <div class="sec-label amarillo" style="margin-top:4px;">Premium — Módulos 10 al 17</div>
+        <div class="sec-label amarillo" style="margin-top:4px;">Premium — Módulos 10 al 21</div>
         <div class="mod-grid" id="mod-grid-prem"></div>
       </div>
     </div>
@@ -693,7 +692,7 @@ const CONFIG = {
 CONFIG.PWD_KEY = 'panel-pwd-hash-' + CONFIG.TEL_DUENIO;
 
 /* ═══════════════════════════════════════════════
-   MÓDULOS JF — 17 oficiales
+   MÓDULOS JF — 21 oficiales
 ═══════════════════════════════════════════════ */
 const MODULOS = [
   { n:'01', nombre:'Bienvenida & FAQ',         nivel:'estrat' },
@@ -712,7 +711,11 @@ const MODULOS = [
   { n:'14', nombre:'Recordatorios vencim.',     nivel:'prem'   },
   { n:'15', nombre:'Vendedor IA',               nivel:'prem'   },
   { n:'16', nombre:'Stock & Abastecimiento',    nivel:'prem'   },
-  { n:'17', nombre:'Agenda del Dueño',          nivel:'prem'   }
+  { n:'17', nombre:'Agenda del Dueño',          nivel:'prem'   },
+  { n:'18', nombre:'Transcripción de audios',   nivel:'prem'   },
+  { n:'19', nombre:'Cotización PDF',            nivel:'prem'   },
+  { n:'20', nombre:'Recuperación de carrito',   nivel:'prem'   },
+  { n:'21', nombre:'Cumpleaños del cliente',    nivel:'prem'   }
 ];
 
 /* ═══════════════════════════════════════════════
@@ -859,11 +862,9 @@ function renderSistema() {
   const c = DATA.config  || {};
   document.getElementById('s-rebomba').textContent   = s.rebomba   || '—';
   document.getElementById('s-wa').textContent        = s.wa_api    || '—';
-  document.getElementById('s-mods').textContent      = c.mods_activos != null ? c.mods_activos + ' / 17' : '—';
+  document.getElementById('s-mods').textContent      = c.mods_activos != null ? c.mods_activos + ' / 21' : '—';
   document.getElementById('s-msgs-rest').textContent = c.msgs_restantes ?? '—';
   document.getElementById('s-clientes').textContent  = k('clientes_total') || (DATA.clientes || []).length || '—';
-  document.getElementById('s-plan').textContent      = c.plan || '—';
-  document.getElementById('mod-plan-label').textContent = c.plan || '';
 }
 
 function k(key) { return DATA.kpis ? DATA.kpis[key] : null; }
