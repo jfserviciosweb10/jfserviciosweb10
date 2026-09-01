@@ -150,11 +150,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/que-modulos-te-consiguen-clientes-nuevos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/transcripcion-de-audios-automatica-por-whatsapp.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/cotizacion-pdf-automatica-por-whatsapp.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/recuperacion-de-carrito-automatica-por-whatsapp.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfserviciosweb.com/blog/cumpleanos-del-cliente-automatico-por-whatsapp.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
-
-<url>
-<loc>https://jfserviciosweb.com/blog/que-modulos-te-consiguen-clientes-nuevos.html</loc>
-<lastmod>2026-07-12</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
