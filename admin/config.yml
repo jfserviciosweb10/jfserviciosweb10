@@ -9,13 +9,13 @@ public_folder: "img/uploads"
 
 collections:
   - name: "posts"
-    label: "Artículos del Blog"
+    label: "Articulos del Blog"
     folder: "blog/_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Titulo", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime" }
-      - { label: "Descripción corta", name: "description", widget: "string" }
+      - { label: "Descripcion corta", name: "description", widget: "string" }
       - { label: "Imagen de portada", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
