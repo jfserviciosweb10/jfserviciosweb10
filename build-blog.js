@@ -60,6 +60,31 @@ function formatearFecha(fechaIso) {
   }
 }
 
+// Busca una foto en Pexels usando las palabras clave del artículo.
+// Si no hay clave configurada, o la búsqueda falla, devuelve null y el
+// artículo sigue con la imagen que ya tenía (o el logo por defecto) —
+// nunca rompe la generación por esto.
+async function buscarFotoPexels(keywords) {
+  const apiKey = process.env.PEXELS_API_KEY;
+  if (!apiKey || !keywords) return null;
+  try {
+    const resp = await fetch(
+      `https://api.pexels.com/v1/search?query=${encodeURIComponent(keywords)}&per_page=1&orientation=landscape`,
+      { headers: { Authorization: apiKey } }
+    );
+    if (!resp.ok) {
+      console.log(`Pexels respondió ${resp.status} para "${keywords}" — se usa imagen por defecto.`);
+      return null;
+    }
+    const data = await resp.json();
+    const foto = data.photos && data.photos[0];
+    return foto ? foto.src.large : null;
+  } catch (e) {
+    console.log(`Error buscando en Pexels ("${keywords}"): ${e.message} — se usa imagen por defecto.`);
+    return null;
+  }
+}
+
 function generarArticuloHTML(datos, cuerpoHTML, slug) {
   const titulo = datos.title || 'Artículo';
   const descripcion = datos.description || '';
@@ -207,41 +232,51 @@ function generarTarjetaHTML(datos, slug) {
 `;
 }
 
-if (!fs.existsSync(CARPETA_POSTS)) {
-  console.log('No hay carpeta blog/_posts todavía — nada para procesar.');
-  process.exit(0);
-}
-
-let indexHTML = fs.existsSync(RUTA_BLOG_INDEX) ? fs.readFileSync(RUTA_BLOG_INDEX, 'utf8') : null;
-let cambioIndex = false;
-let nuevos = 0;
-
-const archivos = fs.readdirSync(CARPETA_POSTS).filter((f) => f.endsWith('.md'));
-
-archivos.forEach((archivo) => {
-  const rutaMd = path.join(CARPETA_POSTS, archivo);
-  const texto = fs.readFileSync(rutaMd, 'utf8');
-  const { datos, cuerpo } = parsearFrontmatter(texto);
-  const slug = slugLimpio(archivo);
-  const rutaHtmlSalida = path.join('blog', `${slug}.html`);
-
-  const cuerpoHTML = marked.parse(cuerpo || '');
-  const htmlArticulo = generarArticuloHTML(datos, cuerpoHTML, slug);
-  fs.writeFileSync(rutaHtmlSalida, htmlArticulo, 'utf8');
-
-  // Solo se suma la tarjeta al índice si este artículo todavía no
-  // estaba linkeado ahí (evita duplicar si el script corre de nuevo).
-  if (indexHTML && !indexHTML.includes(`href="${slug}.html"`)) {
-    const marcaInicio = '<!-- BLOG-CARDS-AUTO-START -->';
-    const tarjeta = generarTarjetaHTML(datos, slug);
-    indexHTML = indexHTML.replace(marcaInicio, marcaInicio + '\n' + tarjeta);
-    cambioIndex = true;
-    nuevos++;
+async function procesarTodo() {
+  if (!fs.existsSync(CARPETA_POSTS)) {
+    console.log('No hay carpeta blog/_posts todavía — nada para procesar.');
+    return;
   }
-});
 
-if (cambioIndex) {
-  fs.writeFileSync(RUTA_BLOG_INDEX, indexHTML, 'utf8');
+  let indexHTML = fs.existsSync(RUTA_BLOG_INDEX) ? fs.readFileSync(RUTA_BLOG_INDEX, 'utf8') : null;
+  let cambioIndex = false;
+  let nuevos = 0;
+
+  const archivos = fs.readdirSync(CARPETA_POSTS).filter((f) => f.endsWith('.md'));
+
+  for (const archivo of archivos) {
+    const rutaMd = path.join(CARPETA_POSTS, archivo);
+    const texto = fs.readFileSync(rutaMd, 'utf8');
+    const { datos, cuerpo } = parsearFrontmatter(texto);
+    const slug = slugLimpio(archivo);
+    const rutaHtmlSalida = path.join('blog', `${slug}.html`);
+
+    // Si no hay imagen manual pero sí palabras clave, se busca sola en Pexels.
+    if (!datos.image && datos.pexels_keywords) {
+      const fotoPexels = await buscarFotoPexels(datos.pexels_keywords);
+      if (fotoPexels) datos.image = fotoPexels;
+    }
+
+    const cuerpoHTML = marked.parse(cuerpo || '');
+    const htmlArticulo = generarArticuloHTML(datos, cuerpoHTML, slug);
+    fs.writeFileSync(rutaHtmlSalida, htmlArticulo, 'utf8');
+
+    // Solo se suma la tarjeta al índice si este artículo todavía no
+    // estaba linkeado ahí (evita duplicar si el script corre de nuevo).
+    if (indexHTML && !indexHTML.includes(`href="${slug}.html"`)) {
+      const marcaInicio = '<!-- BLOG-CARDS-AUTO-START -->';
+      const tarjeta = generarTarjetaHTML(datos, slug);
+      indexHTML = indexHTML.replace(marcaInicio, marcaInicio + '\n' + tarjeta);
+      cambioIndex = true;
+      nuevos++;
+    }
+  }
+
+  if (cambioIndex) {
+    fs.writeFileSync(RUTA_BLOG_INDEX, indexHTML, 'utf8');
+  }
+
+  console.log(`Listo. ${archivos.length} artículo(s) en blog/_posts, ${nuevos} nuevo(s) sumado(s) al índice.`);
 }
 
-console.log(`Listo. ${archivos.length} artículo(s) en blog/_posts, ${nuevos} nuevo(s) sumado(s) al índice.`);
+procesarTodo();

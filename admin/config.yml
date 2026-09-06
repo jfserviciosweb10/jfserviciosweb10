@@ -17,7 +17,8 @@ collections:
       - { label: "Titulo", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime" }
       - { label: "Descripcion corta", name: "description", widget: "string" }
-      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
+      - { label: "Imagen de portada", name: "image", widget: "image", required: false, hint: "Si la dejas vacia y completas el campo de abajo, la foto se busca sola en Pexels" }
+      - { label: "Palabras clave para la foto (en ingles)", name: "pexels_keywords", widget: "string", required: false, hint: "Ej: web design laptop. Solo se usa si no subiste una imagen arriba." }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   - name: "faq"

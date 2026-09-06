@@ -18,6 +18,8 @@ jobs:
         run: npm install marked js-yaml --no-save
 
       - name: Reconstruir artículos del blog
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: node build-blog.js
 
       - name: Reconstruir FAQ
