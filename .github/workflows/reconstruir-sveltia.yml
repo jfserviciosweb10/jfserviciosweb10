@@ -1,0 +1,32 @@
+name: Reconstruir contenido de Sveltia
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog/_posts/**'
+      - '_data/faq.yml'
+
+jobs:
+  reconstruir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: npm install marked js-yaml --no-save
+
+      - name: Reconstruir artículos del blog
+        run: node build-blog.js
+
+      - name: Reconstruir FAQ
+        run: node build-faq.js
+
+      - name: Commitear cambios si hubo
+        run: |
+          git config user.name "JF Bot"
+          git config user.email "bot@jfserviciosweb.com"
+          git add blog/ index.html
+          git diff --quiet && git diff --staged --quiet || git commit -m "Actualizar blog y FAQ desde Sveltia [auto]"
+          git push || echo "Nada para pushear"
