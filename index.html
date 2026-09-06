@@ -2106,6 +2106,78 @@ document.addEventListener('DOMContentLoaded', function(){
   <img src="img/whatsapp-flotante.webp?v=3" alt="WhatsApp" width="58" height="58">
 </a>
 
+<!-- DEMO EN VIVO — pop-up de ejemplo de Alertas Web -->
+<style>
+#demoAW{position:fixed;bottom:96px;right:24px;width:320px;max-width:calc(100vw - 32px);background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5);transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:all .3s cubic-bezier(.2,.9,.3,1.2);z-index:996}
+#demoAW.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+#demoAW .dh{background:linear-gradient(135deg,#128C4B,#0f7a41);padding:12px 14px;display:flex;align-items:center;gap:10px}
+#demoAW .dh b{display:block;font-size:13px;color:#fff}
+#demoAW .dh span{font-size:10.5px;color:rgba(255,255,255,.75)}
+#demoAW .dclose{margin-left:auto;color:rgba(255,255,255,.8);cursor:pointer;font-size:18px;padding:2px 6px}
+#demoAW .dbadge{background:var(--bg);color:var(--gold);font-size:9.5px;font-weight:700;letter-spacing:.4px;text-align:center;padding:5px}
+#demoAW .dbody{padding:12px;min-height:120px;display:flex;flex-direction:column;gap:8px}
+#demoAW .dmsg{max-width:82%;padding:8px 11px;border-radius:11px;font-size:13px;line-height:1.35;opacity:0;transform:translateY(6px);animation:dpop .3s forwards}
+@keyframes dpop{to{opacity:1;transform:translateY(0)}}
+#demoAW .dmsg.bot{background:var(--bg3);color:#fff;align-self:flex-start;border-bottom-left-radius:3px}
+#demoAW .dmsg.user{background:var(--wa);color:#06210f;align-self:flex-end;border-bottom-right-radius:3px;font-weight:600}
+#demoAW .dtyping{align-self:flex-start;background:var(--bg3);padding:9px 12px;border-radius:11px;border-bottom-left-radius:3px;display:flex;gap:4px;opacity:0;animation:dpop .25s forwards}
+#demoAW .dtyping span{width:5px;height:5px;background:#8A9BA8;border-radius:50%;animation:dblink 1s infinite ease-in-out}
+#demoAW .dtyping span:nth-child(2){animation-delay:.15s}
+#demoAW .dtyping span:nth-child(3){animation-delay:.3s}
+@keyframes dblink{0%,80%,100%{opacity:.3}40%{opacity:1}}
+#demoAW .dfoot{padding:8px 12px 12px;border-top:1px solid var(--border)}
+#demoAW .dcta{display:block;text-align:center;background:var(--gold);color:#181828;font-weight:700;font-size:12.5px;padding:9px;border-radius:8px;text-decoration:none}
+@media(max-width:480px){#demoAW{bottom:90px}}
+</style>
+<div id="demoAW">
+  <div class="dh">
+    <div style="flex:1">
+      <b>Alertas Web</b>
+      <span>Así responde tu negocio</span>
+    </div>
+    <div class="dclose" onclick="document.getElementById('demoAW').classList.remove('open')">×</div>
+  </div>
+  <div class="dbadge">ESTO ES UNA DEMO — MIRÁ CÓMO ATIENDE SOLO</div>
+  <div class="dbody" id="demoAWBody"></div>
+  <div class="dfoot"><a class="dcta" href="#planes">Quiero esto en mi negocio →</a></div>
+</div>
+<script>
+(function(){
+  const script=[
+    {who:'user',text:'Hola, ¿tenés turno para mañana a la tarde?'},
+    {who:'bot',text:'¡Hola! Sí, tenemos lugar mañana a las 16:30 o 17:15. ¿Cuál te queda mejor?'},
+    {who:'user',text:'17:15 dale'},
+    {who:'bot',text:'Perfecto, quedás confirmado para mañana 17:15. Te llega un recordatorio 1h antes 👍'}
+  ];
+  let played=false;
+  function play(){
+    if(played)return; played=true;
+    const body=document.getElementById('demoAWBody');
+    let delay=200;
+    script.forEach(m=>{
+      if(m.who==='bot'){
+        setTimeout(()=>{
+          const t=document.createElement('div');
+          t.className='dtyping';
+          t.innerHTML='<span></span><span></span><span></span>';
+          body.appendChild(t); body.scrollTop=body.scrollHeight;
+          setTimeout(()=>{t.remove();add(m,body);},800);
+        },delay); delay+=1300;
+      } else { setTimeout(()=>add(m,body),delay); delay+=800; }
+    });
+  }
+  function add(m,body){
+    const el=document.createElement('div');
+    el.className='dmsg '+(m.who==='bot'?'bot':'user');
+    el.textContent=m.text; body.appendChild(el); body.scrollTop=body.scrollHeight;
+  }
+  setTimeout(()=>{
+    const p=document.getElementById('demoAW');
+    if(!p.classList.contains('open')){ p.classList.add('open'); play(); }
+  }, 9000);
+})();
+</script>
+
 <script>
 // ============================================================
 // i18n
