@@ -11,3 +11,9 @@ Este es el primer párrafo de prueba.").
 Este es el primer párrafo de prueba.").
 
 rre (ej: "Y este es el final del artículo de prueba."), de
+
+"Segundo párrafo, después de la primera foto").
+
+![](/img/uploads/11..1%2C18MB.JPG)
+
+TODO BIEN...CHAU
