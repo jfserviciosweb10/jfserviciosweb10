@@ -30,3 +30,6 @@ jobs:
           git add blog/ index.html
           git diff --quiet && git diff --staged --quiet || git commit -m "Actualizar blog y FAQ desde Sveltia [auto]"
           git push || echo "Nada para pushear"
+
+permissions:
+  contents: write
