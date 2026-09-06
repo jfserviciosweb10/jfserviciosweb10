@@ -39,4 +39,4 @@ Supabase es ideal para programadores independientes, estudiantes y empresas emer
 
 Lo mejor de todo es que ofrece un plan gratuito muy generoso para que pruebes tus ideas. Si tu aplicación crece y se vuelve famosa, puedes pasar a sus planes de pago que siguen siendo muy accesibles. 
 
-¡Es hora de dejar de pelear con los servidores y concentrarte en crear la mejor experiencia para tus usuarios! Puedes empezar hoy mismo en el Sitio Oficial de Supabase.
+¡Es hora de dejar de pelear con los servidores y concentrarte en crear la mejor experiencia para tus usuarios! Puedes empezar hoy mismo en el Sitio Oficial de Supabase....
