@@ -152,7 +152,10 @@ function generarArticuloHTML(datos, cuerpoHTML, slug) {
   <div style="font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:.6rem">${escAttr(fechaLegible)}</div>
   <h1 style="font-family:var(--font-head);font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:1.5rem;color:var(--t1)">${escAttr(titulo)}</h1>
 
-  <div style="font-size:1rem;line-height:1.75;color:var(--t1)">
+  <style>
+    .article-body img{display:block;max-width:100%;height:auto;border-radius:var(--r2);margin:1.75rem auto;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+  </style>
+  <div class="article-body" style="font-size:1rem;line-height:1.75;color:var(--t1)">
 ${cuerpoHTML}
   </div>
 

@@ -10,6 +10,7 @@ public_folder: "img/uploads"
 collections:
   - name: "posts"
     label: "Articulos del Blog"
+    description: "Al guardar, tarda alrededor de 1 minuto en aparecer publicado en la web. No es instantaneo: antes de ese minuto, el cambio todavia no esta terminado."
     folder: "blog/_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -23,6 +24,7 @@ collections:
 
   - name: "faq"
     label: "Preguntas Frecuentes"
+    description: "Al guardar, tarda alrededor de 1 minuto en aparecer publicado en la web. No es instantaneo: antes de ese minuto, el cambio todavia no esta terminado."
     files:
       - file: "_data/faq.yml"
         label: "Mi FAQ"
