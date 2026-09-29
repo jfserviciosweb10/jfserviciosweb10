@@ -351,6 +351,8 @@ body {
       style="width:100%;box-sizing:border-box;padding:12px 14px;border-radius:10px;border:2px solid #2a2a3a;background:#14141f;color:#fff;font-size:1rem;margin-bottom:10px">
     <button onclick="intentarLogin()" style="width:100%;padding:12px;border-radius:10px;border:none;background:#00E676;color:#06210f;font-weight:800;font-size:.95rem;cursor:pointer">Entrar</button>
     <p id="loginError" style="font-size:.8rem;color:#f87171;margin-top:10px;min-height:1em"></p>
+    <a href="#" onclick="olvideClave();return false;" style="font-size:.82rem;color:#9898b8;text-decoration:underline">¿Olvidaste tu contraseña?</a>
+    <p id="loginAyuda" style="display:none;font-size:.8rem;color:#c8c8e0;margin-top:10px;line-height:1.45"></p>
   </div>
 </div>
 
@@ -436,8 +438,9 @@ window.addEventListener('orientationchange', setVH);
         <div class="stat"><span class="stat-k">Alertas Web</span><span class="stat-v verde" id="s-rebomba">—</span></div>
         <div class="stat"><span class="stat-k">WhatsApp API</span><span class="stat-v verde" id="s-wa">—</span></div>
         <div class="stat"><span class="stat-k">Módulos activos</span><span class="stat-v" id="s-mods">—</span></div>
-        <div class="stat"><span class="stat-k">Msgs gratuitos restantes</span><span class="stat-v verde" id="s-msgs-rest">—</span></div>
+        <div class="stat"><span class="stat-k">Mensajes enviados hoy</span><span class="stat-v verde" id="s-msgs-rest">—</span></div>
         <div class="stat"><span class="stat-k">Clientes totales</span><span class="stat-v" id="s-clientes">—</span></div>
+        <div class="stat"><span class="stat-k">Plan</span><span class="stat-v amarillo" id="s-plan">—</span></div>
       </div>
 
       <div class="card">
@@ -491,14 +494,27 @@ window.addEventListener('orientationchange', setVH);
     <div class="section" id="sec-negocios">
 
       <div class="tabs">
-        <button class="tab-btn active" onclick="tabNegocios('cotizaciones')" id="tab-cotizaciones">Cotiz.</button>
+        <button class="tab-btn active" onclick="tabNegocios('pedidos')" id="tab-pedidos">Pedidos</button>
+        <button class="tab-btn" onclick="tabNegocios('cotizaciones')" id="tab-cotizaciones">Cotiz.</button><!-- cotiz ya no arranca activa -->
         <button class="tab-btn" onclick="tabNegocios('leads')"       id="tab-leads">Leads</button>
         <button class="tab-btn" onclick="tabNegocios('stock')"       id="tab-stock">Stock</button>
         <button class="tab-btn" onclick="tabNegocios('vencimientos')" id="tab-vencimientos">Venc.</button>
       </div>
 
+      <!-- TAB PEDIDOS (MOD28 — comercio conversacional) -->
+      <div class="tab-content active" id="tc-pedidos">
+        <div class="card">
+          <div class="card-title">Pedidos por WhatsApp <span class="sub" id="pedidos-count">—</span></div>
+          <div class="sec-label ama">Nuevos / En preparación</div>
+          <div id="pedidos-activos"></div>
+          <hr class="sep">
+          <div class="sec-label" style="color:var(--gris-txt)">Entregados / Cancelados</div>
+          <div id="pedidos-cerrados"></div>
+        </div>
+      </div>
+
       <!-- TAB COTIZACIONES -->
-      <div class="tab-content active" id="tc-cotizaciones">
+      <div class="tab-content" id="tc-cotizaciones">
         <div class="card">
           <div class="card-title">Cotizaciones</div>
           <div class="sec-label ama">Pendientes</div>
@@ -587,11 +603,13 @@ window.addEventListener('orientationchange', setVH);
         <div id="conv-lista"></div>
       </div>
       <div class="card">
-        <div class="card-title">Módulos Alertas Web</div>
-        <div class="sec-label verde">Estratégica — Módulos 1 al 9</div>
-        <div class="mod-grid" id="mod-grid-estrat"></div>
-        <div class="sec-label amarillo" style="margin-top:4px;">Premium — Módulos 10 al 21</div>
-        <div class="mod-grid" id="mod-grid-prem"></div>
+        <div class="card-title">Contenido para redes <span class="sub" id="posts-count">—</span></div>
+        <div id="posts-lista"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Módulos Alertas Web <span class="sub" id="mod-plan-label">—</span></div>
+        <div class="sec-label verde">Los 26 módulos — incluidos en todos los planes</div>
+        <div class="mod-grid" id="mod-grid-todos"></div>
       </div>
     </div>
 
@@ -684,6 +702,7 @@ const CONFIG = {
   PANEL_DATA_URL:  'https://nsnhxzqewyilitmseouh.supabase.co/functions/v1/panel-data',
   TEL_DUENIO:      '5493496591636',
   NEGOCIO:         'JF Servicios Web',
+  TEL_NEGOCIO:     '5493496462821',   // WhatsApp del NEGOCIO (el que atiende Abril), ej. '5493496XXXXXX'. Lo usa "¿Olvidaste tu contraseña?".
   POLL_INTERVAL:   30000,
   CACHE_KEY:       'rebomba-panel-data-v2',
   VAPID_PUBLIC_KEY:'BEase7ZK8cgKsWZTkVXPuAN3TUwDsLBmEUssrBHbrFumAh0IS4MiYbrv98fo4ouhOCjxWhXF0xYW2XYRSF4KTAM',
@@ -692,30 +711,38 @@ const CONFIG = {
 CONFIG.PWD_KEY = 'panel-pwd-hash-' + CONFIG.TEL_DUENIO;
 
 /* ═══════════════════════════════════════════════
-   MÓDULOS JF — 21 oficiales
+   MÓDULOS JF — los 26 de la web (29/09/2026)
+   Mismos nombres y numeración que jfserviciosweb.com.
+   Los 26 vienen en TODOS los planes (ya no hay reparto
+   Estratégica 1-9 / Premium 10-21).
 ═══════════════════════════════════════════════ */
 const MODULOS = [
-  { n:'01', nombre:'Bienvenida & FAQ',         nivel:'estrat' },
-  { n:'02', nombre:'Confirmación Turno',        nivel:'estrat' },
-  { n:'03', nombre:'Recordatorio 2hs',          nivel:'estrat' },
-  { n:'04', nombre:'Encuesta post-servicio',    nivel:'estrat' },
-  { n:'05', nombre:'Alerta insatisfacción',     nivel:'estrat' },
-  { n:'06', nombre:'Reviews Google',            nivel:'estrat' },
-  { n:'07', nombre:'Recuperación clientes',     nivel:'estrat' },
-  { n:'08', nombre:'Seguimiento cotización',    nivel:'estrat' },
-  { n:'09', nombre:'Reporte semanal IA',        nivel:'estrat' },
-  { n:'10', nombre:'Catálogo por WA',           nivel:'prem'   },
-  { n:'11', nombre:'Contenido Redes / Blog',    nivel:'prem'   },
-  { n:'12', nombre:'Precios dinámicos',         nivel:'prem'   },
-  { n:'13', nombre:'FAQ IA + GMB autopost',     nivel:'prem'   },
-  { n:'14', nombre:'Recordatorios vencim.',     nivel:'prem'   },
-  { n:'15', nombre:'Vendedor IA',               nivel:'prem'   },
-  { n:'16', nombre:'Stock & Abastecimiento',    nivel:'prem'   },
-  { n:'17', nombre:'Agenda del Dueño',          nivel:'prem'   },
-  { n:'18', nombre:'Transcripción de audios',   nivel:'prem'   },
-  { n:'19', nombre:'Cotización PDF',            nivel:'prem'   },
-  { n:'20', nombre:'Recuperación de carrito',   nivel:'prem'   },
-  { n:'21', nombre:'Cumpleaños del cliente',    nivel:'prem'   }
+  { n:'01', nombre:'Bienvenida automática' },
+  { n:'02', nombre:'Confirmación de turno + lista de espera' },
+  { n:'03', nombre:'Recordatorio 2 hs antes' },
+  { n:'04', nombre:'Encuesta post-servicio' },
+  { n:'05', nombre:'Alerta de insatisfacción' },
+  { n:'06', nombre:'Reseñas Google' },
+  { n:'07', nombre:'Recuperación de clientes dormidos' },
+  { n:'08', nombre:'Seguimiento de cotización' },
+  { n:'09', nombre:'Reporte semanal inteligente' },
+  { n:'10', nombre:'Catálogo por WhatsApp' },
+  { n:'11', nombre:'Contenido & Redes' },
+  { n:'12', nombre:'Actualización de precios' },
+  { n:'13', nombre:'FAQ con IA' },
+  { n:'14', nombre:'Vencimientos y pagos' },
+  { n:'15', nombre:'Abril — Vendedora IA', estrella:true },
+  { n:'16', nombre:'Stock y abastecimiento' },
+  { n:'17', nombre:'Agenda del dueño' },
+  { n:'18', nombre:'Transcripción de audios' },
+  { n:'19', nombre:'Cotización en PDF' },
+  { n:'20', nombre:'Consulta sin cierre' },
+  { n:'21', nombre:'Cumpleaños del cliente' },
+  { n:'22', nombre:'Alerta de lead frío' },
+  { n:'23', nombre:'Carrito abandonado (tienda online)' },
+  { n:'24', nombre:'Reservas de turno conectadas' },
+  { n:'25', nombre:'Venta cruzada automática' },
+  { n:'26', nombre:'Ofertas relámpago' }
 ];
 
 /* ═══════════════════════════════════════════════
@@ -723,7 +750,7 @@ const MODULOS = [
 ═══════════════════════════════════════════════ */
 let DATA = null;
 let preciosEditados = {};
-let tabActualNegocios = 'cotizaciones';
+let tabActualNegocios = 'pedidos';
 
 /* ═══════════════════════════════════════════════
    NAVEGACIÓN PRINCIPAL
@@ -766,6 +793,24 @@ function mostrarLogin(mensajeError) {
     input.value = '';
     input.focus();
     input.onkeydown = (e) => { if (e.key === 'Enter') intentarLogin(); };
+  }
+}
+
+/* ¿Olvidaste tu contraseña? (agregado 28/09/2026)
+   Abre WhatsApp con RESET_PASS ya escrito, dirigido al número del negocio.
+   El sistema solo responde si el mensaje sale del celular del dueño
+   (tel_duenio), así que es seguro aunque cualquiera toque el link.
+   La clave nueva le llega por WhatsApp; después la puede cambiar por
+   una suya con RESET_PASS:suClave. */
+function olvideClave() {
+  const ayuda = document.getElementById('loginAyuda');
+  const tel = (CONFIG.TEL_NEGOCIO || '').replace(/\D/g, '');
+  ayuda.style.display = 'block';
+  if (tel) {
+    ayuda.innerHTML = 'Se abrió WhatsApp con <b>RESET_PASS</b> ya escrito. <b>Envialo desde tu celular de dueño</b> y te llega una contraseña nueva en segundos.';
+    window.open('https://wa.me/' + tel + '?text=' + encodeURIComponent('RESET_PASS'), '_blank');
+  } else {
+    ayuda.innerHTML = 'Desde <b>tu celular de dueño</b>, mandale <b>RESET_PASS</b> al WhatsApp de tu negocio. Te llega una contraseña nueva en segundos.';
   }
 }
 
@@ -829,11 +874,13 @@ function renderTodo() {
   renderClientes();
   renderTurnos();
   renderLeads();
+  renderPedidos();
   renderCotizaciones();
   renderVencimientos();
   renderStock();
   renderLog();
   renderConversaciones();
+  renderPosts();
   renderModulos();
   renderBadges();
 }
@@ -862,9 +909,11 @@ function renderSistema() {
   const c = DATA.config  || {};
   document.getElementById('s-rebomba').textContent   = s.rebomba   || '—';
   document.getElementById('s-wa').textContent        = s.wa_api    || '—';
-  document.getElementById('s-mods').textContent      = c.mods_activos != null ? c.mods_activos + ' / 21' : '—';
-  document.getElementById('s-msgs-rest').textContent = c.msgs_restantes ?? '—';
+  document.getElementById('s-mods').textContent      = MODULOS.length + ' incluidos';
+  document.getElementById('s-msgs-rest').textContent = k('msgs_enviados_hoy') ?? 0;
   document.getElementById('s-clientes').textContent  = k('clientes_total') || (DATA.clientes || []).length || '—';
+  document.getElementById('s-plan').textContent      = c.plan || '—';
+  document.getElementById('mod-plan-label').textContent = c.plan || '';
 }
 
 function k(key) { return DATA.kpis ? DATA.kpis[key] : null; }
@@ -890,11 +939,11 @@ function clienteHTML(c) {
   const nivel = (c.nivel || 'NUEVO').toUpperCase();
   const nivelCls = nivel === 'VIP' ? 'vip' : nivel === 'FRECUENTE' ? 'frecuente' : nivel === 'REGULAR' ? 'regular' : 'nuevo';
   const pillCls  = nivel === 'VIP' ? 'vip naranja' : nivel === 'FRECUENTE' ? 'verde' : nivel === 'REGULAR' ? 'azul' : 'gris';
-  return `<div class="row" onclick="accionCliente('${c.id}','${c.telefono}','${c.nombre}')">
-    <div class="av ${nivelCls}">${c.ini}</div>
+  return `<div class="row" onclick="accionCliente('${esc(c.id)}')">
+    <div class="av ${nivelCls}">${esc(c.ini)}</div>
     <div style="flex:1;min-width:0">
-      <div style="font-size:13px;font-weight:600">${c.nombre}</div>
-      <div style="font-size:11px;color:var(--gris-txt)">${c.tipo || '—'} · ${c.zona || '—'} · última: ${c.ultima_visita || '—'}</div>
+      <div style="font-size:13px;font-weight:600">${esc(c.nombre)}</div>
+      <div style="font-size:11px;color:var(--gris-txt)">${esc(c.tipo || '—')} · ${esc(c.zona || '—')} · última: ${esc(c.ultima_visita || '—')}</div>
     </div>
     <div style="text-align:right;flex-shrink:0">
       <span class="pill ${pillCls}">${nivel}</span>
@@ -913,7 +962,9 @@ function filtrarClientes(q) {
     : '<p class="empty-msg">Sin resultados</p>';
 }
 
-function accionCliente(id, tel, nombre) {
+function accionCliente(id) {
+  const c = (DATA.clientes || []).find(x => x.id === id) || {};
+  const tel = c.telefono, nombre = c.nombre || 'este cliente';
   if (!tel) return showToast('Sin teléfono registrado');
   const wa = 'https://wa.me/' + tel.replace(/\D/g,'');
   if (confirm(`¿Escribir a ${nombre} por WhatsApp?`)) window.open(wa, '_blank');
@@ -925,10 +976,10 @@ function leadHTML(l) {
   const scoreCls = cls === 'frio' ? 'frio' : cls === 'hot' ? 'hot' : 'tibio';
   const tel = l.telefono || '';
   return `<div class="row" onclick="${tel ? `window.open('https://wa.me/${tel.replace(/\\D/g,'')}','_blank')` : ''}">
-    <div class="av ${scoreCls}">${l.ini}</div>
+    <div class="av ${scoreCls}">${esc(l.ini)}</div>
     <div style="flex:1;min-width:0">
-      <div style="font-size:13px;font-weight:600">${l.nombre}</div>
-      <div style="font-size:11px;color:var(--gris-txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${l.msg}</div>
+      <div style="font-size:13px;font-weight:600">${esc(l.nombre)}</div>
+      <div style="font-size:11px;color:var(--gris-txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(l.msg)}</div>
     </div>
     <div style="text-align:right;flex-shrink:0">
       <span class="pill ${scoreCls}">${l.score}</span>
@@ -954,8 +1005,8 @@ function renderLeads() {
     const enEsta = leads.filter(l => (l.etapa || 'NUEVO') === etapa);
     document.getElementById('kcount-' + etapa).textContent = enEsta.length;
     document.getElementById('kcards-' + etapa).innerHTML = enEsta.map(l => `
-      <div class="kanban-card" draggable="true" data-id="${l.id}">
-        <div class="k-nombre">${l.nombre}</div>
+      <div class="kanban-card" draggable="true" data-id="${esc(l.id)}">
+        <div class="k-nombre">${esc(l.nombre)}</div>
         <span class="pill ${(l.score||'').toLowerCase().replace('í','i')}" style="margin-top:4px">${l.score}</span>
       </div>`).join('');
   });
@@ -1008,8 +1059,8 @@ function renderTurnos() {
         <div class="t-hora">${t.hora}</div>
         <div class="t-bar ${t.estado}"></div>
         <div class="t-info">
-          <div class="t-nombre">${t.nombre}</div>
-          <div class="t-tipo">${t.tipo}</div>
+          <div class="t-nombre">${esc(t.nombre)}</div>
+          <div class="t-tipo">${esc(t.tipo)}</div>
         </div>
         <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
           <span class="pill ${t.estado==='confirmado'?'verde':t.estado==='pendiente'?'ama':'rojo'}">${t.estado}</span>
@@ -1017,6 +1068,70 @@ function renderTurnos() {
         </div>
       </div>`).join('')
     : '<p class="empty-msg">Sin turnos para hoy</p>';
+}
+
+/* ── PEDIDOS (MOD28 — los que cierra Abril por WhatsApp) ── */
+function renderPedidos() {
+  const pedidos = DATA.pedidos || [];
+  const activos  = pedidos.filter(p => p.estado === 'NUEVO' || p.estado === 'PREPARANDO');
+  const cerrados = pedidos.filter(p => p.estado === 'ENTREGADO' || p.estado === 'CANCELADO');
+
+  const nuevos = pedidos.filter(p => p.estado === 'NUEVO').length;
+  document.getElementById('pedidos-count').textContent =
+    nuevos > 0 ? nuevos + ' nuevo' + (nuevos > 1 ? 's' : '') : (activos.length ? 'en preparación' : 'al día');
+
+  document.getElementById('pedidos-activos').innerHTML = activos.length
+    ? activos.map(pedidoHTML).join('')
+    : '<p class="empty-msg">Sin pedidos pendientes</p>';
+  document.getElementById('pedidos-cerrados').innerHTML = cerrados.length
+    ? cerrados.slice(0, 10).map(pedidoHTML).join('')
+    : '<p class="empty-msg" style="font-size:11px">—</p>';
+}
+
+function pedidoHTML(p) {
+  const estadoCls = p.estado === 'ENTREGADO' ? 'verde'
+                  : p.estado === 'CANCELADO' ? 'rojo'
+                  : p.estado === 'PREPARANDO' ? 'ama' : 'naranja';
+  const estadoTxt = p.estado === 'NUEVO' ? 'NUEVO'
+                  : p.estado === 'PREPARANDO' ? 'preparando'
+                  : p.estado === 'ENTREGADO' ? 'entregado' : 'cancelado';
+  const tel = (p.telefono || '').replace(/\D/g, '');
+  return `<div class="row" style="align-items:flex-start">
+    <div class="av nuevo" style="font-size:16px">🛒</div>
+    <div style="flex:1;min-width:0">
+      <div style="font-size:13px;font-weight:600">${esc(p.nombre || p.telefono || '—')}</div>
+      <div style="font-size:12px;margin:2px 0">${esc(p.resumen || '—')}</div>
+      <div style="font-size:11px;color:var(--gris-txt)">
+        Total: <b style="color:var(--verde)">$${Number(p.total||0).toLocaleString('es-AR')}</b> · ${p.hace || p.fecha || ''}
+      </div>
+      ${p.nota ? `<div style="font-size:11px;color:var(--amarillo);margin-top:2px">📝 ${esc(p.nota)}</div>` : ''}
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0">
+      <span class="pill ${estadoCls}">${estadoTxt}</span>
+      ${p.estado === 'NUEVO' ? `
+        <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionPedido('pedidoPreparando','${p.id}')">📦 Preparar</button>
+      ` : ''}
+      ${(p.estado === 'NUEVO' || p.estado === 'PREPARANDO') ? `
+        <button class="btn sm verde" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionPedido('pedidoEntregado','${p.id}')">✓ Entregado</button>
+        <button class="btn sm rojo" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionPedido('pedidoCancelado','${p.id}')">✕ Cancelar</button>
+        ${tel ? `<a class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px;text-decoration:none;text-align:center" href="https://wa.me/${tel}" target="_blank">📲 WA</a>` : ''}
+      ` : ''}
+    </div>
+  </div>`;
+}
+
+async function accionPedido(action, id) {
+  showToast('⏳ Procesando...');
+  const r = await postGAS({ action, id, tel_duenio: CONFIG.TEL_DUENIO });
+  if (r && r.ok === false) {
+    showToast('⚠ ' + (r.error || 'No se pudo procesar'));
+  } else {
+    const msg = action === 'pedidoPreparando' ? '📦 Pedido en preparación'
+              : action === 'pedidoEntregado'  ? '✅ Pedido entregado'
+              : '✕ Pedido cancelado';
+    showToast(msg);
+  }
+  setTimeout(cargarDatos, 1500);
 }
 
 /* ── COTIZACIONES ── */
@@ -1038,7 +1153,7 @@ function cotizHTML(c) {
   return `<div class="row">
     <div class="av cot">$</div>
     <div style="flex:1;min-width:0">
-      <div style="font-size:13px;font-weight:600">${c.cliente || c.telefono || '—'}</div>
+      <div style="font-size:13px;font-weight:600">${esc(c.cliente || c.telefono || '—')}</div>
       <div style="font-size:11px;color:var(--gris-txt)">${c.fecha} · $${Number(c.monto||0).toLocaleString('es-AR')}</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0">
@@ -1088,8 +1203,8 @@ function vencHTML(v) {
   return `<div class="row">
     <div class="av ${urgente ? 'alerta' : 'nuevo'}">📅</div>
     <div style="flex:1;min-width:0">
-      <div style="font-size:13px;font-weight:600">${v.descripcion}</div>
-      <div style="font-size:11px;color:var(--gris-txt)">${v.tipo} · ${v.fecha}</div>
+      <div style="font-size:13px;font-weight:600">${esc(v.descripcion)}</div>
+      <div style="font-size:11px;color:var(--gris-txt)">${esc(v.tipo)} · ${esc(v.fecha)}</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0">
       <span class="pill ${cls}">${diasTxt}</span>
@@ -1128,8 +1243,8 @@ function stockHTML(s) {
   return `<div class="stock-row">
     <div class="av ${s.alerta ? 'alerta' : 'nuevo'}" style="font-size:16px">${s.alerta ? '⚠' : '📦'}</div>
     <div class="stock-bar">
-      <div class="stock-nombre">${s.nombre}</div>
-      <div class="stock-info">mín: ${s.minimo} · proveedor: ${s.proveedor}</div>
+      <div class="stock-nombre">${esc(s.nombre)}</div>
+      <div class="stock-info">mín: ${esc(s.minimo)} · proveedor: ${esc(s.proveedor)}</div>
       <div style="margin-top:4px;height:3px;background:var(--gris-borde);border-radius:2px">
         <div style="height:100%;width:${pct}%;background:${s.alerta?'var(--rojo)':pct<150?'var(--amarillo)':'var(--verde)'};border-radius:2px"></div>
       </div>
@@ -1139,9 +1254,17 @@ function stockHTML(s) {
   </div>`;
 }
 
+// Botón "Pedido" (29/09/2026): cuando llega la mercadería, el dueño carga
+// la cantidad nueva y se guarda en el catálogo (la misma lista que usan
+// WhatsApp y Abril). Antes mandaba 'marcarPedidoHecho', que no hacía nada.
 async function pedidoHecho(id) {
-  await postGAS({ action:'marcarPedidoHecho', id });
-  showToast('✅ Pedido marcado como hecho');
+  const item = (DATA.stock || []).find(s => s.id === id);
+  const txt = prompt(`¿Cuántas unidades de "${item ? item.nombre : 'este producto'}" tenés ahora?`);
+  if (txt === null) return;
+  const cantidad = parseFloat(String(txt).replace(',', '.'));
+  if (isNaN(cantidad) || cantidad < 0) return showToast('⚠ Ingresá un número válido');
+  const r = await postGAS({ action:'actualizarStock', id, cantidad });
+  if (r && r.ok !== false) showToast('✅ Stock actualizado'); // si falló, postGAS ya mostró el error
   setTimeout(cargarDatos, 1500);
 }
 
@@ -1151,11 +1274,45 @@ function renderLog() {
   document.getElementById('log-count').textContent = log.length + ' entradas';
   document.getElementById('log-lista').innerHTML = log.map(l =>
     `<div class="log-row">
-      <span class="log-mod">${l.mod}</span>
-      <span class="log-txt">${l.txt}</span>
+      <span class="log-mod">${esc(l.mod)}</span>
+      <span class="log-txt">${esc(l.txt)}</span>
       <span class="log-hora">${l.hora}</span>
     </div>`
   ).join('') || '<p class="empty-msg">Sin actividad aún</p>';
+}
+
+/* ── POSTS (MOD11 — contenido para redes que generó la IA) ── */
+function renderPosts() {
+  const posts = DATA.posts || [];
+  document.getElementById('posts-count').textContent = posts.length ? posts.length + ' recientes' : '—';
+  document.getElementById('posts-lista').innerHTML = posts.length
+    ? posts.map(p => `
+      <div class="row" style="align-items:flex-start;flex-wrap:wrap">
+        <div style="flex:1;min-width:0">
+          <div style="font-size:13px;font-weight:600">${esc(p.titulo)}</div>
+          <div style="font-size:11px;color:var(--gris-txt)">${esc(p.hace || p.fecha)}</div>
+          <details style="margin-top:4px">
+            <summary style="font-size:11px;color:var(--verde);cursor:pointer">Ver texto</summary>
+            <div style="font-size:12px;white-space:pre-wrap;margin-top:6px">${esc(p.contenido)}</div>
+          </details>
+        </div>
+        <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 8px;flex-shrink:0" onclick="copiarPost('${esc(p.id)}')">📋 Copiar</button>
+      </div>`).join('')
+    : '<p class="empty-msg">Todavía no generaste posts. Escribile POST: y el tema al bot.</p>';
+}
+
+async function copiarPost(id) {
+  const p = (DATA.posts || []).find(x => x.id === id);
+  if (!p) return showToast('⚠ No encontré ese post');
+  try {
+    await navigator.clipboard.writeText(p.contenido);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = p.contenido; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch {}
+    ta.remove();
+  }
+  showToast('✅ Post copiado — pegalo en Instagram o Facebook');
 }
 
 function renderConversaciones() {
@@ -1163,10 +1320,10 @@ function renderConversaciones() {
   document.getElementById('conv-lista').innerHTML = convs.length
     ? convs.map(c => `
       <div class="row">
-        <div class="av nuevo">${(c.nombre||'?')[0].toUpperCase()}</div>
+        <div class="av nuevo">${esc((c.nombre||'?')[0].toUpperCase())}</div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:13px;font-weight:600">${c.nombre}</div>
-          <div style="font-size:11px;color:var(--gris-txt)">Primer: ${c.primer_cont} · Último: ${c.ultimo_msg}</div>
+          <div style="font-size:13px;font-weight:600">${esc(c.nombre)}</div>
+          <div style="font-size:11px;color:var(--gris-txt)">Primer: ${esc(c.primer_cont)} · Último: ${esc(c.ultimo_msg)}</div>
         </div>
       </div>`).join('')
     : '<p class="empty-msg">Sin conversaciones</p>';
@@ -1174,27 +1331,19 @@ function renderConversaciones() {
 
 /* ── MÓDULOS ── */
 function renderModulos() {
-  const activos = DATA.mods_activos || [];
-  ['estrat','prem'].forEach(nivel => {
-    const mods = MODULOS.filter(m => m.nivel === nivel);
-    document.getElementById('mod-grid-' + nivel).innerHTML = mods.map(m => {
-      const on      = activos.includes(m.n);
-      const lblCls  = on ? 'verde' : (nivel === 'prem' ? 'ama' : '');
-      const lblTxt  = on ? 'Activo' : (nivel === 'prem' ? 'Premium' : 'Inactivo');
-      return `<div class="mod-card ${on?'on':''}">
-        <div class="mod-num">MOD ${m.n}</div>
+  // Los 26 vienen en todos los planes: se muestran todos como incluidos.
+  document.getElementById('mod-grid-todos').innerHTML = MODULOS.map(m => `<div class="mod-card on">
+        <div class="mod-num">MOD ${m.n}${m.estrella ? ' ⭐' : ''}</div>
         <div class="mod-name">${m.nombre}</div>
-        <span class="pill ${lblCls}">${lblTxt}</span>
-      </div>`;
-    }).join('');
-  });
+        <span class="pill verde">Incluido</span>
+      </div>`).join('');
 }
 
 /* ── BADGES ── */
 function renderBadges() {
   const hot  = (DATA.leads   || []).filter(l => l.score === 'HOT').length;
   const pend = (DATA.turnos  || []).filter(t => t.estado === 'pendiente').length;
-  const neg  = (DATA.kpis?.cotizaciones_pend || 0) + (DATA.kpis?.vencimientos_prox || 0) + (DATA.kpis?.stock_bajo || 0);
+  const neg  = (DATA.kpis?.pedidos_nuevos || 0) + (DATA.kpis?.cotizaciones_pend || 0) + (DATA.kpis?.vencimientos_prox || 0) + (DATA.kpis?.stock_bajo || 0);
 
   const bl = document.getElementById('badge-leads');   // ya no existe, está en negocios
   const bt = document.getElementById('badge-turnos');
@@ -1386,11 +1535,11 @@ function getDemoData() {
       { telefono:'5493496552345', nombre:'Carlos Rodríguez',primer_cont:'15/02',ultimo_msg:'28/04' }
     ],
     log:[
-      { mod:'MOD 03', txt:'Recordatorio turno enviado a <strong>María González</strong>',  hora:'08:00' },
-      { mod:'MOD 01', txt:'FAQ respondido a <strong>José Test</strong>',                   hora:'08:34' },
-      { mod:'MOD 08', txt:'Seguimiento cotización enviado a <strong>Pedro Martínez</strong>', hora:'09:15' },
-      { mod:'MOD 15', txt:'Vendedor IA activado con <strong>María Rodríguez</strong>',     hora:'09:48' },
-      { mod:'MOD 16', txt:'Alerta stock bajo — <strong>Resma A4</strong>',                 hora:'10:00' }
+      { mod:'MOD 03', txt:'Recordatorio turno enviado a María González',  hora:'08:00' },
+      { mod:'MOD 01', txt:'FAQ respondido a José Test',                   hora:'08:34' },
+      { mod:'MOD 08', txt:'Seguimiento cotización enviado a Pedro Martínez', hora:'09:15' },
+      { mod:'MOD 15', txt:'Vendedor IA activado con María Rodríguez',     hora:'09:48' },
+      { mod:'MOD 16', txt:'Alerta stock bajo — Resma A4',                 hora:'10:00' }
     ],
     precios:[
       { prod:'Servicio básico',   precio:8000  },
@@ -1406,6 +1555,13 @@ function getDemoData() {
 /* ═══════════════════════════════════════════════
    UI HELPERS
 ═══════════════════════════════════════════════ */
+// Escapa texto que escribe un cliente (nombre de perfil de WhatsApp, mensajes,
+// notas) antes de pintarlo con innerHTML. Sin esto, un nombre armado a propósito
+// podía ejecutar código dentro del panel del dueño.
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
