@@ -161,7 +161,7 @@ ${cuerpoHTML}
 
   <div style="margin-top:3rem;background:linear-gradient(135deg,rgba(240,180,41,.1),rgba(240,180,41,.03));border:2px solid var(--gold);border-radius:var(--r2);padding:2rem">
     <p style="font-size:.92rem;color:var(--t2);margin-bottom:1.25rem">¿Querés algo así de simple para tu negocio? Escribinos:</p>
-    <a href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20le%C3%AD%20tu%20art%C3%ADculo%20sobre%20${encodeURIComponent(titulo)}%20y%20quiero%20consultar" target="_blank" rel="noopener noreferrer" class="btn-wa" style="display:inline-flex">💬 Quiero saber más</a>
+    <a href="https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20le%C3%AD%20tu%20art%C3%ADculo%20sobre%20${encodeURIComponent(titulo)}%20y%20quiero%20consultar" target="_blank" rel="noopener noreferrer" class="btn-wa" style="display:inline-flex">💬 Quiero saber más</a>
   </div>
 
 </article>
@@ -187,7 +187,7 @@ ${cuerpoHTML}
       <h4>Contacto</h4>
       <div class="footer-contact-info">
         <p>
-          <a href="https://api.whatsapp.com/send?phone=5493496591636" target="_blank" rel="noopener noreferrer">+54 9 3496 591636</a><br>
+          <a href="https://api.whatsapp.com/send?phone=5493496462821" target="_blank" rel="noopener noreferrer">+54 9 3496 462821</a><br>
           ✉️ <a href="mailto:info@jfserviciosweb.com">info@jfserviciosweb.com</a><br>
           📍 Esperanza, Santa Fe, Argentina
         </p>
@@ -199,8 +199,8 @@ ${cuerpoHTML}
   </div>
 </footer>
 
-<a id="wa-float" href="https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20consultar" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-  <span id="wa-float-text">Escribinos al +54 9 3496 591636</span>
+<a id="wa-float" href="https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20quiero%20consultar" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <span id="wa-float-text">Escribinos al +54 9 3496 462821</span>
   <img src="../img/whatsapp-flotante.webp?v=3" alt="WhatsApp" width="58" height="58">
 </a>
 
