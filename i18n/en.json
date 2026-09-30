@@ -1575,6 +1575,10 @@
   "es": "📊 Seguimiento de cotizaciones",
   "en": "📊 Quote follow-up"
  },
+ "h6cb53731": {
+  "es": "Escribinos por WhatsApp y en 15 minutos de conversación te mostramos en vivo cómo funciona el nivel que mejor se adapta a tu negocio y tu presupuesto.<br><br>📱 WhatsApp: tocá el botón verde<br>📧 Email: info@jfserviciosweb.com<br>🌐 jfserviciosweb.com",
+  "en": "Message us on WhatsApp and in 15 minutes of conversation we'll show you live how the plan that best fits your business and budget works.<br><br>📱 WhatsApp: tap the green button<br>📧 Email: info@jfserviciosweb.com<br>🌐 jfserviciosweb.com"
+ },
  "h6d3938f1": {
   "es": "Generador de contenido para redes automática por WhatsApp",
   "en": "Automatic social media content generator via WhatsApp"
@@ -1914,6 +1918,10 @@
  "h8988945a": {
   "es": "Cuando un negocio empieza a vender por internet, la primera reacción suele ser buscar \"una tienda online\" — y ahí aparecen decenas de plataformas con carrito de compras, cupones de descuento, gestión de envíos, pasarelas de pago integradas y mil funciones más.",
   "en": "When a business starts selling online, the first reaction is usually to search for \"an online store\" — and then dozens of platforms appear with shopping carts, discount coupons, shipping management, integrated payment gateways and a thousand more features."
+ },
+ "h8a593bcc": {
+  "es": "<span id=\"wa-float-text\">Escribinos por WhatsApp</span> <img src=\"../img/WHATSAPP-FLOTANTE.webp?v=2\" alt=\"WhatsApp\" width=\"58\" height=\"58\">",
+  "en": "<span id=\"wa-float-text\">Message us on WhatsApp</span>\n  <img src=\"../img/WHATSAPP-FLOTANTE.webp?v=2\" alt=\"WhatsApp\" width=\"58\" height=\"58\">"
  },
  "h8a62e26c": {
   "es": "Módulo 24 de 26 · Alerta-Web",
@@ -2299,6 +2307,10 @@
   "es": "🛠️ Soporte técnico",
   "en": "🛠️ Technical support"
  },
+ "ha364006d": {
+  "es": "<strong>WhatsApp</strong><br><span style=\"font-size:.82rem;color:var(--t3)\">Escribinos cuando quieras · Respuesta en horas</span>",
+  "en": "<strong>WhatsApp</strong><br><span style=\"font-size:.82rem;color:var(--t3)\">Message us anytime · Response in hours</span>"
+ },
  "ha38a6c37": {
   "es": "<strong>Lo que ganás:</strong> Respuestas inmediatas a toda hora sin que el dueño esté pegado al teléfono — el cliente que consulta a las 11 de la noche no se va sin respuesta ni se va a la competencia.",
   "en": "<strong>What you gain:</strong> Immediate answers at any hour without the owner being glued to the phone — the customer who asks at 11 at night doesn't leave without an answer or go to the competition."
@@ -2643,6 +2655,10 @@
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Difusión de ofertas relámpago</span>",
   "en": "<a href=\"../\" style=\"color:var(--t3)\">Home</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Flash offer distribution</span>"
  },
+ "hb95d4a5d": {
+  "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">Escribinos por WhatsApp</a><br> ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br> 📍 Esperanza, Santa Fe, Argentina",
+  "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">Message us on WhatsApp</a><br>\n          ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br>\n          📍 Esperanza, Santa Fe, Argentina"
+ },
  "hb997bf1c": {
   "es": "Incluye Panel + Push",
   "en": "Includes Panel + Push"
@@ -2746,6 +2762,10 @@
  "hc176fdee": {
   "es": "📅 Sacar un turno",
   "en": "📅 Book an appointment"
+ },
+ "hc1832dba": {
+  "es": "<span id=\"wa-float-text\">Escribinos por WhatsApp</span> <img src=\"img/whatsapp-flotante.webp?v=3\" alt=\"WhatsApp\" width=\"58\" height=\"58\">",
+  "en": "<span id=\"wa-float-text\">Message us on WhatsApp</span>\n  <img src=\"img/whatsapp-flotante.webp?v=3\" alt=\"WhatsApp\" width=\"58\" height=\"58\">"
  },
  "hc19be089": {
   "es": "Una vez abonado el 50% inicial y encargado el proyecto, no hay reembolsos por cancelación bajo ningún concepto.",
@@ -3031,6 +3051,10 @@
   "es": "Más reseñas reales en Google significa mejor posición en el mapa y en la búsqueda local — eso es gente nueva encontrándote sola, sin que gastes en publicidad.",
   "en": "More real reviews on Google means better position on the map and local search — that's new people finding you on their own, without you spending on ads."
  },
+ "hd42e7e58": {
+  "es": "<img src=\"img/whatsapp-flotante.webp\" width=\"16\" height=\"16\" alt=\"WA\" style=\"display:inline;vertical-align:middle;border-radius:3px;margin-right:4px\"> <a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">Escribinos por WhatsApp</a><br> ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br> <img src=\"img/instagram.webp\" width=\"16\" height=\"16\" alt=\"IG\" style=\"display:inline;vertical-align:middle;margin-right:4px\"> <a href=\"https://www.instagram.com/jfserviciosweb/\" target=\"_blank\" rel=\"noopener noreferrer\">@jfserviciosweb</a><br> 📍 Esperanza, Santa Fe, Argentina",
+  "en": "<img src=\"img/whatsapp-flotante.webp\" width=\"16\" height=\"16\" alt=\"WA\" style=\"display:inline;vertical-align:middle;border-radius:3px;margin-right:4px\">\n          <a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">Message us on WhatsApp</a><br>\n          ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br>\n          <img src=\"img/instagram.webp\" width=\"16\" height=\"16\" alt=\"IG\" style=\"display:inline;vertical-align:middle;margin-right:4px\">\n          <a href=\"https://www.instagram.com/jfserviciosweb/\" target=\"_blank\" rel=\"noopener noreferrer\">@jfserviciosweb</a><br>\n          📍 Esperanza, Santa Fe, Argentina"
+ },
  "hd557f278": {
   "es": "Encuesta post-servicio automática por WhatsApp",
   "en": "Automatic post-service survey via WhatsApp"
@@ -3038,6 +3062,10 @@
  "hd57b4d91": {
   "es": "Un cliente enojado que no se atiende a tiempo se convierte en una mala reseña pública — y una mala reseña pública espanta a decenas de clientes futuros.",
   "en": "An angry customer who isn't attended to in time becomes a negative public review — and a negative public review scares off dozens of future customers."
+ },
+ "hd5b8fdeb": {
+  "es": "<span id=\"wa-float-text\">Escribinos por WhatsApp</span> <img src=\"../img/whatsapp-flotante.webp?v=2\" alt=\"WhatsApp\" width=\"58\" height=\"58\">",
+  "en": "<span id=\"wa-float-text\">Message us on WhatsApp</span>\n  <img src=\"../img/whatsapp-flotante.webp?v=2\" alt=\"WhatsApp\" width=\"58\" height=\"58\">"
  },
  "hd5d3e22c": {
   "es": "FAQ con Inteligencia Artificial",
@@ -3490,6 +3518,10 @@
  "hf18508ec": {
   "es": "<strong>Lo que ganás:</strong> Decisiones más rápidas y mejor informadas, y alertas tempranas cuando una semana viene floja — a tiempo de reaccionar, no de lamentarte.",
   "en": "<strong>What you gain:</strong> Faster, better-informed decisions, and early warnings when a week is running slow — in time to react, not to regret."
+ },
+ "hf1b2103a": {
+  "es": "<span id=\"wa-float-text\">Escribinos por WhatsApp</span> <img src=\"../img/whatsapp-flotante.webp?v=3\" alt=\"WhatsApp\" width=\"58\" height=\"58\">",
+  "en": "<span id=\"wa-float-text\">Message us on WhatsApp</span>\n  <img src=\"../img/whatsapp-flotante.webp?v=3\" alt=\"WhatsApp\" width=\"58\" height=\"58\">"
  },
  "hf233c78a": {
   "es": "Cerrás más rápido, con una imagen prolija de tu negocio, sin perder tiempo armando cada presupuesto a mano...",
