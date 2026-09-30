@@ -208,7 +208,7 @@ ${cuerpoHTML}
       <h4>Contacto</h4>
       <div class="footer-contact-info">
         <p>
-          <a href="https://api.whatsapp.com/send?phone=5493496462821" target="_blank" rel="noopener noreferrer">+54 9 3496 462821</a><br>
+          <a href="https://api.whatsapp.com/send?phone=5493496462821" target="_blank" rel="noopener noreferrer">Escribinos por WhatsApp</a><br>
           ✉️ <a href="mailto:info@jfserviciosweb.com">info@jfserviciosweb.com</a><br>
           📍 Esperanza, Santa Fe, Argentina
         </p>
@@ -221,7 +221,7 @@ ${cuerpoHTML}
 </footer>
 
 <a id="wa-float" href="https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20quiero%20consultar" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-  <span id="wa-float-text">Escribinos al +54 9 3496 462821</span>
+  <span id="wa-float-text">Escribinos por WhatsApp</span>
   <img src="../img/whatsapp-flotante.webp?v=3" alt="WhatsApp" width="58" height="58">
 </a>
 
