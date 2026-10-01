@@ -19,6 +19,10 @@
   "es": "<a class=\"dcta\" href=\"#\" data-wa=\"Hola%20Jos%C3%A9%2C%20vi%20la%20demo%20de%20Alertas%20Web%20y%20quiero%20esto%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Quiero esto en mi negocio →</a>",
   "en": "<a class=\"dcta\" href=\"#\" data-wa=\"Hola%20Jos%C3%A9%2C%20vi%20la%20demo%20de%20Alertas%20Web%20y%20quiero%20esto%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">I want this for my business →</a>"
  },
+ "h02e4e89e": {
+  "es": "<span>¿Pregunta de prueba?</span><span class=\"faq-arrow\">↓</span>",
+  "en": "<span>Test question?</span><span class=\"faq-arrow\">↓</span>"
+ },
  "h030368be": {
   "es": "El dueño se entera antes de quedarse sin stock.",
   "en": "The owner finds out before running out of stock."
@@ -2662,6 +2666,10 @@
  "hb8bdcbf3": {
   "es": "Módulo 08 de 26",
   "en": "Module 08 of 26"
+ },
+ "hb8d0d868": {
+  "es": "Esta es una respuesta de prueba para el traductor.",
+  "en": "This is a test answer for the translator."
  },
  "hb8d7a924": {
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Difusión de ofertas relámpago</span>",
