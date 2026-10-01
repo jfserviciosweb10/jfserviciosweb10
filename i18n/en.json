@@ -115,6 +115,10 @@
   "es": "Estos 12 no atienden al desconocido que te escribe por primera vez — pero construyen algo igual de valioso: <strong>la experiencia y la reputación que hacen que un cliente te recomiende a otro</strong>. Un negocio con buena atención, cero quejas sueltas y cobros al día también consigue gente nueva — por el boca a boca. Es la otra cara de la misma moneda.",
   "en": "These 12 don't answer the stranger writing to you for the first time — but they build something just as valuable: <strong>the experience and reputation that make a customer recommend you to another</strong>. A business with good service, no loose complaints and payments on time also gets new people — through word of mouth. It's the other side of the same coin."
  },
+ "h0a0a96f6": {
+  "es": "<img src=\"img/whatsapp-flotante.webp\" width=\"16\" height=\"16\" alt=\"WA\" style=\"display:inline;vertical-align:middle;border-radius:3px;margin-right:4px\"> <a href=\"https://api.whatsapp.com/send?phone=5493496593581\" target=\"_blank\" rel=\"noopener noreferrer\">Escribinos por WhatsApp</a><br> ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br> <img src=\"img/instagram.webp\" width=\"16\" height=\"16\" alt=\"IG\" style=\"display:inline;vertical-align:middle;margin-right:4px\"> <a href=\"https://www.instagram.com/jfserviciosweb/\" target=\"_blank\" rel=\"noopener noreferrer\">@jfserviciosweb</a><br> 📍 Esperanza, Santa Fe, Argentina",
+  "en": "<img src=\"img/whatsapp-flotante.webp\" width=\"16\" height=\"16\" alt=\"WA\" style=\"display:inline;vertical-align:middle;border-radius:3px;margin-right:4px\">\n          <a href=\"https://api.whatsapp.com/send?phone=5493496593581\" target=\"_blank\" rel=\"noopener noreferrer\">Message us on WhatsApp</a><br>\n          ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br>\n          <img src=\"img/instagram.webp\" width=\"16\" height=\"16\" alt=\"IG\" style=\"display:inline;vertical-align:middle;margin-right:4px\">\n          <a href=\"https://www.instagram.com/jfserviciosweb/\" target=\"_blank\" rel=\"noopener noreferrer\">@jfserviciosweb</a><br>\n          📍 Esperanza, Santa Fe, Argentina"
+ },
  "h0a786635": {
   "es": "Recuperación de Clientes Dormidos por WhatsApp",
   "en": "Sleeping Customer Recovery via WhatsApp"
@@ -1319,6 +1323,10 @@
   "es": "Vencimientos y registro de pago",
   "en": "Due dates and payment tracking"
  },
+ "h5d04cf88": {
+  "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581\" target=\"_blank\" rel=\"noopener noreferrer\">Escribinos por WhatsApp</a><br> ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br> 📍 Esperanza, Santa Fe, Argentina",
+  "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581\" target=\"_blank\" rel=\"noopener noreferrer\">Write us on WhatsApp</a><br>\n          ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br>\n          📍 Esperanza, Santa Fe, Argentina"
+ },
  "h5d1cbcad": {
   "es": "Si no vuelve a escribir, el dueño se entera a tiempo para ofrecerle algo y cerrar.",
   "en": "If they don't write back, the owner finds out in time to make them an offer and close the deal."
@@ -1958,6 +1966,10 @@
  "h8c205510": {
   "es": "Confirmación de turno + lista de espera automática por WhatsApp",
   "en": "Appointment confirmation + automatic waitlist via WhatsApp"
+ },
+ "h8c76e5e9": {
+  "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Transcripci%C3%B3n%20de%20audios%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
+  "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Transcripci%C3%B3n%20de%20audios%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Free demo</a>"
  },
  "h8cb6ee2a": {
   "es": "Un cliente te escribe a las 11 de la noche preguntando el precio de algo. Vos ya te acostaste, o estás en la cena con tu familia, o simplemente no llegaste a mirar el celular. Ese mensaje queda ahí, sin respuesta, hasta la mañana siguiente.",
@@ -3003,6 +3015,10 @@
   "es": "Ver cómo sumarla →",
   "en": "See how to add it →"
  },
+ "hd16cd0e6": {
+  "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Vendedor%20IA%2024/7%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
+  "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Vendedor%20IA%2024/7%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Free demo</a>"
+ },
  "hd1b6597e": {
   "es": "Módulo 19 de 26 · Alerta-Web",
   "en": "Module 19 of 26 · Alerta-Web"
@@ -3054,6 +3070,10 @@
  "hd42e7e58": {
   "es": "<img src=\"img/whatsapp-flotante.webp\" width=\"16\" height=\"16\" alt=\"WA\" style=\"display:inline;vertical-align:middle;border-radius:3px;margin-right:4px\"> <a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">Escribinos por WhatsApp</a><br> ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br> <img src=\"img/instagram.webp\" width=\"16\" height=\"16\" alt=\"IG\" style=\"display:inline;vertical-align:middle;margin-right:4px\"> <a href=\"https://www.instagram.com/jfserviciosweb/\" target=\"_blank\" rel=\"noopener noreferrer\">@jfserviciosweb</a><br> 📍 Esperanza, Santa Fe, Argentina",
   "en": "<img src=\"img/whatsapp-flotante.webp\" width=\"16\" height=\"16\" alt=\"WA\" style=\"display:inline;vertical-align:middle;border-radius:3px;margin-right:4px\">\n          <a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">Message us on WhatsApp</a><br>\n          ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br>\n          <img src=\"img/instagram.webp\" width=\"16\" height=\"16\" alt=\"IG\" style=\"display:inline;vertical-align:middle;margin-right:4px\">\n          <a href=\"https://www.instagram.com/jfserviciosweb/\" target=\"_blank\" rel=\"noopener noreferrer\">@jfserviciosweb</a><br>\n          📍 Esperanza, Santa Fe, Argentina"
+ },
+ "hd4c8a0cd": {
+  "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Venta%20cruzada%20autom%C3%A1tica%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
+  "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Venta%20cruzada%20autom%C3%A1tica%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Free demo</a>"
  },
  "hd557f278": {
   "es": "Encuesta post-servicio automática por WhatsApp",
