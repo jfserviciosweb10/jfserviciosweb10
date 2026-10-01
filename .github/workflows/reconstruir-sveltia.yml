@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Instalar dependencias
-        run: npm install marked js-yaml --no-save
+        run: npm install marked js-yaml cheerio@1.0.0 --no-save
 
       - name: Reconstruir artículos del blog
         env:
@@ -25,12 +25,28 @@ jobs:
       - name: Reconstruir FAQ
         run: node build-faq.js
 
+      # Traducción automática al inglés de lo que se acaba de regenerar.
+      # Si falla (ej. sin crédito en la API) NO frena la publicación: el sitio
+      # queda en español y el bot diario lo reintenta.
+      - name: Traducir home al inglés
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node build-i18n.js
+
+      - name: Traducir blog al inglés
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node build-i18n-blog.js
+
       - name: Commitear cambios si hubo
         run: |
           git config user.name "JF Bot"
           git config user.email "bot@jfserviciosweb.com"
-          git add blog/ index.html
-          git diff --quiet && git diff --staged --quiet || git commit -m "Actualizar blog y FAQ desde Sveltia [auto]"
+          git add blog/ index.html i18n/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Actualizar blog y FAQ desde Sveltia + traducción EN [auto]"
+          git pull --rebase || true
           git push || echo "Nada para pushear"
 
 permissions:
