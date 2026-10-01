@@ -33,6 +33,7 @@ collections:
           - label: "Preguntas"
             name: "items"
             widget: "list"
+            required: false
             summary: "{{fields.pregunta}}"
             fields:
               - { label: "Pregunta", name: "pregunta", widget: "string" }
