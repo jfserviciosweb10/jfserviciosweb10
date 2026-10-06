@@ -208,7 +208,7 @@ ${cuerpoHTML}
       <h4>Contacto</h4>
       <div class="footer-contact-info">
         <p>
-          <a href="https://api.whatsapp.com/send?phone=5493496593581" target="_blank" rel="noopener noreferrer">Escribinos por WhatsApp</a><br>
+          <a href="https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20le%C3%AD%20tu%20blog%20y%20quiero%20consultar" target="_blank" rel="noopener noreferrer">Escribinos por WhatsApp</a><br>
           ✉️ <a href="mailto:info@jfserviciosweb.com">info@jfserviciosweb.com</a><br>
           📍 Esperanza, Santa Fe, Argentina
         </p>
