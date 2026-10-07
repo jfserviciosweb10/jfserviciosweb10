@@ -435,6 +435,7 @@ section{padding:5rem 5%}
 .extra-btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
 #qrCanvasJF{margin-top:14px;display:none}
 #qrCanvasJF.show{display:block}
+#qrCanvasJF img,#qrCanvasJF canvas{background:#fff;padding:14px;border-radius:10px;box-sizing:content-box}
 .qr-wrap-jf{text-align:center;margin-top:10px}
 .qr-wrap-jf p{font-size:.75rem;color:var(--t3);margin-top:6px}
 .contact-form{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:2.5rem}
@@ -2101,7 +2102,7 @@ function toggleFaq(btn){
     new QRCode(wrap, {
       text: DATOS_QR[tipo].texto,
       width: 160, height: 160,
-      colorDark: '#4a7cf6', colorLight: '#ffffff',
+      colorDark: '#111827', colorLight: '#ffffff',
       correctLevel: QRCode.CorrectLevel.M
     });
     qrActual = tipo;
