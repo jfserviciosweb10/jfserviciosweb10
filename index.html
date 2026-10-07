@@ -2078,7 +2078,7 @@ function toggleFaq(btn){
 (function(){
   var qrActual = null; // 'whatsapp' | 'web' | null
   var DATOS_QR = {
-    whatsapp: { texto: 'https://wa.me/5493496593581?text=Hola%20Jos%C3%A9%2C%20escane%C3%A9%20el%20QR%20de%20tu%20web', label: 'Escaneá para ir directo a WhatsApp' },
+    whatsapp: { texto: 'https://wa.me/5493496593581?text=Hola!%20Vengo%20del%20QR', label: 'Escaneá para ir directo a WhatsApp' },
     web:      { texto: 'https://jfserviciosweb.com',   label: 'Escaneá para ver esta web' }
   };
   function qrLabel(tipo){ try{ return T[lang]['qr.'+tipo]||DATOS_QR[tipo].label; }catch(e){ return DATOS_QR[tipo].label; } }
@@ -2102,7 +2102,7 @@ function toggleFaq(btn){
       text: DATOS_QR[tipo].texto,
       width: 160, height: 160,
       colorDark: '#4a7cf6', colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.H
+      correctLevel: QRCode.CorrectLevel.M
     });
     qrActual = tipo;
     wrap.classList.add('show');
