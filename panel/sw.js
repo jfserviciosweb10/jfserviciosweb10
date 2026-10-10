@@ -1,6 +1,6 @@
 /* RE-BOMBA Panel — Service Worker v1.2
    Rutas relativas: funciona en GitHub Pages con o sin dominio propio */
-const CACHE_NAME = 'rebomba-panel-v5';
+const CACHE_NAME = 'rebomba-panel-v6';
 const ASSETS = [
   './index.html',
   './offline.html',
@@ -38,6 +38,17 @@ self.addEventListener('fetch', e => {
           { headers: { 'Content-Type': 'application/json' } }
         )
       )
+    );
+    return;
+  }
+  // red primero para la pagina (index.html): asi las correcciones llegan sin borrar datos;
+  // la cache solo se usa si no hay internet.
+  if (e.request.mode === 'navigate' || url.pathname.endsWith('/index.html')) {
+    e.respondWith(
+      fetch(e.request, { cache: 'no-cache' }).then(res => {
+        if (res.ok && e.request.method === 'GET') { caches.open(CACHE_NAME).then(c => c.put(e.request, res.clone())); }
+        return res;
+      }).catch(() => caches.match(e.request).then(h => h || caches.match('./offline.html')))
     );
     return;
   }

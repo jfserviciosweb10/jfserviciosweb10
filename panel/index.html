@@ -8,13 +8,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Panel JF">
-<meta name="description" content="Panel de gestión Alertas Web — JF Servicios Web">
+<meta name="description" content="Panel de gestión Alertas Webs — JF Servicios Web">
 <link rel="manifest" href="./manifest.json">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-<title>Panel Alertas Web</title>
+<title>Panel Alertas Webs</title>
 <style>
 /* ═══════════════════════════════════════════════
    TOKENS
@@ -435,7 +435,7 @@ window.addEventListener('orientationchange', setVH);
 
       <div class="card">
         <div class="card-title">Estado del sistema</div>
-        <div class="stat"><span class="stat-k">Alertas Web</span><span class="stat-v verde" id="s-rebomba">—</span></div>
+        <div class="stat"><span class="stat-k">Alertas Webs</span><span class="stat-v verde" id="s-rebomba">—</span></div>
         <div class="stat"><span class="stat-k">WhatsApp API</span><span class="stat-v verde" id="s-wa">—</span></div>
         <div class="stat"><span class="stat-k">Módulos activos</span><span class="stat-v" id="s-mods">—</span></div>
         <div class="stat"><span class="stat-k">Mensajes enviados hoy</span><span class="stat-v verde" id="s-msgs-rest">—</span></div>
@@ -595,7 +595,7 @@ window.addEventListener('orientationchange', setVH);
     <!-- ═══ MENSAJES ═══ -->
     <div class="section" id="sec-mensajes">
       <div class="card">
-        <div class="card-title">Log Alertas Web <span class="sub" id="log-count">cargando...</span></div>
+        <div class="card-title">Log Alertas Webs <span class="sub" id="log-count">cargando...</span></div>
         <div id="log-lista"></div>
       </div>
       <div class="card">
@@ -607,7 +607,7 @@ window.addEventListener('orientationchange', setVH);
         <div id="posts-lista"></div>
       </div>
       <div class="card">
-        <div class="card-title">Módulos Alertas Web <span class="sub" id="mod-plan-label">—</span></div>
+        <div class="card-title">Módulos Alertas Webs <span class="sub" id="mod-plan-label">—</span></div>
         <div class="sec-label verde">Los 26 módulos — incluidos en todos los planes</div>
         <div class="mod-grid" id="mod-grid-todos"></div>
       </div>
@@ -1275,7 +1275,7 @@ function renderLog() {
   document.getElementById('log-lista').innerHTML = log.map(l =>
     `<div class="log-row">
       <span class="log-mod">${esc(l.mod)}</span>
-      <span class="log-txt">${esc(l.txt)}</span>
+      <span class="log-txt">${fmtWA(l.txt)}</span>
       <span class="log-hora">${l.hora}</span>
     </div>`
   ).join('') || '<p class="empty-msg">Sin actividad aún</p>';
@@ -1562,6 +1562,15 @@ function esc(v) {
   return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
+/* Formato WhatsApp -> HTML: *negrita*, _cursiva_, ~tachado~ y saltos de línea (siempre escapa primero) */
+function fmtWA(v) {
+  return esc(v)
+    .replace(/\*([^*\n]+)\*/g, '<b>$1</b>')
+    .replace(/(^|[\s(])_([^_\n]+)_(?=[\s).,!?:;]|$)/g, '$1<i>$2</i>')
+    .replace(/~([^~\n]+)~/g, '<s>$1</s>')
+    .replace(/\n/g, '<br>');
+}
+
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -1664,7 +1673,7 @@ async function activarPushNotifications() {
     const response = await fetch(CONFIG.PANEL_DATA_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'savePushSubscription', subscription: sub.toJSON(), tel_duenio: CONFIG.TEL_DUENIO })
+      body: JSON.stringify({ action: 'savePushSubscription', subscription: sub.toJSON(), tel_duenio: CONFIG.TEL_DUENIO, password_hash: localStorage.getItem(CONFIG.PWD_KEY) || '' })
     });
     const result = await response.json();
     if (result.ok) {
