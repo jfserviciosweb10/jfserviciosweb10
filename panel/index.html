@@ -1348,6 +1348,7 @@ function renderPosts() {
         <div style="flex:1;min-width:0">
           <div style="font-size:13px;font-weight:600">${esc(p.titulo)}</div>
           <div style="font-size:11px;color:var(--gris-txt)">${esc(p.hace || p.fecha)}</div>
+          ${p.imagen ? `<div style="margin-top:6px"><img src="${esc(p.imagen)}" alt="" loading="lazy" style="max-width:100%;width:240px;border-radius:8px;display:block"><a href="${esc(p.imagen)}" target="_blank" rel="noopener" download style="font-size:11px;color:var(--verde);display:inline-block;margin-top:4px">⬇ Descargar imagen</a></div>` : ''}
           <details style="margin-top:4px">
             <summary style="font-size:11px;color:var(--verde);cursor:pointer">Ver texto</summary>
             <div style="font-size:12px;white-space:pre-wrap;margin-top:6px">${esc(p.contenido)}</div>
