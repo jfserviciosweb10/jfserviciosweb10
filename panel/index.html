@@ -1353,6 +1353,7 @@ function renderPosts() {
             <summary style="font-size:11px;color:var(--verde);cursor:pointer">Ver texto</summary>
             <div style="font-size:12px;white-space:pre-wrap;margin-top:6px">${esc(p.contenido)}</div>
           </details>
+          ${p.corto ? `<details style="margin-top:4px"><summary style="font-size:11px;color:var(--verde);cursor:pointer">✂️ Versión corta (estado / historia)</summary><div style="font-size:12px;white-space:pre-wrap;margin-top:6px">${esc(p.corto)}</div><button class="btn sm" style="margin-top:6px;font-size:9px;padding:3px 8px" onclick="copiarCorto('${esc(p.id)}')">📋 Copiar corta</button></details>` : ''}
         </div>
         <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 8px;flex-shrink:0" onclick="copiarPost('${esc(p.id)}')">📋 Copiar</button>
       </div>`).join('')
@@ -1382,6 +1383,20 @@ async function generarPostIA() {
     generandoPostIA = false;
     if (btn) { btn.disabled = false; btn.innerHTML = textoBtn; }
   }
+}
+
+async function copiarCorto(id) {
+  const p = (DATA.posts || []).find(x => x.id === id);
+  if (!p || !p.corto) return showToast('⚠ No encontré la versión corta');
+  try {
+    await navigator.clipboard.writeText(p.corto);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = p.corto; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch {}
+    ta.remove();
+  }
+  showToast('✅ Versión corta copiada');
 }
 
 async function copiarPost(id) {
