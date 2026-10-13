@@ -604,6 +604,8 @@ window.addEventListener('orientationchange', setVH);
       </div>
       <div class="card">
         <div class="card-title">Contenido para redes <span class="sub" id="posts-count">—</span></div>
+        <button class="btn filled" id="btn-gen-post" onclick="generarPostIA()"><i class="ti ti-sparkles"></i> Generar con IA</button>
+        <div style="font-size:11px;color:var(--gris-txt);margin:2px 0 10px">Escribís la idea y la IA arma el post con los datos reales de tu negocio. Tarda unos 20 segundos.</div>
         <div id="posts-lista"></div>
       </div>
       <div class="card">
@@ -1354,6 +1356,31 @@ function renderPosts() {
         <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 8px;flex-shrink:0" onclick="copiarPost('${esc(p.id)}')">📋 Copiar</button>
       </div>`).join('')
     : '<p class="empty-msg">Todavía no generaste posts. Escribile POST: y el tema al bot.</p>';
+}
+
+// MOD11 — "Generar con IA": pide un post desde el panel (mismo generador que el comando POST de WhatsApp).
+let generandoPostIA = false;
+async function generarPostIA() {
+  if (generandoPostIA) return showToast('⏳ Ya se está generando un post, esperá un momento');
+  const idea = prompt('¿Sobre qué querés el post?\n\nEj: promo del fin de semana, un tip de tu rubro, presentar un producto nuevo.');
+  if (idea === null) return;
+  const texto = String(idea).trim();
+  if (texto.length < 6) return showToast('⚠ Escribí una idea un poco más larga');
+  if (CONFIG.DEMO) { showToast('Modo demo: acción simulada'); return; }
+  const btn = document.getElementById('btn-gen-post');
+  const textoBtn = btn ? btn.innerHTML : '';
+  generandoPostIA = true;
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Generando tu post… (unos 20 segundos)'; }
+  try {
+    const r = await postGAS({ action: 'generarPost', idea: texto });
+    if (r && r.ok !== false) {
+      showToast(r.msg || '✅ Post generado');
+      await cargarDatos();
+    }
+  } finally {
+    generandoPostIA = false;
+    if (btn) { btn.disabled = false; btn.innerHTML = textoBtn; }
+  }
 }
 
 async function copiarPost(id) {
