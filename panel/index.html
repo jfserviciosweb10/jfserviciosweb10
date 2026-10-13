@@ -505,7 +505,7 @@ window.addEventListener('orientationchange', setVH);
       <div class="tab-content active" id="tc-pedidos">
         <div class="card">
           <div class="card-title">Pedidos por WhatsApp <span class="sub" id="pedidos-count">—</span></div>
-          <div class="sec-label ama">Nuevos / En preparación</div>
+          <div class="sec-label ama">Nuevos / En preparación / Enviados</div>
           <div id="pedidos-activos"></div>
           <hr class="sep">
           <div class="sec-label" style="color:var(--gris-txt)">Entregados / Cancelados</div>
@@ -1073,12 +1073,12 @@ function renderTurnos() {
 /* ── PEDIDOS (MOD28 — los que cierra Abril por WhatsApp) ── */
 function renderPedidos() {
   const pedidos = DATA.pedidos || [];
-  const activos  = pedidos.filter(p => p.estado === 'NUEVO' || p.estado === 'PREPARANDO');
+  const activos  = pedidos.filter(p => p.estado === 'NUEVO' || p.estado === 'PREPARANDO' || p.estado === 'ENVIADO');
   const cerrados = pedidos.filter(p => p.estado === 'ENTREGADO' || p.estado === 'CANCELADO');
 
   const nuevos = pedidos.filter(p => p.estado === 'NUEVO').length;
   document.getElementById('pedidos-count').textContent =
-    nuevos > 0 ? nuevos + ' nuevo' + (nuevos > 1 ? 's' : '') : (activos.length ? 'en preparación' : 'al día');
+    nuevos > 0 ? nuevos + ' nuevo' + (nuevos > 1 ? 's' : '') : (activos.length ? 'en curso' : 'al día');
 
   document.getElementById('pedidos-activos').innerHTML = activos.length
     ? activos.map(pedidoHTML).join('')
@@ -1091,20 +1091,24 @@ function renderPedidos() {
 function pedidoHTML(p) {
   const estadoCls = p.estado === 'ENTREGADO' ? 'verde'
                   : p.estado === 'CANCELADO' ? 'rojo'
+                  : p.estado === 'ENVIADO' ? 'frio'
                   : p.estado === 'PREPARANDO' ? 'ama' : 'naranja';
   const estadoTxt = p.estado === 'NUEVO' ? 'NUEVO'
                   : p.estado === 'PREPARANDO' ? 'preparando'
+                  : p.estado === 'ENVIADO' ? 'enviado'
                   : p.estado === 'ENTREGADO' ? 'entregado' : 'cancelado';
+  const enCurso = (p.estado === 'NUEVO' || p.estado === 'PREPARANDO' || p.estado === 'ENVIADO');
   const tel = (p.telefono || '').replace(/\D/g, '');
   return `<div class="row" style="align-items:flex-start">
     <div class="av nuevo" style="font-size:16px">🛒</div>
     <div style="flex:1;min-width:0">
-      <div style="font-size:13px;font-weight:600">${esc(p.nombre || p.telefono || '—')}</div>
+      <div style="font-size:13px;font-weight:600">${p.numero ? '<span style="color:var(--gris-txt)">#' + esc(p.numero) + '</span> ' : ''}${esc(p.nombre || p.telefono || '—')}</div>
       <div style="font-size:12px;margin:2px 0">${esc(p.resumen || '—')}</div>
       <div style="font-size:11px;color:var(--gris-txt)">
         Total: <b style="color:var(--verde)">$${Number(p.total||0).toLocaleString('es-AR')}</b> · ${p.hace || p.fecha || ''}
       </div>
       ${p.nota ? `<div style="font-size:11px;color:var(--amarillo);margin-top:2px">📝 ${esc(p.nota)}</div>` : ''}
+      ${p.estado === 'ENVIADO' ? `<div style="font-size:11px;color:var(--azul);margin-top:2px">🚚 Enviado ${esc(p.enviado || '')}${p.seguimiento ? ' · 📍 ' + esc(p.seguimiento) : ''}</div>` : ''}
     </div>
     <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0">
       <span class="pill ${estadoCls}">${estadoTxt}</span>
@@ -1112,12 +1116,34 @@ function pedidoHTML(p) {
         <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionPedido('pedidoPreparando','${p.id}')">📦 Preparar</button>
       ` : ''}
       ${(p.estado === 'NUEVO' || p.estado === 'PREPARANDO') ? `
+        <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="enviarPedido('${p.id}')">🚚 Enviado</button>
+      ` : ''}
+      ${enCurso ? `
         <button class="btn sm verde" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionPedido('pedidoEntregado','${p.id}')">✓ Entregado</button>
         <button class="btn sm rojo" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionPedido('pedidoCancelado','${p.id}')">✕ Cancelar</button>
         ${tel ? `<a class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px;text-decoration:none;text-align:center" href="https://wa.me/${tel}" target="_blank">📲 WA</a>` : ''}
       ` : ''}
     </div>
   </div>`;
+}
+
+// MOD30 — "Enviado": marca el pedido y le avisa al cliente por WhatsApp (con seguimiento opcional).
+async function enviarPedido(id) {
+  const p = (DATA.pedidos || []).find(x => x.id === id);
+  const txt = prompt(
+    `Pedido ${p && p.numero ? '#' + p.numero + ' ' : ''}de ${p ? (p.nombre || p.telefono) : 'este cliente'}.\n\n` +
+    `Código de seguimiento o dato de entrega (opcional).\n` +
+    `Dejalo vacío si no tiene y tocá Aceptar: se le avisa igual que el pedido salió.`
+  );
+  if (txt === null) return;
+  showToast('⏳ Avisando al cliente...');
+  const r = await postGAS({ action: 'pedidoEnviado', id, seguimiento: String(txt).trim() });
+  if (r && r.ok !== false) {
+    showToast(r.via === 'plantilla' ? '🚚 Pedido enviado y cliente avisado ✅'
+            : r.via === 'texto'     ? '🚚 Marcado enviado · el aviso salió como mensaje común (le llega si te escribió en las últimas 24 hs)'
+            : '⚠ Marcado enviado, pero no pude avisarle al cliente. Escribile vos por WA');
+  }
+  setTimeout(cargarDatos, 1500);
 }
 
 async function accionPedido(action, id) {
@@ -1244,13 +1270,14 @@ function stockHTML(s) {
     <div class="av ${s.alerta ? 'alerta' : 'nuevo'}" style="font-size:16px">${s.alerta ? '⚠' : '📦'}</div>
     <div class="stock-bar">
       <div class="stock-nombre">${esc(s.nombre)}</div>
-      <div class="stock-info">mín: ${esc(s.minimo)} · proveedor: ${esc(s.proveedor)}</div>
+      <div class="stock-info">mín: ${esc(s.minimo)} · proveedor: ${esc(s.proveedor)}${s.desc_desde && s.desc_pct ? ' · 🏷️ desde ' + esc(s.desc_desde) + ': ' + esc(s.desc_pct) + '% off' : ''}${s.esperando > 0 ? ' · 🔔 ' + esc(s.esperando) + ' esperando' : ''}</div>
       <div style="margin-top:4px;height:3px;background:var(--gris-borde);border-radius:2px">
         <div style="height:100%;width:${pct}%;background:${s.alerta?'var(--rojo)':pct<150?'var(--amarillo)':'var(--verde)'};border-radius:2px"></div>
       </div>
     </div>
     <div class="stock-nivel ${cls}">${s.actual}</div>
-    ${s.alerta ? `<button class="btn sm rojo" style="margin:0;width:auto;font-size:9px" onclick="pedidoHecho('${s.id}')">Pedido</button>` : ''}
+    ${(s.alerta || s.actual <= 0) ? `<button class="btn sm rojo" style="margin:0;width:auto;font-size:9px" onclick="pedidoHecho('${s.id}')">Pedido</button>` : ''}
+    <button class="btn sm" style="margin:0;width:auto;font-size:9px" onclick="descuentoProducto('${s.id}')">🏷️</button>
   </div>`;
 }
 
@@ -1264,7 +1291,35 @@ async function pedidoHecho(id) {
   const cantidad = parseFloat(String(txt).replace(',', '.'));
   if (isNaN(cantidad) || cantidad < 0) return showToast('⚠ Ingresá un número válido');
   const r = await postGAS({ action:'actualizarStock', id, cantidad });
-  if (r && r.ok !== false) showToast('✅ Stock actualizado'); // si falló, postGAS ya mostró el error
+  if (r && r.ok !== false) {
+    // MOD29: si el producto estaba en 0, el servidor avisa solo a los clientes anotados con AVISAME
+    showToast(r.esperando > 0 ? `✅ Stock actualizado · 🔔 Avisé a ${r.avisados} de ${r.esperando} cliente(s) que esperaban`
+                              : '✅ Stock actualizado'); // si falló, postGAS ya mostró el error
+  }
+  setTimeout(cargarDatos, 1500);
+}
+
+// Descuento por cantidad (desde N unidades, X% off). El sistema lo aplica solo al cerrar el pedido.
+async function descuentoProducto(id) {
+  const item = (DATA.stock || []).find(s => s.id === id);
+  const actual = item && item.desc_desde && item.desc_pct ? `\nHoy: desde ${item.desc_desde} unidades, ${item.desc_pct}% off.` : '';
+  const txt = prompt(
+    `Descuento por cantidad para "${item ? item.nombre : 'este producto'}".${actual}\n\n` +
+    `Escribí: cantidad mínima y porcentaje.\nEj: 3 10  → desde 3 unidades, 10% de descuento.\n` +
+    `Escribí 0 para quitar el descuento.`
+  );
+  if (txt === null) return;
+  const t = String(txt).trim().toLowerCase();
+  let body;
+  if (t === '0' || t === 'quitar' || t === 'no') {
+    body = { action: 'cargarDescuento', id, quitar: true };
+  } else {
+    const m = t.replace(',', '.').match(/(\d+)\D+(\d+(?:\.\d+)?)/);
+    if (!m) return showToast('⚠ Escribí dos números, ej: 3 10');
+    body = { action: 'cargarDescuento', id, desde: parseInt(m[1]), pct: parseFloat(m[2]) };
+  }
+  const r = await postGAS(body);
+  if (r && r.ok !== false) showToast(body.quitar ? '✅ Descuento quitado' : '✅ Descuento cargado');
   setTimeout(cargarDatos, 1500);
 }
 
