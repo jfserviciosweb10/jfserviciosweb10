@@ -147,7 +147,7 @@ function generarArticuloHTML(datos, cuerpoHTML, slug) {
     <li><a href="../#ganchos2">Propuesta</a></li>
     <li><a href="../#planes">Planes</a></li>
     <li><a href="../#preview-webs">Ejemplos reales</a></li>
-    <li><a href="../#rebomba">Alerta-Web</a></li>
+    <li><a href="../#rebomba">Alertas Webs</a></li>
     <li><a href="../#faq">FAQ</a></li>
     <li><a href="../#contacto">Contacto</a></li>
   </ul>
@@ -159,7 +159,7 @@ function generarArticuloHTML(datos, cuerpoHTML, slug) {
   <a href="../#ganchos2" onclick="closeMenu()">Propuesta</a>
   <a href="../#planes" onclick="closeMenu()">Planes</a>
   <a href="../#preview-webs" onclick="closeMenu()">Ejemplos reales</a>
-  <a href="../#rebomba" onclick="closeMenu()">Alerta-Web</a>
+  <a href="../#rebomba" onclick="closeMenu()">Alertas Webs</a>
   <a href="../#contacto" onclick="closeMenu()">Contacto</a>
 </div>
 
@@ -199,7 +199,7 @@ ${cuerpoHTML}
       <ul>
         <li><a href="../#ganchos2">Propuesta</a></li>
         <li><a href="../#planes">Planes</a></li>
-        <li><a href="../#rebomba">Alerta-Web</a></li>
+        <li><a href="../#rebomba">Alertas Webs</a></li>
         <li><a href="../#faq">FAQ</a></li>
         <li><a href="../#contacto">Contacto</a></li>
       </ul>
