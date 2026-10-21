@@ -839,6 +839,10 @@
   "es": "Menos cancelaciones de último momento y clientes más comprometidos con el horario reservado — sin que vos t...",
   "en": "Fewer last-minute cancellations and clients more committed to their reserved time — without you having to..."
  },
+ "h2ef82455": {
+  "es": "Estratégica: que incluye hasta 8 páginas, blog editable, gestión de clientes, agenda de turnos y todo el SEO. Premium agrega: hasta 12 páginas, app instalable en el celular, multiidioma, logo profesional incluido y blog avanzado con categorías. Podés arrancar con Estratégica y hacer upgrade después pagando solo la diferencia.<br>También jfweb_movi que es similar a Premium pero sólo para el celular. Y Alertas Automáticas, donde te damos los 30 módulos de automatización, tengas o no tengas una web.",
+  "en": "Estratégica: includes up to 8 pages, editable blog, customer management, appointment scheduling and full SEO. Premium adds: up to 12 pages, installable app on your mobile, multilingual, professional logo included and advanced blog with categories. You can start with Estratégica and upgrade later paying only the difference.<br>Also JFWEB_MOVI which is similar to Premium but mobile-only. And Alertas Automáticas, where we give you the 30 automation modules, whether or not you have a website."
+ },
  "h2f04faf9": {
   "es": "USD 300 pago &uacute;nico + USD 120/mes de membres&iacute;a (el primer mes es gratis).",
   "en": "USD 300 one-time payment + USD 120/month membership (first month is FREE)."
@@ -3258,6 +3262,10 @@
  "hac524fce": {
   "es": "Sí. Todos los datos que Alertas Webs recopila (nombres, teléfonos, respuestas) se guardan en infraestructura segura y privada, con acceso exclusivo para vos a través del Panel del Dueño. No se comparten con terceros ni se usan para ningún otro fin.",
   "en": "Yes. All data that Alertas Webs collects (names, phone numbers, responses) is stored in secure and private infrastructure, with exclusive access for you through the Owner Panel. It is not shared with third parties or used for any other purpose."
+ },
+ "hac7a98de": {
+  "es": "ALERTAS WEBS corren en servidores las 24 horas, los mantenemos, actualizamos y soportamos por vos. En Alertas Automáticas y Estratégica cuesta U$D 100/mes pagando anual, o U$D 115 mes a mes. En MOVI y Premium, U$D 120/mes anual o U$D 135 mes a mes. El precio no cambia con los años.",
+  "en": "ALERTAS WEBS run on servers 24 hours a day, we maintain, update and support them for you. On Alertas Automáticas and Estratégica it costs USD 100/month paid annually, or USD 115 month to month. On MOVI and Premium, USD 120/month annual or USD 135 month to month. The price doesn't change over the years."
  },
  "hac8b9ed5": {
   "es": "Alguien llenó el carrito de tu tienda online y se fue sin pagar. Este módulo le manda un recordatorio automático por WhatsApp, sin que vos intervengas, y recupera ventas que ya estaban casi cerradas.",
