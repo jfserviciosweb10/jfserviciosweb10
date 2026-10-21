@@ -1799,6 +1799,10 @@
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Llamada%20perdida%20a%20WhatsApp%20de%20Alertas%20Webs%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
   "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Llamada%20perdida%20a%20WhatsApp%20de%20Alertas%20Webs%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Free demo</a>"
  },
+ "h626bda34": {
+  "es": "Elegí tu nivel de acuerdo a tu uso",
+  "en": "Choose your level based on your usage"
+ },
  "h62a93c7e": {
   "es": "Alertas Webs transcribe automáticamente los audios de tus clientes y te los muestra en texto junto al audio original.",
   "en": "Alertas Webs automatically transcribes your customers' audio messages and shows them to you in text along with the original audio."
@@ -2175,9 +2179,17 @@
   "es": "Blog · Alerta-Web",
   "en": "Blog · Alerta-Web"
  },
+ "h72fdf96b": {
+  "es": "Quiero mi web profesional en mi celular",
+  "en": "I want my professional website on my mobile"
+ },
  "h7313dbcc": {
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Recuperación de carrito abandonado</span>",
   "en": "<a href=\"../\" style=\"color:var(--t3)\">Home</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Abandoned cart recovery</span>"
+ },
+ "h731615cc": {
+  "es": "Quiero mi web y manejarla desde mi PC",
+  "en": "I want my website and manage it from my PC"
  },
  "h7343363f": {
   "es": "Cupones y descuentos",
@@ -2214,6 +2226,10 @@
  "h74354a8e": {
   "es": "Encuesta post-servicio",
   "en": "Post-service survey"
+ },
+ "h7467c118": {
+  "es": "<a href=\"#contacto\" class=\"btn-wa\" data-boton=\"demo_personalizada\" onclick=\"try{document.getElementById('inputNivel').value='Demo Gratuita';gtag('event','pedir_demo_personalizada')}catch(e){}\">Pedí tu demo personalizada, con automatizaciones</a>",
+  "en": "<a href=\"#contacto\" class=\"btn-wa\" data-boton=\"demo_personalizada\" onclick=\"try{document.getElementById('inputNivel').value='Demo Gratuita';gtag('event','pedir_demo_personalizada')}catch(e){}\">Get your personalized demo, with automations</a>"
  },
  "h748b3674": {
   "es": "Módulo 20 de 26 · Alerta-Web",
@@ -3511,6 +3527,10 @@
   "es": "Módulo 22 · Alerta de lead frío",
   "en": "Module 22 · Cold Lead Alert"
  },
+ "hb88d497a": {
+  "es": "Tenés o no tenés una web",
+  "en": "You either have or don't have a website"
+ },
  "hb8950175": {
   "es": "El <strong>dominio queda a tu nombre</strong> desde el primer d&iacute;a. Cuando abon&aacute;s el 50% final recib&iacute;s tus accesos: acceso de colaborador con permisos de escritura al repositorio, suficiente para operar tu Panel de Contenidos. La <strong>administraci&oacute;n plena (Owner) del repositorio y del DNS</strong> pasa a vos al completar 13 meses desde la entrega (1 gratis + 12 pagos) con la membres&iacute;a activa y al d&iacute;a, sin costo.",
   "en": "The <strong>domain is registered in your name</strong> from day one. When you pay the final 50% you receive your access: collaborator access with write permissions to the repository, sufficient to operate your Content Panel. <strong>Full administration (Owner) of the repository and DNS</strong> transfers to you upon completing 13 months from delivery (1 free + 12 paid) with active and current membership, at no cost."
@@ -3899,6 +3919,10 @@
   "es": "Módulo 04 de 26",
   "en": "Module 04 of 26"
  },
+ "hcc8d49c1": {
+  "es": "Todos tienen todos los módulos.",
+  "en": "All levels include all modules."
+ },
  "hccc3d534": {
   "es": "Alguien preguntó precio y se quedó en silencio — la venta se enfría sola. Este módulo te avisa a tiempo para ofrecerle algo y cerrar, antes de que se vaya a la competencia.",
   "en": "Someone asked for a price and went silent — the sale cools down on its own. This module alerts you in time to make an offer and close, before they go to the competition."
@@ -4142,6 +4166,10 @@
  "hd97598ca": {
   "es": "<strong>50% al empezar y 50% al aprobar.</strong> Los precios son en USD y el tipo de cambio se acuerda al momento de cada pago. El 50% inicial no se devuelve una vez que empezamos a producir (sin perjuicio de los derechos que la ley te reconozca). Al pagar el 50% inicial aceptás los T&eacute;rminos y Condiciones vigentes.",
   "en": "<strong>50% upfront and 50% upon approval.</strong> Prices are in USD and the exchange rate is agreed at the time of each payment. The initial 50% is not refundable once we start production (without prejudice to the rights recognized by law). By paying the initial 50% you accept the current Terms and Conditions."
+ },
+ "hd98b115e": {
+  "es": "Quiero la versión más completa y profesional en la PC y en el celular",
+  "en": "I want the most complete and professional version on PC and mobile"
  },
  "hd9b6a214": {
   "es": "El presupuesto se arma a mano, tarda, y a veces ni se manda a tiempo.",
@@ -4594,6 +4622,10 @@
  "hf007ef0a": {
   "es": "Esto que acabás de leer no es una promesa: es el Módulo 06 — Reseñas Google funcionando hoy, en producción real. Nuestro objetivo no es venderte una automatización — es que factures más.",
   "en": "What you just read isn't a promise: it's Module 06 — Google Reviews working today, in real production. Our goal isn't to sell you automation — it's for you to invoice more."
+ },
+ "hf04e730c": {
+  "es": "Alertas Autom&aacute;ticas",
+  "en": "Alertas Automáticas"
  },
  "hf05d0965": {
   "es": "Confirmación de turno",
