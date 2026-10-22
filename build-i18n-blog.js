@@ -30,7 +30,7 @@ const BATCH = 25;
 
 const GLOSARIO = `
 - NO traduzcas nombres de producto: Alertas Webs, ALERTAS WEBS, Alertas Web, ALERTAS WEB, Alertas Automáticas, ALERTAS AUTOMÁTICAS, Estratégica, Premium, JFWEB_MOVI, MOVI, Abril, JF Servicios Web, JF-Búsquedas, Tienda Digital (traducir como "Digital Store" solo en frases; en nombres propios dejalo), Pagefind, Brevo Meetings, Cloudflare, GitHub, WhatsApp, MercadoPago, PayPal.
-- "Panel del Dueño" = "Owner Panel". "Panel de Contenidos" = "Content Panel".
+- "Panel de WhatsApp" = "WhatsApp Panel". "Panel de Contenidos" = "Content Panel".
 - "turno" (cita) = "appointment". "rubro" = "industry" o "type of business". "pymes" = "small businesses".
 - "pago único" = "one-time payment". "mes GRATIS" = "month FREE". "membresía" = "membership".
 - Tuteo/voseo argentino -> "you". Mantené el tono cercano y directo del original.

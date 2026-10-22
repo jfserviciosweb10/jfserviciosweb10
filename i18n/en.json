@@ -141,7 +141,7 @@
  },
  "h07adea66": {
   "es": "Son privados: no los vendemos ni los usamos para otros fines, y vos accedés a ellos desde tu Panel del Dueño. Para que el sistema funcione, los datos pasan por proveedores técnicos: Meta (WhatsApp), Supabase (base de datos), Anthropic y Groq (inteligencia artificial y transcripción de audio) y Google. Más detalle en la Política de Privacidad.",
-  "en": "They're private: we don't sell them or use them for other purposes, and you access them from your Owner Panel. For the system to work, data passes through technical providers: Meta (WhatsApp), Supabase (database), Anthropic and Groq (artificial intelligence and audio transcription) and Google. More details in the Privacy Policy."
+  "en": "They're private: we don't sell them or use them for other purposes, and you access them from your WhatsApp Panel. For the system to work, data passes through technical providers: Meta (WhatsApp), Supabase (database), Anthropic and Groq (artificial intelligence and audio transcription) and Google. More details in the Privacy Policy."
  },
  "h07db3446": {
   "es": "Estos 15 no atienden al desconocido que te escribe por primera vez — pero construyen algo igual de valioso: <strong>la experiencia y la reputación que hacen que un cliente te recomiende a otro</strong>. Un negocio con buena atención, cero quejas sueltas y cobros al día también consigue gente nueva — por el boca a boca. Es la otra cara de la misma moneda.",
@@ -325,7 +325,7 @@
  },
  "h1284e778": {
   "es": "👥 Panel del Dueño incluido — gestión de clientes, turnos y stock desde tu PC",
-  "en": "👥 Owner Panel included — customer, appointment and stock management from your PC"
+  "en": "👥 WhatsApp Panel included — customer, appointment and stock management from your PC"
  },
  "h128afdb4": {
   "es": "Escribís la oferta una sola vez y el sistema se la manda a todos los que se anotaron para recibirlas...",
@@ -641,7 +641,7 @@
  },
  "h219a3d1c": {
   "es": "📲 <strong>Panel del Dueño</strong> instalable como app en tu celular (además de PC) — con notificaciones push en tiempo real",
-  "en": "📲 <strong>Owner Panel</strong> installable as an app on your phone (as well as on PC) — with real-time push notifications"
+  "en": "📲 <strong>WhatsApp Panel</strong> installable as an app on your phone (as well as on PC) — with real-time push notifications"
  },
  "h21eb53f8": {
   "es": "Módulo 10 de 30 · Alertas Webs",
@@ -1033,7 +1033,7 @@
  },
  "h397c66a3": {
   "es": "📲 Panel del Dueño instalable como app en el celular",
-  "en": "📲 Owner Panel installable as an app on your phone"
+  "en": "📲 WhatsApp Panel installable as an app on your phone"
  },
  "h399997c6": {
   "es": "Pedido por WhatsApp",
@@ -1441,7 +1441,7 @@
  },
  "h52805956": {
   "es": "🔔 Panel del Dueño con notificaciones push (celular)",
-  "en": "🔔 Owner Panel with push notifications (phone)"
+  "en": "🔔 WhatsApp Panel with push notifications (phone)"
  },
  "h52dfa22a": {
   "es": "Un precio viejo genera discusiones o ventas mal cobradas.",
@@ -1453,7 +1453,7 @@
  },
  "h53651035": {
   "es": "Sí. Todos los datos que Alertas Web recopila (nombres, teléfonos, respuestas) se guardan en infraestructura segura y privada, con acceso exclusivo para vos a través del Panel del Dueño. No se comparten con terceros ni se usan para ningún otro fin.",
-  "en": "Yes. All the data Alertas Web collects (names, phone numbers, replies) is stored on secure, private infrastructure, with exclusive access for you through the Owner Panel. It isn't shared with third parties or used for any other purpose."
+  "en": "Yes. All the data Alertas Web collects (names, phone numbers, replies) is stored on secure, private infrastructure, with exclusive access for you through the WhatsApp Panel. It isn't shared with third parties or used for any other purpose."
  },
  "h5365b99e": {
   "es": "Confirmación de turno y recordatorio automático para bajar el ausentismo.",
@@ -1473,7 +1473,7 @@
  },
  "h5405415c": {
   "es": "⚠️ Este plan no incluye logo profesional, multiidioma ni el Panel del Dueño instalado como app en tu celular. Para eso, mirá Premium o JFWEB_MOVI.",
-  "en": "⚠️ This plan doesn't include a professional logo, multilingual support or the Owner Panel installed as an app on your phone. For that, look at Premium or JFWEB_MOVI."
+  "en": "⚠️ This plan doesn't include a professional logo, multilingual support or the WhatsApp Panel installed as an app on your phone. For that, look at Premium or JFWEB_MOVI."
  },
  "h5413165e": {
   "es": "De los 26 módulos, te mostramos exactamente cuáles están enfocados 100% en traerte gente que hoy no te conoce — y por qué.",
@@ -1693,7 +1693,7 @@
  },
  "h5d27adc5": {
   "es": "🚀 <strong>ALERTAS WEBS incluido</strong> — automatización WhatsApp completa con Panel del Dueño",
-  "en": "🚀 <strong>ALERTAS WEBS included</strong> — complete WhatsApp automation with Owner Panel"
+  "en": "🚀 <strong>ALERTAS WEBS included</strong> — complete WhatsApp automation with WhatsApp Panel"
  },
  "h5d5124c6": {
   "es": "¿Todavía no tenés sitio web propio?",
@@ -2389,7 +2389,7 @@
  },
  "h7e52927e": {
   "es": "<span class=\"ci\">✓</span><span>Los 26 módulos, Panel del Dueño, servidores 24 hs, mantenimiento y soporte</span>",
-  "en": "<span class=\"ci\">✓</span><span>All 26 modules, Owner Panel, 24-hr servers, maintenance and support</span>"
+  "en": "<span class=\"ci\">✓</span><span>All 26 modules, WhatsApp Panel, 24-hr servers, maintenance and support</span>"
  },
  "h7e9483d5": {
   "es": "Con todos los Niveles te damos 1 mes gratis. Antes de que termine te consultamos si querés continuar. Desde el mes 2 es 100% opcional — sin mantenimiento tu web sigue online.",
@@ -2541,7 +2541,7 @@
  },
  "h88012a2e": {
   "es": "Sí. Podés editar textos, precios y datos de contacto desde el Panel del Dueño sin tocar código ni depender de nadie. Y con ALERTAS WEBS (desde U$D 100/mes anual), lo haces directamente desde el celular por WhatsApp en segundos: un mensaje actualiza tu sitio.",
-  "en": "Yes. You can edit texts, prices and contact information from the Owner Panel without touching code or depending on anyone. And with ALERTAS WEBS (from U$D 100/month annual), you do it directly from your phone via WhatsApp in seconds: one message updates your site."
+  "en": "Yes. You can edit texts, prices and contact information from the WhatsApp Panel without touching code or depending on anyone. And with ALERTAS WEBS (from U$D 100/month annual), you do it directly from your phone via WhatsApp in seconds: one message updates your site."
  },
  "h880ebefc": {
   "es": "Abril, la vendedora con Inteligencia Artificial, atiende y vende las 24 horas, los 7 días: informa, recuerda lo que el cliente venía hablando, toma pedidos y te avisa con el total, calculado con tus precios reales y tus descuentos por cantidad.",
@@ -2745,7 +2745,7 @@
  },
  "h91f5e418": {
   "es": "No es una web aparte ni un nivel reducido. Es exactamente lo mismo que PREMIUM, tu sitio completo con SEO, multiidioma, blog, más las 26 automatizaciones de ALERTAS WEB, con el Panel del Dueño instalable SOLO EN TU CELULAR como una app, sin depender de una compu.",
-  "en": "It isn't a separate website or a reduced level. It's exactly the same as PREMIUM: your complete site with SEO, multilingual, blog, plus the 26 ALERTAS WEB automations, with the Owner Panel installable ONLY ON YOUR PHONE as an app, without depending on a computer."
+  "en": "It isn't a separate website or a reduced level. It's exactly the same as PREMIUM: your complete site with SEO, multilingual, blog, plus the 26 ALERTAS WEB automations, with the WhatsApp Panel installable ONLY ON YOUR PHONE as an app, without depending on a computer."
  },
  "h91fb788e": {
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Seguimiento%20de%20cotizaci%C3%B3n%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
@@ -3125,7 +3125,7 @@
  },
  "ha5ffb001": {
   "es": "Sí. Podés editar textos, precios y datos de contacto desde el Panel del Dueño sin tocar código ni depender de nadie. Y con ALERTAS WEB (desde U$D 100/mes anual), lo haces directamente desde el celular por WhatsApp en segundos: un mensaje actualiza tu sitio.",
-  "en": "Yes. You can edit texts, prices and contact details from the Owner Panel without touching code or depending on anyone. And with ALERTAS WEB (from USD 100/month annual), you do it straight from your phone over WhatsApp in seconds: one message updates your site."
+  "en": "Yes. You can edit texts, prices and contact details from the WhatsApp Panel without touching code or depending on anyone. And with ALERTAS WEB (from USD 100/month annual), you do it straight from your phone over WhatsApp in seconds: one message updates your site."
  },
  "ha62cdad2": {
   "es": "🚀 <strong>ALERTAS WEBS 30 módulos completo</strong> — automatización total de WhatsApp",
@@ -3181,7 +3181,7 @@
  },
  "ha8ecad0a": {
   "es": "No es una web aparte ni un nivel reducido. Es exactamente lo mismo que PREMIUM, tu sitio completo con SEO, multiidioma, blog, más las 30 automatizaciones de ALERTAS WEBS, con el Panel del Dueño instalable SOLO EN TU CELULAR como una app, sin depender de una compu.",
-  "en": "It's not a separate website or a reduced level. It's exactly the same as PREMIUM, your complete website with SEO, multilingual, blog, plus the 30 Alertas Webs automations, with the Owner Panel installable ONLY ON YOUR PHONE as an app, with no computer dependency."
+  "en": "It's not a separate website or a reduced level. It's exactly the same as PREMIUM, your complete website with SEO, multilingual, blog, plus the 30 Alertas Webs automations, with the WhatsApp Panel installable ONLY ON YOUR PHONE as an app, with no computer dependency."
  },
  "ha929a0fb": {
   "es": "Esto que acabás de leer no es una promesa: es el Módulo 04 — Encuesta post-servicio funcionando hoy, en producción real. Nuestro objetivo no es venderte una automatización — es que factures más.",
@@ -3269,7 +3269,7 @@
  },
  "hac524fce": {
   "es": "Sí. Todos los datos que Alertas Webs recopila (nombres, teléfonos, respuestas) se guardan en infraestructura segura y privada, con acceso exclusivo para vos a través del Panel del Dueño. No se comparten con terceros ni se usan para ningún otro fin.",
-  "en": "Yes. All data that Alertas Webs collects (names, phone numbers, responses) is stored in secure and private infrastructure, with exclusive access for you through the Owner Panel. It is not shared with third parties or used for any other purpose."
+  "en": "Yes. All data that Alertas Webs collects (names, phone numbers, responses) is stored in secure and private infrastructure, with exclusive access for you through the WhatsApp Panel. It is not shared with third parties or used for any other purpose."
  },
  "hac7a98de": {
   "es": "ALERTAS WEBS corren en servidores las 24 horas, los mantenemos, actualizamos y soportamos por vos. En Alertas Automáticas y Estratégica cuesta U$D 100/mes pagando anual, o U$D 115 mes a mes. En MOVI y Premium, U$D 120/mes anual o U$D 135 mes a mes. El precio no cambia con los años.",
@@ -3309,7 +3309,7 @@
  },
  "had5f13d2": {
   "es": "<span class=\"ci\">✓</span><span>Los 30 módulos, Panel del Dueño, servidores 24 hs, mantenimiento y soporte</span>",
-  "en": "<span class=\"ci\">✓</span><span>All 30 modules, Owner Panel, 24/7 servers, maintenance and support</span>"
+  "en": "<span class=\"ci\">✓</span><span>All 30 modules, WhatsApp Panel, 24/7 servers, maintenance and support</span>"
  },
  "hae0b505c": {
   "es": "Recordatorio 2h antes",
@@ -3629,7 +3629,7 @@
  },
  "hbc1c291f": {
   "es": "<a href=\"agenda-automatica-para-duenos-de-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 17 — Agenda del dueño</a> <a href=\"primera-respuesta-automatica-whatsapp-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 01 — Bienvenida</a> <a href=\"confirmacion-automatica-de-turnos-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 02 — Confirmación de turno</a>",
-  "en": "<a href=\"agenda-automatica-para-duenos-de-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 17 — Owner Panel</a>\n      <a href=\"primera-respuesta-automatica-whatsapp-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 01 — Welcome</a>\n      <a href=\"confirmacion-automatica-de-turnos-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 02 — Appointment Confirmation</a>"
+  "en": "<a href=\"agenda-automatica-para-duenos-de-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 17 — WhatsApp Panel</a>\n      <a href=\"primera-respuesta-automatica-whatsapp-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 01 — Welcome</a>\n      <a href=\"confirmacion-automatica-de-turnos-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 02 — Appointment Confirmation</a>"
  },
  "hbd29d79e": {
   "es": "Módulo 26 de 26 · Alerta-Web",
@@ -4445,7 +4445,7 @@
  },
  "he81179fe": {
   "es": "🚀 <strong>ALERTAS WEB incluido</strong> — automatización WhatsApp completa con Panel del Dueño",
-  "en": "🚀 <strong>ALERTAS WEB included</strong> — complete WhatsApp automation with Owner Panel"
+  "en": "🚀 <strong>ALERTAS WEB included</strong> — complete WhatsApp automation with WhatsApp Panel"
  },
  "he83aabac": {
   "es": "❌ Cancelan a último momento, el horario queda vacío y esa hora no se factura.",
@@ -4573,7 +4573,7 @@
  },
  "hedd0aa9a": {
   "es": "No es una web aparte ni un nivel reducido. Es exactamente lo mismo que PREMIUM, tu sitio completo con SEO, multiidioma, blog, más las 26 automatizaciones de ALERTAS WEBS, con el Panel del Dueño instalable SOLO EN TU CELULAR como una app, sin depender de una compu.",
-  "en": "It's not a separate website or a reduced level. It's exactly the same as PREMIUM, your complete site with SEO, multilingual, blog, plus 26 ALERTAS WEBS automations, with the Owner Panel installable ONLY ON YOUR PHONE as an app, independent of a computer."
+  "en": "It's not a separate website or a reduced level. It's exactly the same as PREMIUM, your complete site with SEO, multilingual, blog, plus 26 ALERTAS WEBS automations, with the WhatsApp Panel installable ONLY ON YOUR PHONE as an app, independent of a computer."
  },
  "hedd37969": {
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Stock y abastecimiento</span>",
