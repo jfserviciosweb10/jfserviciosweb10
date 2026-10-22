@@ -907,6 +907,10 @@
   "es": "Módulo 27 · Carga de catálogo por foto",
   "en": "Module 27 · Catalog upload by photo"
  },
+ "h3227b508": {
+  "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20mi%20demo%20personalizada.%20Te%20paso%20los%20datos%20y%20fotos%20de%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\" style=\"white-space:nowrap;max-width:100%;font-size:clamp(.74rem,3.3vw,.95rem);padding:14px 18px\" data-boton=\"demo_personalizada\" onclick=\"try{gtag('event','pedir_demo_personalizada')}catch(e){}\">Pedí tu DEMO con Automatizaciones y Personalizada GRATIS</a> <p style=\"max-width:700px;margin:1rem auto 0;font-size:.85rem;color:var(--t2);line-height:1.6\"><strong>Personalizada</strong> es hecha con tus datos, logo y fotos (local, tu equipo, hasta 3 de tus productos o servicios) y armamos tu demo, sin costo, antes de que pagues.<br>&iquest;Preferís mirar primero? <a href=\"#preview-webs\" style=\"color:var(--green);font-weight:700\">Eleg&iacute; tu rubro y nivel</a> y mir&aacute; un ejemplo ya armado.</p>",
+  "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20mi%20demo%20personalizada.%20Te%20paso%20los%20datos%20y%20fotos%20de%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\" style=\"white-space:nowrap;max-width:100%;font-size:clamp(.74rem,3.3vw,.95rem);padding:14px 18px\" data-boton=\"demo_personalizada\" onclick=\"try{gtag('event','pedir_demo_personalizada')}catch(e){}\">Get your FREE Personalized DEMO with Automations</a>\n      <p style=\"max-width:700px;margin:1rem auto 0;font-size:.85rem;color:var(--t2);line-height:1.6\"><strong>Personalized</strong> is made with your data, logo and photos (your location, your team, up to 3 of your products or services) and we build your demo, at no cost, before you pay.<br>Prefer to look first? <a href=\"#preview-webs\" style=\"color:var(--green);font-weight:700\">Choose your industry and level</a> and see a ready-made example.</p>"
+ },
  "h32bb076e": {
   "es": "Una promoción que se te vence hoy, o un producto que necesitás mover ya, pierden fuerza si tenés que avisarle a cada cliente uno por uno — para cuando terminaste de escribir a todos, la oportunidad ya pasó. Y mandar mensajes de venta sin que la persona lo haya pedido no es solo poco profesional: puede terminar en una queja que ponga en riesgo tu cuenta de WhatsApp entera.",
   "en": "A promotion that expires today, or a product you need to move now, loses momentum if you have to notify each customer one by one — by the time you finish writing to everyone, the opportunity is gone. And sending sales messages without the person asking for it isn't just unprofessional: it can end in a complaint that puts your entire WhatsApp account at risk."
@@ -3138,6 +3142,10 @@
  "ha662a516": {
   "es": "Reputación online que crece sola, mes a mes, sin esfuerzo — y más reseñas significa más clientes nuevos que llegan buscándote en Google, sin pagar publicidad.",
   "en": "Online reputation that grows on its own, month after month, without effort — and more reviews means more new customers finding you on Google, without paying for ads."
+ },
+ "ha69b1108": {
+  "es": "Quiero mi web profesional sólo en mi PC",
+  "en": "I want my professional website only on my PC"
  },
  "ha6ac821b": {
   "es": "WhatsApp en Acción →",
