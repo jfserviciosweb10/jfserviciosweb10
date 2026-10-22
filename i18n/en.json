@@ -331,6 +331,10 @@
   "es": "Escribís la oferta una sola vez y el sistema se la manda a todos los que se anotaron para recibirlas...",
   "en": "You write the offer once and the system sends it to everyone who signed up to receive them..."
  },
+ "h1296f1c6": {
+  "es": "No es una web aparte ni un nivel reducido. Es exactamente lo mismo que PREMIUM, tu sitio completo con SEO, multiidioma, blog, más las 30 automatizaciones de ALERTAS WEBS, con el Panel de WhatsApp instalable SOLO EN TU CELULAR como una app, sin depender de una compu.",
+  "en": "It's not a separate website or a reduced version. It's exactly the same as PREMIUM, your complete site with SEO, multiple languages, blog, plus the 30 ALERTAS WEBS automations, with the WhatsApp Panel installable ONLY ON YOUR PHONE as an app, without depending on a computer."
+ },
  "h12debe9b": {
   "es": "<strong>Lo que ganás:</strong> Cero clientes perdidos por demora en el primer contacto. Tu negocio contesta rápido las 24 horas, aunque vos estés durmiendo, manejando o atendiendo a otra persona.",
   "en": "<strong>What you gain:</strong> Zero customers lost to delays at first contact. Your business replies fast around the clock, even while you're asleep, driving or serving someone else."
@@ -631,6 +635,10 @@
   "es": "Módulo 15 de 26",
   "en": "Module 15 of 26"
  },
+ "h210b9c94": {
+  "es": "Trabajamos para que Abril y los módulos le respondan a tus clientes desde el número de WhatsApp de tu negocio, el que ya conocen. Antes de empezar revisamos tu número y te confirmamos cómo se conecta; si no se pudiera conectar sin riesgo para tu línea, te lo decimos antes de cobrarte nada. Usamos la API oficial de WhatsApp: el costo de los mensajes lo cobra Meta según tu volumen y te lo confirmamos antes de activar.",
+  "en": "We work so that Abril and the modules respond to your customers from your business's WhatsApp number, the one they already know. Before we start, we'll review your number and confirm how it connects; if it couldn't connect safely for your line, we'll let you know before charging you anything. We use WhatsApp's official API: Meta charges for messages based on your volume and we'll confirm this before activating."
+ },
  "h21128304": {
   "es": "Módulo 11 de 30",
   "en": "Module 11 of 30"
@@ -707,6 +715,10 @@
   "es": "❌ Cargar el catálogo producto por producto lleva horas, y mientras tanto el sistema no puede contestar precios ni tomar pedidos.",
   "en": "❌ Loading the catalog product by product takes hours, and meanwhile the system can't answer prices or take orders."
  },
+ "h2685a025": {
+  "es": "<span class=\"ci\">✓</span><span>Los 30 módulos, Panel de WhatsApp, servidores 24 hs, mantenimiento y soporte</span>",
+  "en": "<span class=\"ci\">✓</span><span>All 30 modules, WhatsApp Panel, 24-hour servers, maintenance and support</span>"
+ },
  "h273df079": {
   "es": "La mayoría de los negocios chicos no están ni en \"necesito un e-commerce gigante\" ni en \"me alcanza con mandar fotos por WhatsApp\". Están en el medio: quieren mostrar sus productos de forma profesional, cobrar sin fricción, y no pagar una mensualidad por funciones que no usan. Ese es exactamente el lugar que ocupa Tienda Digital.",
   "en": "Most small businesses aren't at \"I need a giant e-commerce\" or \"sending photos on WhatsApp is enough.\" They're in the middle: they want to show their products professionally, get paid without friction, and not pay a monthly fee for features they don't use. That's exactly where Digital Store sits."
@@ -762,6 +774,10 @@
  "h2985b204": {
   "es": "<strong>Lo que ganás:</strong> Ventas resueltas al instante, el empujón de la urgencia real y el descuento que premia comprar más — sin inventar una escasez falsa.",
   "en": "<strong>What you gain:</strong> Sales resolved instantly, the push of real urgency and the discount that rewards buying more — without inventing fake scarcity."
+ },
+ "h29a8eab3": {
+  "es": "📲 Panel de WhatsApp instalable como app en el celular",
+  "en": "📲 WhatsApp Panel installable as an app on your phone"
  },
  "h2a4acf91": {
   "es": "A los 30-60 minutos, tu cliente recibe solo un WhatsApp recordándole lo que dejó en el carrito. Sin que vos hagas nada.",
@@ -1251,6 +1267,10 @@
   "es": "El cliente pregunta por un producto puntual, se lo vendés, y ahí termina la conversación — nunca se entera de qué otra cosa le podría servir para completar esa compra.",
   "en": "The customer asks for a specific product, you sell it to them, and the conversation ends — they never find out what else might help complete that purchase."
  },
+ "h48015819": {
+  "es": "Sí. Desde el Panel de Contenidos editás textos, precios y datos de contacto sin tocar código ni depender de nadie.",
+  "en": "Yes. From the Content Panel you can edit texts, prices and contact information without touching code or depending on anyone."
+ },
  "h485c7ef9": {
   "es": "<a href=\"#planes\">Estratégica — $250 USD</a>",
   "en": "<a href=\"#planes\">Estratégica — $250 USD</a>"
@@ -1342,6 +1362,10 @@
  "h4d56cf81": {
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Reporte%20semanal%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
   "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Reporte%20semanal%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Free demo</a>"
+ },
+ "h4d6cc8e3": {
+  "es": "📲 <strong>Panel de WhatsApp</strong> instalable como app en tu celular (además de PC) — con notificaciones push en tiempo real",
+  "en": "📲 <strong>WhatsApp Panel</strong> installable as an app on your phone (plus PC) — with real-time push notifications"
  },
  "h4d7147ec": {
   "es": "🔥 Quiero dejar de perder esta plata",
@@ -1462,6 +1486,10 @@
  "h5375f329": {
   "es": "El cliente recibe recordatorio 2 horas antes y llega.",
   "en": "The client gets a 2-hour reminder and shows up."
+ },
+ "h53ab7de8": {
+  "es": "🚀 <strong>ALERTAS WEBS incluido</strong> — automatización WhatsApp completa con Panel de WhatsApp",
+  "en": "🚀 <strong>ALERTAS WEBS included</strong> — complete WhatsApp automation with WhatsApp Panel"
  },
  "h53c47a2f": {
   "es": "Módulo 20 de 26",
@@ -1903,6 +1931,10 @@
   "es": "Entre 1% y 5% por transacción",
   "en": "Between 1% and 5% per transaction"
  },
+ "h65d396fc": {
+  "es": "La membresía vence el día 10 de cada mes y te avisamos antes del vencimiento. Si pasada esa fecha no se abona, se corta el suministro de las automatizaciones de Alertas Webs. Se reactivan cuando regularizás el pago, y tu dominio sigue siendo tuyo siempre. Más detalle en Reglas claras.",
+  "en": "The membership expires on the 10th of each month and we'll notify you before expiration. If not paid after that date, the Alertas Webs automations will be cut off. They reactivate when you regularize payment, and your domain remains yours always. More details in Fair Terms."
+ },
  "h65df9693": {
   "es": "Módulo 13 de 26 · Alerta-Web",
   "en": "Module 13 of 26 · Alertas Web"
@@ -2335,6 +2367,10 @@
   "es": "El cliente pregunta por un producto que se agotó, le decís \"no tengo\" y se va. Cuando lo reponés, ya compró en otro lado — y vos ni sabés cuántos lo estaban esperando.",
   "en": "The customer asks for a product that's sold out, you say \"I don't have it\" and they leave. When you restock, they've already bought elsewhere — and you don't even know how many were waiting for it."
  },
+ "h79c12961": {
+  "es": "🔔 Panel de WhatsApp con notificaciones push (celular)",
+  "en": "🔔 WhatsApp Panel with push notifications (phone)"
+ },
  "h79cd449b": {
   "es": "Reputación online que crece sola, mes a mes, sin esfuerzo — y más reseñas significa más clientes nuevos que...",
   "en": "Online reputation that grows on its own, month after month, effortlessly — and more reviews mean more new c..."
@@ -2766,6 +2802,10 @@
  "h92ba870f": {
   "es": "Módulo 17 de 30 · Alertas Webs",
   "en": "Module 17 of 30 · Alertas Webs"
+ },
+ "h930a4650": {
+  "es": "👥 Panel de WhatsApp incluido — gestión de clientes, turnos y stock desde tu PC",
+  "en": "👥 WhatsApp Panel included — manage customers, appointments and inventory from your PC"
  },
  "h93212b33": {
   "es": "Cálculo: consultas/día × días hábiles del mes (26) × % sin responder × una tasa conservadora del 30% de esas consultas que se hubieran convertido en venta × tu ticket promedio. Es una estimación orientativa, pensada para mostrar el orden de magnitud, no una cifra exacta de tu negocio.",
@@ -3515,6 +3555,10 @@
   "es": "Cero clientes perdidos por demora en el primer contacto. Tu negocio contesta rápido las 24 horas, aunque vo...",
   "en": "Zero clients lost due to delays in first contact. Your business answers fast 24 hours a day, even when yo..."
  },
+ "hb72a834e": {
+  "es": "&ldquo;Pago &uacute;nico&rdquo; es el costo de producci&oacute;n del sitio o del sistema. <strong>La membres&iacute;a de Alertas Webs es aparte y mensual</strong> (el primer mes es gratis). Tiene tarifa anual o mes a mes. <strong>Vence el día 10 de cada mes</strong>; el primer vencimiento es el primer día 10 que cae al menos un mes después de la entrega.",
+  "en": "&ldquo;One-time payment&rdquo; is the production cost of the website or system. <strong>The Alertas Webs membership is separate and monthly</strong> (the first month is FREE). It has annual or month-to-month rates. <strong>It expires on the 10th of each month</strong>; the first expiration date is the first 10th that falls at least one month after delivery."
+ },
  "hb732b1e9": {
   "es": "Cargar el catálogo producto por producto lleva horas, y mientras no está cargado, el sistema no puede contestar precios ni tomar pedidos por vos.",
   "en": "Loading your catalog product by product takes hours, and while it's not loaded, the system can't answer prices or take orders for you."
@@ -3651,9 +3695,17 @@
   "es": "Estratégica: que incluye hasta 8 páginas, blog editable, gestión de clientes, agenda de turnos y todo el SEO. Premium agrega: hasta 12 páginas, app instalable en el celular, multiidioma, logo profesional incluido y blog avanzado con categorías. Podés arrancar con Estratégica y hacer upgrade después pagando solo la diferencia.<br>También jfweb_movi que es similar a Premium pero sólo para el celular. Y Alertas Automáticas en la que te damos las Alertas Web, tengas o no tengas una web.",
   "en": "Estratégica: includes up to 8 pages, editable blog, customer management, appointment booking and all the SEO. Premium adds: up to 12 pages, an app installable on your phone, multilingual, professional logo included and an advanced blog with categories. You can start with Estratégica and upgrade later, paying only the difference.<br>There is also JFWEB_MOVI, which is similar to Premium but for phones only. And Alertas Automáticas, in which we give you Alertas Web, whether or not you have a website."
  },
+ "hbdf7a6a3": {
+  "es": "Hasta la entrega, el contenido lo armamos juntos y nos hacemos cargo de lo que publicamos. Por eso nos reservamos el derecho de no hacer webs con mensajes de odio, pornografía, estafas o esquemas multinivel: ese trabajo no lo aceptamos ni cobramos el 50% inicial. Una vez entregado, el contenido es responsabilidad del dueño del sitio; mientras administramos tu sitio, ante una denuncia u orden judicial podemos darlo de baja. Las fotos, logos y textos de terceros tienen que ser tuyos o tener permiso de uso. El detalle está en los Términos y Condiciones.",
+  "en": "Until delivery, we put the content together and take responsibility for what we publish. That's why we reserve the right not to build websites with hate messages, pornography, scams or multi-level schemes: we don't accept that work or charge the initial 50%. Once delivered, the content is the responsibility of the website owner; while we manage your site, in case of a complaint or court order we can take it down. Third-party photos, logos and texts must be yours or have permission to use. Details are in the Terms and Conditions."
+ },
  "hbe45ff5e": {
   "es": "Módulo 18 · Transcripción de audios",
   "en": "Module 18 · Audio transcription"
+ },
+ "hbe4f73bc": {
+  "es": "Son privados: no los vendemos ni los usamos para otros fines, y vos accedés a ellos desde tu Panel de WhatsApp. Para que el sistema funcione, los datos pasan por proveedores técnicos: Meta (WhatsApp), Supabase (base de datos), Anthropic y Groq (inteligencia artificial y transcripción de audio) y Google. Más detalle en la Política de Privacidad.",
+  "en": "They are private: we don't sell them or use them for other purposes, and you access them from your WhatsApp Panel. For the system to work, data passes through technical providers: Meta (WhatsApp), Supabase (database), Anthropic and Groq (artificial intelligence and audio transcription) and Google. More details in the Privacy Policy."
  },
  "hbe7763e8": {
   "es": "<a href=\"../#rebomba\">Alerta-Web</a>",
@@ -4731,6 +4783,10 @@
   "es": "Menos ausentismo, menos huecos vacíos en la agenda, más horas facturadas por semana sin agregar trabajo administrativo.",
   "en": "Less no-shows, fewer empty slots on your schedule, more billable hours per week with zero added admin work."
  },
+ "hf4e2712c": {
+  "es": "⚠️ Este plan no incluye logo profesional, multiidioma ni el Panel de WhatsApp instalado como app en tu celular. Para eso, mirá Premium o JFWEB_MOVI.",
+  "en": "⚠️ This plan does not include professional logo, multiple languages or the WhatsApp Panel installed as an app on your phone. For that, check out Premium or JFWEB_MOVI."
+ },
  "hf4efa846": {
   "es": "<strong>Lo que ganás:</strong> Decisiones más rápidas y mejor informadas, la plata cobrada a la vista y alertas tempranas cuando una semana viene floja — a tiempo de reaccionar, no de lamentarte.",
   "en": "<strong>What you gain:</strong> Faster decisions and better information, money collected in sight and early alerts when a week looks slow — time to react, not regret."
@@ -4886,6 +4942,10 @@
  "hfd33b2e5": {
   "es": "Cerrás más rápido, con un PDF prolijo en segundos — y el sistema insiste solo hasta cerrar la venta...",
   "en": "Close faster with a polished PDF in seconds — and the system keeps pushing until the sale is sealed..."
+ },
+ "hfd346dc6": {
+  "es": "<span>¿Qué contenido pueden tener los sitios y quién responde por él?</span><span class=\"faq-arrow\">↓</span>",
+  "en": "<span>What content can websites have and who is responsible for it?</span><span class=\"faq-arrow\">↓</span>"
  },
  "hfd649755": {
   "es": "Tocá para ver cada pantalla",
