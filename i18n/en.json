@@ -483,6 +483,10 @@
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Confirmación de turno</span>",
   "en": "<a href=\"../\" style=\"color:var(--t3)\">Home</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Appointment confirmation</span>"
  },
+ "h1a9061af": {
+  "es": "<span>PRUEBA CELU-borrar</span><span class=\"faq-arrow\">↓</span>",
+  "en": "<span>TEST MOBILE-delete</span><span class=\"faq-arrow\">↓</span>"
+ },
  "h1a9516e9": {
   "es": "Módulo 23 de 30 · Alertas Webs",
   "en": "Module 23 of 30 · Alertas Webs"
@@ -838,6 +842,10 @@
  "h2d53c7e3": {
   "es": "El problema que te cuesta dinero",
   "en": "The problem that costs you money"
+ },
+ "h2d9756c2": {
+  "es": "Ok. Esto funciona....",
+  "en": "Ok. This works...."
  },
  "h2e1e87c6": {
   "es": "Una empleada que vende mientras vos dormís, comés o estás con tu familia — sin sueldo, sin licencias, sin descanso y sin errores en las cuentas.",
