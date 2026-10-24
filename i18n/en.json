@@ -875,6 +875,10 @@
   "es": "Recuperación de clientes inactivos",
   "en": "Inactive Client Recovery"
  },
+ "h2f45f2bc": {
+  "es": "Le sacás una foto a tu lista de precios — o mandás el PDF, la dictás por audio o la escribís — y la Inteligencia Artificial lee los productos y los precios y los carga sola. Cuando los precios cambian, mandás la lista nueva y el sistema actualiza los precios de los productos que ya tenías y suma los nuevos; si un producto se repite o no está claro cuál es, no lo toca y te avisa. Antes de guardar, te muestra un resumen para que lo repases y confirmes: nada queda cargado sin tu visto bueno. Desde ese momento, el sistema ya contesta precios y toma pedidos por vos.",
+  "en": "You take a photo of your price list — or send the PDF, dictate it by audio, or type it — and Artificial Intelligence reads the products and prices and loads them automatically. When prices change, you send the new list and the system updates the prices of products you already have and adds the new ones; if a product is repeated or unclear, it won't touch it and will alert you. Before saving, it shows you a summary to review and confirm: nothing gets loaded without your approval. From that moment on, the system answers price inquiries and takes orders for you."
+ },
  "h2f4fee34": {
   "es": "<strong>Lo que ganás:</strong> Podés escuchar el audio cuando quieras, pero además siempre te queda el texto — nada se pierde, podés buscarlo después, y el sistema lo entiende como cualquier mensaje escrito para actuar solo.",
   "en": "<strong>What you gain:</strong> You can listen to the audio whenever you like, but you also always keep the text — nothing gets lost, you can search it later, and the system understands it like any written message so it can act on its own."
@@ -1234,6 +1238,10 @@
  "h45e6d8cf": {
   "es": "<strong>Lo que ganás:</strong> Ventas guardadas hasta que repongas, con clientes que ya dijeron que querían comprar, y la demanda real a la vista: sabés qué reponer primero.",
   "en": "<strong>What you gain:</strong> Sales held until you restock, with customers who already said they wanted to buy, and real demand in sight: you know what to restock first."
+ },
+ "h462944ac": {
+  "es": "Tu catálogo listo en minutos en vez de horas y siempre al día, con tu control antes de que quede cargado — y desde ese momento, el sistema ya contesta precios y toma pedidos por vos.",
+  "en": "Your catalog ready in minutes instead of hours and always up to date, with your control before it's loaded — and from that moment on, the system answers price inquiries and takes orders for you."
  },
  "h4631a81e": {
   "es": "Módulo 11 · Contenido & Redes",
@@ -4495,6 +4503,10 @@
   "es": "Módulo 11 de 26 · Alerta-Web",
   "en": "Module 11 of 26 · Alertas Web"
  },
+ "he7590f92": {
+  "es": "Le sacás una foto a tu lista de precios — o mandás el PDF, la dictás por audio o la escribís — y la Inteligencia Artificial carga sola los productos y los precios. Cuando cambian los precios, mandás la lista nueva y se actualizan solos. Vos repasás el resumen y confirmás.",
+  "en": "You take a photo of your price list — or send the PDF, dictate it by audio, or type it — and Artificial Intelligence loads the products and prices on its own. When prices change, you send the new list and they update automatically. You review the summary and confirm."
+ },
  "he7941c3a": {
   "es": "✅ El sistema hace seguimiento a las 24 y 72 horas, y después para.",
   "en": "✅ The system follows up at 24 and 72 hours, and then stops."
@@ -4546,6 +4558,10 @@
  "he930e11c": {
   "es": "Tenés una promo del día (algo que se vence, una oferta puntual) y no tenés forma rápida de avisarle a tus clientes — o los mandás a mano, uno por uno.",
   "en": "You have a limited-time promo (something that expires, a one-off offer) and you don't have a quick way to notify your customers — or you send them by hand, one by one."
+ },
+ "he98de179": {
+  "es": "<strong>Lo que ganás:</strong> Tu catálogo listo en minutos en vez de horas y siempre al día, con tu control antes de que se guarde nada.",
+  "en": "<strong>What you get:</strong> Your catalog ready in minutes instead of hours and always up to date, with your control before anything is saved."
  },
  "he9a3df74": {
   "es": "Un saludo a tiempo, con un beneficio, fortalece la relación con quien ya te eligió — más fidelización, más boca a boca.",
@@ -4878,6 +4894,10 @@
  "hf853f168": {
   "es": "✅ El dueño recibe una calificación automática después de cada servicio.",
   "en": "✅ The owner receives an automatic rating after every service."
+ },
+ "hf887ecb7": {
+  "es": "✅ Le sacás una foto a tu lista de precios — o mandás el PDF, la dictás por audio o la escribís — y la Inteligencia Artificial carga sola productos y precios. Cuando cambian los precios, mandás la lista nueva y se actualizan solos. Vos repasás el resumen y confirmás.",
+  "en": "✅ Take a photo of your price list — or send the PDF, dictate it by audio or type it — and the Artificial Intelligence loads products and prices on its own. When prices change, you send the new list and they update automatically. You review the summary and confirm."
  },
  "hf88b3823": {
   "es": "&ldquo;Pago &uacute;nico&rdquo; es el costo de producci&oacute;n del sitio o del sistema. <strong>La membres&iacute;a de Alertas Webs es aparte y mensual</strong> (el primer mes es gratis). Tiene tarifa anual o mes a mes.",
