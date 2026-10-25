@@ -1350,6 +1350,7 @@ const EDITABLES = {
     titulo: 'Editar turno', accion: 'editarTurno', borrar: 'borrarTurno',
     lista: () => DATA.turnos || [],
     campos: [
+      { k: 'telefono', label: 'Teléfono (con 549)', tipo: 'text', val: x => x.telefono || '' },
       { k: 'fecha',    label: 'Fecha',             tipo: 'date', val: x => x.fecha_iso || '' },
       { k: 'hora',     label: 'Hora',              tipo: 'time', val: x => x.hora_hhmm || '' },
       { k: 'servicio', label: 'Servicio / motivo', tipo: 'text', val: x => (x.tipo && x.tipo !== 'Consulta') ? x.tipo : '' }
