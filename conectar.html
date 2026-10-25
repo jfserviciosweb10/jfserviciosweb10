@@ -33,6 +33,16 @@ a{color:var(--ac)}
 
 <button id="btn" type="button">Conectar mi WhatsApp</button>
 <div class="card"><b>Estado</b><div id="estado" class="m">Todavía no se conectó nada.</div></div>
+
+<div class="card" id="admin">
+<b>Solo para JF Servicios Web (alta del cliente)</b>
+<p class="m">Después de conectar en la ventana de Meta, completá esto y tocá el botón.</p>
+<p><label>Clave de alta<br><input id="clave" type="password" autocomplete="off" style="width:100%;padding:.5rem;box-sizing:border-box"></label></p>
+<p><label>WhatsApp del dueño (con 549, sin +)<br><input id="tel" type="text" inputmode="numeric" placeholder="5493496591636" style="width:100%;padding:.5rem;box-sizing:border-box"></label></p>
+<p><label><input id="guardar" type="checkbox"> Guardar este número en el cliente (reemplaza el que tiene hoy)</label></p>
+<button id="enviar" type="button" disabled>Enviar a RE-BOMBA</button>
+<div id="resp" class="m" style="white-space:pre-wrap;word-break:break-word;margin-top:.8rem"></div>
+</div>
 <p class="m">Al conectar aceptás nuestra <a href="/privacidad.html">Política de Privacidad</a>. Podés pedir la desconexión cuando quieras escribiendo a info@jfserviciosweb.com.</p>
 
 <script>
@@ -63,6 +73,7 @@ window.addEventListener("message", function(ev){
     sesion.waba_id = data.data && data.data.waba_id;
     sesion.phone_number_id = data.data && data.data.phone_number_id;
     sesion.evento = data.event;
+    habilitarEnvio();
     say("Conexión terminada en Meta. Evento: " + data.event + "\nCuenta: " + (sesion.waba_id || "-") + "\nNúmero (id): " + (sesion.phone_number_id || "-"));
   } else if(data.event === "CANCEL"){
     say("Cancelaste el proceso antes de terminar. Podés volver a intentarlo.");
@@ -79,6 +90,8 @@ btn.addEventListener("click", function(){
     btn.disabled = false;
     if(resp && resp.authResponse && resp.authResponse.code){
       sesion.code_recibido = true;
+      codigo = resp.authResponse.code;
+      habilitarEnvio();
       say((estado.textContent.indexOf("Conexión terminada") === 0 ? estado.textContent + "\n\n" : "") + "Autorización recibida. Código obtenido (no se muestra por seguridad).");
     } else {
       say("No se completó la autorización. Podés volver a intentarlo.");
@@ -93,6 +106,27 @@ btn.addEventListener("click", function(){
       sessionInfoVersion: "3"
     }
   });
+});
+
+var codigo = null;
+var FUNC_URL = "https://nsnhxzqewyilitmseouh.supabase.co/functions/v1/conectar-whatsapp";
+var btnEnviar = document.getElementById("enviar");
+var respEl = document.getElementById("resp");
+function habilitarEnvio(){ btnEnviar.disabled = !(codigo && sesion.waba_id); }
+btnEnviar.addEventListener("click", function(){
+  btnEnviar.disabled = true;
+  respEl.textContent = "Enviando...";
+  fetch(FUNC_URL, {
+    method: "POST",
+    headers: {"Content-Type": "application/json", "x-admin-key": document.getElementById("clave").value},
+    body: JSON.stringify({
+      code: codigo, waba_id: sesion.waba_id, phone_number_id: sesion.phone_number_id || "",
+      tel_duenio: document.getElementById("tel").value,
+      guardar: document.getElementById("guardar").checked
+    })
+  }).then(function(r){ return r.json(); })
+    .then(function(j){ respEl.textContent = JSON.stringify(j, null, 2); codigo = null; })
+    .catch(function(e){ respEl.textContent = "Error de red: " + e; btnEnviar.disabled = false; });
 });
 </script>
 </main></body></html>
