@@ -1059,7 +1059,8 @@ function activarDragDropKanban() {
 
 /* ── TURNOS ── */
 function renderTurnos() {
-  const turnos = DATA.turnos || [];
+  // El servidor manda 'nuevo' para un turno recien cargado: se muestra como pendiente.
+  const turnos = (DATA.turnos || []).map(t => t.estado === 'nuevo' ? { ...t, estado: 'pendiente' } : t);
   document.getElementById('turnos-fecha').textContent = new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long'});
   const conf = turnos.filter(t => t.estado === 'confirmado').length;
   const pend = turnos.filter(t => t.estado === 'pendiente').length;
