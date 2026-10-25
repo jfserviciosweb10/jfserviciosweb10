@@ -476,7 +476,7 @@ window.addEventListener('orientationchange', setVH);
     <!-- ═══ TURNOS ═══ -->
     <div class="section" id="sec-turnos">
       <div class="card">
-        <div class="card-title">Agenda hoy <span class="sub" id="turnos-fecha"></span></div>
+        <div class="card-title">Agenda <span class="sub" id="turnos-fecha"></span></div>
         <div id="turnos-lista"></div>
       </div>
       <div class="card">
@@ -693,6 +693,15 @@ window.addEventListener('orientationchange', setVH);
     <input class="inp" id="ms-minimo" type="number" placeholder="Cantidad mínima" style="margin-bottom:8px">
     <input class="inp" id="ms-proveedor" placeholder="Proveedor" style="margin-bottom:8px">
     <button class="btn filled" onclick="confirmarStock()"><i class="ti ti-check"></i> Guardar producto</button>
+  </div>
+</div>
+
+<!-- Modal editar (generico: turno, cotizacion, vencimiento, producto) -->
+<div class="modal-overlay" id="modal-editar">
+  <div class="modal">
+    <div class="modal-title"><span id="me-titulo">Editar</span> <button class="modal-close" onclick="cerrarModal('modal-editar')">✕</button></div>
+    <div id="me-campos"></div>
+    <button class="btn filled" onclick="guardarEdicion()"><i class="ti ti-check"></i> Guardar cambios</button>
   </div>
 </div>
 
@@ -1059,6 +1068,7 @@ function renderTurnos() {
   document.getElementById('t-conf').textContent  = conf;
   document.getElementById('t-pend').textContent  = pend;
   document.getElementById('t-canc').textContent  = canc;
+  const hoyAR = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' });
   document.getElementById('turnos-lista').innerHTML = turnos.length
     ? turnos.map(t => `
       <div class="turno-row">
@@ -1066,14 +1076,15 @@ function renderTurnos() {
         <div class="t-bar ${t.estado}"></div>
         <div class="t-info">
           <div class="t-nombre">${esc(t.nombre)}</div>
-          <div class="t-tipo">${esc(t.tipo)}</div>
+          <div class="t-tipo">${esc(t.tipo)}${t.fecha_iso && t.fecha_iso !== hoyAR ? ' · ' + esc(t.fecha) : ''}</div>
         </div>
         <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
           <span class="pill ${t.estado==='confirmado'?'verde':t.estado==='pendiente'?'ama':'rojo'}">${t.estado}</span>
           ${t.estado==='pendiente' ? `<button class="btn sm verde" style="margin-top:0;padding:4px 8px" onclick="confirmarTurnoId('${t.id}')">✓</button>` : ''}
+          <div style="display:flex;gap:4px"><button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="abrirEditar('turno','${t.id}')" title="Editar">✎</button><button class="btn sm rojo" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="borrarItem('turno','${t.id}')" title="Borrar">🗑</button></div>
         </div>
       </div>`).join('')
-    : '<p class="empty-msg">Sin turnos para hoy</p>';
+    : '<p class="empty-msg">Sin turnos en los próximos días</p>';
 }
 
 /* ── PEDIDOS (MOD28 — los que cierra Abril por WhatsApp) ── */
@@ -1194,6 +1205,7 @@ function cotizHTML(c) {
         <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionCotiz('cerrar','${c.id}')">✓ Cerrar</button>
         <button class="btn sm rojo" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="accionCotiz('seguimiento','${c.id}')">↩ WA</button>
       ` : ''}
+      <div style="display:flex;gap:4px"><button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="abrirEditar('cotizacion','${c.id}')" title="Editar">✎</button><button class="btn sm rojo" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="borrarItem('cotizacion','${c.id}')" title="Borrar">🗑</button></div>
     </div>
   </div>`;
 }
@@ -1244,6 +1256,7 @@ function vencHTML(v) {
         <button class="btn sm verde" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="pagarVenc('${v.id}')">✓ Pagado</button>
         <button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="recordarVenc('${v.id}')">🔔 WA</button>
       ` : '<span class="pill verde">Pagado</span>'}
+      <div style="display:flex;gap:4px"><button class="btn sm" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="abrirEditar('vencimiento','${v.id}')" title="Editar">✎</button><button class="btn sm rojo" style="margin-top:0;font-size:9px;padding:3px 6px" onclick="borrarItem('vencimiento','${v.id}')" title="Borrar">🗑</button></div>
     </div>
   </div>`;
 }
@@ -1284,6 +1297,8 @@ function stockHTML(s) {
     <div class="stock-nivel ${cls}">${s.actual}</div>
     ${(s.alerta || s.actual <= 0) ? `<button class="btn sm rojo" style="margin:0;width:auto;font-size:9px" onclick="pedidoHecho('${s.id}')">Pedido</button>` : ''}
     <button class="btn sm" style="margin:0;width:auto;font-size:9px" onclick="descuentoProducto('${s.id}')">🏷️</button>
+    <button class="btn sm" style="margin:0;width:auto;font-size:9px" onclick="abrirEditar('producto','${s.id}')" title="Editar">✎</button>
+    <button class="btn sm rojo" style="margin:0;width:auto;font-size:9px" onclick="borrarItem('producto','${s.id}')" title="Borrar">🗑</button>
   </div>`;
 }
 
@@ -1327,6 +1342,87 @@ async function descuentoProducto(id) {
   const r = await postGAS(body);
   if (r && r.ok !== false) showToast(body.quitar ? '✅ Descuento quitado' : '✅ Descuento cargado');
   setTimeout(cargarDatos, 1500);
+}
+
+/* ── EDITAR / BORRAR (turnos, cotizaciones, vencimientos, productos) ── */
+const EDITABLES = {
+  turno: {
+    titulo: 'Editar turno', accion: 'editarTurno', borrar: 'borrarTurno',
+    lista: () => DATA.turnos || [],
+    campos: [
+      { k: 'fecha',    label: 'Fecha',             tipo: 'date', val: x => x.fecha_iso || '' },
+      { k: 'hora',     label: 'Hora',              tipo: 'time', val: x => x.hora_hhmm || '' },
+      { k: 'servicio', label: 'Servicio / motivo', tipo: 'text', val: x => (x.tipo && x.tipo !== 'Consulta') ? x.tipo : '' }
+    ],
+    nombre: x => x.nombre || 'este turno'
+  },
+  cotizacion: {
+    titulo: 'Editar cotización', accion: 'editarCotizacion', borrar: 'borrarCotizacion',
+    lista: () => DATA.cotizaciones || [],
+    campos: [
+      { k: 'monto',    label: 'Monto $',  tipo: 'number', val: x => x.monto || '' },
+      { k: 'telefono', label: 'Teléfono', tipo: 'text',   val: x => x.telefono || '' }
+    ],
+    nombre: x => x.cliente || 'esta cotización'
+  },
+  vencimiento: {
+    titulo: 'Editar vencimiento', accion: 'editarVencimiento', borrar: 'borrarVencimiento',
+    lista: () => DATA.vencimientos || [],
+    campos: [
+      { k: 'descripcion',       label: 'Descripción', tipo: 'text', val: x => x.descripcion === '—' ? '' : x.descripcion },
+      { k: 'fecha_vencimiento', label: 'Fecha',       tipo: 'date', val: x => x.fecha_iso || '' },
+      { k: 'tipo',              label: 'Tipo',        tipo: 'text', val: x => x.tipo === '—' ? '' : x.tipo }
+    ],
+    nombre: x => x.descripcion || 'este vencimiento'
+  },
+  producto: {
+    titulo: 'Editar producto', accion: 'editarProducto', borrar: 'borrarProducto',
+    lista: () => DATA.stock || [],
+    campos: [
+      { k: 'nombre',    label: 'Nombre',            tipo: 'text',   val: x => x.nombre || '' },
+      { k: 'minimo',    label: 'Cantidad mínima',   tipo: 'number', val: x => x.minimo || '' },
+      { k: 'proveedor', label: 'Proveedor',         tipo: 'text',   val: x => x.proveedor === '—' ? '' : x.proveedor }
+    ],
+    nombre: x => x.nombre || 'este producto'
+  }
+};
+let EDITANDO = null;
+
+function abrirEditar(tipo, id) {
+  const cfg = EDITABLES[tipo];
+  const item = cfg && cfg.lista().find(x => x.id === id);
+  if (!item) return showToast('⚠ No encontré el registro, actualizá el panel');
+  EDITANDO = { tipo, id };
+  document.getElementById('me-titulo').textContent = cfg.titulo;
+  document.getElementById('me-campos').innerHTML = cfg.campos.map(c =>
+    `<label style="font-size:11px;color:var(--gris-txt);display:block;margin-bottom:2px">${esc(c.label)}</label>` +
+    `<input class="inp" id="me-${c.k}" type="${c.tipo}" value="${esc(c.val(item))}" style="margin-bottom:8px">`
+  ).join('');
+  document.getElementById('modal-editar').classList.add('show');
+}
+
+async function guardarEdicion() {
+  if (!EDITANDO) return;
+  const cfg = EDITABLES[EDITANDO.tipo];
+  const body = { action: cfg.accion, id: EDITANDO.id };
+  cfg.campos.forEach(c => { body[c.k] = document.getElementById('me-' + c.k).value; });
+  const r = await postGAS(body);
+  if (!r || r.ok === false) return; // postGAS ya mostró el error
+  cerrarModal('modal-editar');
+  EDITANDO = null;
+  showToast('✅ Cambios guardados');
+  setTimeout(cargarDatos, 1200);
+}
+
+async function borrarItem(tipo, id) {
+  const cfg = EDITABLES[tipo];
+  const item = cfg && cfg.lista().find(x => x.id === id);
+  if (!item) return showToast('⚠ No encontré el registro, actualizá el panel');
+  if (!confirm('¿Seguro que querés borrar "' + cfg.nombre(item) + '"?\nNo se puede deshacer.')) return;
+  const r = await postGAS({ action: cfg.borrar, id });
+  if (!r || r.ok === false) return;
+  showToast('🗑 Borrado');
+  setTimeout(cargarDatos, 1200);
 }
 
 /* ── LOG / CONVERSACIONES ── */
@@ -1472,8 +1568,9 @@ async function confirmarTurno() {
     hora:     document.getElementById('mt-hora').value,
     servicio: document.getElementById('mt-servicio').value
   };
-  if (!turno.telefono || !turno.fecha) return showToast('⚠ Completá teléfono y fecha');
-  await postGAS({ action:'agregarTurno', turno });
+  if (!turno.telefono || !turno.fecha || !turno.hora) return showToast('⚠ Completá teléfono, fecha y hora');
+  const r = await postGAS({ action:'agregarTurno', turno });
+  if (!r || r.ok === false) return;
   cerrarModal('modal-turno');
   showToast('✅ Turno agregado');
   setTimeout(cargarDatos, 1500);
@@ -1505,7 +1602,9 @@ async function confirmarVencimiento() {
     tipo:              document.getElementById('mv-tipo').value || 'OTRO'
   };
   if (!vencimiento.descripcion) return showToast('⚠ Ingresá la descripción');
-  await postGAS({ action:'agregarVencimiento', vencimiento });
+  if (!vencimiento.fecha_vencimiento) return showToast('⚠ Elegí la fecha de vencimiento');
+  const r = await postGAS({ action:'agregarVencimiento', vencimiento });
+  if (!r || r.ok === false) return;
   cerrarModal('modal-vencimiento');
   showToast('✅ Vencimiento guardado');
   setTimeout(cargarDatos, 1500);
