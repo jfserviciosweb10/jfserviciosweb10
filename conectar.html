@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conectar mi WhatsApp · Alertas Webs</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jfserviciosweb.com/conectar.html">
+<style>
+:root{--bg:#fff;--fg:#1a1d23;--mut:#5b6270;--ac:#0b6b3a;--bd:#e3e6eb;--card:#f6f8fa}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1116;--fg:#e8eaee;--mut:#9aa3b2;--ac:#4ade80;--bd:#272c35;--card:#161b22}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:2rem 16px 4rem}
+h1{font-size:1.6rem;line-height:1.2}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:1rem 1.2rem;margin:1rem 0}
+ol{padding-left:1.2rem}li{margin:.4rem 0}
+button{background:#1877f2;color:#fff;border:0;border-radius:8px;padding:.85rem 1.4rem;font-size:1rem;font-weight:600;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+.m{color:var(--mut);font-size:.88rem}
+#estado{white-space:pre-wrap;word-break:break-word;font-size:.95rem}
+a{color:var(--ac)}
+</style></head><body><main>
+<p><a href="/">&larr; Volver a jfserviciosweb.com</a></p>
+<h1>Conectar mi WhatsApp</h1>
+<p>Conectá el WhatsApp de tu negocio a Alertas Webs <b>sin perder tu número ni tus chats</b>. Seguís usando la app WhatsApp Business en tu celular como siempre.</p>
+
+<div class="card">
+<b>Antes de empezar</b>
+<ol>
+<li>Tené a mano el celular con la app <b>WhatsApp Business</b> (versión 2.24.17 o superior) y el número de tu negocio ya activo ahí.</li>
+<li>Tené a mano tu cuenta de Facebook.</li>
+<li>Al tocar el botón se abre una ventana de Meta. Seguí los pasos y escaneá el código QR con tu celular.</li>
+</ol>
+<p class="m">Cada tanto, abrí la app WhatsApp Business en tu celular (al menos cada 2 semanas): si no, la conexión se pausa.</p>
+</div>
+
+<button id="btn" type="button">Conectar mi WhatsApp</button>
+<div class="card"><b>Estado</b><div id="estado" class="m">Todavía no se conectó nada.</div></div>
+<p class="m">Al conectar aceptás nuestra <a href="/privacidad.html">Política de Privacidad</a>. Podés pedir la desconexión cuando quieras escribiendo a info@jfserviciosweb.com.</p>
+
+<script>
+var APP_ID = "1631814691414365";
+var CONFIG_ID = "2152747391983961";
+var estado = document.getElementById("estado");
+var btn = document.getElementById("btn");
+var sesion = {};
+
+function say(t){ estado.textContent = t; }
+
+window.fbAsyncInit = function(){
+  FB.init({appId: APP_ID, autoLogAppEvents: true, xfbml: false, version: "v25.0"});
+};
+(function(d,s,id){
+  if(d.getElementById(id)) return;
+  var js = d.createElement(s); js.id = id; js.async = true; js.defer = true;
+  js.src = "https://connect.facebook.net/es_LA/sdk.js";
+  d.head.appendChild(js);
+})(document, "script", "facebook-jssdk");
+
+window.addEventListener("message", function(ev){
+  if(ev.origin !== "https://www.facebook.com" && ev.origin !== "https://web.facebook.com") return;
+  var data;
+  try { data = JSON.parse(ev.data); } catch(e){ return; }
+  if(!data || data.type !== "WA_EMBEDDED_SIGNUP") return;
+  if(data.event === "FINISH" || data.event === "FINISH_WHATSAPP_BUSINESS_APP_ONBOARDING"){
+    sesion.waba_id = data.data && data.data.waba_id;
+    sesion.phone_number_id = data.data && data.data.phone_number_id;
+    sesion.evento = data.event;
+    say("Conexión terminada en Meta. Evento: " + data.event + "\nCuenta: " + (sesion.waba_id || "-") + "\nNúmero (id): " + (sesion.phone_number_id || "-"));
+  } else if(data.event === "CANCEL"){
+    say("Cancelaste el proceso antes de terminar. Podés volver a intentarlo.");
+  } else if(data.event === "ERROR"){
+    say("Meta informó un error: " + JSON.stringify(data.data || {}));
+  }
+});
+
+btn.addEventListener("click", function(){
+  if(typeof FB === "undefined"){ say("Todavía está cargando. Probá de nuevo en unos segundos."); return; }
+  btn.disabled = true;
+  say("Abriendo la ventana de Meta...");
+  FB.login(function(resp){
+    btn.disabled = false;
+    if(resp && resp.authResponse && resp.authResponse.code){
+      sesion.code_recibido = true;
+      say((estado.textContent.indexOf("Conexión terminada") === 0 ? estado.textContent + "\n\n" : "") + "Autorización recibida. Código obtenido (no se muestra por seguridad).");
+    } else {
+      say("No se completó la autorización. Podés volver a intentarlo.");
+    }
+  }, {
+    config_id: CONFIG_ID,
+    response_type: "code",
+    override_default_response_type: true,
+    extras: {
+      setup: {},
+      featureType: "whatsapp_business_app_onboarding",
+      sessionInfoVersion: "3"
+    }
+  });
+});
+</script>
+</main></body></html>
