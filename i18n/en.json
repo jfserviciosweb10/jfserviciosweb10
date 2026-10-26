@@ -143,6 +143,10 @@
   "es": "Son privados: no los vendemos ni los usamos para otros fines, y vos accedés a ellos desde tu Panel del Dueño. Para que el sistema funcione, los datos pasan por proveedores técnicos: Meta (WhatsApp), Supabase (base de datos), Anthropic y Groq (inteligencia artificial y transcripción de audio) y Google. Más detalle en la Política de Privacidad.",
   "en": "They're private: we don't sell them or use them for other purposes, and you access them from your WhatsApp Panel. For the system to work, data passes through technical providers: Meta (WhatsApp), Supabase (database), Anthropic and Groq (artificial intelligence and audio transcription) and Google. More details in the Privacy Policy."
  },
+ "h07b36f8a": {
+  "es": "<span>¿Qué puedo hacer yo mismo desde el Panel de WhatsApp?</span><span class=\"faq-arrow\">↓</span>",
+  "en": "<span>What can I do myself from the WhatsApp Panel?</span><span class=\"faq-arrow\">↓</span>"
+ },
  "h07db3446": {
   "es": "Estos 15 no atienden al desconocido que te escribe por primera vez — pero construyen algo igual de valioso: <strong>la experiencia y la reputación que hacen que un cliente te recomiende a otro</strong>. Un negocio con buena atención, cero quejas sueltas y cobros al día también consigue gente nueva — por el boca a boca. Es la otra cara de la misma moneda.",
   "en": "These 15 don't attend to the stranger writing you for the first time — but they build something just as valuable: <strong>the experience and reputation that make a customer recommend you to another</strong>. A business with good service, zero complaints floating around and payments on time also gets new people — through word of mouth. It's the other side of the same coin."
@@ -446,6 +450,10 @@
  "h185829b7": {
   "es": "Sí. Desde el Panel de Contenidos, en tu celular, cambiás títulos, textos, horarios, precios de servicios, mail, dirección, logo y foto de portada, sin tocar código ni depender de nadie. Los teléfonos y el WhatsApp los cargamos nosotros, para que nunca se rompa un contacto.",
   "en": "Yes. From the Content Panel, on your phone, you change titles, texts, schedules, service prices, email, address, logo and cover photo, without touching code or depending on anyone. We load the phone numbers and WhatsApp, so a contact never breaks."
+ },
+ "h18930cc3": {
+  "es": "Todo lo del día a día, sin llamarnos. Ves tus clientes, turnos, pedidos, cotizaciones, leads, stock y vencimientos de los últimos 90 días. Lo que llega por WhatsApp lo carga Abril sola; lo que arreglás por teléfono o en el local lo sumás vos desde el panel: turnos, cotizaciones, vencimientos y productos. Si te equivocás o algo cambia, tocás el lápiz para corregirlo o el tacho para borrarlo (te pide confirmación antes). También confirmás turnos, preparás, enviás, entregás o cancelás pedidos, cerrás cotizaciones, marcás vencimientos como pagados y actualizás el stock. Los pedidos no se borran: se cancelan, para que quede el registro de la venta.",
+  "en": "Everything day-to-day, without calling us. You see your clients, appointments, orders, quotes, leads, inventory and expiration dates from the last 90 days. What arrives via WhatsApp is loaded by Abril automatically; what you arrange by phone or at your location you add yourself from the panel: appointments, quotes, expiration dates and products. If you make a mistake or something changes, you tap the pencil to edit it or the trash to delete it (it asks for confirmation first). You also confirm appointments, prepare, send, deliver or cancel orders, close quotes, mark expiration dates as paid and update inventory. Orders are never deleted: they're canceled, so the sales record is kept."
  },
  "h18a78fe7": {
   "es": "Cerrajerías y urgencias 24hs",
@@ -2087,6 +2095,10 @@
   "es": "En cualquier tienda online, la mayoría de los carritos se abandonan antes de terminar la compra — un llamado, un dato que le faltaba, una duda de último momento, o simplemente se distrajo. No es que no quería comprar: algo lo interrumpió a mitad de camino. Sin un recordatorio, esa venta casi lista para cerrarse se enfría sola, y la mayoría de las tiendas nunca hace nada para recuperarla.",
   "en": "In any online store, most carts are abandoned before purchase is complete — a phone call, missing information, a last-minute doubt, or they just got distracted. It's not that they didn't want to buy: something interrupted them halfway through. Without a reminder, that almost-closed sale cools down on its own, and most stores never do anything to recover it."
  },
+ "h6bc378aa": {
+  "es": "<a href=\"https://tally.so/r/2jjE2M\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\" style=\"white-space:nowrap;max-width:100%;font-size:clamp(.74rem,3.3vw,.95rem);padding:14px 18px\" data-boton=\"demo_personalizada\" onclick=\"try{gtag('event','pedir_demo_personalizada')}catch(e){}\">Pedí tu DEMO con Automatizaciones y Personalizada GRATIS</a> <p style=\"max-width:700px;margin:1rem auto 0;font-size:.85rem;color:var(--t2);line-height:1.6\"><strong>Personalizada</strong> es hecha con tus datos, logo y fotos (local, tu equipo, hasta 3 de tus productos o servicios) y armamos tu demo, sin costo, antes de que pagues.<br>&iquest;Preferís mirar primero? <a href=\"#preview-webs\" style=\"color:var(--green);font-weight:700\">Eleg&iacute; tu rubro y nivel</a> y mir&aacute; un ejemplo ya armado.</p>",
+  "en": "<a href=\"https://tally.so/r/2jjE2M\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\" style=\"white-space:nowrap;max-width:100%;font-size:clamp(.74rem,3.3vw,.95rem);padding:14px 18px\" data-boton=\"demo_personalizada\" onclick=\"try{gtag('event','pedir_demo_personalizada')}catch(e){}\">Request your FREE DEMO with Automations and Personalized</a>\n      <p style=\"max-width:700px;margin:1rem auto 0;font-size:.85rem;color:var(--t2);line-height:1.6\"><strong>Personalized</strong> is made with your data, logo and photos (your location, your team, up to 3 of your products or services) and we build your demo, at no cost, before you pay.<br>Prefer to look first? <a href=\"#preview-webs\" style=\"color:var(--green);font-weight:700\">Choose your industry and level</a> and see a ready-made example.</p>"
+ },
  "h6be0bc7c": {
   "es": "<a href=\"vendedor-con-inteligencia-artificial-para-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 15 — Vendedor IA 24/7</a> <a href=\"recuperacion-de-carrito-abandonado-tienda-online.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 23 — Carrito abandonado</a> <a href=\"avisame-cuando-haya-stock-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 29 — Avisame cuando haya stock</a>",
   "en": "<a href=\"vendedor-con-inteligencia-artificial-para-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 15 — AI Seller 24/7</a>\n      <a href=\"recuperacion-de-carrito-abandonado-tienda-online.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 23 — Abandoned cart</a>\n      <a href=\"avisame-cuando-haya-stock-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 29 — Notify me when in stock</a>"
@@ -2919,6 +2931,10 @@
   "es": "Estas son las tres señales más comunes, y ninguna de ellas se siente como \"estoy perdiendo plata\" en el momento. Se sienten como parte normal del día a día. Ese es justamente el problema.",
   "en": "These are the three most common signs, and none of them feel like \"I'm losing money\" in the moment. They feel like a normal part of your day-to-day. That's exactly the problem."
  },
+ "h991f1da6": {
+  "es": "👥 Panel de WhatsApp incluido — clientes, turnos, pedidos, cotizaciones, leads, stock y vencimientos desde tu PC",
+  "en": "👥 WhatsApp Panel included — clients, appointments, orders, quotes, leads, inventory and expiration dates from your PC"
+ },
  "h993b8d8b": {
   "es": "Vamos directo: 11 de los 24 módulos están enfocados 100% en que consigas clientes nuevos. Te mostramos cuáles son y por qué, uno por uno.",
   "en": "Let's be direct: 11 of the 24 modules are 100% focused on getting you new customers. We show you which ones and why, one by one."
@@ -3078,6 +3094,10 @@
  "ha15cfd7b": {
   "es": "USD 250 pago &uacute;nico + USD 100/mes de membres&iacute;a (el primer mes es gratis).",
   "en": "USD 250 one-time payment + USD 100/month membership (first month is FREE)."
+ },
+ "ha17cccd6": {
+  "es": "<span>¿Cómo borro o cambio algo que ya cargué en el Panel de Contenidos?</span><span class=\"faq-arrow\">↓</span>",
+  "en": "<span>How do I delete or change something I've already uploaded in the Content Panel?</span><span class=\"faq-arrow\">↓</span>"
  },
  "ha18b7b91": {
   "es": "Módulo 06 de 26 · Alerta-Web",
@@ -3766,6 +3786,10 @@
  "hc01848be": {
   "es": "La forma más simple es automatizar exactamente estas tres cosas: la primera respuesta, el recordatorio de turnos, y el seguimiento de cotizaciones sin cerrar. No hace falta un sistema complicado — alcanza con que tu WhatsApp de siempre haga estas tareas repetitivas solo, mientras vos te ocupás de lo que realmente necesita tu atención personal.",
   "en": "The simplest way is to automate exactly these three things: the first response, the appointment reminder, and the follow-up on closed quotes. You don't need a complicated system — it's enough for your regular WhatsApp to handle these repetitive tasks on its own, while you focus on what really needs your personal attention."
+ },
+ "hc084e5ee": {
+  "es": "Las secciones que ves dependen de tu negocio y de tu web (servicios, menú, promociones, equipo, horarios, etc.). Entrás al panel desde tu celular, abrís la que necesitás, tocás el ítem y lo cambiás. Para borrarlo del todo, usás el tacho de basura de la lista. Si preferís no perderlo, apagás el interruptor “Mostrar en la web” y desaparece del sitio sin borrarse: ideal para una promo vencida que después querés reusar. Al guardar, el sitio se actualiza solo en uno o dos minutos.",
+  "en": "The sections you see depend on your business and your website (services, menu, promotions, team, hours, etc.). You access the panel from your phone, open the one you need, tap the item and change it. To delete it completely, you use the trash icon from the list. If you prefer not to lose it, you turn off the \"Show on website\" switch and it disappears from the site without being deleted: ideal for an expired promo that you want to reuse later. When you save, the site updates itself in one or two minutes."
  },
  "hc09dec07": {
   "es": "No incluido",
