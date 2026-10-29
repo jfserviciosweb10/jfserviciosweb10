@@ -459,6 +459,10 @@
   "es": "Cerrajerías y urgencias 24hs",
   "en": "Locksmiths and 24-hr emergencies"
  },
+ "h18ae99e0": {
+  "es": "✅ Cada pedido que cierra tu asistente queda registrado con su número. Cuando lo despachás, escribís ENVIADO y el número (con el código de seguimiento, si tenés), o tocás el botón Enviado en tu panel, y el cliente recibe solo un mensaje: que su pedido ya está en camino, qué lleva y cómo seguirlo. Cuando llega, ENTREGADO lo cierra.",
+  "en": "✅ Every order your assistant closes is recorded with its number. When you ship it, you write SENT and the number (with the tracking code, if you have one), or tap the Sent button in your panel, and the customer receives just one message: that their order is on the way, what it contains and how to track it. When it arrives, DELIVERED closes it."
+ },
  "h19135ae9": {
   "es": "© <span id=\"year\"></span> JF Servicios Web · Esperanza, Santa Fe, Argentina",
   "en": "© <span id=\"year\"></span> JF Servicios Web · Esperanza, Santa Fe, Argentina"
@@ -651,6 +655,10 @@
   "es": "Módulo 15 de 26",
   "en": "Module 15 of 26"
  },
+ "h20dfcbc0": {
+  "es": "✅ El sistema entiende cada audio que manda un cliente, lo transcribe y le responde al instante, igual que si hubiera escrito.",
+  "en": "✅ The system understands each audio a customer sends, transcribes it and responds instantly, just like if they had typed it."
+ },
  "h210b9c94": {
   "es": "Trabajamos para que Abril y los módulos le respondan a tus clientes desde el número de WhatsApp de tu negocio, el que ya conocen. Antes de empezar revisamos tu número y te confirmamos cómo se conecta; si no se pudiera conectar sin riesgo para tu línea, te lo decimos antes de cobrarte nada. Usamos la API oficial de WhatsApp: el costo de los mensajes lo cobra Meta según tu volumen y te lo confirmamos antes de activar.",
   "en": "We work so that Abril and the modules respond to your customers from your business's WhatsApp number, the one they already know. Before we start, we'll review your number and confirm how it connects; if it couldn't connect safely for your line, we'll let you know before charging you anything. We use WhatsApp's official API: Meta charges for messages based on your volume and we'll confirm this before activating."
@@ -690,6 +698,10 @@
  "h22d95feb": {
   "es": "Estás atendiendo a un cliente o trabajando y el teléfono suena. No podés atender, esa persona cuelga, y muchas veces llama al siguiente de la lista. Esa venta se perdió sin que te enteres.",
   "en": "You're attending to a customer or working and the phone rings. You can't answer, that person hangs up, and many times they call the next number on the list. That sale was lost without you even knowing about it."
+ },
+ "h23013946": {
+  "es": "<span class=\"ci\">✓</span><span>Primer mes bonificado, desde la entrega de tu web. El precio no sube con los años</span>",
+  "en": "<span class=\"ci\">✓</span><span>First month complimentary, from your web delivery. The price doesn't increase over the years</span>"
  },
  "h234166ab": {
   "es": "Cero cobros olvidados, cero cortes de servicio por descuido, control total del flujo de caja recurrente sin...",
@@ -1099,6 +1111,10 @@
   "es": "Si el cliente califica bien (4 o 5), el sistema le pide automáticamente que deje una reseña en Google, con el link directo.",
   "en": "If the customer rates well (4 or 5), the system automatically asks them to leave a review on Google, with the direct link."
  },
+ "h3ae8e8c7": {
+  "es": "Dominio gratis el primer Año, SSL y Hosting Gratis para siempre. Incluso podés pedir tu Demo-Prueba gratis de 7 días. Tu web es tuya para siempre.",
+  "en": "Free domain for the first year, free SSL and hosting forever. You can even request your free 7-day Demo-Trial. Your web is yours forever."
+ },
  "h3b5493ba": {
   "es": "<a href=\"#\" data-wa=\"Hola%20Jos%C3%A9%2C%20quiero%20m%C3%A1s%20info%20sobre%20jfserviciosweb.com%20-%20Demo%20gratis\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\">💬 Quiero mi demo gratis</a>",
   "en": "<a href=\"#\" data-wa=\"Hola%20Jos%C3%A9%2C%20quiero%20m%C3%A1s%20info%20sobre%20jfserviciosweb.com%20-%20Demo%20gratis\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\">💬 I want my free demo</a>"
@@ -1287,6 +1303,10 @@
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20FAQ%20con%20Inteligencia%20Artificial%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
   "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20FAQ%20con%20Inteligencia%20Artificial%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Free demo</a>"
  },
+ "h479374ff": {
+  "es": "<strong>Lo que ganás:</strong> Cerrás más rápido, con una imagen prolija de tu negocio, sin perder tiempo armando cada presupuesto a mano — y el sistema insiste solo hasta cerrar la venta.",
+  "en": "<strong>What you gain:</strong> You close faster, with a polished image of your business, without wasting time putting together each quote by hand — and the system keeps pushing until the sale closes."
+ },
  "h4794b33a": {
   "es": "El costo de un community manager, sin pagar un community manager — y la tranquilidad de que todo lo que dice es verdad. Copiás, pegás y publicás.",
   "en": "The cost of a community manager, without paying a community manager—and the peace of mind that everything it says is true. Copy, paste, and post."
@@ -1310,6 +1330,10 @@
  "h487f1ca7": {
   "es": "Carrito abandonado (tienda online)",
   "en": "Abandoned cart (online store)"
+ },
+ "h493ece39": {
+  "es": "<a href=\"https://tally.so/r/2jjE2M\" target=\"_blank\" rel=\"noopener noreferrer\">Demo-Prueba gratis</a>",
+  "en": "<a href=\"https://tally.so/r/2jjE2M\" target=\"_blank\" rel=\"noopener noreferrer\">Free Demo-Trial</a>"
  },
  "h4994af06": {
   "es": "<a href=\"catalogo-de-productos-por-whatsapp-automatico.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 10 — Catálogo por WhatsApp</a> <a href=\"como-cerrar-mas-presupuestos-con-seguimiento-automatico.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 08 — Seguimiento de cotización</a> <a href=\"cotizacion-pdf-automatica-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 19 — Cotización PDF</a>",
@@ -1447,6 +1471,10 @@
   "es": "Los 30 módulos, uno por uno",
   "en": "All 30 modules, one by one"
  },
+ "h4f925ea4": {
+  "es": "✅ El presupuesto sale como un PDF prolijo y profesional, listo para mandar, en segundos.",
+  "en": "✅ The budget comes out as a neat, professional PDF, ready to send, in seconds."
+ },
  "h502add4a": {
   "es": "Con un mensaje con la idea —por WhatsApp o desde el botón «Generar con IA» de tu panel— el posteo sale listo en segundos, con su imagen, una versión corta para estados e historias y, cuando tiene sentido, un testimonio real de un cliente tuyo.",
   "en": "With a message with the idea—via WhatsApp or by clicking 'Generate with AI' on your panel—the post is ready in seconds, complete with an image, a short version for statuses and stories, and when it makes sense, a real testimonial from one of your customers."
@@ -1526,6 +1554,10 @@
  "h53e39e9d": {
   "es": "Alguien carga productos en el carrito de tu tienda online, llega hasta el checkout, y se va sin pagar. Nadie se entera. La venta se pierde en silencio.",
   "en": "Someone adds products to your store's cart, gets to checkout, and leaves without paying. Nobody notices. The sale is lost silently."
+ },
+ "h53fd99d4": {
+  "es": "&ldquo;Pago &uacute;nico&rdquo; es el costo de producci&oacute;n del sitio o del sistema. <strong>La membres&iacute;a de Alertas Webs es aparte y mensual</strong> (el primer mes es gratis y empieza con la entrega, una vez abonada la producci&oacute;n). Tiene tarifa anual o mes a mes. <strong>Vence el día 10 de cada mes</strong>; el primer vencimiento es el primer día 10 que cae al menos un mes después de la entrega.",
+  "en": "&ldquo;One-time payment&rdquo; is the production cost of the site or system. <strong>Alertas Webs membership is separate and monthly</strong> (the first month is free and starts with delivery, once production is paid). It has annual or month-to-month rates. <strong>It expires on the 10th of each month</strong>; the first expiration is the first 10th that falls at least one month after delivery."
  },
  "h5405415c": {
   "es": "⚠️ Este plan no incluye logo profesional, multiidioma ni el Panel del Dueño instalado como app en tu celular. Para eso, mirá Premium o JFWEB_MOVI.",
@@ -1723,6 +1755,10 @@
   "es": "<strong>Lo que ganás:</strong> Fidelización automática con quien vos elegís, sin el riesgo de un gesto incómodo con quien no tenés esa confianza.",
   "en": "<strong>What you gain:</strong> Automatic loyalty with the people you choose, without the risk of an awkward gesture toward someone you don't have that kind of rapport with."
  },
+ "h5c78a629": {
+  "es": "❌ Un cliente te manda un audio y, si no lo podés escuchar en el momento, queda sin respuesta hasta que te des cuenta.",
+  "en": "❌ A customer sends you an audio and, if you can't listen to it right away, it goes unanswered until you notice it."
+ },
  "h5c89c6d5": {
   "es": "❌ El dueño no sabe cómo viene la semana hasta que ya es tarde.",
   "en": "❌ The owner doesn't know how the week is going until it's too late."
@@ -1771,6 +1807,10 @@
   "es": "🔗 Código QR + tarjeta de contacto digital",
   "en": "🔗 QR code + digital contact card"
  },
+ "h5de4d9fe": {
+  "es": "En todos los planes te pasamos un cuestionario para conocer tus datos y gustos, y desde que los recibimos completos, depende del plan: la Demo-Prueba gratis, dentro de las 48 horas, Estratégica, Premium y JFWEB_MOVI en 3-5 días hábiles, Alertas Automáticas en 48-96 horas (según lo completo que esté el formulario Tally que nos envíes).",
+  "en": "In all plans we send you a questionnaire to get to know your data and preferences, and from the moment we receive them complete, depending on the plan: the free Demo-Trial, within 48 hours, Estratégica, Premium and JFWEB_MOVI in 3-5 business days, Alertas Automáticas in 48-96 hours (depending on how complete the Tally form you send us is)."
+ },
  "h5de6e30f": {
   "es": "Si ningún otro módulo pudo resolver la consulta, entra Abril, la vendedora con Inteligencia Artificial: atiende, informa sobre productos, recuerda lo que el cliente venía hablando, toma pedidos y te avisa con el total, calculado con tus precios reales y tus descuentos por cantidad. Cada pedido queda con su número y lo ves en tu panel. Si algo está agotado, le ofrece al cliente avisarle cuando vuelva (Módulo 29). Y si el cliente le habla por audio, le puede contestar con su propia voz, con el mismo mensaje por escrito abajo. Lo que no puede resolver, lo deriva al dueño.",
   "en": "If no other module could solve the inquiry, Abril comes in — the AI-powered saleswoman: she serves, informs about products, remembers what the customer was discussing, takes orders, and alerts you with the total calculated with your real prices and volume discounts. Every order gets its number and you see it in your panel. If something is out of stock, she offers to notify the customer when it's back (Module 29). And if the customer sends her audio, she can reply with her own voice, with the same message in text below. What she can't resolve, she passes to the owner."
@@ -1791,6 +1831,10 @@
   "es": "El dueño paga o pierde horas armando posteos para redes.",
   "en": "The owner pays or spends hours creating social media posts."
  },
+ "h5f06d617": {
+  "es": "USD 400 pago &uacute;nico + USD 120/mes de membres&iacute;a (el primer mes es gratis, desde la entrega).",
+  "en": "USD 400 one-time payment + USD 120/month membership (first month is free, from delivery)."
+ },
  "h5f41a5b4": {
   "es": "Módulo 17 de 26 · Alerta-Web",
   "en": "Module 17 of 26 · Alerta-Web"
@@ -1810,6 +1854,10 @@
  "h6023eba4": {
   "es": "Difusión de ofertas relámpago",
   "en": "Flash sale promotions"
+ },
+ "h604b264f": {
+  "es": "Pago único + U$D 100/mes ALERTAS WEBS · 1 mes GRATIS desde la entrega (AUTOMATIZACIONES)",
+  "en": "One-time payment + USD 100/month Alertas Webs · 1 month FREE from delivery (AUTOMATIONS)"
  },
  "h60661dca": {
   "es": "Ventas resueltas al instante, sin que el dueño tenga que estar disponible todo el tiempo respondiendo lo mismo una y otra vez.",
@@ -1890,6 +1938,10 @@
  "h630a94bb": {
   "es": "Módulo 26 de 26",
   "en": "Module 26 of 26"
+ },
+ "h633d32c7": {
+  "es": "<strong>Lo que ganás:</strong> Ningún cliente se queda esperando por mandar un audio: recibe respuesta igual de rápida que el que escribe, y el sistema actúa sobre lo que dijo (precio, turno, pedido) como con cualquier mensaje escrito.",
+  "en": "<strong>What you gain:</strong> No customer waits around sending an audio: they get a response just as fast as someone who types, and the system acts on what they said (price, appointment, order) like any written message."
  },
  "h63673e4b": {
   "es": "<strong>Incluye:</strong> catálogo, stock, precios por WhatsApp, carrito abandonado (si tenés tienda online), venta cruzada y ofertas relámpago.<br><strong>Ideal para:</strong> tiendas, reposterías, ferreterías.",
@@ -2058,6 +2110,10 @@
  "h692036f1": {
   "es": "📈 CRM HubSpot para tus contactos y leads",
   "en": "📈 HubSpot CRM for your contacts and leads"
+ },
+ "h6a3acc88": {
+  "es": "Pago único · + U$D 120/mes ALERTAS WEBS · <strong style=\"color:var(--green)\">1 mes GRATIS desde la entrega (AUTOMATIZACIONES)</strong>",
+  "en": "One-time payment · + USD 120/month Alertas Webs · <strong style=\"color:var(--green)\">1 month FREE from delivery (AUTOMATIONS)</strong>"
  },
  "h6a5246c2": {
   "es": "Decisiones más rápidas y mejor informadas, la plata cobrada a la vista y alertas tempranas cuando una semana viene floja...",
@@ -2379,6 +2435,10 @@
   "es": "<span style=\"font-weight:900;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--gold);letter-spacing:.01em;line-height:1.15\">ELEGÍ TU RUBRO Y NIVEL</span>",
   "en": "<span style=\"font-weight:900;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--gold);letter-spacing:.01em;line-height:1.15\">CHOOSE YOUR INDUSTRY AND LEVEL</span>"
  },
+ "h78240898": {
+  "es": "USD 200 pago &uacute;nico + USD 100/mes de membres&iacute;a (el primer mes es gratis, desde la entrega).",
+  "en": "USD 200 one-time payment + USD 100/month membership (first month is free, from delivery)."
+ },
  "h7831925b": {
   "es": "✅ El dueño elige a quién saludar, y el sistema lo hace solo, el día exacto, con un beneficio.",
   "en": "✅ The owner chooses who to greet, and the system does it on its own, on the exact day, with a perk."
@@ -2566,6 +2626,10 @@
  "h85b97728": {
   "es": "Módulo 17 de 30",
   "en": "Module 17 of 30"
+ },
+ "h866ce075": {
+  "es": "USD 250 pago &uacute;nico + USD 100/mes de membres&iacute;a (el primer mes es gratis, desde la entrega).",
+  "en": "USD 250 one-time payment + USD 100/month membership (first month is free, from delivery)."
  },
  "h866f50a6": {
   "es": "¿Cuál es tu ticket promedio de venta (en pesos)?",
@@ -3007,6 +3071,10 @@
   "es": "Vendedor IA 24/7 (Abril)",
   "en": "AI Sales Agent 24/7 (Abril)"
  },
+ "h9e37243c": {
+  "es": "❌ El cliente compra, vos despachás el paquete y él te escribe todos los días: \"¿ya salió?\", \"¿me pasás el código?\". Cada consulta te saca tiempo, y si te olvidás de avisar, queda la duda de si el pedido le va a llegar.",
+  "en": "❌ The customer buys, you ship the package and they text you every day: \"Did it ship?\", \"Can you send me the code?\". Each inquiry takes your time, and if you forget to notify them, there's doubt about whether the order will arrive."
+ },
  "h9e3c6a55": {
   "es": "Esto que acabás de leer no es una promesa: es el Módulo 25 — Venta cruzada automática funcionando hoy, en producción real. Nuestro objetivo no es venderte una automatización — es que factures más.",
   "en": "What you just read isn't a promise: it's Module 25 — Automatic Cross-Selling working right now, in real production. Our goal isn't to sell you automation — it's to help you make more money."
@@ -3327,6 +3395,10 @@
   "es": "Cero oportunidades comerciales tiradas a la basura por colgarte con el celular — rescatás plata fresca que...",
   "en": "Zero business opportunities wasted by being glued to your phone — you rescue fresh cash that..."
  },
+ "hab894612": {
+  "es": "Con todos los Niveles te damos 1 mes gratis de Alertas Webs, que empieza el día que te entregamos tu web, una vez abonada la producción (50% al empezar y 50% al entregar). Antes de que termine te consultamos si querés continuar. Desde el mes 2 es 100% opcional — sin mantenimiento tu web sigue online.",
+  "en": "With all Levels we give you 1 free month of Alertas Webs, which starts the day we deliver your web, once production is paid (50% at start and 50% at delivery). Before it ends we'll check if you want to continue. From month 2 it's 100% optional — without maintenance your web stays online."
+ },
  "habc1b754": {
   "es": "Reporte semanal inteligente",
   "en": "Smart weekly report"
@@ -3462,6 +3534,10 @@
  "hb188b699": {
   "es": "✅ El sistema avisa a tiempo y el pago se registra con un mensaje o un toque en el panel.",
   "en": "✅ The system alerts you on time and the payment is registered with a message or a notification in the panel."
+ },
+ "hb1ec06ed": {
+  "es": "Cotización profesional automática",
+  "en": "Automatic professional quote"
  },
  "hb2026ce6": {
   "es": "Fidelización automática con quien vos elegís, sin el riesgo de un gesto incómodo con quien no tenés esa confianza.",
@@ -4487,6 +4563,10 @@
   "es": "<a href=\"../#planes\">Estratégica — $399 USD</a>",
   "en": "<a href=\"../#planes\">Estratégica — $399 USD</a>"
  },
+ "he41d07a8": {
+  "es": "USD 300 pago &uacute;nico + USD 120/mes de membres&iacute;a (el primer mes es gratis, desde la entrega).",
+  "en": "USD 300 one-time payment + USD 120/month membership (first month is free, from delivery)."
+ },
  "he4245826": {
   "es": "<span>SEO</span>",
   "en": "<span>SEO</span>"
@@ -4707,6 +4787,10 @@
   "es": "Reactiva ventas que ya dabas por perdidas, sin que vos tengas que acordarte de nadie.",
   "en": "Reactivate sales you already gave up for lost, without you having to remember anyone."
  },
+ "hef38284e": {
+  "es": "Demo-Prueba gratis de 7 días · Online en 48 hs · Sin compromiso",
+  "en": "Free 7-Day Demo-Trial · Online within 48 hours · No commitment"
+ },
  "hef463a1b": {
   "es": "Completá estos 3 datos y te mostramos una estimación real, con la cuenta a la vista — sin números inflados.",
   "en": "Fill in these 3 details and we'll show you a real estimate, with the math in plain sight — no inflated numbers."
@@ -4870,6 +4954,10 @@
  "hf58beb51": {
   "es": "👉 Hacé clic acá para ver las acciones de este módulo de Alertas Webs",
   "en": "👉 Click here to see the actions of this Alertas Webs module"
+ },
+ "hf5a85cd4": {
+  "es": "JF Servicios Web es una empresa especializada en generación de webs estáticas: veloces, seguras, con SEO total integrado, que integra un sistema creado por nosotros llamado ALERTAS WEBS que intercomunica tu web con tu celular a través de WhatsApp. Responde, agenda, vende y te notifica las 24 horas, aunque tengas tu celular o computadora apagados. Es un servicio adicional y opcional a tu web, el primer mes completamente gratis (empieza el día que te entregamos tu web, una vez abonada la producción) PARA QUE COMPRUEBES EL VALOR SIN COMPROMETERTE. ANTES DE QUE FINALICE EL MES TE LLAMAMOS PARA CONOCER TU OPINIÓN.",
+  "en": "JF Servicios Web is a company specialized in generating static webs: fast, secure, with full integrated SEO, which integrates a system created by us called ALERTAS WEBS that interconnects your web with your cell phone through WhatsApp. It responds, schedules, sells and notifies you 24 hours, even if you have your cell phone or computer off. It's an additional and optional service to your web, the first month completely free (starts the day we deliver your web, once production is paid) SO YOU CAN CHECK THE VALUE WITHOUT COMMITMENT. BEFORE THE MONTH ENDS WE'LL CALL YOU TO HEAR YOUR OPINION."
  },
  "hf5f522f6": {
   "es": "📈 Estadísticas de visitas (Google Analytics 4)",
