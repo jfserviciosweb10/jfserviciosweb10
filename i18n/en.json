@@ -711,6 +711,10 @@
   "es": "Tu web Premium + 26 ALERTAS WEBS, todo en tu celular como una app",
   "en": "Your Premium web + 26 ALERTAS WEBS, everything on your phone like an app"
  },
+ "h23f192a8": {
+  "es": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Demo-Prueba gratis de 7 días · Online en 48 hs · Sin compromiso</a>",
+  "en": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Free Demo-Trial for 7 days · Online in 48 hrs · No commitment</a>"
+ },
  "h2468a544": {
   "es": "<a href=\"primera-respuesta-automatica-whatsapp-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 01 — Bienvenida</a> <a href=\"confirmacion-automatica-de-turnos-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 02 — Confirmación de turno</a> <a href=\"como-evitar-que-los-clientes-falten-a-los-turnos.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 03 — Recordatorio 2 horas antes</a>",
   "en": "<a href=\"primera-respuesta-automatica-whatsapp-negocio.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 01 — Welcome</a>\n      <a href=\"confirmacion-automatica-de-turnos-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 02 — Appointment confirmation</a>\n      <a href=\"como-evitar-que-los-clientes-falten-a-los-turnos.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 03 — Reminder 2 hours before</a>"
@@ -1299,6 +1303,10 @@
   "es": "✅ Cada lunes llega un resumen claro de toda la actividad.",
   "en": "✅ Every Monday a clear summary of all the activity arrives."
  },
+ "h46ce011c": {
+  "es": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\">Demo-Prueba gratis</a>",
+  "en": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\">Free Demo-Trial</a>"
+ },
  "h46dca516": {
   "es": "Módulo 01 de 26",
   "en": "Module 01 of 26"
@@ -1334,10 +1342,6 @@
  "h487f1ca7": {
   "es": "Carrito abandonado (tienda online)",
   "en": "Abandoned cart (online store)"
- },
- "h46ce011c": {
-  "es": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\">Demo-Prueba gratis</a>",
-  "en": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\">Free Demo-Trial</a>"
  },
  "h4994af06": {
   "es": "<a href=\"catalogo-de-productos-por-whatsapp-automatico.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 10 — Catálogo por WhatsApp</a> <a href=\"como-cerrar-mas-presupuestos-con-seguimiento-automatico.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 08 — Seguimiento de cotización</a> <a href=\"cotizacion-pdf-automatica-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 19 — Cotización PDF</a>",
@@ -4678,10 +4682,6 @@
  "he930e11c": {
   "es": "Tenés una promo del día (algo que se vence, una oferta puntual) y no tenés forma rápida de avisarle a tus clientes — o los mandás a mano, uno por uno.",
   "en": "You have a limited-time promo (something that expires, a one-off offer) and you don't have a quick way to notify your customers — or you send them by hand, one by one."
- },
- "h23f192a8": {
-  "es": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Demo-Prueba gratis de 7 días · Online en 48 hs · Sin compromiso</a>",
-  "en": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Free Demo-Trial for 7 days · Online in 48 hrs · No commitment</a>"
  },
  "he98de179": {
   "es": "<strong>Lo que ganás:</strong> Tu catálogo listo en minutos en vez de horas y siempre al día, con tu control antes de que se guarde nada.",
