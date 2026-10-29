@@ -1235,6 +1235,10 @@
   "es": "Servicios técnicos y presupuestos",
   "en": "Technical services and quotes"
  },
+ "h4436f930": {
+  "es": "<strong>Garant&iacute;a de 7 d&iacute;as</strong> desde la entrega: corregimos sin costo cualquier error de funcionamiento (reparar, no devolver el dinero). <strong>Soporte t&eacute;cnico</strong> con la membres&iacute;a activa: respondemos en horario h&aacute;bil, normalmente dentro de 1 d&iacute;a h&aacute;bil. <strong>Cambios:</strong> de texto y contacto, gratis siempre; fotos y videos, te ense&ntilde;amos a hacerlo o lo hacemos por USD 25.",
+  "en": "<strong>7-day guarantee</strong> from delivery: we fix any malfunction at no cost (repair, not a refund). <strong>Technical support</strong> with active membership: we respond during business hours, normally within 1 business day. <strong>Changes:</strong> text and contact, always free; photos and videos, we teach you how to do it or we do it for USD 25."
+ },
  "h446f02de": {
   "es": "Sacaste un turno para un cliente y quedó anotado en tu cabeza, o en un cuaderno, o en el calendario del celular. Pero nunca le llegó una confirmación clara. El cliente se queda con la duda de si realmente quedó agendado. Y peor todavía: si nadie le recuerda el turno un par de horas antes, la chance de que se olvide y no aparezca sube muchísimo.",
   "en": "You scheduled an appointment for a customer and it's written down in your head, or in a notebook, or in your phone's calendar. But they never got a clear confirmation. The customer is left wondering if the appointment really was booked. And worse still: if nobody reminds them of the appointment a couple hours before, the chance they'll forget and not show up goes way up."
@@ -1602,6 +1606,10 @@
  "h55ec49f3": {
   "es": "Reseñas Google",
   "en": "Google Reviews"
+ },
+ "h564475b1": {
+  "es": "💡 <strong>La analogía perfecta:</strong> Es exactamente igual que contratar un servicio de alarma para tu hogar. Si cancelás el servicio, <strong>la casa sigue siendo tuya</strong> — el guardia deja de venir. Tu web y tu dominio siguen siendo tuyos. Alertas Webs se desactivan porque el motor es nuestro. Podés reactivar en cualquier momento.",
+  "en": "💡 <strong>The perfect analogy:</strong> It's exactly like hiring an alarm service for your home. If you cancel the service, <strong>the house is still yours</strong> — the guard stops coming. Your website and domain are still yours. Alertas Webs turn off because the engine is ours. You can reactivate anytime."
  },
  "h564ee012": {
   "es": "Respuestas inmediatas a toda hora sin que el dueño esté pegado al teléfono — el cliente que consulta a las ...",
@@ -3259,6 +3267,10 @@
   "es": "El negocio solo vende cuando el dueño está despierto y disponible.",
   "en": "Your business only sells when you're awake and available."
  },
+ "ha56738f4": {
+  "es": "<strong>50% al empezar y 50% al aprobar.</strong> Los precios son en USD y el tipo de cambio se acuerda al momento de cada pago. El 50% inicial no se devuelve una vez que empezamos a producir (sin perjuicio de los derechos que la ley te reconozca). Al pagar el 50% inicial aceptás los T&eacute;rminos y Condiciones vigentes. Los recargos por financiaci&oacute;n est&aacute;n a cargo del cliente.",
+  "en": "<strong>50% upfront and 50% upon approval.</strong> Prices are in USD and the exchange rate is agreed upon at the time of each payment. The initial 50% is non-refundable once we start production (without prejudice to the rights the law grants you). By paying the initial 50% you accept the current Terms and Conditions. Financing charges are the customer's responsibility."
+ },
  "ha56f1f20": {
   "es": "El cliente escribe el nombre de un producto —aunque lo escriba con errores o sin tildes— y el sistema responde solo con precio y stock al instante. Si quedan pocas unidades, se lo dice en el mismo mensaje; si cargaste un descuento por cantidad, se lo muestra ya calculado; y si está agotado, se lo dice con honestidad y le ofrece anotarlo para avisarle apenas vuelva. Con escribir CATALOGO (o tocar «Ver catálogo completo» en tu web), el cliente ve todo lo que vendés.",
   "en": "The customer writes the name of a product — even with typos or without accents — and the system responds with only price and stock instantly. If units are running low, it tells them in the same message; if you've set a quantity discount, it shows it already calculated; and if it's out of stock, it tells them honestly and offers to note their interest so you can notify them as soon as it's back. By typing CATALOG (or tapping «View full catalog» on your website), the customer sees everything you sell."
@@ -4666,6 +4678,10 @@
  "he930e11c": {
   "es": "Tenés una promo del día (algo que se vence, una oferta puntual) y no tenés forma rápida de avisarle a tus clientes — o los mandás a mano, uno por uno.",
   "en": "You have a limited-time promo (something that expires, a one-off offer) and you don't have a quick way to notify your customers — or you send them by hand, one by one."
+ },
+ "he951ec6f": {
+  "es": "<a href=\"https://tally.so/r/2jjE2M\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Demo-Prueba gratis de 7 días · Online en 48 hs · Sin compromiso</a>",
+  "en": "<a href=\"https://tally.so/r/2jjE2M\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Free Demo-Trial for 7 days · Online in 48 hrs · No commitment</a>"
  },
  "he98de179": {
   "es": "<strong>Lo que ganás:</strong> Tu catálogo listo en minutos en vez de horas y siempre al día, con tu control antes de que se guarde nada.",
