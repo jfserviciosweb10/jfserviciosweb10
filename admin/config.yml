@@ -24,10 +24,10 @@ collections:
 
   - name: "faq"
     label: "Preguntas Frecuentes"
-    description: "Al guardar, tarda alrededor de 1 minuto en aparecer publicado en la web. No es instantaneo: antes de ese minuto, el cambio todavia no esta terminado."
+    description: "Aca agregas preguntas NUEVAS: aparecen al final de la lista de la web. Las preguntas que ya estaban publicadas no se ven ni se editan desde aca (para cambiar una de esas, pedile a JF Servicios Web). Al guardar, tarda alrededor de 1 minuto en aparecer publicado en la web. No es instantaneo: antes de ese minuto, el cambio todavia no esta terminado."
     files:
       - file: "_data/faq.yml"
-        label: "Mi FAQ"
+        label: "Preguntas nuevas (se suman al final)"
         name: "faq"
         fields:
           - label: "Preguntas"
