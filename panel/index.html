@@ -1120,7 +1120,7 @@ function pedidoHTML(p) {
   return `<div class="row" style="align-items:flex-start">
     <div class="av nuevo" style="font-size:16px">🛒</div>
     <div style="flex:1;min-width:0">
-      <div style="font-size:13px;font-weight:600">${p.numero ? '<span style="color:var(--gris-txt)">#' + esc(p.numero) + '</span> ' : ''}${esc(p.nombre || p.telefono || '—')}</div>
+      <div style="font-size:13px;font-weight:600">${p.numero ? '<span style="color:var(--gris-txt)">#' + esc(p.numero) + '</span> ' : ''}${esc(p.nombre || fmtTel(p.telefono) || '—')}</div>
       <div style="font-size:12px;margin:2px 0">${esc(p.resumen || '—')}</div>
       <div style="font-size:11px;color:var(--gris-txt)">
         Total: <b style="color:var(--verde)">$${Number(p.total||0).toLocaleString('es-AR')}</b> · ${p.hace || p.fecha || ''}
@@ -1149,7 +1149,7 @@ function pedidoHTML(p) {
 async function enviarPedido(id) {
   const p = (DATA.pedidos || []).find(x => x.id === id);
   const txt = prompt(
-    `Pedido ${p && p.numero ? '#' + p.numero + ' ' : ''}de ${p ? (p.nombre || p.telefono) : 'este cliente'}.\n\n` +
+    `Pedido ${p && p.numero ? '#' + p.numero + ' ' : ''}de ${p ? (p.nombre || fmtTel(p.telefono)) : 'este cliente'}.\n\n` +
     `Código de seguimiento o dato de entrega (opcional).\n` +
     `Dejalo vacío si no tiene y tocá Aceptar: se le avisa igual que el pedido salió.`
   );
@@ -1197,7 +1197,7 @@ function cotizHTML(c) {
   return `<div class="row">
     <div class="av cot">$</div>
     <div style="flex:1;min-width:0">
-      <div style="font-size:13px;font-weight:600">${esc(c.cliente || c.telefono || '—')}</div>
+      <div style="font-size:13px;font-weight:600">${esc(c.cliente || fmtTel(c.telefono) || '—')}</div>
       <div style="font-size:11px;color:var(--gris-txt)">${c.fecha} · $${Number(c.monto||0).toLocaleString('es-AR')}</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0">
@@ -1763,6 +1763,18 @@ function getDemoData() {
 // podía ejecutar código dentro del panel del dueño.
 function esc(v) {
   return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// FIX_TEL_FORMATO: muestra el telefono como +54 9 3496 52-6318 en vez de 5493496526318 (solo para mostrar; el dato guardado no cambia)
+function fmtTel(v) {
+  const d = String(v ?? '').replace(/\D/g, '');
+  if (d.length === 13 && d.startsWith('549')) {
+    const n = d.slice(3);
+    const area = n.startsWith('11') ? 2 : 4;
+    const rest = n.slice(area);
+    return '+54 9 ' + n.slice(0, area) + ' ' + rest.slice(0, rest.length - 4) + '-' + rest.slice(-4);
+  }
+  return v ? String(v) : '';
 }
 
 /* Formato WhatsApp -> HTML: *negrita*, _cursiva_, ~tachado~ y saltos de línea (siempre escapa primero) */
