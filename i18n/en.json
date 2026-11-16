@@ -2439,6 +2439,10 @@
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Aviso de envío con seguimiento</span>",
   "en": "<a href=\"../\" style=\"color:var(--t3)\">Home</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Shipping notification with tracking</span>"
  },
+ "h77aecdf7": {
+  "es": "✅ Escribís COTIZAR, elegís de una lista al cliente con quien venías hablando, le ponés el trabajo y el monto, y en segundos tenés el presupuesto en PDF, prolijo y con número propio. Lo reenviás vos, o escribís CONFIRMAR y el sistema se lo manda directo al cliente.",
+  "en": "✅ You write QUOTE, select the client you've been talking to from a list, add the job and amount, and in seconds you have a neat PDF budget with its own number. You send it back, or write CONFIRM and the system sends it directly to the client."
+ },
  "h77bc4c2b": {
   "es": "📅 Turnos que no se pierden",
   "en": "📅 Appointments that don't get lost"
