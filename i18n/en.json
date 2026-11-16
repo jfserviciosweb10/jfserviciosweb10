@@ -1411,6 +1411,10 @@
   "es": "<img src=\"img/hosting-cero.webp\" alt=\"Hosting\" width=\"36\" height=\"36\" loading=\"lazy\"><span>Hosting gratis</span>",
   "en": "<img src=\"img/hosting-cero.webp\" alt=\"Hosting\" width=\"36\" height=\"36\" loading=\"lazy\"><span>Free hosting</span>"
  },
+ "h4d04f28d": {
+  "es": "✅ El sistema avisa a tiempo. El pago se registra con un mensaje o un toque en el panel; si lo hacés por mensaje con la fecha del próximo vencimiento, el siguiente queda agendado solo.",
+  "en": "✅ The system alerts you in time. Payment is registered with a message or a tap in the panel; if you do it by message with the next due date, the following one gets scheduled automatically."
+ },
  "h4d2cf91b": {
   "es": "El dueño contesta a mano cada consulta de precio, una y otra vez.",
   "en": "The owner answers each price inquiry by hand, over and over again."
@@ -2579,6 +2583,10 @@
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Llamada perdida a WhatsApp</span>",
   "en": "<a href=\"../\" style=\"color:var(--t3)\">Home</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Missed call to WhatsApp</span>"
  },
+ "h80c85caf": {
+  "es": "✅ El sistema detecta el momento justo (inactividad, garantía vencida), manda un mensaje personalizado e insiste distinto si no responde. Y las campañas estacionales las lanzás vos con un solo mensaje.",
+  "en": "✅ The system detects the right moment (inactivity, expired warranty), sends a personalized message and follows up differently if there's no response. And you launch seasonal campaigns with just one message."
+ },
  "h80e98feb": {
   "es": "Cada mensaje que se queda \"para después\" es, literalmente, una venta que se te está escapando mientras dormís.",
   "en": "Every message that gets put off for \"later\" is, literally, a sale that's slipping away while you sleep."
@@ -3551,6 +3559,10 @@
   "es": "<a href=\"#rebomba\">Alertas Webs</a>",
   "en": "<a href=\"#rebomba\">Alertas Webs</a>"
  },
+ "hb180ac52": {
+  "es": "✅ En celulares Android, con una app gratuita que te dejamos instalada, si no atendés o rechazás la llamada, a quien llamó le llega solo un mensaje con un acceso directo a tu WhatsApp, y tu asistente le responde al instante. Si atendés, no pasa nada.",
+  "en": "✅ On Android phones, with a free app we install for you, if you don't answer or reject the call, the caller gets only a message with a direct link to your WhatsApp, and your assistant responds instantly. If you answer, nothing happens."
+ },
  "hb188b699": {
   "es": "✅ El sistema avisa a tiempo y el pago se registra con un mensaje o un toque en el panel.",
   "en": "✅ The system alerts you on time and the payment is registered with a message or a notification in the panel."
@@ -4323,6 +4335,10 @@
   "es": "Paso 3: Completá el perfil de verdad",
   "en": "Step 3: Complete your profile properly"
  },
+ "hd6a56883": {
+  "es": "✅ El dueño elige a quién saludar. El día anterior el sistema le avisa quién cumple y le pide el mensaje, con el beneficio que quiera ofrecer; el día del cumpleaños lo manda solo, por WhatsApp.",
+  "en": "✅ The owner chooses who to greet. The day before, the system alerts them who has a birthday and asks for the message, with whatever benefit you want to offer; on the birthday itself it sends it automatically via WhatsApp."
+ },
  "hd7291490": {
   "es": "Recuperación de carritos abandonados en tu tienda online",
   "en": "Abandoned cart recovery in your online store"
@@ -4687,6 +4703,10 @@
   "es": "Tenés una promo del día (algo que se vence, una oferta puntual) y no tenés forma rápida de avisarle a tus clientes — o los mandás a mano, uno por uno.",
   "en": "You have a limited-time promo (something that expires, a one-off offer) and you don't have a quick way to notify your customers — or you send them by hand, one by one."
  },
+ "he93f2c8f": {
+  "es": "✅ 2 o 3 horas después del turno, el cliente recibe una encuesta corta por WhatsApp para calificar de 1 a 5. La nota queda guardada, entra en tu reporte semanal y, si es baja, te avisamos al instante.",
+  "en": "✅ 2 or 3 hours after the appointment, your customer receives a short survey via WhatsApp to rate you from 1 to 5. The rating is saved, included in your weekly report, and if it's low, we notify you instantly."
+ },
  "he98de179": {
   "es": "<strong>Lo que ganás:</strong> Tu catálogo listo en minutos en vez de horas y siempre al día, con tu control antes de que se guarde nada.",
   "en": "<strong>What you get:</strong> Your catalog ready in minutes instead of hours and always up to date, with your control before anything is saved."
@@ -4875,6 +4895,10 @@
   "es": "❌ Alguien carga productos en el carrito de tu tienda online y se va sin pagar. Nadie se entera. La venta se pierde en silencio.",
   "en": "❌ Someone fills the cart in your online store and leaves without paying. Nobody finds out. The sale is lost in silence."
  },
+ "hf181d1d7": {
+  "es": "✅ El dueño recibe recordatorios de cada turno de su agenda 48 horas, 24 horas y 2 horas antes, sin excusas.",
+  "en": "✅ The owner receives appointment reminders from their calendar 48 hours, 24 hours, and 2 hours before, no excuses."
+ },
  "hf18508ec": {
   "es": "<strong>Lo que ganás:</strong> Decisiones más rápidas y mejor informadas, y alertas tempranas cuando una semana viene floja — a tiempo de reaccionar, no de lamentarte.",
   "en": "<strong>What you gain:</strong> Faster, better-informed decisions, and early warnings when a week is running slow — in time to react, not to regret."
@@ -4998,6 +5022,10 @@
  "hf719e315": {
   "es": "Alertas Webs",
   "en": "Alertas Webs"
+ },
+ "hf75e7ab6": {
+  "es": "<strong>Lo que ganás:</strong> Decisiones más rápidas y mejor informadas, la plata cobrada a la vista y una foto clara cada lunes para ver si la semana viene floja — a tiempo de reaccionar, no de lamentarte.",
+  "en": "<strong>What you gain:</strong> Faster and better-informed decisions, money collected upfront, and a clear snapshot every Monday to see if the week ahead looks slow — time to react, not to regret."
  },
  "hf77f8fe0": {
   "es": "✅ El cliente recibe recordatorio 2 horas antes y llega.",
