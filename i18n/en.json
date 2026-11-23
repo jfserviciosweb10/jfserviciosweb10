@@ -1587,6 +1587,10 @@
   "es": "Con un mensaje con la idea —por WhatsApp o desde el botón «Generar con IA» de tu panel— el posteo sale listo en segundos, con su imagen, una versión corta para estados e historias y, cuando tiene sentido, un testimonio real de un cliente tuyo.",
   "en": "With a message with the idea—via WhatsApp or by clicking 'Generate with AI' on your panel—the post is ready in seconds, complete with an image, a short version for statuses and stories, and when it makes sense, a real testimonial from one of your customers."
  },
+ "h502fcd51": {
+  "es": "<span class=\"rb-hint-arrow\" aria-hidden=\"true\">👇</span> Elegí el cajón que más te duele y tocá el botón verde: te mostramos cómo se resuelve, automatización por automatización.",
+  "en": "<span class=\"rb-hint-arrow\" aria-hidden=\"true\">👇</span> Pick the pain point that hurts most and hit the green button: we'll show you how to solve it, automation by automation."
+ },
  "h5089c6c3": {
   "es": "El dueño no tiene idea si el cliente quedó conforme.",
   "en": "The owner has no idea if the client is satisfied."
