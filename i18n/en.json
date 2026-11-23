@@ -235,6 +235,10 @@
   "es": "<a href=\"#planes\">Planes</a>",
   "en": "<a href=\"#planes\">Plans</a>"
  },
+ "h0cc243c5": {
+  "es": "✅ Al cliente conforme se le pide la reseña en el momento justo, Y los testimonios reales que vos guardás con un mensaje se usan donde más convierten — como en tus posteos de redes.",
+  "en": "✅ When the satisfied customer is asked for a review at just the right moment, AND the real testimonials you save with a message are used where they convert best — like in your social media posts."
+ },
  "h0cc28e20": {
   "es": "<a href=\"preguntas-frecuentes-automaticas-con-inteligencia-artificial.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 13 — FAQ con Inteligencia Artificial</a> <a href=\"control-automatico-de-vencimientos-y-cobros.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 14 — Vencimientos y registro de pago</a> <a href=\"vendedor-con-inteligencia-artificial-para-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 15 — Vendedor IA 24/7</a>",
   "en": "<a href=\"preguntas-frecuentes-automaticas-con-inteligencia-artificial.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 13 — FAQ with Artificial Intelligence</a>\n      <a href=\"control-automatico-de-vencimientos-y-cobros.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 14 — Expiration Dates and Payment Tracking</a>\n      <a href=\"vendedor-con-inteligencia-artificial-para-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 15 — AI Salesperson 24/7</a>"
@@ -4119,6 +4123,10 @@
   "es": "<span id=\"wa-float-text\">Escribinos por WhatsApp</span> <img src=\"img/whatsapp-flotante.webp?v=3\" alt=\"WhatsApp\" width=\"58\" height=\"58\">",
   "en": "<span id=\"wa-float-text\">Message us on WhatsApp</span>\n  <img src=\"img/whatsapp-flotante.webp?v=3\" alt=\"WhatsApp\" width=\"58\" height=\"58\">"
  },
+ "hc19908f9": {
+  "es": "✅ El sistema responde solo con precio y stock al instante, aunque escriba sin tildes o con mayúsculas. Avisa si quedan pocas unidades, muestra tu descuento por cantidad (se aplica solo al cerrar el pedido) y, si está agotado, ofrece anotarlo para avisarle cuando vuelva.",
+  "en": "✅ The system responds instantly with price and stock, even if they write without accents or in uppercase. It alerts if units are running low, shows your quantity discount (applied only when closing the order) and, if it's out of stock, offers to add them to a list to notify them when it's back."
+ },
  "hc19be089": {
   "es": "Una vez abonado el 50% inicial y encargado el proyecto, no hay reembolsos por cancelación bajo ningún concepto.",
   "en": "Once the initial 50% has been paid and the project commissioned, there are no refunds for cancellation under any circumstances."
@@ -4878,6 +4886,10 @@
  "he6717135": {
   "es": "$99 USD, pago único, sin mensualidad y sin comisión sobre tus ventas. Disponible para los planes con sitio propio.",
   "en": "$99 USD, one-time payment, no monthly fee and no commission on your sales. Available for plans with your own site."
+ },
+ "he69dd63d": {
+  "es": "✅ Confirmación automática en pocos minutos — y si el cliente cancela, el sistema le ofrece ese lugar solo a quien esté anotado en lista de espera.",
+  "en": "✅ Automatic confirmation within minutes — and if the customer cancels, the system offers that spot only to whoever is on the waitlist."
  },
  "he6a3c60c": {
   "es": "Enterarte que te quedaste sin stock cuando el cliente ya te lo está pidiendo es una venta perdida en el momento exacto en que podrías haberla ganado.",
