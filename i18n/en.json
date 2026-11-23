@@ -599,6 +599,10 @@
   "es": "<img src=\"img/whatsapp-flotante.webp\" width=\"18\" height=\"18\" alt=\"WA\" style=\"border-radius:4px;display:inline\"> Consultar por este add-on",
   "en": "<img src=\"img/whatsapp-flotante.webp\" width=\"18\" height=\"18\" alt=\"WA\" style=\"border-radius:4px;display:inline\"> Ask about this add-on"
  },
+ "h1ca3917f": {
+  "es": "<strong>Turnos y agenda</strong><small>Turnos confirmados y recordados, sin que estés pendiente</small>",
+  "en": "<strong>Appointments and scheduling</strong><small>Confirmed and reminded appointments, no need to follow up</small>"
+ },
  "h1ce97d4d": {
   "es": "Sin visibilidad clara de cómo viene el negocio semana a semana, las decisiones se toman a ciegas y los problemas se detectan tarde. Y si la plata que cobraste está repartida entre cuadernos, mensajes y planillas sueltas, nunca sabés cuánto entró de verdad.",
   "en": "Without clear visibility of how your business is doing week to week, decisions are made blind and problems are spotted too late. And if the money you collected is scattered across notebooks, messages, and loose spreadsheets, you never really know how much came in."
@@ -2751,6 +2755,10 @@
   "es": "El dueño recibe recordatorios de sus propios turnos, sin excusas.",
   "en": "The owner receives reminders of their own appointments, no excuses."
  },
+ "h8449cf33": {
+  "es": "<span class=\"t-ver\">Ver las 9 automatizaciones ▾</span><span class=\"t-ocultar\">Ocultar ▴</span>",
+  "en": "<span class=\"t-ver\">View all 9 automations ▾</span><span class=\"t-ocultar\">Hide ▴</span>"
+ },
  "h845509f1": {
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">+54 9 3496 462821</a><br> ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br> 📍 Esperanza, Santa Fe, Argentina",
   "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821\" target=\"_blank\" rel=\"noopener noreferrer\">+54 9 3496 462821</a><br>\n          ✉️ <a href=\"mailto:info@jfserviciosweb.com\">info@jfserviciosweb.com</a><br>\n          📍 Esperanza, Santa Fe, Argentina"
@@ -3031,6 +3039,10 @@
   "es": "Tu web nunca muestra un precio viejo, así no perdés ventas por desconfianza o un error de cotización.",
   "en": "Your website never shows an old price, so you don't lose sales due to distrust or a quote error."
  },
+ "h91efab24": {
+  "es": "<span class=\"t-ver\">Ver las 5 automatizaciones ▾</span><span class=\"t-ocultar\">Ocultar ▴</span>",
+  "en": "<span class=\"t-ver\">View all 5 automations ▾</span><span class=\"t-ocultar\">Hide ▴</span>"
+ },
  "h91f5e418": {
   "es": "No es una web aparte ni un nivel reducido. Es exactamente lo mismo que PREMIUM, tu sitio completo con SEO, multiidioma, blog, más las 26 automatizaciones de ALERTAS WEB, con el Panel del Dueño instalable SOLO EN TU CELULAR como una app, sin depender de una compu.",
   "en": "It isn't a separate website or a reduced level. It's exactly the same as PREMIUM: your complete site with SEO, multilingual, blog, plus the 26 ALERTAS WEB automations, with the WhatsApp Panel installable ONLY ON YOUR PHONE as an app, without depending on a computer."
@@ -3118,6 +3130,10 @@
  "h967d685b": {
   "es": "Lo que hace el sistema",
   "en": "What the system does"
+ },
+ "h968736e9": {
+  "es": "<span class=\"t-ver\">Ver las 3 automatizaciones ▾</span><span class=\"t-ocultar\">Ocultar ▴</span>",
+  "en": "<span class=\"t-ver\">View all 3 automations ▾</span><span class=\"t-ocultar\">Hide ▴</span>"
  },
  "h97171135": {
   "es": "Módulo 13 de 26",
@@ -3659,6 +3675,10 @@
   "es": "Carrito multi-producto",
   "en": "Multi-product cart"
  },
+ "haeaec01b": {
+  "es": "<span class=\"t-ver\">Ver las 4 automatizaciones ▾</span><span class=\"t-ocultar\">Ocultar ▴</span>",
+  "en": "<span class=\"t-ver\">View all 4 automations ▾</span><span class=\"t-ocultar\">Hide ▴</span>"
+ },
  "haebe45ae": {
   "es": "&#128274; Datos y privacidad",
   "en": "🔒 Data and privacy"
@@ -3690,6 +3710,10 @@
  "haf8ec20b": {
   "es": "Publica automático en Facebook, Instagram, LinkedIn, Google My Business y tu blog. Cada publicación es una nueva oportunidad de que alguien que no te conocía te encuentre.",
   "en": "Auto-post to Facebook, Instagram, LinkedIn, Google My Business and your blog. Each post is a new chance for someone who didn't know you to find you."
+ },
+ "haf972851": {
+  "es": "<strong>Reputación</strong><small>Saber cómo te ven tus clientes y conseguir mejores reseñas</small>",
+  "en": "<strong>Reputation</strong><small>See how your customers perceive you and get better reviews</small>"
  },
  "hafa4e63c": {
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496462821&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Recordatorio%202%20horas%20antes%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
@@ -4131,6 +4155,10 @@
   "es": "En el instante en que un cliente nuevo escribe por primera vez, el sistema responde automáticamente con un mensaje de bienvenida adaptado al rubro del negocio.",
   "en": "The instant a new customer writes for the first time, the system automatically responds with a welcome message tailored to your industry."
  },
+ "hc2f0320d": {
+  "es": "<strong>Ventas y seguimiento</strong><small>Que ningún presupuesto ni consulta se enfríe en silencio</small>",
+  "en": "<strong>Sales and follow-up</strong><small>Keep every quote and inquiry warm, never let them go cold</small>"
+ },
  "hc2fb84ad": {
   "es": "Módulo 06 de 26",
   "en": "Module 06 of 26"
@@ -4246,6 +4274,10 @@
  "hc848386c": {
   "es": "<a href=\"recuperacion-de-carrito-automatica-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 20 — Alerta de consulta enfriada</a> <a href=\"catalogo-de-productos-por-whatsapp-automatico.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Módulo 10 — Catálogo por WhatsApp</a> <a href=\"tienda-digital-vs-ecommerce.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Tienda Digital vs. e-commerce</a>",
   "en": "<a href=\"recuperacion-de-carrito-automatica-por-whatsapp.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 20 — Cold inquiry alert</a>\n      <a href=\"catalogo-de-productos-por-whatsapp-automatico.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Module 10 — Catalog via WhatsApp</a>\n      <a href=\"tienda-digital-vs-ecommerce.html\" style=\"display:block;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;text-decoration:none;color:var(--t1);font-size:.88rem;font-weight:700;transition:border-color .2s\">Digital Store vs. e-commerce</a>"
+ },
+ "hc88b6a00": {
+  "es": "<strong>Operación del día a día</strong><small>Menos tareas repetidas y más control desde el celular</small>",
+  "en": "<strong>Day-to-day operations</strong><small>Fewer repetitive tasks and more control from your phone</small>"
  },
  "hc8c52137": {
   "es": "<span>¿Alertas Web tienen costo?</span><span class=\"faq-arrow\">↓</span>",
@@ -4470,6 +4502,10 @@
  "hd4c8a0cd": {
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Venta%20cruzada%20autom%C3%A1tica%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Demo gratuita</a>",
   "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%20Jos%C3%A9%2C%20vi%20el%20m%C3%B3dulo%20Venta%20cruzada%20autom%C3%A1tica%20de%20Alerta-Web%20y%20quiero%20probarlo%20en%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\">Free demo</a>"
+ },
+ "hd4df0ba6": {
+  "es": "<strong>Marketing y clientes</strong><small>Volver a hablar con los clientes que ya tenés</small>",
+  "en": "<strong>Marketing and customers</strong><small>Reconnect with customers you already have</small>"
  },
  "hd4f7ffa8": {
   "es": "Módulo 21 de 30 · Alertas Webs",
