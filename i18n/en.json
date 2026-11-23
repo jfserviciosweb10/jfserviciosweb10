@@ -371,6 +371,10 @@
   "es": "Web Estrat&eacute;gica",
   "en": "Web Estratégica"
  },
+ "h13c84cb5": {
+  "es": "La membresía vence el día 10 de cada mes y te avisamos antes del vencimiento. Si pasada esa fecha no se abona, se corta el suministro de las automatizaciones de Alertas Webs. Se reactivan cuando regularizás el pago, y tu dominio sigue siendo tuyo siempre. Si decidís cancelar, contanos por qué: nos ayuda a mejorar. Más detalle en Reglas claras.",
+  "en": "The membership expires on the 10th of each month and we'll notify you before it expires. If that date passes without payment, the supply of Alertas Webs automations will be cut off. They'll be reactivated when you regularize payment, and your domain remains yours always. If you decide to cancel, let us know why: it helps us improve. More details in Clear Rules."
+ },
  "h140dcb93": {
   "es": "El negocio solo vende cuando el dueño está despierto y disponible. Todo lo demás — la noche, el fin de semana, el momento en que estás ocupado — es facturación que se pierde.",
   "en": "Your business only sells when you're awake and available. Everything else — the night, the weekend, the moment you're busy — is revenue that slips away."
@@ -755,6 +759,10 @@
   "es": "Tu web Premium + 26 ALERTAS WEBS, todo en tu celular como una app",
   "en": "Your Premium web + 26 ALERTAS WEBS, everything on your phone like an app"
  },
+ "h23a04780": {
+  "es": "Dominio gratis el primer Año, SSL y hosting sin costo mensual. Incluso podés pedir tu Demo-Prueba gratis de 7 días. El código y el dominio son tuyos.",
+  "en": "Free domain the first year, SSL and hosting at no monthly cost. You can even request your free 7-day Demo-Trial. The code and domain are yours."
+ },
  "h23f192a8": {
   "es": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Demo-Prueba gratis de 7 días · Online en 48 hs · Sin compromiso</a>",
   "en": "<a href=\"https://tally.so/r/BEEWZY\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:underline\" data-boton=\"demo_prueba_hero\" onclick=\"try{gtag('event','demo_prueba_hero')}catch(e){}\">Free Demo-Trial for 7 days · Online in 48 hrs · No commitment</a>"
@@ -794,6 +802,10 @@
  "h2685a025": {
   "es": "<span class=\"ci\">✓</span><span>Los 30 módulos, Panel de WhatsApp, servidores 24 hs, mantenimiento y soporte</span>",
   "en": "<span class=\"ci\">✓</span><span>All 30 modules, WhatsApp Panel, 24-hour servers, maintenance and support</span>"
+ },
+ "h26a594f3": {
+  "es": "✅ Entrega en 3-5 días hábiles · 2 revisiones · Garantía de correcciones: 7 días",
+  "en": "✅ Delivery in 3-5 business days · 2 revisions · Corrections guarantee: 7 days"
  },
  "h273df079": {
   "es": "La mayoría de los negocios chicos no están ni en \"necesito un e-commerce gigante\" ni en \"me alcanza con mandar fotos por WhatsApp\". Están en el medio: quieren mostrar sus productos de forma profesional, cobrar sin fricción, y no pagar una mensualidad por funciones que no usan. Ese es exactamente el lugar que ocupa Tienda Digital.",
@@ -1014,6 +1026,10 @@
  "h3227b508": {
   "es": "<a href=\"https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20mi%20demo%20personalizada.%20Te%20paso%20los%20datos%20y%20fotos%20de%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\" style=\"white-space:nowrap;max-width:100%;font-size:clamp(.74rem,3.3vw,.95rem);padding:14px 18px\" data-boton=\"demo_personalizada\" onclick=\"try{gtag('event','pedir_demo_personalizada')}catch(e){}\">Pedí tu DEMO con Automatizaciones y Personalizada GRATIS</a> <p style=\"max-width:700px;margin:1rem auto 0;font-size:.85rem;color:var(--t2);line-height:1.6\"><strong>Personalizada</strong> es hecha con tus datos, logo y fotos (local, tu equipo, hasta 3 de tus productos o servicios) y armamos tu demo, sin costo, antes de que pagues.<br>&iquest;Preferís mirar primero? <a href=\"#preview-webs\" style=\"color:var(--green);font-weight:700\">Eleg&iacute; tu rubro y nivel</a> y mir&aacute; un ejemplo ya armado.</p>",
   "en": "<a href=\"https://api.whatsapp.com/send?phone=5493496591636&text=Hola%20Jos%C3%A9%2C%20quiero%20mi%20demo%20personalizada.%20Te%20paso%20los%20datos%20y%20fotos%20de%20mi%20negocio\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-wa\" style=\"white-space:nowrap;max-width:100%;font-size:clamp(.74rem,3.3vw,.95rem);padding:14px 18px\" data-boton=\"demo_personalizada\" onclick=\"try{gtag('event','pedir_demo_personalizada')}catch(e){}\">Get your FREE Personalized DEMO with Automations</a>\n      <p style=\"max-width:700px;margin:1rem auto 0;font-size:.85rem;color:var(--t2);line-height:1.6\"><strong>Personalized</strong> is made with your data, logo and photos (your location, your team, up to 3 of your products or services) and we build your demo, at no cost, before you pay.<br>Prefer to look first? <a href=\"#preview-webs\" style=\"color:var(--green);font-weight:700\">Choose your industry and level</a> and see a ready-made example.</p>"
+ },
+ "h32b524ba": {
+  "es": "ALERTAS WEBS corren en servidores las 24 horas, los mantenemos, actualizamos y soportamos por vos. En Alertas Automáticas y Estratégica cuesta U$D 100/mes pagando anual, o U$D 115 mes a mes. En MOVI y Premium, U$D 120/mes anual o U$D 135 mes a mes. El precio no cambia con los años. La tarifa anual es con débito automático: te cuesta menos porque nos da la seguridad del cobro. La de mes a mes es sin débito automático y sin obligación. En las dos podés cancelar cuando quieras. Los 12 meses de la tarifa anual se cuentan después del mes gratis.",
+  "en": "ALERTAS WEBS run on servers 24 hours a day, we maintain, update and support them for you. With Alertas Automáticas and Estratégica it costs USD 100/month paying annually, or USD 115 month to month. With MOVI and Premium, USD 120/month annual or USD 135 month to month. The price doesn't change over the years. The annual rate is with automatic debit: it costs you less because it gives us payment security. The month to month is without automatic debit and no obligation. With either one you can cancel whenever you want. The 12 months of the annual rate are counted after the month FREE."
  },
  "h32bb076e": {
   "es": "Una promoción que se te vence hoy, o un producto que necesitás mover ya, pierden fuerza si tenés que avisarle a cada cliente uno por uno — para cuando terminaste de escribir a todos, la oportunidad ya pasó. Y mandar mensajes de venta sin que la persona lo haya pedido no es solo poco profesional: puede terminar en una queja que ponga en riesgo tu cuenta de WhatsApp entera.",
@@ -1238,6 +1254,10 @@
  "h4012c828": {
   "es": "💬 Quiero estos módulos en mi negocio",
   "en": "💬 I want these modules in my business"
+ },
+ "h403a79a2": {
+  "es": "<span class=\"ci\">✓</span><span>USD 120/mes anual con débito automático, o 135 mes a mes sin obligación (MOVI y Premium)</span>",
+  "en": "<span class=\"ci\">✓</span><span>USD 120/month annual with automatic debit, or 135 month to month without obligation (MOVI and Premium)</span>"
  },
  "h405cc415": {
   "es": "Conocé los planes →",
@@ -1574,6 +1594,10 @@
  "h50f46422": {
   "es": "Ante cualquier problema técnico respondemos de inmediato y sin costo extra, en todos los niveles y mientras el sitio esté en nuestro hosting.",
   "en": "For any technical problem we respond immediately and at no extra cost, on all levels and as long as the site is on our hosting."
+ },
+ "h50f87e15": {
+  "es": "&ldquo;Pago &uacute;nico&rdquo; es el costo de producci&oacute;n del sitio o del sistema. <strong>La membres&iacute;a de Alertas Webs es aparte y mensual</strong> (el primer mes es gratis y empieza con la entrega, una vez abonada la producci&oacute;n). Tiene tarifa anual (con débito automático) o mes a mes (sin obligación). <strong>Vence el día 10 de cada mes</strong>; el primer vencimiento es el primer día 10 que cae al menos un mes después de la entrega.",
+  "en": "\"One-time payment\" is the production cost of the website or system. <strong>The Alertas Webs membership is separate and monthly</strong> (the first month is FREE and starts with delivery, once production is paid). It has an annual rate (with automatic debit) or month to month (no obligation). <strong>It expires on the 10th of each month</strong>; the first expiration is the first 10th that falls at least one month after delivery."
  },
  "h5131eccd": {
   "es": "<a href=\"../#faq\">FAQ</a>",
@@ -2035,6 +2059,10 @@
   "es": "<strong>Lo que ganás:</strong> Ningún cliente se queda esperando por mandar un audio: recibe respuesta igual de rápida que el que escribe, y el sistema actúa sobre lo que dijo (precio, turno, pedido) como con cualquier mensaje escrito.",
   "en": "<strong>What you gain:</strong> No customer waits around sending an audio: they get a response just as fast as someone who types, and the system acts on what they said (price, appointment, order) like any written message."
  },
+ "h6358e1c1": {
+  "es": "✅ Entrega en 3-5 días hábiles · 1 revisión · Garantía de correcciones: 7 días",
+  "en": "✅ Delivery in 3-5 business days · 1 revision · Corrections guarantee: 7 days"
+ },
  "h63673e4b": {
   "es": "<strong>Incluye:</strong> catálogo, stock, precios por WhatsApp, carrito abandonado (si tenés tienda online), venta cruzada y ofertas relámpago.<br><strong>Ideal para:</strong> tiendas, reposterías, ferreterías.",
   "en": "<strong>Includes:</strong> catalog, stock, prices by WhatsApp, abandoned cart (if you have an online store), cross-selling and flash offers.<br><strong>Ideal for:</strong> shops, bakeries, hardware stores."
@@ -2306,6 +2334,10 @@
  "h6e585fd6": {
   "es": "Módulo 07 de 30 · Alertas Webs",
   "en": "Module 07 of 30 · Alertas Webs"
+ },
+ "h6e774747": {
+  "es": "Sí. Tenés 7 días desde la entrega para reportar cualquier problema y lo corregimos sin costo. La garantía cubre correcciones técnicas y ajustes sobre lo acordado. Consiste en reparar, no en devolver el dinero. El 50% inicial no se reintegra una vez iniciada la producción, sin perjuicio de los derechos que la ley te reconozca. Es una política clara que aplicamos desde el primer día.",
+  "en": "Yes. You have 7 days from delivery to report any issues and we'll fix them at no cost. The guarantee covers technical corrections and adjustments to what was agreed. It consists of repairs, not refunds. The initial 50% is not refunded once production has started, without prejudice to the rights recognized by law. It's a clear policy we've applied from day one."
  },
  "h6e885821": {
   "es": "Módulo 12 de 26 · Alerta-Web",
@@ -3575,6 +3607,10 @@
   "es": "Sí. Todos los datos que Alertas Webs recopila (nombres, teléfonos, respuestas) se guardan en infraestructura segura y privada, con acceso exclusivo para vos a través del Panel del Dueño. No se comparten con terceros ni se usan para ningún otro fin.",
   "en": "Yes. All data that Alertas Webs collects (names, phone numbers, responses) is stored in secure and private infrastructure, with exclusive access for you through the WhatsApp Panel. It is not shared with third parties or used for any other purpose."
  },
+ "hac66b0d5": {
+  "es": "&iquest;No sab&eacute;s cu&aacute;l elegir? <a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%21%20Ayudame%20a%20elegir%20el%20plan%20que%20me%20conviene\" data-boton=\"puertas_ayudame\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--green);font-weight:700\">Ayudame a elegir (Abril te pregunta 3 cosas)</a>.<br> Precios en d&oacute;lares (USD). El pago &uacute;nico se abona 50% al empezar y 50% al aprobar. La membres&iacute;a mensual es aparte (mes a mes, sin débito automático, cuesta USD 15 m&aacute;s). Detalle completo en &ldquo;Reglas claras&rdquo;, m&aacute;s abajo.",
+  "en": "Don't know which one to choose? <a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%21%20Ayudame%20a%20elegir%20el%20plan%20que%20me%20conviene\" data-boton=\"puertas_ayudame\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--green);font-weight:700\">Help me choose (Abril asks you 3 things)</a>.<br>\n    Prices in dollars (USD). The one-time payment is paid 50% upfront and 50% upon approval. The monthly membership is separate (month-to-month, no automatic debit, costs USD 15 extra). Full details in \"Clear Rules\", below."
+ },
  "hac7a98de": {
   "es": "ALERTAS WEBS corren en servidores las 24 horas, los mantenemos, actualizamos y soportamos por vos. En Alertas Automáticas y Estratégica cuesta U$D 100/mes pagando anual, o U$D 115 mes a mes. En MOVI y Premium, U$D 120/mes anual o U$D 135 mes a mes. El precio no cambia con los años.",
   "en": "ALERTAS WEBS run on servers 24 hours a day, we maintain, update and support them for you. On Alertas Automáticas and Estratégica it costs USD 100/month paid annually, or USD 115 month to month. On MOVI and Premium, USD 120/month annual or USD 135 month to month. The price doesn't change over the years."
@@ -4783,6 +4819,10 @@
   "es": "<a href=\"../\" style=\"color:var(--t3)\">Inicio</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Alerta de lead frío</span>",
   "en": "<a href=\"../\" style=\"color:var(--t3)\">Home</a> › <a href=\"./\" style=\"color:var(--t3)\">Blog</a> › <span style=\"color:var(--t2)\">Cold lead alert</span>"
  },
+ "he4e39adc": {
+  "es": "🌐 SSL + Dominio primer año + Hosting sin costo mensual",
+  "en": "🌐 SSL + Domain first year + Hosting at no monthly cost"
+ },
  "he51284bc": {
   "es": "<span class=\"ci\">📦</span><span>El <strong>repositorio GitHub</strong> — creado a tu nombre con acceso de propietario desde el día 1</span>",
   "en": "<span class=\"ci\">📦</span><span>The <strong>GitHub repository</strong> — created in your name with owner access from day 1</span>"
@@ -4802,6 +4842,10 @@
  "he6a3c60c": {
   "es": "Enterarte que te quedaste sin stock cuando el cliente ya te lo está pidiendo es una venta perdida en el momento exacto en que podrías haberla ganado.",
   "en": "Finding out you're out of stock when the customer is already asking for it is a lost sale at the exact moment you could have made it."
+ },
+ "he6aacac0": {
+  "es": "<span class=\"ci\">✓</span><span>USD 100/mes anual con débito automático, o 115 mes a mes sin obligación (Alertas Webs y Estratégica)</span>",
+  "en": "<span class=\"ci\">✓</span><span>USD 100/month annual with automatic debit, or 115 month to month without obligation (Alertas Webs and Estratégica)</span>"
  },
  "he6cd42a2": {
   "es": "Alerta de insatisfacción automática por WhatsApp",
