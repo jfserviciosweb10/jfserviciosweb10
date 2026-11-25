@@ -847,6 +847,10 @@
   "es": "&iquest;No sab&eacute;s cu&aacute;l elegir? <a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%21%20Ayudame%20a%20elegir%20el%20plan%20que%20me%20conviene\" data-boton=\"puertas_ayudame\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--green);font-weight:700\">Ayudame a elegir (Abril te pregunta 3 cosas)</a>.<br> Precios en d&oacute;lares (USD). El pago &uacute;nico se abona 50% al empezar y 50% al aprobar. La membres&iacute;a mensual es aparte (mes a mes cuesta USD 15 m&aacute;s). Detalle completo en &ldquo;Reglas claras&rdquo;, m&aacute;s abajo.",
   "en": "Not sure which to pick? <a href=\"https://api.whatsapp.com/send?phone=5493496593581&text=Hola%21%20Ayudame%20a%20elegir%20el%20plan%20que%20me%20conviene\" data-boton=\"puertas_ayudame\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--green);font-weight:700\">Help me choose (Abril asks you 3 things)</a>.<br>\n    Prices in USD. The one-time payment is charged 50% to start and 50% upon approval. Monthly membership is separate (month to month costs USD 15 more). Full details in \"Clear Rules\", below."
  },
+ "h289a5785": {
+  "es": "Alertas Webs transcribe automáticamente los audios de tus clientes y te los muestra en texto junto al audio original. Se transcriben audios de hasta unos 3 minutos. Abril también puede contestar con nota de voz (hasta 200 por mes y 350 caracteres cada una, siempre con su transcripción).",
+  "en": "Alertas Webs automatically transcribes your customers' audio messages and shows them to you as text along with the original audio. Audio messages of up to about 3 minutes are transcribed. Abril can also reply with voice notes (up to 200 per month and 350 characters each, always with its transcription)."
+ },
  "h28a3f874": {
   "es": "Cero preguntas de \"¿dónde está mi pedido?\", clientes tranquilos y la imagen profesional de una tienda grande, con un mensaje tuyo de una línea.",
   "en": "Zero \"Where's my order?\" questions, happy customers, and the professional image of a big store—all with one-line message from you."
@@ -1238,6 +1242,10 @@
  "h3e2b4cfa": {
   "es": "El dueño le escribe al sistema el producto y el nuevo precio, y se actualiza automáticamente en toda la operación.",
   "en": "The owner texts the system the product and new price, and it updates automatically throughout the operation."
+ },
+ "h3e2c11b6": {
+  "es": "Sí, algo muy simple: abrir la app WhatsApp Business en el celular donde tenés tu línea del negocio, al menos una vez cada 13 días (lo ideal es una vez por semana). Es una regla de Meta. Si pasa más tiempo, la conexión se corta y Abril deja de responder hasta que se reconecte.",
+  "en": "Yes, something very simple: open the WhatsApp Business app on the phone where you have your business line, at least once every 13 days (ideal is once a week). It's a Meta rule. If more time passes, the connection drops and Abril stops responding until it reconnects."
  },
  "h3e2ed906": {
   "es": "Módulo 24 de 30 · Alertas Webs",
@@ -2379,6 +2387,10 @@
   "es": "Módulo 02 · Confirmación de turno",
   "en": "Module 02 · Appointment confirmation"
  },
+ "h6fb3cdbb": {
+  "es": "<strong>No: no funciona con cualquier WhatsApp.</strong> Funciona con el número de WhatsApp de tu negocio, el que ya conocen tus clientes, y seguís usando tu celular como hasta ahora, siempre que se cumpla esto:<br>• Tiene que ser un <strong>celular</strong> con WhatsApp. Un teléfono fijo no puede llevar automatizaciones.<br>• Tiene que ser la app <strong>WhatsApp Business</strong> (gratis). Si hoy usás el WhatsApp común, te guiamos para pasarlo a Business sin cambiar de número.<br>• Tenés que abrir WhatsApp Business en ese celular <strong>al menos una vez cada 13 días</strong> para que la conexión no se corte (lo ideal: una vez por semana).<br>• Abril atiende los chats individuales; los grupos siguen en tu celular como siempre.<br>• WhatsApp (Meta) puede no aceptar un número, por ejemplo uno muy nuevo o con poca actividad. <strong>Lo revisamos antes de empezar y, si no se pudiera conectar sin riesgo para tu línea, te lo decimos antes de cobrarte nada.</strong><br>Usamos la API oficial de WhatsApp: el costo de los mensajes lo cobra Meta según tu volumen y te lo confirmamos antes de activar.",
+  "en": "<strong>No: it doesn't work with just any WhatsApp.</strong> It works with your business WhatsApp number, the one your customers already know, and you keep using your phone as usual, as long as this is met:<br>• It has to be a <strong>cell phone</strong> with WhatsApp. A landline can't carry automations.<br>• It has to be the <strong>WhatsApp Business</strong> app (free). If you're using regular WhatsApp now, we'll guide you to switch to Business without changing your number.<br>• You have to open WhatsApp Business on that phone <strong>at least once every 13 days</strong> so the connection doesn't drop (ideal: once a week).<br>• Abril handles individual chats; groups stay on your phone as always.<br>• WhatsApp (Meta) may not accept a number, for example a very new one or with little activity. <strong>We review it before we start and, if we couldn't connect safely for your line, we'll tell you before charging anything.</strong><br>We use WhatsApp's official API: Meta charges for message costs based on your volume and we'll confirm it before activating."
+ },
  "h6fb9292e": {
   "es": "✅ El presupuesto sale en PDF profesional, solo, en segundos.",
   "en": "✅ The quote goes out as a professional PDF, automatically, in seconds."
@@ -2510,6 +2522,10 @@
  "h74354a8e": {
   "es": "Encuesta post-servicio",
   "en": "Post-service survey"
+ },
+ "h743ef9e9": {
+  "es": "<span>¿Tengo que hacer algo para que la conexión con mi WhatsApp no se caiga?</span><span class=\"faq-arrow\">↓</span>",
+  "en": "<span>Do I have to do anything to keep my WhatsApp connection from dropping?</span><span class=\"faq-arrow\">↓</span>"
  },
  "h7467c118": {
   "es": "<a href=\"#contacto\" class=\"btn-wa\" data-boton=\"demo_personalizada\" onclick=\"try{document.getElementById('inputNivel').value='Demo Gratuita';gtag('event','pedir_demo_personalizada')}catch(e){}\">Pedí tu demo personalizada, con automatizaciones</a>",
