@@ -1227,6 +1227,10 @@
   "es": "❌ Contestás precios a mano, el cliente pide algo que ya no hay o deja el carrito a medias.",
   "en": "❌ You answer prices by hand, the customer asks for something that's out of stock or leaves the cart half-filled."
  },
+ "h3c428654": {
+  "es": "✅ El cliente recibe recordatorio 2 horas antes y llega. Y si el servicio necesita preparación (venir en ayunas, traer estudios, no lavarse el pelo), el recordatorio le lleva tus indicaciones.",
+  "en": "✅ The customer receives a reminder 2 hours before the appointment and shows up. And if the service needs preparation (fasting, bringing test results, not washing hair), the reminder includes your instructions."
+ },
  "h3cefeee3": {
   "es": "<img src=\"img/redes-sociales.webp\" alt=\"Redes\" width=\"36\" height=\"36\" loading=\"lazy\"><span>Redes Sociales</span>",
   "en": "<img src=\"img/redes-sociales.webp\" alt=\"Social\" width=\"36\" height=\"36\" loading=\"lazy\"><span>Social Networks</span>"
@@ -3559,6 +3563,10 @@
   "es": "Cuando llega la carta (o completás la verificación por el método alternativo), entrás de nuevo a business.google.com e ingresás el código. Recién en ese momento tu negocio aparece en el mapa de Google. Sin ese código, el perfil existe, pero no lo ve nadie.",
   "en": "When the letter arrives (or you complete verification using the alternative method), go back to business.google.com and enter the code. That's when your business appears on Google Maps. Without that code, the profile exists, but no one sees it."
  },
+ "ha7c42e14": {
+  "es": "✅ La Inteligencia Artificial responde al instante, a toda hora. Si cerrás por feriado o tenés un horario especial, lo avisás con un mensaje y la IA se lo informa a cada cliente que pregunta, sin ofrecer turnos ni entregas esos días.",
+  "en": "✅ Artificial Intelligence responds instantly, 24/7. If you're closed for a holiday or have special hours, you post a message and the AI informs each customer who asks, without offering appointments or deliveries those days."
+ },
  "ha8b927ec": {
   "es": "&#127760; Dominio",
   "en": "🌐 Domain"
@@ -5186,6 +5194,10 @@
  "hf0874204": {
   "es": "Venta cruzada automática por WhatsApp",
   "en": "Automatic Cross-Selling via WhatsApp"
+ },
+ "hf08e6324": {
+  "es": "✅ 2 o 3 horas después del turno, el cliente recibe una encuesta corta por WhatsApp para calificar de 1 a 5. La nota queda guardada, entra en tu reporte semanal y, si es baja, te avisamos al instante. Junto con la encuesta le llegan los cuidados para después del servicio que vos cargaste.",
+  "en": "✅ 2 or 3 hours after the appointment, the customer receives a short survey via WhatsApp to rate from 1 to 5. The rating is saved, included in your weekly report, and if it's low, we notify you instantly. Along with the survey, they receive the aftercare instructions you uploaded."
  },
  "hf094ddb0": {
   "es": "❌ El audio queda solo grabado — si no lo escuchás en el momento, se pierde entre los mensajes del día, y no hay forma de buscarlo después.",
