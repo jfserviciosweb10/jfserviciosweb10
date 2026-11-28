@@ -827,6 +827,10 @@
   "es": "Ordena tu cobranza para que ninguna renovación se pierda por un simple olvido.",
   "en": "Organize your collections so no renewal gets lost over a simple oversight."
  },
+ "h27d6e416": {
+  "es": "<span class=\"ci\">📦</span><span>El <strong>repositorio GitHub</strong> — con acceso de escritura para vos desde la entrega y administración plena (Owner) al completar el mes gratis + 12 cuotas pagas</span>",
+  "en": "<span class=\"ci\">📦</span><span>The <strong>GitHub repository</strong> — with write access for you from delivery and full administration (Owner) upon completing the month FREE + 12 paid installments</span>"
+ },
  "h27fa3030": {
   "es": "Setup técnico",
   "en": "Technical setup"
@@ -4298,6 +4302,10 @@
  "hc6bdf753": {
   "es": "<a href=\"../#ganchos2\" onclick=\"closeMenu()\">Propuesta</a> <a href=\"../#planes\" onclick=\"closeMenu()\">Planes</a> <a href=\"../#preview-webs\" onclick=\"closeMenu()\">Ejemplos reales</a> <a href=\"../#rebomba\" onclick=\"closeMenu()\">Alerta-Web</a> <a href=\"../#contacto\" onclick=\"closeMenu()\">Contacto</a>",
   "en": "<a href=\"../#ganchos2\" onclick=\"closeMenu()\">Proposal</a>\n  <a href=\"../#planes\" onclick=\"closeMenu()\">Plans</a>\n  <a href=\"../#preview-webs\" onclick=\"closeMenu()\">Real examples</a>\n  <a href=\"../#rebomba\" onclick=\"closeMenu()\">Alerta-Web</a>\n  <a href=\"../#contacto\" onclick=\"closeMenu()\">Contact</a>"
+ },
+ "hc7112f9d": {
+  "es": "El <strong>dominio queda a tu nombre</strong> desde el primer d&iacute;a. Cuando abon&aacute;s el 50% final recib&iacute;s tus accesos: acceso de colaborador con permisos de escritura al repositorio, suficiente para operar tu Panel de Contenidos. La <strong>administraci&oacute;n plena (Owner) del repositorio y del DNS</strong> pasa a vos al completar el mes gratis + 12 cuotas pagas (los meses sin pagar o en pausa no cuentan), con la membres&iacute;a activa y al d&iacute;a, sin costo.",
+  "en": "The <strong>domain is in your name</strong> from day one. When you pay the final 50% you receive your access: collaborator access with write permissions to the repository, enough to operate your Content Panel. Full <strong>administration (Owner) of the repository and DNS</strong> passes to you upon completing the month FREE + 12 paid installments (months without payment or on pause don't count), with active membership and up to date, at no cost."
  },
  "hc724b0c3": {
   "es": "Módulo 22 de 26",
